@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<root> 
+  <tools name="InsertToolbar" dockable="true" enabled="true">  
+    <tool name="AjaxSpellCheck"/>  
+    <tool name="ImageManager" shortcut="CTRL+M"/>  
+    <tool name="DocumentManager"/>  
+    <tool name="FormatStripper"/>  
+    <tool separator="true"/>  
+    <tool name="InsertTable"/>  
+    <tool name="InsertRowAbove"/>  
+    <tool name="InsertRowBelow"/>  
+    <tool name="DeleteRow"/>  
+    <tool name="InsertColumnLeft"/>  
+    <tool name="InsertColumnRight"/>  
+    <tool name="DeleteColumn"/>  
+    <tool separator="true"/>  
+    <tool name="MergeColumns"/>  
+    <tool name="MergeRows"/>  
+    <tool separator="true"/>  
+    <tool name="SplitCell"/>  
+    <tool name="DeleteCell"/>  
+    <tool name="SetCellProperties"/>  
+    <tool name="SetTableProperties"/>  
+  </tools> 
+  <tools enabled="true">  
+    <tool name="Undo"/>  
+    <tool name="Redo"/>  
+    <tool separator="true"/>  
+    <tool name="Cut"/>  
+    <tool name="Copy"/>  
+    <tool name="Paste" shortcut="CTRL+!"/>  
+    <tool separator="true"/>  
+    <tool name="PasteFromWord"/>  
+    <tool name="PasteFromWordNoFontsNoSizes"/>  
+    <tool name="PastePlainText"/>  
+    <tool name="PasteAsHtml"/>  
+    <tool separator="true"/>  
+    <tool name="Print"/>  
+    <tool name="FindAndReplace"/>  
+    <tool name="SelectAll"/>  
+    <tool separator="true"/>  
+    <tool name="InsertGroupbox"/>  
+    <tool name="InsertParagraph"/>  
+    <tool name="InsertHorizontalRule"/>  
+    <tool name="InsertSnippet"/>  
+    <tool separator="true"/>  
+    <tool name="InsertDate"/>  
+    <tool name="InsertTime"/>  
+  </tools> 
+  <tools enabled="true" dockable="true">  
+    <tool name="Bold"/>  
+    <tool name="Italic"/>  
+    <tool name="Underline"/>  
+    <tool name="StrikeThrough"/>  
+    <tool separator="true"/>  
+    <tool name="Superscript"/>  
+    <tool name="Subscript"/>  
+    <tool separator="true"/>  
+    <tool name="ConvertToLower"/>  
+    <tool name="ConvertToUpper"/>  
+    <tool separator="true"/>  
+    <tool name="Indent"/>  
+    <tool name="Outdent"/>  
+    <tool name="InsertOrderedList"/>  
+    <tool name="InsertUnorderedList"/>  
+    <tool name="ToggleScreenMode"/>  
+  </tools> 
+  <tools name="DropdownToolbar" dockable="true">  
+    <tool name="ForeColor" /> 
+    <tool name="BackColor"></tool> 
+    <tool name="FontName"></tool> 
+    <tool name="FontSize"></tool> 
+    <tool name="ApplyClass"></tool> 
+    <tool name="InsertCustomLink"></tool> 
+    <tool name="FormatBlock"></tool> 
+    <tool name="FormatStripper" /> 
+  </tools> 
+</root> 

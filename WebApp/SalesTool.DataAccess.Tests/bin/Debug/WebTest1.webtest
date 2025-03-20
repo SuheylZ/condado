@@ -1,0 +1,187 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WebTest Name="WebTest1" Id="ce798373-dd54-4022-8907-bca68ac0ee56" Owner="" Priority="2147483647" Enabled="True" CssProjectStructure="" CssIteration="" Timeout="0" WorkItemIds="" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010" Description="" CredentialUserName="" CredentialPassword="" PreAuthenticate="True" Proxy="" StopOnError="False" RecordedResultFile="WebTest1.a07fe497-b50c-4917-90f9-1fd75e9660dc.rec.webtestresult">
+  <Items>
+    <Request Method="GET" Guid="89a31f77-2693-4a1d-96a6-1302898a2d8a" Version="1.1" Url="http://sqs-scqa.condadogroup.com/" ThinkTime="5" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="http://sqs-scqa.condadogroup.com/Login.aspx" ReportingName="" />
+    <Request Method="POST" Guid="a1594596-4179-4833-b226-c152ca29cac5" Version="1.1" Url="http://sqs-scqa.condadogroup.com/Login.aspx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="http://sqs-scqa.condadogroup.com/Leads/viewLeads.aspx" ReportingName="">
+      <FormPostHttpBody>
+        <FormPostParameter Name="__EVENTTARGET" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__EVENTARGUMENT" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__VIEWSTATE" Value="/wEPDwULLTE4NjM0NTEwMDRkGAEFHl9fQ29udHJvbHNSZXF1aXJlUG9zdEJhY2tLZXlfXxYBBRRMb2dpblVzZXIkUmVtZW1iZXJNZQ==" RecordedValue="/wEPDwULLTE4NjM0NTEwMDRkGAEFHl9fQ29udHJvbHNSZXF1aXJlUG9zdEJhY2tLZXlfXxYBBRRMb2dpblVzZXIkUmVtZW1iZXJNZQ==" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__EVENTVALIDATION" Value="/wEdAAVJK+rbMopyx/LUsTKIdso3HfOfr91+YI2XVhP1c/pGR96FYSfo5JULYVvfQ61/Uw6UmyQTrVhsZGLMAYZcWWNl7DVGJTnjv5GsHJ/X19AaVg==" RecordedValue="/wEdAAVJK+rbMopyx/LUsTKIdso3HfOfr91+YI2XVhP1c/pGR96FYSfo5JULYVvfQ61/Uw6UmyQTrVhsZGLMAYZcWWNl7DVGJTnjv5GsHJ/X19AaVg==" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="LoginUser$UserName" Value="rgrant@selectquotesenior.com" RecordedValue="rgrant@selectquotesenior.com" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="LoginUser$Password" Value="National$0" RecordedValue="National$0" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="LoginUser$LoginButton" Value="Log In" RecordedValue="Log In" CorrelationBinding="" UrlEncode="True" />
+      </FormPostHttpBody>
+    </Request>
+    <Request Method="GET" Guid="103fd9c8-ecf6-445f-9937-fe18241383dd" Version="1.1" Url="http://sqs-scqa.condadogroup.com/Leads/EventReminder.aspx" ThinkTime="4" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="">
+      <QueryStringParameters>
+        <QueryStringParameter Name="EventId" Value="25508" RecordedValue="25508" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="GET" Guid="49cba230-fdc1-4dbb-a1b6-c08c74f860a5" Version="1.1" Url="http://sqs-scqa.condadogroup.com/Leads/EventReminder.aspx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="">
+      <QueryStringParameters>
+        <QueryStringParameter Name="EventId" Value="25508" RecordedValue="25508" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="GET" Guid="17049f00-68ae-4fd8-9e82-ffc4c5eeb8e7" Version="1.1" Url="http://sqs-scqa.condadogroup.com/Leads/EventReminder.aspx" ThinkTime="1" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="">
+      <QueryStringParameters>
+        <QueryStringParameter Name="EventId" Value="25510" RecordedValue="25510" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="GET" Guid="b9229f46-f662-4a63-8d53-ad8ffe92098b" Version="1.1" Url="http://sqs-scqa.condadogroup.com/Leads/EventReminder.aspx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="">
+      <QueryStringParameters>
+        <QueryStringParameter Name="EventId" Value="25510" RecordedValue="25510" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="GET" Guid="c668f255-4115-4184-9e70-7927e99e7944" Version="1.1" Url="http://sqs-scqa.condadogroup.com/Leads/EventReminder.aspx" ThinkTime="1" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="">
+      <QueryStringParameters>
+        <QueryStringParameter Name="EventId" Value="25512" RecordedValue="25512" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="GET" Guid="de080899-aeed-4caf-9d45-12ecbd64b8e1" Version="1.1" Url="http://sqs-scqa.condadogroup.com/Leads/EventReminder.aspx" ThinkTime="8" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="">
+      <QueryStringParameters>
+        <QueryStringParameter Name="EventId" Value="25512" RecordedValue="25512" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="GET" Guid="222466f6-f5a1-4282-af9a-a6b649831300" Version="1.1" Url="http://sqs-scqa.condadogroup.com/Leads/Leads.aspx" ThinkTime="27" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="">
+      <QueryStringParameters>
+        <QueryStringParameter Name="accountid" Value="888378" RecordedValue="888378" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="GET" Guid="c8e61b25-b583-4126-96a5-58d75deabf88" Version="1.1" Url="http://sqs-scqa.condadogroup.com/Leads/ApplyAction.aspx" ThinkTime="3" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="">
+      <QueryStringParameters>
+        <QueryStringParameter Name="statusId" Value="5" RecordedValue="5" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="LeadID" Value="2166333" RecordedValue="2166333" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="AccountID" Value="888378" RecordedValue="888378" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="ActionID" Value="19" RecordedValue="19" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="actioncomment" Value="sadf" RecordedValue="sadf" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="substatusId" Value="18" RecordedValue="18" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="realstatusId" Value="5" RecordedValue="5" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="rwndrnd" Value="0.08371308169755354" RecordedValue="0.08371308169755354" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="POST" Guid="37df0a2a-c366-4bd7-bbcf-08376e33fc1f" Version="1.1" Url="http://sqs-scqa.condadogroup.com/Leads/ApplyAction.aspx" ThinkTime="2" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="">
+      <QueryStringParameters>
+        <QueryStringParameter Name="statusId" Value="5" RecordedValue="5" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="LeadID" Value="2166333" RecordedValue="2166333" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="AccountID" Value="888378" RecordedValue="888378" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="ActionID" Value="19" RecordedValue="19" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="actioncomment" Value="sadf" RecordedValue="sadf" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="substatusId" Value="18" RecordedValue="18" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="realstatusId" Value="5" RecordedValue="5" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="rwndrnd" Value="0.08371308169755354" RecordedValue="0.08371308169755354" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+      <FormPostHttpBody>
+        <FormPostParameter Name="scmanager_TSM" Value=";;AjaxControlToolkit, Version=4.1.60919.0, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e:en-US:ee051b62-9cd6-49a5-87bb-93c07bc43d63:ea597d4b:b25378d2" RecordedValue=";;AjaxControlToolkit, Version=4.1.60919.0, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e:en-US:ee051b62-9cd6-49a5-87bb-93c07bc43d63:ea597d4b:b25378d2" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__EVENTTARGET" Value="ddlSubStatus" RecordedValue="ddlSubStatus" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__EVENTARGUMENT" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__LASTFOCUS" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__VIEWSTATEKEY" Value="626fe314-dc62-4323-96be-e47b154825b3" RecordedValue="626fe314-dc62-4323-96be-e47b154825b3" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__VIEWSTATE" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__VIEWSTATEENCRYPTED" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="hdnIndividualStep" Value="0" RecordedValue="0" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="hdnDTE" Value="0" RecordedValue="0" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="ddlSubStatus" Value="20" RecordedValue="20" CorrelationBinding="" UrlEncode="True" />
+      </FormPostHttpBody>
+    </Request>
+    <Request Method="POST" Guid="a25ec530-c7d0-4bbf-bd99-0eba3fae028c" Version="1.1" Url="http://sqs-scqa.condadogroup.com/Leads/ApplyAction.aspx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="">
+      <QueryStringParameters>
+        <QueryStringParameter Name="statusId" Value="5" RecordedValue="5" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="LeadID" Value="2166333" RecordedValue="2166333" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="AccountID" Value="888378" RecordedValue="888378" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="ActionID" Value="19" RecordedValue="19" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="actioncomment" Value="sadf" RecordedValue="sadf" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="substatusId" Value="18" RecordedValue="18" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="realstatusId" Value="5" RecordedValue="5" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="rwndrnd" Value="0.08371308169755354" RecordedValue="0.08371308169755354" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+      <FormPostHttpBody>
+        <FormPostParameter Name="scmanager_TSM" Value=";;AjaxControlToolkit, Version=4.1.60919.0, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e:en-US:ee051b62-9cd6-49a5-87bb-93c07bc43d63:ea597d4b:b25378d2" RecordedValue=";;AjaxControlToolkit, Version=4.1.60919.0, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e:en-US:ee051b62-9cd6-49a5-87bb-93c07bc43d63:ea597d4b:b25378d2" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__EVENTTARGET" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__EVENTARGUMENT" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__LASTFOCUS" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__VIEWSTATEKEY" Value="d8c9a82c-767b-440b-9a65-f1739651efa4" RecordedValue="d8c9a82c-767b-440b-9a65-f1739651efa4" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__VIEWSTATE" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__VIEWSTATEENCRYPTED" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="hdnIndividualStep" Value="0" RecordedValue="0" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="hdnDTE" Value="0" RecordedValue="0" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="ddlSubStatus" Value="20" RecordedValue="20" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="btnContinue" Value="Continue" RecordedValue="Continue" CorrelationBinding="" UrlEncode="True" />
+      </FormPostHttpBody>
+    </Request>
+    <Request Method="GET" Guid="3e1e0bea-6770-4163-8a15-bc3ab1fa86ff" Version="1.1" Url="http://sqs-scqa.condadogroup.com/Leads/Leads.aspx" ThinkTime="15" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="">
+      <QueryStringParameters>
+        <QueryStringParameter Name="accountid" Value="888378" RecordedValue="888378" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="IsParentPopupClose" Value="true" RecordedValue="true" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="GET" Guid="8ab6b718-eaa6-4760-a401-65e27e39b5a7" Version="1.1" Url="http://sqs-scqa.condadogroup.com/Leads/Leads.aspx" ThinkTime="1" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" />
+    <Request Method="GET" Guid="f30f0a7e-39ff-403c-bf12-07f08934a499" Version="1.1" Url="http://q.824js.info/dealdo/event-report" ThinkTime="14" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="">
+      <QueryStringParameters>
+        <QueryStringParameter Name="type" Value="quick" RecordedValue="quick" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="topic" Value="cc" RecordedValue="cc" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="domain" Value="sqs-scqa.condadogroup.com" RecordedValue="sqs-scqa.condadogroup.com" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="rnd" Value="0.8732332361869979" RecordedValue="0.8732332361869979" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="GET" Guid="309f6234-6dc3-4551-bdae-d12b991c1561" Version="1.1" Url="http://sqs-scqa.condadogroup.com/Leads/Leads.aspx" ThinkTime="13" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="">
+      <QueryStringParameters>
+        <QueryStringParameter Name="accountid" Value="-1" RecordedValue="-1" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="GET" Guid="7176f013-f525-484c-9d8f-da7633838304" Version="1.1" Url="http://sqs-scqa.condadogroup.com/Leads/Leads.aspx" ThinkTime="8" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="">
+      <QueryStringParameters>
+        <QueryStringParameter Name="accountid" Value="888381" RecordedValue="888381" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="GET" Guid="32459a41-ed3a-41de-8249-4d85f441d077" Version="1.1" Url="http://sqs-scqa.condadogroup.com/Leads/Leads.aspx" ThinkTime="5" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" />
+    <Request Method="GET" Guid="768a3481-2bea-4c95-ad8c-6ebdc47033c9" Version="1.1" Url="http://sqs-scqa.condadogroup.com/reports/reportdisplay.aspx" ThinkTime="5" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="">
+      <QueryStringParameters>
+        <QueryStringParameter Name="reportid" Value="6" RecordedValue="6" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="GET" Guid="1ed45010-1f9b-4b26-b57c-6dd56001e2c5" Version="1.1" Url="http://sqs-scqa.condadogroup.com/reports/reportdisplay.aspx" ThinkTime="25" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="">
+      <QueryStringParameters>
+        <QueryStringParameter Name="reportid" Value="26" RecordedValue="26" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="GET" Guid="2d51ea11-9db9-4a50-b812-361b58750906" Version="1.1" Url="http://sqs-scqa.condadogroup.com/Leads/viewPrioritizedLeads.aspx" ThinkTime="4" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" />
+    <Request Method="POST" Guid="9867d76d-7ec7-40c6-9113-abeb4d19bb06" Version="1.1" Url="http://sqs-scqa.condadogroup.com/Leads/Leads.aspx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="">
+      <QueryStringParameters>
+        <QueryStringParameter Name="accountid" Value="888323" RecordedValue="888323" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+      <FormPostHttpBody>
+        <FormPostParameter Name="RadScriptManager1_TSM" Value=";;AjaxControlToolkit, Version=4.1.60919.0, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e:en-US:ee051b62-9cd6-49a5-87bb-93c07bc43d63:ea597d4b:b25378d2;Telerik.Web.UI:en-US:0507d587-20ad-4e22-b866-76bd3eaee2df:16e4e7cd:f7645509:22a6274a:ed16cbdc:24ee1bba:19620875:874f8ea2:f46195d3:92fe8ea0:fa31b949:490a9d4e:bd8f85e4:e330518b:2003d0b8:1e771326:c8618e41" RecordedValue=";;AjaxControlToolkit, Version=4.1.60919.0, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e:en-US:ee051b62-9cd6-49a5-87bb-93c07bc43d63:ea597d4b:b25378d2;Telerik.Web.UI:en-US:0507d587-20ad-4e22-b866-76bd3eaee2df:16e4e7cd:f7645509:22a6274a:ed16cbdc:24ee1bba:19620875:874f8ea2:f46195d3:92fe8ea0:fa31b949:490a9d4e:bd8f85e4:e330518b:2003d0b8:1e771326:c8618e41" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="RadStyleSheetManager1_TSSM" Value=";Telerik.Web.UI, Version=2013.2.717.40, Culture=neutral, PublicKeyToken=121fae78165ba3d4:en-US:0507d587-20ad-4e22-b866-76bd3eaee2df:92753c09:91f742eb:ed2942d4;Telerik.Web.UI.Skins, Version=2013.2.717.40, Culture=neutral, PublicKeyToken=121fae78165ba3d4:en-US:4429117d-8219-4eca-9971-f4baab0d6745:311bfd78" RecordedValue=";Telerik.Web.UI, Version=2013.2.717.40, Culture=neutral, PublicKeyToken=121fae78165ba3d4:en-US:0507d587-20ad-4e22-b866-76bd3eaee2df:92753c09:91f742eb:ed2942d4;Telerik.Web.UI.Skins, Version=2013.2.717.40, Culture=neutral, PublicKeyToken=121fae78165ba3d4:en-US:4429117d-8219-4eca-9971-f4baab0d6745:311bfd78" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__EVENTTARGET" Value="ctl00$MainContent$grdLeads$ctl09$lnkEdit" RecordedValue="ctl00$MainContent$grdLeads$ctl09$lnkEdit" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__EVENTARGUMENT" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__VIEWSTATEKEY" Value="6dcac77d-acf3-4b1e-92bf-0fe822772528" RecordedValue="6dcac77d-acf3-4b1e-92bf-0fe822772528" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__VIEWSTATE" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__VIEWSTATEENCRYPTED" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__PREVIOUSPAGE" Value="XEaq125ZoNM9uhEbHHJcl9l5ucy8atU44lyWVxASYfBMXYmul2oStmFaEOCcFL_5KbtE_JMxzWsv2GkvmjUIX0e84AWRj-yhnAUhHawdZ1YdlIf70" RecordedValue="XEaq125ZoNM9uhEbHHJcl9l5ucy8atU44lyWVxASYfBMXYmul2oStmFaEOCcFL_5KbtE_JMxzWsv2GkvmjUIX0e84AWRj-yhnAUhHawdZ1YdlIf70" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="__EVENTVALIDATION" Value="bDVo2Lvt07NueUoXi70pI7U+qb5Duvk3HruwjNk5c0a57AMGA/LuO1qZpGX6Cxwt+CmO4PSW2M6J/xvsE8KOogu59FpbuXxJKgEK/ZZNqCNgqn3Q4MacaHRPhBW8UQ3zbRix7kuXAFLx2gdx1SVQroxYhS6yXHlXEUOMzNlh8vmWB6EB80hpGGvJhIP8LzrI8LGFHCuk9WKYqZU+cVHh/vR6Tp4edGC5EzMuZpopKADeKWVQsNth+LWy6hNl5q1kvy2sVFVHN1Gna8v4hxIxvGI2tYQJFViwYoAdR3DqFGjQXPzg7B0+I/QGQmd1BFu+wflC3aM+SUjoEASjfmuFHHauINYIb1ldqWtVyBWSMH0+NzYBqs8+UmvSN3p/gkEvpz3XO/gOVaIgjbFWqpHkLEp/cunwAn7PeqjmJ7h7fMA/AULyl1mAi8d0HHbLPMXg99b38yzy5gSR0kMSwA9zoSfL948etEcNtFbg3SOEBorjNB2MsArw41lVHxi8VyZyHHeWjWUrIWycoAazJ8tJLbXuDpdzWAoVz0uzcyaInlv8hxg5ZGSt0ptx0yXo3eW1FAgOwq/wWg0jF4dBJH8vxaT5PNh4ipZ0SVCeLg6bt33qFdE16xKjqGZ3VZAWNwQZTYgzplm9mBxANGQEbJeN7H+Yrdweld+PJ/OsFlNco0OdnPe950GnKY/PVS/UJ7xSJGSH5s8NSBYTPf8aepp26q0aWA+6IMHiYue1JWzpmm8zHUyjKHoNgK50JN1g5bX7GBkV77jw1tyHDQxyWJPiA1NJamks4YWCv5V5r1Cuj9BhtbPg7SidxMP6oFzkv6AGajI8Zq8qL5Ja4HKtAPGxxxQJfYaiDV0MYBGDMYZbkZZKvfPg8bRJ0PDMt9GXsx86fKIlhQD2IvNagDzIABW+WUStKK8JJWsasBQ+8vi5rG793vJI48L/VYjseSae24vWNME1KyoknGEqJ2t8MCJmPKFJQ7Rq8iqdMAj7LbDf9G9ID7rp5fnm64UtsyLSwuloPWmjC4Nb5x4mGsVd+uMmJKu6RGSGb8oDZZVEmZY+y8FbMWGLKeHhA3iGxu+J5g+y88XG1NeNHk+1LHNrdSkt/KdGlRclYj959igXZXexSEqpHN89+KXgoBTjIavTtlViKCXJ43WbyIGNwTkNkyXKqy4ybeaeWngwIAnV2M7S0cteYTDHPvD4l+xSfzGE0Z28tYC2apQZD7Qn6ArVjMR9He9fN8jlGFprs1mw9nC5TIQWhXsKv4G6RjjzVE7KjbaM60O4lMSyGQJgDxhNF2a7/LUih++4KHDn1s5UnaW2mjjo0fHkS7YCVXqBTjUZNOIaoIoZb2mBcPdpxqRedbmCE/DGAQauHm+ObkECHGdl+OdsSfk/KQOCtwkNfa1dRcQOgD9871mV6om9a3BOA9GDklsEeyVjUn3Jh/N0HjyCJYxtTcViUBXyxrbGCIpj8apnw93wd8JYNLFLJ80cvflIrAoZ9juiEx0D38xmA3Rni5/EdQCFRU6YcGsDaF2ccOWShks6W3VP3PktHj4rLdOC0hOQsu+BGlVYAdmI+LJw+aXioNUuXCISRhRL4t3ZVrQaI6gB+LlyJRsjUfBARAFxJzvNEO2NfNXJdqEh67r/QV701SJ6AyGSII2ry24jPlKlTHGEzeBHzh8cQOMK1aQHEVw16b/IykfE7KJbjDxgGLcVoI/saDLdYbpkmEyy/957gAtwiQ==" RecordedValue="bDVo2Lvt07NueUoXi70pI7U+qb5Duvk3HruwjNk5c0a57AMGA/LuO1qZpGX6Cxwt+CmO4PSW2M6J/xvsE8KOogu59FpbuXxJKgEK/ZZNqCNgqn3Q4MacaHRPhBW8UQ3zbRix7kuXAFLx2gdx1SVQroxYhS6yXHlXEUOMzNlh8vmWB6EB80hpGGvJhIP8LzrI8LGFHCuk9WKYqZU+cVHh/vR6Tp4edGC5EzMuZpopKADeKWVQsNth+LWy6hNl5q1kvy2sVFVHN1Gna8v4hxIxvGI2tYQJFViwYoAdR3DqFGjQXPzg7B0+I/QGQmd1BFu+wflC3aM+SUjoEASjfmuFHHauINYIb1ldqWtVyBWSMH0+NzYBqs8+UmvSN3p/gkEvpz3XO/gOVaIgjbFWqpHkLEp/cunwAn7PeqjmJ7h7fMA/AULyl1mAi8d0HHbLPMXg99b38yzy5gSR0kMSwA9zoSfL948etEcNtFbg3SOEBorjNB2MsArw41lVHxi8VyZyHHeWjWUrIWycoAazJ8tJLbXuDpdzWAoVz0uzcyaInlv8hxg5ZGSt0ptx0yXo3eW1FAgOwq/wWg0jF4dBJH8vxaT5PNh4ipZ0SVCeLg6bt33qFdE16xKjqGZ3VZAWNwQZTYgzplm9mBxANGQEbJeN7H+Yrdweld+PJ/OsFlNco0OdnPe950GnKY/PVS/UJ7xSJGSH5s8NSBYTPf8aepp26q0aWA+6IMHiYue1JWzpmm8zHUyjKHoNgK50JN1g5bX7GBkV77jw1tyHDQxyWJPiA1NJamks4YWCv5V5r1Cuj9BhtbPg7SidxMP6oFzkv6AGajI8Zq8qL5Ja4HKtAPGxxxQJfYaiDV0MYBGDMYZbkZZKvfPg8bRJ0PDMt9GXsx86fKIlhQD2IvNagDzIABW+WUStKK8JJWsasBQ+8vi5rG793vJI48L/VYjseSae24vWNME1KyoknGEqJ2t8MCJmPKFJQ7Rq8iqdMAj7LbDf9G9ID7rp5fnm64UtsyLSwuloPWmjC4Nb5x4mGsVd+uMmJKu6RGSGb8oDZZVEmZY+y8FbMWGLKeHhA3iGxu+J5g+y88XG1NeNHk+1LHNrdSkt/KdGlRclYj959igXZXexSEqpHN89+KXgoBTjIavTtlViKCXJ43WbyIGNwTkNkyXKqy4ybeaeWngwIAnV2M7S0cteYTDHPvD4l+xSfzGE0Z28tYC2apQZD7Qn6ArVjMR9He9fN8jlGFprs1mw9nC5TIQWhXsKv4G6RjjzVE7KjbaM60O4lMSyGQJgDxhNF2a7/LUih++4KHDn1s5UnaW2mjjo0fHkS7YCVXqBTjUZNOIaoIoZb2mBcPdpxqRedbmCE/DGAQauHm+ObkECHGdl+OdsSfk/KQOCtwkNfa1dRcQOgD9871mV6om9a3BOA9GDklsEeyVjUn3Jh/N0HjyCJYxtTcViUBXyxrbGCIpj8apnw93wd8JYNLFLJ80cvflIrAoZ9juiEx0D38xmA3Rni5/EdQCFRU6YcGsDaF2ccOWShks6W3VP3PktHj4rLdOC0hOQsu+BGlVYAdmI+LJw+aXioNUuXCISRhRL4t3ZVrQaI6gB+LlyJRsjUfBARAFxJzvNEO2NfNXJdqEh67r/QV701SJ6AyGSII2ry24jPlKlTHGEzeBHzh8cQOMK1aQHEVw16b/IykfE7KJbjDxgGLcVoI/saDLdYbpkmEyy/957gAtwiQ==" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="ctl00$dirtyFlag" Value="0" RecordedValue="0" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="ctl00$newPageUrl" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="ctl00_tlQuickLinkAlert_ClientState" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="ctl00_dlgConfirmBox_ClientState" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="ctl00_tlWindowManager_ClientState" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="ctl00$winSessionTimer$C$hdCurrentAccountID" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="ctl00_winSessionTimer_ClientState" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="ctl00_tlMenu_ClientState" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="ctl00$txtSearch" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="ctl00$ddlSearchOptions" Value="1" RecordedValue="1" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="ctl00$hdnIdleTimeOut" Value="30000" RecordedValue="30000" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="ctl00$hdngalHeight" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="ctl00$hdngalWidth" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+      </FormPostHttpBody>
+    </Request>
+  </Items>
+  <ValidationRules>
+    <ValidationRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ValidateResponseUrl, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" DisplayName="Response URL" Description="Validates that the response URL after redirects are followed is the same as the recorded response URL.  QueryString parameters are ignored." Level="Low" ExectuionOrder="BeforeDependents" />
+    <ValidationRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ValidationRuleResponseTimeGoal, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" DisplayName="Response Time Goal" Description="Validates that the response time for the request is less than or equal to the response time goal as specified on the request.  Response time goals of zero will be ignored." Level="Low" ExectuionOrder="AfterDependents">
+      <RuleParameters>
+        <RuleParameter Name="Tolerance" Value="0" />
+      </RuleParameters>
+    </ValidationRule>
+  </ValidationRules>
+</WebTest>

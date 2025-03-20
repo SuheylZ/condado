@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="GALModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="GALModelStoreContainer">
+    <EntitySet Name="Application_Storage" EntityType="GALModel.Store.Application_Storage" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="GALEngineListsDump" EntityType="GALModel.Store.GALEngineListsDump" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="queue_acd_statistics" EntityType="GALModel.Store.queue_acd_statistics" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="queue_inbound_acd" EntityType="GALModel.Store.queue_inbound_acd" store:Type="Tables" Schema="dbo" />
+  </EntityContainer>
+  <EntityType Name="Application_Storage">
+    <Key>
+      <PropertyRef Name="Key" />
+    </Key>
+    <Property Name="Key" Type="nvarchar" Nullable="false" MaxLength="40" />
+    <Property Name="iValue" Type="int" />
+    <Property Name="fValue" Type="numeric" Precision="10" Scale="4" />
+    <Property Name="bValue" Type="bit" />
+    <Property Name="uValue" Type="uniqueidentifier" />
+    <Property Name="dValue" Type="datetime" />
+    <Property Name="tvalue" Type="text" />
+  </EntityType>
+  <EntityType Name="GALEngineListsDump">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ACDListDump" Type="varchar(max)" />
+    <Property Name="GWBListDump" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="queue_acd_statistics">
+    <Key>
+      <PropertyRef Name="qas_agent_id" />
+    </Key>
+    <Property Name="qas_agent_id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="qas_acd_count" Type="int" />
+    <Property Name="qas_max_acd" Type="int" />
+    <Property Name="qas_max_quota" Type="int" />
+    <Property Name="qas_min_level" Type="int" />
+    <Property Name="qas_next_refresh" Type="int" />
+    <Property Name="qas_acd_call_taken" Type="int" />
+    <Property Name="qas_PV_schedule_result" Type="int" />
+    <Property Name="qas_is_enabled" Type="bit" />
+    <Property Name="qas_reason" Type="nvarchar" MaxLength="25" />
+    <Property Name="qas_last_update" Type="datetime" />
+  </EntityType>
+  <EntityType Name="queue_inbound_acd">
+    <Key>
+      <PropertyRef Name="qia_key" />
+    </Key>
+    <Property Name="qia_key" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="qia_skill" Type="varchar" MaxLength="100" />
+    <Property Name="qia_contactID" Type="varchar" MaxLength="100" />
+    <Property Name="qia_phone_number" Type="varchar" MaxLength="100" />
+    <Property Name="qia_add_date" Type="datetime" />
+    <Property Name="qia_mod_date" Type="datetime" />
+    <Property Name="qia_add_usr" Type="varchar" MaxLength="100" />
+    <Property Name="qia_mod_usr" Type="varchar" MaxLength="100" />
+    <Property Name="qia_status" Type="varchar" MaxLength="100" />
+    <Property Name="qia_timestamp" Type="datetime" />
+    <Property Name="qia_cmp_id" Type="int" />
+    <Property Name="qia_sta_key" Type="uniqueidentifier" />
+    <Property Name="qia_call_taken_by" Type="uniqueidentifier" />
+    <Property Name="qia_call_taken_time" Type="datetime" />
+  </EntityType>
+  <Function Name="ACDToDial" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="agentID" Type="uniqueidentifier" Mode="In" />
+  </Function>
+  <Function Name="GetACDStatistics" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="GetAgentListForACDUpdate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="inboundQueueID" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="LeadBasicDisplayAllAgents" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+</Schema>

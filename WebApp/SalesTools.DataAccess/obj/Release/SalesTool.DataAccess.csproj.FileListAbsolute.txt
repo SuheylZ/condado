@@ -1,0 +1,24 @@
+F:\Yasir Ali\Projects\LiveTFSNew\SelectCARE - WebApp\SalesTools.DataAccess\bin\Release\SalesTool.DataAccess.dll.config
+F:\Yasir Ali\Projects\LiveTFSNew\SelectCARE - WebApp\SalesTools.DataAccess\bin\Release\SalesTool.DataAccess.dll
+F:\Yasir Ali\Projects\LiveTFSNew\SelectCARE - WebApp\SalesTools.DataAccess\bin\Release\SalesTool.DataAccess.pdb
+F:\Yasir Ali\Projects\LiveTFSNew\SelectCARE - WebApp\SalesTools.DataAccess\bin\Release\EntityFramework.dll
+F:\Yasir Ali\Projects\LiveTFSNew\SelectCARE - WebApp\SalesTools.DataAccess\bin\Release\EntityFramework.xml
+F:\Yasir Ali\Projects\LiveTFSNew\SelectCARE - WebApp\SalesTools.DataAccess\obj\Release\SalesTool.DataAccess.csprojResolveAssemblyReference.cache
+F:\Yasir Ali\Projects\LiveTFSNew\SelectCARE - WebApp\SalesTools.DataAccess\obj\Release\SalesTool.DataAccess.dll
+F:\Yasir Ali\Projects\LiveTFSNew\SelectCARE - WebApp\SalesTools.DataAccess\obj\Release\SalesTool.DataAccess.pdb
+F:\Yasir Ali\Projects\TFSCondado\WebApp\SalesTools.DataAccess\bin\Release\SalesTool.DataAccess.dll.config
+F:\Yasir Ali\Projects\TFSCondado\WebApp\SalesTools.DataAccess\bin\Release\SalesTool.DataAccess.dll
+F:\Yasir Ali\Projects\TFSCondado\WebApp\SalesTools.DataAccess\bin\Release\SalesTool.DataAccess.pdb
+F:\Yasir Ali\Projects\TFSCondado\WebApp\SalesTools.DataAccess\bin\Release\EntityFramework.dll
+F:\Yasir Ali\Projects\TFSCondado\WebApp\SalesTools.DataAccess\bin\Release\EntityFramework.xml
+F:\Yasir Ali\Projects\TFSCondado\WebApp\SalesTools.DataAccess\obj\Release\SalesTool.DataAccess.csprojResolveAssemblyReference.cache
+F:\Yasir Ali\Projects\TFSCondado\WebApp\SalesTools.DataAccess\obj\Release\SalesTool.DataAccess.dll
+F:\Yasir Ali\Projects\TFSCondado\WebApp\SalesTools.DataAccess\obj\Release\SalesTool.DataAccess.pdb
+D:\Suheyl\Projects\Condado\WebApp\SalesTools.DataAccess\bin\Release\SalesTool.DataAccess.dll.config
+D:\Suheyl\Projects\Condado\WebApp\SalesTools.DataAccess\bin\Release\SalesTool.DataAccess.dll
+D:\Suheyl\Projects\Condado\WebApp\SalesTools.DataAccess\bin\Release\SalesTool.DataAccess.pdb
+D:\Suheyl\Projects\Condado\WebApp\SalesTools.DataAccess\bin\Release\EntityFramework.dll
+D:\Suheyl\Projects\Condado\WebApp\SalesTools.DataAccess\bin\Release\EntityFramework.xml
+D:\Suheyl\Projects\Condado\WebApp\SalesTools.DataAccess\obj\Release\SalesTool.DataAccess.dll
+D:\Suheyl\Projects\Condado\WebApp\SalesTools.DataAccess\obj\Release\SalesTool.DataAccess.pdb
+D:\Suheyl\Projects\Condado\WebApp\SalesTools.DataAccess\obj\Release\SalesTool.DataAccess.csprojResolveAssemblyReference.cache

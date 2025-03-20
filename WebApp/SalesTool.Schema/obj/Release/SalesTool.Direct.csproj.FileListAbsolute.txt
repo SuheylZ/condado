@@ -1,0 +1,5 @@
+F:\Yasir Ali\Projects\LiveTFSNew\SelectCARE - WebApp\SalesTool.Schema\bin\Release\SalesTool.Direct.dll
+F:\Yasir Ali\Projects\LiveTFSNew\SelectCARE - WebApp\SalesTool.Schema\bin\Release\SalesTool.Direct.pdb
+F:\Yasir Ali\Projects\LiveTFSNew\SelectCARE - WebApp\SalesTool.Schema\obj\Release\SalesTool.Direct.dll
+F:\Yasir Ali\Projects\LiveTFSNew\SelectCARE - WebApp\SalesTool.Schema\obj\Release\SalesTool.Direct.pdb
+F:\Yasir Ali\Projects\LiveTFSNew\SelectCARE - WebApp\SalesTool.Schema\obj\Release\SalesTool.Direct.csprojResolveAssemblyReference.cache

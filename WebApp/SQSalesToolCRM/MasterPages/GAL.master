@@ -1,0 +1,105 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/MasterPages/Site.Master" CodeFile="GAL.master.cs"Inherits="GAL_MasterPage" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" Runat="Server">
+        <%--<link href="/Styles/galmenu.css" rel="stylesheet" type="text/css" />--%>
+<asp:ContentPlaceHolder runat="server" ID="head" />
+
+
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="MainContent" Runat="Server">
+    <%--          <div style="width:500px;display:inline; float:left; margin-right:10px;padding-top:10px; vertical-align:top;" class="galMenu">         
+        
+
+            <telerik:RadPanelBar ID="RadPanelBar2" Runat="server" CssClass="menu" Skin="" AllowCollapseAllItems="True" Width="100%" ExpandMode="SingleExpandedItem" PersistStateInCookie="True">
+                        <Items>
+                            <telerik:RadPanelItem runat="server" Text="Agents ">
+                                <Items>
+                                    <telerik:RadPanelItem runat="server" Text="&nbsp;&nbsp;&nbsp;&nbsp;Manage Agents" NavigateUrl="~/Administration/GAL/AgentManager.aspx" />
+                                    <telerik:RadPanelItem runat="server" Text="&nbsp;&nbsp;&nbsp;&nbsp;Manage Agent Groups" NavigateUrl="~/Administration/GAL/AgentGroupModify.aspx" />
+                                </Items>
+                            </telerik:RadPanelItem>
+                            <telerik:RadPanelItem runat="server" Text="Campaigns">
+                                <Items>
+                                    <telerik:RadPanelItem runat="server" Text="&nbsp;&nbsp;&nbsp;&nbsp;Modify Campaigns" NavigateUrl="~/Administration/GAL/CampaignManager.aspx" />
+                                    <telerik:RadPanelItem runat="server" Text="&nbsp;&nbsp;&nbsp;&nbsp;Modify Campaign Groups" NavigateUrl="~/Administration/GAL/CampaignGroupModify.aspx" />
+                                </Items>
+                            </telerik:RadPanelItem>
+                            <telerik:RadPanelItem runat="server" Text="Age &amp; States">
+                                <Items>
+                                    <telerik:RadPanelItem runat="server" Text="&nbsp;&nbsp;&nbsp;&nbsp;Modify Age Groups" NavigateUrl="~/Administration/GAL/AgeGroupModify.aspx" />
+                                    <telerik:RadPanelItem runat="server" Text="&nbsp;&nbsp;&nbsp;&nbsp;Manage States" NavigateUrl="~/Administration/GAL/StateGroupModify.aspx" />
+                                </Items>
+                            </telerik:RadPanelItem>
+                            <telerik:RadPanelItem runat="server" Text="Dashboard Editor">
+                                <Items>
+                                    <telerik:RadPanelItem runat="server" Text="&nbsp;&nbsp;&nbsp;&nbsp;Campaign Routing &amp; Prioritization" NavigateUrl="~/Administration/GAL/DashboardEditor.aspx?module=CampaignGroups" Value="Campaign Routing &amp; Prioritization" />
+                                    <telerik:RadPanelItem runat="server" Text="&nbsp;&nbsp;&nbsp;&nbsp;State Prioritization" NavigateUrl="~/Administration/GAL/DashboardEditor.aspx?module=StateRoute" Value="State Prioritization" />
+                                    <telerik:RadPanelItem runat="server" Text="&nbsp;&nbsp;&nbsp;&nbsp;Age Prioritization" NavigateUrl="~/Administration/GAL/DashboardEditor.aspx?module=AgeRoute"  Value="Age Prioritization" />
+                                </Items>
+                            </telerik:RadPanelItem>
+                            <telerik:RadPanelItem runat="server" Text="Reports">
+                                <Items>
+                                    <telerik:RadPanelItem NavigateUrl="~/Administration/GAL/Reports.aspx?tabid=1" Text="&nbsp;&nbsp;&nbsp;&nbsp;Group Matrix" Value="Group Matrix"/>
+                                    <telerik:RadPanelItem NavigateUrl="~/Administration/GAL/Reports.aspx?tabid=2" Text="&nbsp;&nbsp;&nbsp;&nbsp;Agent Totals" Value="Agent Totals"/>
+                                    <telerik:RadPanelItem NavigateUrl="~/Administration/GAL/Reports.aspx?tabid=3" Text="&nbsp;&nbsp;&nbsp;&nbsp;Campaign Totals" Value="Campaign Totals"/>
+                                </Items>
+                            </telerik:RadPanelItem>
+                        </Items>
+            </telerik:RadPanelBar>
+        </div>
+        <div style="width:80%; margin-left:10px;  float:left;">--%>
+    
+                <telerik:RadMenu ID="RadPanelBar1" Runat="server" CssClass="menu" Skin="" PersistLoadOnDemandItems="true" >
+                        <Items>
+                            <telerik:RadMenuItem runat="server" Text="Agents ">
+                                <Items>
+                                    <telerik:RadMenuItem runat="server" Text="&nbsp;&nbsp;&nbsp;&nbsp;Manage Agents" NavigateUrl="~/Administration/GAL/AgentManager.aspx" />
+                                    <telerik:RadMenuItem runat="server" Text="&nbsp;&nbsp;&nbsp;&nbsp;Manage Agent Groups" NavigateUrl="~/Administration/GAL/AgentGroupModify.aspx" />
+                                </Items>
+                            </telerik:RadMenuItem>
+                            <telerik:RadMenuItem runat="server" Text="Campaigns">
+                                <Items>
+                                    <telerik:RadMenuItem runat="server" Text="&nbsp;&nbsp;&nbsp;&nbsp;Modify Campaigns" NavigateUrl="~/Administration/GAL/CampaignManager.aspx" />
+                                    <telerik:RadMenuItem runat="server" Text="&nbsp;&nbsp;&nbsp;&nbsp;Modify Campaign Groups" NavigateUrl="~/Administration/GAL/CampaignGroupModify.aspx" />
+                                </Items>
+                            </telerik:RadMenuItem>
+                            <telerik:RadMenuItem runat="server" Text="Age &amp; States">
+                                <Items>
+                                    <telerik:RadMenuItem runat="server" Text="&nbsp;&nbsp;&nbsp;&nbsp;Modify Age Groups" NavigateUrl="~/Administration/GAL/AgeGroupModify.aspx" />
+                                    <telerik:RadMenuItem runat="server" Text="&nbsp;&nbsp;&nbsp;&nbsp;Manage States" NavigateUrl="~/Administration/GAL/StateGroupModify.aspx" />
+                                </Items>
+                            </telerik:RadMenuItem>
+                            <telerik:RadMenuItem runat="server" Text="Dashboard Editor">
+                                <Items>
+                                    <telerik:RadMenuItem runat="server" Text="&nbsp;&nbsp;&nbsp;&nbsp;Campaign Routing &amp; Prioritization" NavigateUrl="~/Administration/GAL/DashboardEditor.aspx?module=CampaignGroups" Value="Campaign Routing &amp; Prioritization" />
+                                    <telerik:RadMenuItem runat="server" Text="&nbsp;&nbsp;&nbsp;&nbsp;State Prioritization" NavigateUrl="~/Administration/GAL/DashboardEditor.aspx?module=StateRoute" Value="State Prioritization" />
+                                    <telerik:RadMenuItem runat="server" Text="&nbsp;&nbsp;&nbsp;&nbsp;Age Prioritization" NavigateUrl="~/Administration/GAL/DashboardEditor.aspx?module=AgeRoute"  Value="Age Prioritization" />
+                                </Items>
+                            </telerik:RadMenuItem>
+                            <telerik:RadMenuItem runat="server" Text="Reports">
+                                <Items>
+                                    <telerik:RadMenuItem NavigateUrl="~/Administration/GAL/Reports.aspx?tabid=1" Text="&nbsp;&nbsp;&nbsp;&nbsp;Group Matrix" Value="Group Matrix"/>
+                                    <telerik:RadMenuItem NavigateUrl="~/Administration/GAL/Reports.aspx?tabid=2" Text="&nbsp;&nbsp;&nbsp;&nbsp;Agent Totals" Value="Agent Totals"/>
+                                    <telerik:RadMenuItem NavigateUrl="~/Administration/GAL/Reports.aspx?tabid=3" Text="&nbsp;&nbsp;&nbsp;&nbsp;Campaign Totals" Value="Campaign Totals"/>
+                                </Items>
+                            </telerik:RadMenuItem>
+                        </Items>
+            </telerik:RadMenu>
+    <%--<asp:RadioButtonList ID="rdlistIsACD" runat="server" RepeatDirection="Horizontal" Width="100px" AutoPostBack="True" OnSelectedIndexChanged="rdlistIsACD_SelectedIndexChanged">
+        <asp:ListItem Value="0" Selected="True">Web</asp:ListItem>
+        <asp:ListItem Value="1">ACD</asp:ListItem>
+    </asp:RadioButtonList>--%>
+
+    &nbsp;<asp:DropDownList ID="ddlIsACD" runat="server" AutoPostBack="True" OnSelectedIndexChanged="ddlIsACD_SelectedIndexChanged" Width="60px" CssClass="ACDDropdown">
+        <asp:ListItem Selected="True" Value="0">Web</asp:ListItem>
+        <asp:ListItem Value="1">ACD</asp:ListItem>
+    </asp:DropDownList>
+
+    <br />
+    <asp:HiddenField runat="server" ID="hdnFieldGALType" />
+    <br />
+    
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server" />
+        <%-- </div>--%>
+</asp:Content>
+

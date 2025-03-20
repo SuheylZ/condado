@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<discovery xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.xmlsoap.org/disco/">
+  <contractRef ref="https://login.incontact.com/insidews/insidews.asmx?wsdl" docRef="http://login.incontact.com/insidews/insidews.asmx" xmlns="http://schemas.xmlsoap.org/disco/scl/" />
+  <soap address="https://login.incontact.com/insidews/insidews.asmx" xmlns:q1="http://inlogin.com/inSideWS" binding="q1:inSideWSSoap" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+  <soap address="https://login.incontact.com/insidews/insidews.asmx" xmlns:q2="http://inlogin.com/inSideWS" binding="q2:inSideWSSoap12" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+</discovery>

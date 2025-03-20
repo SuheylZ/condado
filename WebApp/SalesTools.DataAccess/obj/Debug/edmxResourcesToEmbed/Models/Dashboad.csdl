@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Dashboard" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="DashboardEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Announcements" EntityType="Dashboard.Announcement" />
+    <EntitySet Name="ReportTypes" EntityType="Dashboard.ReportType" />
+    <EntitySet Name="Sections" EntityType="Dashboard.Section" />
+    <AssociationSet Name="FK__dashboard__ann_s__4F5E6B2A" Association="Dashboard.FK__dashboard__ann_s__4F5E6B2A">
+      <End Role="dashboard_section" EntitySet="Sections" />
+      <End Role="dashboard_announcements" EntitySet="Announcements" />
+    </AssociationSet>
+    <FunctionImport Name="AddAnnouncementBySection">
+      <Parameter Name="sectionId" Mode="In" Type="Int32" />
+      <Parameter Name="title" Mode="In" Type="String" />
+      <Parameter Name="order" Mode="In" Type="Int32" />
+      <Parameter Name="body" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="DeleteAnnouncement">
+      <Parameter Name="id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="GetAnnouncementBySection" ReturnType="Collection(Dashboard.GetAnnouncementBySectionRS)">
+      <Parameter Name="sectionId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="GetReports" ReturnType="Collection(Dashboard.GetReportsRS)" />
+    <FunctionImport Name="UpdateAnnouncement">
+      <Parameter Name="id" Mode="In" Type="Int32" />
+      <Parameter Name="sectionId" Mode="In" Type="Int32" />
+      <Parameter Name="active" Mode="In" Type="Boolean" />
+      <Parameter Name="title" Mode="In" Type="String" />
+      <Parameter Name="order" Mode="In" Type="Int32" />
+      <Parameter Name="body" Mode="In" Type="String" />
+    </FunctionImport>
+  </EntityContainer>
+  <EntityType Name="Announcement">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="SectionId" Type="Int32" />
+    <Property Name="Order" Type="Int32" Nullable="false" />
+    <Property Name="Title" Type="String" Nullable="false" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="Body" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="DateAdded" Type="DateTime" Precision="3" />
+    <Property Name="IsActive" Type="Boolean" />
+    <NavigationProperty Name="Sections" Relationship="Dashboard.FK__dashboard__ann_s__4F5E6B2A" FromRole="dashboard_announcements" ToRole="dashboard_section" />
+  </EntityType>
+  <EntityType Name="ReportType">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="Title" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="IsDefault" Type="Boolean" Nullable="false" />
+    <Property Name="Order" Type="Int16" Nullable="false" />
+    <Property Type="Boolean" Name="IsSenior" />
+  </EntityType>
+  <EntityType Name="Section">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="Title" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="IsActive" Type="Boolean" />
+    <NavigationProperty Name="Announcements" Relationship="Dashboard.FK__dashboard__ann_s__4F5E6B2A" FromRole="dashboard_section" ToRole="dashboard_announcements" />
+  </EntityType>
+  <Association Name="FK__dashboard__ann_s__4F5E6B2A">
+    <End Role="dashboard_section" Type="Dashboard.Section" Multiplicity="0..1" />
+    <End Role="dashboard_announcements" Type="Dashboard.Announcement" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="dashboard_section">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="dashboard_announcements">
+        <PropertyRef Name="SectionId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <ComplexType Name="GetAnnouncementBySectionRS">
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Title" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="Body" Nullable="true" MaxLength="Max" />
+    <Property Type="DateTime" Name="DateAdded" Nullable="true" Precision="23" />
+  </ComplexType>
+  <ComplexType Name="GetReportsRS">
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Title" Nullable="false" MaxLength="50" />
+    <Property Type="Boolean" Name="IsActive" Nullable="false" />
+  </ComplexType>
+</Schema>

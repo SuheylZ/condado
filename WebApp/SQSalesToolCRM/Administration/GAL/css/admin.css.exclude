@@ -1,0 +1,89 @@
+﻿.ButtonStyle
+{
+    /*BackColor="#FFCC66" ForeColor="#5A471B" */
+    background-color: #FFCC66;
+    color : #5A471B;
+}
+.FormStyle
+{
+    padding: 1px; margin: 1px; border-style: solid; border-width: 1px; background-color:#FFFBD6; width:600px; color: #333333;
+}
+.GridItem
+{
+    padding-right: 10px; 
+}
+
+        .MyTabStyle .ajax__tab_header
+        {
+            font-family: "Helvetica Neue" , Arial, Sans-Serif;
+            font-size: 14px;
+            font-weight:bold;
+            display: block;
+            color: #000000;
+        }
+        .MyTabStyle .ajax__tab_header .ajax__tab_outer
+        {
+            border-color: #333333;
+            color: #333333;
+            padding-left: 10px;
+            margin-right: 3px;
+            border:solid 1px #FFCC66;
+        }
+        .MyTabStyle .ajax__tab_header .ajax__tab_inner
+        {
+            border-color: #5A471B;
+            color: #5A471B;
+            padding: 3px 10px 2px 0px;
+        }
+        /*Hover Tab */
+        .MyTabStyle .ajax__tab_hover .ajax__tab_tab
+        {
+            color: #000000;
+            background:url("../../tab_hover.gif") repeat-x;
+            height:20px;
+        }
+        .MyTabStyle .ajax__tab_hover .ajax__tab_outer
+        {
+            background-color:#FFFBD6;
+        }
+        .MyTabStyle .ajax__tab_hover .ajax__tab_inner
+        {
+            color: #fff;
+        }
+        /*Active Tab*/
+        .MyTabStyle .ajax__tab_active .ajax__tab_tab
+        {
+            color: #333333;            
+            height:20px;
+        }
+        .MyTabStyle .ajax__tab_active .ajax__tab_outer
+        {
+            border-bottom-color: #ffffff;
+            background-color: #FFCC66;
+            color: #333333;
+        }
+        .MyTabStyle .ajax__tab_active .ajax__tab_inner
+        {
+            color: #333333;
+            border-color: #333;
+        }
+        /*InActive Tab*/
+        .MyTabStyle .ajax__tab_tab
+        {
+            color: #666666;            
+        }
+        .MyTabStyle .ajax__tab_body
+        {
+            font-family: verdana,tahoma,helvetica;
+            font-size: 10pt;
+            background-color: #fff;
+            border-top-width: 0;
+            border: solid 1px #FFCC66;
+            border-top-color: #ffffff;         
+        }
+ 
+ .InnerTabStyle
+ {
+     overflow :auto;
+ }
+ 

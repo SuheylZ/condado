@@ -1,0 +1,109 @@
+﻿
+td#textseachtd {
+    width: 150px;
+}
+
+
+.dialerBody .dialerButtons button.ButtonClicked:disabled,
+.dialerBody .dialerButtons button.ButtonClicked {
+    font-size: 10px !important;
+    color: green !important;
+	background-position: -3px -118px !important;
+    cursor:progress !important;
+}
+
+.dialerBody .dialerButtons button.AvailableButton {
+    background-position: -3px -2px;/* !important;*/
+    color:white;/* !important;*/
+    cursor:pointer !important;
+}
+    .dialerBody .dialerButtons button.AvailableButton:hover {
+        background-position: -3px -40px;
+         /*!important;*/
+    }
+    .dialerBody .dialerButtons button.AvailableButton:active {
+        background-position: -3px -79px; /*!important;*/
+    }
+
+.dialerBody .dialerButtons button.AvailableButtonNoLead:disabled,
+.dialerBody .dialerButtons button.AvailableButtonNoLead {
+    color: red !important;
+    background-position: -3px -118px !important;
+    cursor:not-allowed !important;
+}
+
+
+
+
+.dialerBody .dialerButtons button:disabled,
+.dialerBody .dialerButtons button {
+        padding: 0px !important;
+        font-size: 28px;
+        /*color: rgb(105, 105, 105);*/
+        width: 35px;
+        height: 36px;
+        background-color: transparent !important;
+        background-image: url('/WebGAL/styles/btnWebDialer.png') !important;
+        background-position: -3px -118px;
+        background-repeat: no-repeat !important;
+        margin-top: 2px;
+        border: none !important;
+        outline: 0px;
+        cursor:default !important;
+    }
+    
+
+.dialerBody {
+    background-color: #dee3ea;
+    height: 42px;
+    width: 190px;
+    font-family: Arial;
+    margin-bottom: -3px;
+    /*margin-right: -13px;*/
+}
+
+    .dialerBody div {
+        background-color: none !important;
+    }
+
+    .dialerBody .innerDiv {
+        clear: both;
+    }
+
+        .dialerBody .innerDiv div.label {
+            float: left;
+            margin-top: 13px;
+        }
+
+        .dialerBody .innerDiv div.dialerButtons {
+            float: left;
+            padding-left: 5px;
+        }
+
+    /*.dialerBody .buttons {
+        padding: 0px !important;
+        text-align: left !important;
+    }*/
+
+
+    .dialerBody .innerDiv div.available,
+    .dialerBody .innerDiv div.dialed {
+        float: left;
+        padding-left: 10px;
+
+    }
+
+    /*removed from HTML*/
+    /*.dialerBody .innerDiv div.timer {
+        float: right;
+        padding-right: 15px;
+        margin-top: 13px;
+        display:none;
+    }*/
+
+
+    .dialerBody button.available {
+    }
+
+    .dialerBody button.dialed {
+    }

@@ -1,0 +1,1750 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="SQSalesToolLeadStoreContainer" CdmEntityContainer="LeadEntities">
+    <EntitySetMapping Name="AccountDetails">
+      <EntityTypeMapping TypeName="IsTypeOf(SQSalesToolLead.AccountDetail)">
+        <MappingFragment StoreEntitySet="Account_Detail">
+          <ScalarProperty Name="Key" ColumnName="dtl_key" />
+          <ScalarProperty Name="Id" ColumnName="dtl_act_id" />
+          <ScalarProperty Name="PolicyType" ColumnName="dtl_policy_type" />
+          <ScalarProperty Name="PolicyId" ColumnName="dtl_policy_id" />
+          <ScalarProperty Name="AddedBy" ColumnName="dtl_add_user" />
+          <ScalarProperty Name="AddedOn" ColumnName="dtl_add_date" />
+          <ScalarProperty Name="ChangedBy" ColumnName="dtl_change_user" />
+          <ScalarProperty Name="ChangedOn" ColumnName="dtl_change_date" />
+          <ScalarProperty Name="Accountkey" ColumnName="Account_act_key" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AccountIndividualDetails">
+      <EntityTypeMapping TypeName="IsTypeOf(SQSalesToolLead.AccountIndividualDetail)">
+        <MappingFragment StoreEntitySet="account_individual_details">
+          <ScalarProperty Name="Key" ColumnName="act_indv_key" />
+          <ScalarProperty Name="Id" ColumnName="act_indv_id" />
+          <ScalarProperty Name="IsPrimary" ColumnName="act_indv_isprimary" />
+          <ScalarProperty Name="AddedBy" ColumnName="act_indv_add_user" />
+          <ScalarProperty Name="AddedOn" ColumnName="act_indv_add_date" />
+          <ScalarProperty Name="ChangedBy" ColumnName="act_indv_modified_user" />
+          <ScalarProperty Name="ChangedOn" ColumnName="act_indv_modified_date" />
+          <ScalarProperty Name="IsActive" ColumnName="act_indv_active_flag" />
+          <ScalarProperty Name="IsDeleted" ColumnName="act_indv_delete_flag" />
+          <ScalarProperty Name="Individualkey" ColumnName="Individuals_indv_key" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Accounts">
+      <EntityTypeMapping TypeName="SQSalesToolLead.Account">
+        <MappingFragment StoreEntitySet="Accounts">
+          <ScalarProperty Name="NextCalenderDate_AP" ColumnName="act_next_cal_date_ap" />
+          <ScalarProperty Name="NextCalenderDate_OB" ColumnName="act_next_cal_date_ob" />
+          <ScalarProperty Name="NextCalenderDate_TA" ColumnName="act_next_cal_date_ta" />
+          <ScalarProperty Name="NextCalenderDate_CSR" ColumnName="act_next_cal_date_csr" />
+          <ScalarProperty Name="NextCalenderDateAssigned" ColumnName="act_next_cal_date_assigned" />
+          <ScalarProperty Name="OriginalUserKey" ColumnName="act_original_usr" />
+          <ScalarProperty Name="OnBoardUser" ColumnName="act_op_user" />
+          <ScalarProperty Name="AlternateProductUser" ColumnName="act_ap_user" />
+          <ScalarProperty Name="AccountParent" ColumnName="act_parent_key" />
+          <ScalarProperty Name="LifeInfo" ColumnName="act_life_info" />
+          <ScalarProperty Name="Notes" ColumnName="act_notes" />
+          <ScalarProperty Name="ExternalAgent" ColumnName="act_external_agent" />
+          <ScalarProperty Name="TransferUserKey" ColumnName="act_transfer_user" />
+          <ScalarProperty Name="NextEvenDate" ColumnName="act_next_dal_date" />
+          <ScalarProperty Name="AssignedCsrKey" ColumnName="act_assigned_csr" />
+          <ScalarProperty Name="AssignedUserKey" ColumnName="act_assigned_usr" />
+          <ScalarProperty Name="PrimaryLeadKey" ColumnName="act_lead_primary_lead_key" />
+          <ScalarProperty Name="SecondaryIndividualId" ColumnName="act_secondary_individual_id" />
+          <ScalarProperty Name="Key" ColumnName="act_key" />
+          <ScalarProperty Name="PrimaryIndividualId" ColumnName="act_primary_individual_id" />
+          <ScalarProperty Name="PolicyType" ColumnName="Policy_Type" />
+          <ScalarProperty Name="PolicyId" ColumnName="Policy_Id" />
+          <ScalarProperty Name="AddedBy" ColumnName="act_add_user" />
+          <ScalarProperty Name="AddedOn" ColumnName="act_add_date" />
+          <ScalarProperty Name="ChangedBy" ColumnName="act_modified_user" />
+          <ScalarProperty Name="ChangedOn" ColumnName="act_modified_date" />
+          <ScalarProperty Name="IsActive" ColumnName="act_active_flag" />
+          <ScalarProperty Name="IsDeleted" ColumnName="act_delete_flag" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BestCalls">
+      <EntityTypeMapping TypeName="IsTypeOf(SQSalesToolLead.BestCall)">
+        <MappingFragment StoreEntitySet="best_call">
+          <ScalarProperty Name="IndividualKey" ColumnName="IndividualKey" />
+          <ScalarProperty Name="Key" ColumnName="best_key" />
+          <ScalarProperty Name="NumberCall" ColumnName="best_number_call" />
+          <ScalarProperty Name="TimeCall" ColumnName="best_time_call" />
+          <ScalarProperty Name="DateCall" ColumnName="best_date_call" />
+          <ScalarProperty Name="IndividualId" ColumnName="best_individual_id" />
+          <ScalarProperty Name="AppointmentSetHour" ColumnName="best_appointment_set_hour" />
+          <ScalarProperty Name="AppointSetMin" ColumnName="best_appoint_set_min" />
+          <ScalarProperty Name="AppointmentSetDate" ColumnName="best_appointment_set_date" />
+          <ScalarProperty Name="AddedBy" ColumnName="best_add_user" />
+          <ScalarProperty Name="AddedOn" ColumnName="best_add_date" />
+          <ScalarProperty Name="ChangedBy" ColumnName="best_modified_user" />
+          <ScalarProperty Name="ChangedOn" ColumnName="best_modified_date" />
+          <ScalarProperty Name="IsActive" ColumnName="best_active_flag" />
+          <ScalarProperty Name="IsDeleted" ColumnName="best_delete_flag" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CarrierIssues">
+      <EntityTypeMapping TypeName="IsTypeOf(SQSalesToolLead.CarrierIssue)">
+        <MappingFragment StoreEntitySet="carrier_issues">
+          <ScalarProperty Name="IssueTypeId" ColumnName="car_iss_itp_key" />
+          <ScalarProperty Name="LastIssueStatus" ColumnName="car_iss_last_status" />
+          <ScalarProperty Name="AccountId" ColumnName="car_iss_act_key" />
+          <ScalarProperty Name="Key" ColumnName="car_iss_key" />
+          <ScalarProperty Name="DetectDate" ColumnName="car_iss_detect_date" />
+          <ScalarProperty Name="ResolveDate" ColumnName="car_iss_resolve_date" />
+          <ScalarProperty Name="Issues" ColumnName="car_issues" />
+          <ScalarProperty Name="StatusNote" ColumnName="car_iss_status_note" />
+          <ScalarProperty Name="DetailedNote" ColumnName="car_iss_detailed_note" />
+          <ScalarProperty Name="DetailedNote2" ColumnName="car_iss_detailed_note_2" />
+          <ScalarProperty Name="DetailedNote3" ColumnName="car_iss_detailed_note_3" />
+          <ScalarProperty Name="DetailedNote4" ColumnName="car_iss_detailed_note_4" />
+          <ScalarProperty Name="ContactPerson" ColumnName="car_iss_contact_person" />
+          <ScalarProperty Name="ContactNumber" ColumnName="car_iss_contact_number" />
+          <ScalarProperty Name="ContactFax" ColumnName="car_iss_contact_fax" />
+          <ScalarProperty Name="CaseSpecialist" ColumnName="car_iss_case_specialist" />
+          <ScalarProperty Name="OpenResearchRequest" ColumnName="car_iss_open_research_request" />
+          <ScalarProperty Name="ResearchOpenDate" ColumnName="car_iss_research_open_date" />
+          <ScalarProperty Name="ResearchCloseDate" ColumnName="car_iss_research_close_date" />
+          <ScalarProperty Name="ResearchRequest" ColumnName="car_iss_research_request" />
+          <ScalarProperty Name="ResearchResponse" ColumnName="car_iss_research_response" />
+          <ScalarProperty Name="ResearchCaseSpecialist" ColumnName="car_iss_research_case_specialist" />
+          <ScalarProperty Name="AddedBy" ColumnName="car_iss_add_user" />
+          <ScalarProperty Name="AddedOn" ColumnName="car_iss_add_date" />
+          <ScalarProperty Name="ChangedBy" ColumnName="car_iss_modified_user" />
+          <ScalarProperty Name="ChangedOn" ColumnName="car_iss_modified_date" />
+          <ScalarProperty Name="IsActive" ColumnName="car_iss_active_flag" />
+          <ScalarProperty Name="IsDeleted" ColumnName="car_iss_delete_flag" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Carriers">
+      <EntityTypeMapping TypeName="SQSalesToolLead.Carrier">
+        <MappingFragment StoreEntitySet="Carriers">
+          <ScalarProperty Name="Key" ColumnName="car_key" />
+          <ScalarProperty Name="Name" ColumnName="car_name" />
+          <ScalarProperty Name="MsFlag" ColumnName="car_ms_flag" />
+          <ScalarProperty Name="IsMapdp" ColumnName="car_mapdp_flag" />
+          <ScalarProperty Name="IsDental" ColumnName="car_dental_flag" />
+          <ScalarProperty Name="IsHome" ColumnName="car_home_flag" />
+          <ScalarProperty Name="IsAuto" ColumnName="car_auto_flag" />
+          <ScalarProperty Name="IsActive" ColumnName="car_active_flag" />
+          <ScalarProperty Name="IsDeleted" ColumnName="car_delete_flag" />
+          <ScalarProperty Name="AddedBy" ColumnName="car_add_user" />
+          <ScalarProperty Name="AddedOn" ColumnName="car_add_date" />
+          <ScalarProperty Name="ChangedBy" ColumnName="car_change_user" />
+          <ScalarProperty Name="ChangedOn" ColumnName="car_change_date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ContactInformations">
+      <EntityTypeMapping TypeName="IsTypeOf(SQSalesToolLead.ContactInformation)">
+        <MappingFragment StoreEntitySet="contact_information">
+          <ScalarProperty Name="Key" ColumnName="con_key" />
+          <ScalarProperty Name="IndividualId" ColumnName="con_individual_id" />
+          <ScalarProperty Name="Description" ColumnName="con_description" />
+          <ScalarProperty Name="Detail" ColumnName="con_detail" />
+          <ScalarProperty Name="IsActive" ColumnName="con_actve_flag" />
+          <ScalarProperty Name="IsDeleted" ColumnName="con_delete_flag" />
+          <ScalarProperty Name="Individualkey" ColumnName="Individual_indv_key" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DriverIncidences">
+      <EntityTypeMapping TypeName="IsTypeOf(SQSalesToolLead.DriverIncidence)">
+        <MappingFragment StoreEntitySet="driver_incidence">
+          <ScalarProperty Name="Key" ColumnName="inc_key" />
+          <ScalarProperty Name="Id" ColumnName="inc_driver_id" />
+          <ScalarProperty Name="Type" ColumnName="inc_type" />
+          <ScalarProperty Name="Date1" ColumnName="inc_date" />
+          <ScalarProperty Name="ClaimPaidAmount" ColumnName="inc_claim_paid_amount" />
+          <ScalarProperty Name="AddedBy" ColumnName="inc_add_user" />
+          <ScalarProperty Name="AddedOn" ColumnName="inc_add_date" />
+          <ScalarProperty Name="ChangedBy" ColumnName="inc_modified_user" />
+          <ScalarProperty Name="ChangedOn" ColumnName="inc_modified_date" />
+          <ScalarProperty Name="IsActive" ColumnName="inc_active_flag" />
+          <ScalarProperty Name="IsDeleted" ColumnName="inc_delete_flag" />
+          <ScalarProperty Name="DriverInformationKey" ColumnName="driver_info_dri_info_key" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DriverInfos">
+      <EntityTypeMapping TypeName="IsTypeOf(SQSalesToolLead.DriverInfo)">
+        <MappingFragment StoreEntitySet="driver_info">
+          <ScalarProperty Name="ClaimPaidAmount" ColumnName="dri_claim_paid_amount" />
+          <ScalarProperty Name="IncidentDate" ColumnName="dri_incident_date" />
+          <ScalarProperty Name="IncidentDescription" ColumnName="dri_incident_description" />
+          <ScalarProperty Name="IncidentType" ColumnName="dri_incident_type" />
+          <ScalarProperty Name="TicketsAccidentsClaims" ColumnName="dri_tickets_accidents_claims" />
+          <ScalarProperty Name="AccountId" ColumnName="dri_account_id" />
+          <ScalarProperty Name="MedicalPayment" ColumnName="dri_medical_payment" />
+          <ScalarProperty Name="CurrentAutoXDate" ColumnName="dri_current_auto_xdate" />
+          <ScalarProperty Name="LiabilityLimit" ColumnName="dri_liability_limit" />
+          <ScalarProperty Name="CurrentCarrier" ColumnName="dri_current_carrier" />
+          <ScalarProperty Name="LisenceNumber" ColumnName="dri_dl_Lisence_Number" />
+          <ScalarProperty Name="Key" ColumnName="dri_info_key" />
+          <ScalarProperty Name="DlState" ColumnName="dri_dl_state" />
+          <ScalarProperty Name="MaritalStatus" ColumnName="dri_marrital_status" />
+          <ScalarProperty Name="LicenseStatus" ColumnName="dri_License_status" />
+          <ScalarProperty Name="AgeLicensed" ColumnName="dri_age_licensed" />
+          <ScalarProperty Name="YearsAtResidence" ColumnName="dri_yrs_at_residence" />
+          <ScalarProperty Name="Occupation" ColumnName="dri_occupation" />
+          <ScalarProperty Name="YearsWithCompany" ColumnName="dri_yrs_with_company" />
+          <ScalarProperty Name="YrsInField" ColumnName="dri_yrs_in_field" />
+          <ScalarProperty Name="Education" ColumnName="dri_education" />
+          <ScalarProperty Name="NmbrIncidents" ColumnName="dri_nmbr_incidents" />
+          <ScalarProperty Name="St22" ColumnName="dri_ST22" />
+          <ScalarProperty Name="PolicyYears" ColumnName="dri_policy_years" />
+          <ScalarProperty Name="IndividualId" ColumnName="dri_indv_id" />
+          <ScalarProperty Name="AddedBy" ColumnName="dri_add_user" />
+          <ScalarProperty Name="AddedOn" ColumnName="dri_add_date" />
+          <ScalarProperty Name="ChangedBy" ColumnName="dri_modified_user" />
+          <ScalarProperty Name="ChangedOn" ColumnName="dri_modified_date" />
+          <ScalarProperty Name="IsActive" ColumnName="dri_active_flag" />
+          <ScalarProperty Name="IsDeleted" ColumnName="dri_delete_flag" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Homes">
+      <EntityTypeMapping TypeName="IsTypeOf(SQSalesToolLead.Home)">
+        <MappingFragment StoreEntitySet="homes">
+          <ScalarProperty Name="ZipCode" ColumnName="home_ZipCode" />
+          <ScalarProperty Name="StateId" ColumnName="home_sta_key" />
+          <ScalarProperty Name="City" ColumnName="home_City" />
+          <ScalarProperty Name="Address2" ColumnName="home_Address2" />
+          <ScalarProperty Name="Address1" ColumnName="home_Address1" />
+          <ScalarProperty Name="NumberOfBathrooms" ColumnName="home_nmbr_of_bathrooms" />
+          <ScalarProperty Name="Id" ColumnName="home_Id" />
+          <ScalarProperty Name="IndvId" ColumnName="home_indv_id" />
+          <ScalarProperty Name="CurrentCarrier" ColumnName="home_current_carrier" />
+          <ScalarProperty Name="CurrentXdateLeadInfo" ColumnName="home_current_xdate_lead_info" />
+          <ScalarProperty Name="YearBuilt" ColumnName="home_year_built" />
+          <ScalarProperty Name="DwellingType" ColumnName="home_dwelling_type" />
+          <ScalarProperty Name="DesignType" ColumnName="home_design_type" />
+          <ScalarProperty Name="RoofAge" ColumnName="home_roof_age" />
+          <ScalarProperty Name="RoofType" ColumnName="home_roof_type" />
+          <ScalarProperty Name="FoundationType" ColumnName="home_foundation_type" />
+          <ScalarProperty Name="HeatingType" ColumnName="home_heating_type" />
+          <ScalarProperty Name="ExteriorWallType" ColumnName="home_exterior_wall_type" />
+          <ScalarProperty Name="NumberOfClaims" ColumnName="home_nmbr_of_claims" />
+          <ScalarProperty Name="NumberOfBedrooms" ColumnName="home_nmbr_of_bedrooms" />
+          <ScalarProperty Name="SqFootage" ColumnName="home_sq_footage" />
+          <ScalarProperty Name="ReqCoverage" ColumnName="home_req_coverage" />
+          <ScalarProperty Name="AccountId" ColumnName="home_account_id" />
+          <ScalarProperty Name="AddedBy" ColumnName="home_add_user" />
+          <ScalarProperty Name="AddedOn" ColumnName="home_add_date" />
+          <ScalarProperty Name="ChangedBy" ColumnName="home_modified_user" />
+          <ScalarProperty Name="ChangedOn" ColumnName="home_modified_date" />
+          <ScalarProperty Name="IsActive" ColumnName="home_active_flag" />
+          <ScalarProperty Name="IsDeleted" ColumnName="home_delete_flag" />
+          <ScalarProperty Name="Individualkey" ColumnName="Individual_indv_key" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="IndividualDetails">
+      <EntityTypeMapping TypeName="IsTypeOf(SQSalesToolLead.IndividualDetail)">
+        <MappingFragment StoreEntitySet="Individual_Details">
+          <ScalarProperty Name="Key" ColumnName="dtl_key" />
+          <ScalarProperty Name="IndividualId" ColumnName="dtl_individual_id" />
+          <ScalarProperty Name="RelationshipDescription" ColumnName="dtl_relationship_description" />
+          <ScalarProperty Name="RelatedIndividualId" ColumnName="dtl_related_individual_id" />
+          <ScalarProperty Name="AccountId" ColumnName="dtl_account_id" />
+          <ScalarProperty Name="Individualindvkey" ColumnName="Individual_indv_key" />
+          <ScalarProperty Name="Individualsindvkey" ColumnName="Individuals_indv_key" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Individuals">
+      <EntityTypeMapping TypeName="SQSalesToolLead.Individual">
+        <MappingFragment StoreEntitySet="Individuals">
+          <ScalarProperty Name="OnBoardAutoHome" ColumnName="indv_ob_auto_home" />
+          <ScalarProperty Name="OnBoardCsPrep" ColumnName="indv_ob_cs_prep" />
+          <ScalarProperty Name="Last4SSN" ColumnName="indv_last_four_ssn" />
+          <ScalarProperty Name="OnBoardBilling" ColumnName="indv_ob_billing" />
+          <ScalarProperty Name="OnBoardApplicationeSign" ColumnName="indv_ob_app_esign" />
+          <ScalarProperty Name="OnBoardInspection" ColumnName="indv_ob_inspection" />
+          <ScalarProperty Name="OnBoardAnnuity" ColumnName="indv_ob_annuity" />
+          <ScalarProperty Name="OnBoardAutoHomeLife" ColumnName="indv_ob_auto_home_life" />
+          <ScalarProperty Name="OnBoardDental" ColumnName="indv_ob_dental" />
+          <ScalarProperty Name="indv_ap_date" ColumnName="indv_ap_date" />
+          <ScalarProperty Name="IsChanged" ColumnName="indv_change_flag" />
+          <ScalarProperty Name="MiddleName" ColumnName="indv_middle_initial" />
+          <ScalarProperty Name="IndividualTCPAChanged" ColumnName="indv_tcpa_consent_change" />
+          <ScalarProperty Name="IndividualEmailOptOutQueuedChange" ColumnName="indv_email_opt_out_queued_change" />
+          <ScalarProperty Name="ApplicationState" ColumnName="indv_app_state" />
+          <ScalarProperty Name="indv_desire_ins_term" ColumnName="indv_desire_ins_term" />
+          <ScalarProperty Name="indv_desire_ins_alt_amt" ColumnName="indv_desire_ins_alt_amt" />
+          <ScalarProperty Name="indv_desire_ins_amt" ColumnName="indv_desire_ins_amt" />
+          <ScalarProperty Name="indv_exist_ins_rplc" ColumnName="indv_exist_ins_rplc" />
+          <ScalarProperty Name="indv_exist_ins_amt" ColumnName="indv_exist_ins_amt" />
+          <ScalarProperty Name="indv_exist_ins" ColumnName="indv_exist_ins" />
+          <ScalarProperty Name="IndividualEmailOptOut" ColumnName="indv_email_opt_out" />
+          <ScalarProperty Name="TCPAConsent" ColumnName="indv_tcpa_consent" />
+          <ScalarProperty Name="InboundPhone" ColumnName="indv_inbound_phone" />
+          <ScalarProperty Name="IndividualPDPStatusID" ColumnName="indv_individual_pdp_status_key" />
+          <ScalarProperty Name="HRASubsidyAmount" ColumnName="indv_hra_subsidy_amount" />
+          <ScalarProperty Name="IndividualStatusID" ColumnName="indv_individual_status_key" />
+          <ScalarProperty Name="Zipcode" ColumnName="indv_zipcode" />
+          <ScalarProperty Name="ExternalReferenceID" ColumnName="indv_external_reference_id" />
+          <ScalarProperty Name="Email" ColumnName="indv_email" />
+          <ScalarProperty Name="StateID" ColumnName="indv_state_Id" />
+          <ScalarProperty Name="IsDeleted" ColumnName="indv_delete_flag" />
+          <ScalarProperty Name="Relation" ColumnName="indv_relation" />
+          <ScalarProperty Name="Notes" ColumnName="indv_notes" />
+          <ScalarProperty Name="CellPhone" ColumnName="indv_cell_phone" />
+          <ScalarProperty Name="FaxNmbr" ColumnName="indv_fax_nmbr" />
+          <ScalarProperty Name="EveningPhone" ColumnName="indv_evening_phone" />
+          <ScalarProperty Name="DayPhone" ColumnName="indv_day_phone" />
+          <ScalarProperty Name="Key" ColumnName="indv_key" />
+          <ScalarProperty Name="FirstName" ColumnName="indv_first_name" />
+          <ScalarProperty Name="LastName" ColumnName="indv_last_name" />
+          <ScalarProperty Name="Gender" ColumnName="indv_gender" />
+          <ScalarProperty Name="Smoking" ColumnName="indv_smoking" />
+          <ScalarProperty Name="Age" ColumnName="indv_age" />
+          <ScalarProperty Name="Address1" ColumnName="indv_address1" />
+          <ScalarProperty Name="Address2" ColumnName="indv_address2" />
+          <ScalarProperty Name="City" ColumnName="indv_city" />
+          <ScalarProperty Name="AccountId" ColumnName="indv_account_id" />
+          <ScalarProperty Name="AddedBy" ColumnName="indv_add_user" />
+          <ScalarProperty Name="Birthday" ColumnName="indv_birthday" />
+          <ScalarProperty Name="AddedOn" ColumnName="indv_add_date" />
+          <ScalarProperty Name="ChangedBy" ColumnName="indv_modified_user" />
+          <ScalarProperty Name="ChangedOn" ColumnName="indv_modified_date" />
+          <ScalarProperty Name="IsActive" ColumnName="indv_active_flag" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LeaAdditionalInfos">
+      <EntityTypeMapping TypeName="IsTypeOf(SQSalesToolLead.LeadAdditionalInfo)">
+        <MappingFragment StoreEntitySet="lea_additional_info">
+          <ScalarProperty Name="Key" ColumnName="lea_additional_information_key" />
+          <ScalarProperty Name="CreditSelfRating" ColumnName="lea_add_inf_credit_self_rating" />
+          <ScalarProperty Name="Reposession" ColumnName="lea_add_inf_reposession" />
+          <ScalarProperty Name="Id" ColumnName="lea_add_lead_id" />
+          <ScalarProperty Name="AddedBy" ColumnName="lea_add_add_user" />
+          <ScalarProperty Name="AddedOn" ColumnName="lea_add_add_date" />
+          <ScalarProperty Name="ChangedBy" ColumnName="lea_add_modified_user" />
+          <ScalarProperty Name="ChangedOn" ColumnName="lea_add_modified_date" />
+          <ScalarProperty Name="IsActive" ColumnName="lea_add_active_flag" />
+          <ScalarProperty Name="IsDeleted" ColumnName="lea_add_delete_flag" />
+          <ScalarProperty Name="LeadKey" ColumnName="Lead_lea_key" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LeadNotes">
+      <EntityTypeMapping TypeName="IsTypeOf(SQSalesToolLead.LeadNote)">
+        <MappingFragment StoreEntitySet="lead_notes">
+          <ScalarProperty Name="Key" ColumnName="lea_notes_key" />
+          <ScalarProperty Name="NoteLeadsKey" ColumnName="note_leads_key" />
+          <ScalarProperty Name="Text" ColumnName="notes_text" />
+          <ScalarProperty Name="AddedBy" ColumnName="notes_add_user" />
+          <ScalarProperty Name="AddedOn" ColumnName="notes_add_date" />
+          <ScalarProperty Name="ChangedBy" ColumnName="notes_modified_user" />
+          <ScalarProperty Name="ChangedOn" ColumnName="noted_modified_date" />
+          <ScalarProperty Name="IsActive" ColumnName="noted_active_flag" />
+          <ScalarProperty Name="IsDeleted" ColumnName="notes_delete_flag" />
+          <ScalarProperty Name="LeadKey" ColumnName="Lead_lea_key" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LeadSources">
+      <EntityTypeMapping TypeName="IsTypeOf(SQSalesToolLead.LeadSource)">
+        <MappingFragment StoreEntitySet="lead_source">
+          <ScalarProperty Name="Key" ColumnName="source_key" />
+          <ScalarProperty Name="Text" ColumnName="source_text" />
+          <ScalarProperty Name="AddedBy" ColumnName="source_add_user" />
+          <ScalarProperty Name="AddedOn" ColumnName="source_add_date" />
+          <ScalarProperty Name="ChangedBy" ColumnName="source_modified_user" />
+          <ScalarProperty Name="ChangedOn" ColumnName="source_modified_date" />
+          <ScalarProperty Name="IsActive" ColumnName="source_active_flag" />
+          <ScalarProperty Name="IsDeleted" ColumnName="source_delete_flag" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LeadStatuses">
+      <EntityTypeMapping TypeName="IsTypeOf(SQSalesToolLead.LeadStatus)">
+        <MappingFragment StoreEntitySet="lead_status">
+          <ScalarProperty Name="LeadId" ColumnName="status_lead_id" />
+          <ScalarProperty Name="Key" ColumnName="status_key" />
+          <ScalarProperty Name="Text" ColumnName="status_text" />
+          <ScalarProperty Name="AddedBy" ColumnName="status_add_user" />
+          <ScalarProperty Name="AddedOn" ColumnName="status_add_date" />
+          <ScalarProperty Name="ChangedBy" ColumnName="status_modified_user" />
+          <ScalarProperty Name="ChangedOn" ColumnName="status_modified_date" />
+          <ScalarProperty Name="IsActive" ColumnName="status_active_flag" />
+          <ScalarProperty Name="IsDeleted" ColumnName="status_delete_flag" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Medsups">
+      <EntityTypeMapping TypeName="IsTypeOf(SQSalesToolLead.Medsup)">
+        <MappingFragment StoreEntitySet="medsups">
+          <ScalarProperty Name="ApplicationTypeKey" ColumnName="msa_app_type" />
+          <ScalarProperty Name="SubmissionDate" ColumnName="ms_submission_date" />
+          <ScalarProperty Name="MedicareId" ColumnName="ms_medicare_id" />
+          <ScalarProperty Name="PolicyNumber" ColumnName="ms_policy_nmbr" />
+          <ScalarProperty Name="CompanyName" ColumnName="ms_company_name" />
+          <ScalarProperty Name="Enroller" ColumnName="ms_enrl_usr_key" />
+          <ScalarProperty Name="PolicyStatus" ColumnName="ms_pls_key" />
+          <ScalarProperty Name="ExpirationDate" ColumnName="ms_expiration_date" />
+          <ScalarProperty Name="AccountId" ColumnName="ms_account_id" />
+          <ScalarProperty Name="Key" ColumnName="ms_key" />
+          <ScalarProperty Name="CarrierId" ColumnName="ms_carrier_id" />
+          <ScalarProperty Name="Plan" ColumnName="ms_plan" />
+          <ScalarProperty Name="GuarenteedIssue" ColumnName="ms_guarenteed_issue" />
+          <ScalarProperty Name="GuarenteedIssueReason" ColumnName="ms_guarenteed_issue_reason" />
+          <ScalarProperty Name="PreviousPlan" ColumnName="ms_previous_plan" />
+          <ScalarProperty Name="AnnualPremium" ColumnName="ms_annual_premium" />
+          <ScalarProperty Name="IssueDate" ColumnName="ms_issue_date" />
+          <ScalarProperty Name="EffectiveDate" ColumnName="ms_effective_date" />
+          <ScalarProperty Name="Favkey" ColumnName="ms_favkey" />
+          <ScalarProperty Name="FavkeySentToCarrierDate" ColumnName="ms_favkey_sent_to_carrier_date" />
+          <ScalarProperty Name="CancelDeclineDate" ColumnName="ms_cancel_decline_date" />
+          <ScalarProperty Name="PaymentMethod" ColumnName="ms_payment_method" />
+          <ScalarProperty Name="ReissueDate" ColumnName="ms_reissue_date" />
+          <ScalarProperty Name="LapseDate" ColumnName="ms_lapse_date" />
+          <ScalarProperty Name="PaidFromCarrier" ColumnName="ms_paid_from_carrier" />
+          <ScalarProperty Name="CommissionAmount" ColumnName="ms_commission_amount" />
+          <ScalarProperty Name="CommissionPaidDate" ColumnName="ms_commission_paid_date" />
+          <ScalarProperty Name="AddedBy" ColumnName="ms_add_user" />
+          <ScalarProperty Name="AddedOn" ColumnName="ms_add_date" />
+          <ScalarProperty Name="ChangedBy" ColumnName="ms_modified_user" />
+          <ScalarProperty Name="ChangedOn" ColumnName="ms_modified_date" />
+          <ScalarProperty Name="IsActive" ColumnName="ms_active_flag" />
+          <ScalarProperty Name="IsDeleted" ColumnName="ms_delete_flag" />
+          <ScalarProperty Name="IndividualId" ColumnName="ms_individual_id" />
+          <ScalarProperty Name="LeadId" ColumnName="ms_lead_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Plans">
+      <EntityTypeMapping TypeName="SQSalesToolLead.Plan">
+        <MappingFragment StoreEntitySet="Plans">
+          <ScalarProperty Name="Id" ColumnName="Plan_ID" />
+          <ScalarProperty Name="CarrierId" ColumnName="Carrier_Id" />
+          <ScalarProperty Name="Name" ColumnName="Plan_Name" />
+          <ScalarProperty Name="Details" ColumnName="Plan_Details" />
+          <ScalarProperty Name="Type" ColumnName="Plan_Type" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PolicyInformations">
+      <EntityTypeMapping TypeName="IsTypeOf(SQSalesToolLead.PolicyInformation)">
+        <MappingFragment StoreEntitySet="Policy_Information">
+          <ScalarProperty Name="Key" ColumnName="pol_key" />
+          <ScalarProperty Name="IndividualId" ColumnName="pol_individual_id" />
+          <ScalarProperty Name="carrierId" ColumnName="pol_carrier_Id" />
+          <ScalarProperty Name="carrierPlan" ColumnName="pol_carrier_Plan" />
+          <ScalarProperty Name="GuaranteedIssueReason" ColumnName="pol_guaranteed_issue_reason" />
+          <ScalarProperty Name="PreviousPlan" ColumnName="pol_previous_plan" />
+          <ScalarProperty Name="AnnualPremium" ColumnName="pol_annual_premium" />
+          <ScalarProperty Name="IssueDate" ColumnName="pol_issue_date" />
+          <ScalarProperty Name="EffectiveDate" ColumnName="pol_effective_date" />
+          <ScalarProperty Name="FavKey" ColumnName="pol_fav_key" />
+          <ScalarProperty Name="FavkeySentToCarrierDate" ColumnName="pol_favkey_sent_to_carrier_date" />
+          <ScalarProperty Name="CancelDeclineDate" ColumnName="pol_cancel_decline_date" />
+          <ScalarProperty Name="PaymentMode" ColumnName="pol_payment_mode" />
+          <ScalarProperty Name="ReissueDate" ColumnName="pol_reissue_date" />
+          <ScalarProperty Name="MedsuppPaidFromCarrier" ColumnName="pol_medsupp_paid_from_carrier" />
+          <ScalarProperty Name="MedsuppCommissionAmount" ColumnName="pol_medsupp_commission_amount" />
+          <ScalarProperty Name="MedsuppPaidDate" ColumnName="pol_medsupp_paid_date" />
+          <ScalarProperty Name="AddedBy" ColumnName="pol_add_user" />
+          <ScalarProperty Name="AddedOn" ColumnName="pol_add_date" />
+          <ScalarProperty Name="ChangedBy" ColumnName="pol_change_user" />
+          <ScalarProperty Name="ChangedOn" ColumnName="pol_change_date" />
+          <ScalarProperty Name="CarrierCarKey" ColumnName="Carriers_car_key" />
+          <ScalarProperty Name="PlanID" ColumnName="Plans_Plan_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Vehicles">
+      <EntityTypeMapping TypeName="IsTypeOf(SQSalesToolLead.Vehicle)">
+        <MappingFragment StoreEntitySet="vehicles">
+          <ScalarProperty Name="AccountId" ColumnName="veh_account_id" />
+          <ScalarProperty Name="Key" ColumnName="veh_key" />
+          <ScalarProperty Name="Year" ColumnName="veh_year" />
+          <ScalarProperty Name="Make" ColumnName="veh_make" />
+          <ScalarProperty Name="Model" ColumnName="veh_model" />
+          <ScalarProperty Name="Submodel" ColumnName="veh_submodel" />
+          <ScalarProperty Name="AnnualMileage" ColumnName="veh_annual_mileage" />
+          <ScalarProperty Name="WeeklyCommuteDays" ColumnName="veh_weekly_commute_days" />
+          <ScalarProperty Name="PrimaryUse" ColumnName="veh_primary_use" />
+          <ScalarProperty Name="ComprehensiveDeductable" ColumnName="veh_comprehensive_deductable" />
+          <ScalarProperty Name="CollisionDeductable" ColumnName="veh_collision_deductable" />
+          <ScalarProperty Name="SecuritySystem" ColumnName="veh_security_system" />
+          <ScalarProperty Name="WhereParked" ColumnName="veh_where_parked" />
+          <ScalarProperty Name="IndividualId" ColumnName="veh_indv_id" />
+          <ScalarProperty Name="PolicyId" ColumnName="veh_policy_id" />
+          <ScalarProperty Name="AddedBy" ColumnName="veh_add_user" />
+          <ScalarProperty Name="AddedOn" ColumnName="veh_add_date" />
+          <ScalarProperty Name="ChangedBy" ColumnName="veh_modified_user" />
+          <ScalarProperty Name="ChangedOn" ColumnName="veh_modified_date" />
+          <ScalarProperty Name="IsActive" ColumnName="veh_active_flag" />
+          <ScalarProperty Name="IsDeleted" ColumnName="veh_delete_flag" />
+          <ScalarProperty Name="Individualkey" ColumnName="Individual_indv_key" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="medsupApplications">
+      <EntityTypeMapping TypeName="SQSalesToolLead.medsupApplication">
+        <MappingFragment StoreEntitySet="medsupApplication">
+          <ScalarProperty Name="CarrierStatusNote" ColumnName="ms_carrier_status_note" />
+          <ScalarProperty Name="SentToCarrierTrackingNumber" ColumnName="ms_sent_to_carrier_tracking_number" />
+          <ScalarProperty Name="SpousePolicySubmitToCarrierDate" ColumnName="ms_spouse_policy_submit_to_carrier_date" />
+          <ScalarProperty Name="SpouseSentToCarrierMethod" ColumnName="ms_spouse_sent_to_carrier_method" />
+          <ScalarProperty Name="SubmitToCarrierStatusNote" ColumnName="ms_submit_to_carrier_status_note" />
+          <ScalarProperty Name="PolicySubmitToCarrierDate" ColumnName="ms_policy_submit_to_carrier_date" />
+          <ScalarProperty Name="SentToCarrierMethod" ColumnName="ms_sent_to_carrier_method" />
+          <ScalarProperty Name="SubmitToCarrierCaseSpecialist" ColumnName="ms_submit_to_carrier_case_specialist" />
+          <ScalarProperty Name="IndividualId" ColumnName="ms_individual_id" />
+          <ScalarProperty Name="AccountId" ColumnName="ms_account_id" />
+          <ScalarProperty Name="SpouseRequestedApplicationSentDate" ColumnName="ms_spouse_requested_return_application_sent_date" />
+          <ScalarProperty Name="ChangedOn" ColumnName="ms_modified_date" />
+          <ScalarProperty Name="ChangedBy" ColumnName="ms_modified_user" />
+          <ScalarProperty Name="AddedOn" ColumnName="ms_add_date" />
+          <ScalarProperty Name="AddedBy" ColumnName="ms_add_user" />
+          <ScalarProperty Name="IsDeleted" ColumnName="ms_delete_flag" />
+          <ScalarProperty Name="IsActive" ColumnName="ms_active_flag" />
+          <ScalarProperty Name="CaseSpecialistNote3" ColumnName="ms_case_specialist_note_3" />
+          <ScalarProperty Name="CaseSpecialistNote2" ColumnName="ms_case_specialist_note_2" />
+          <ScalarProperty Name="CaseSpecialistNote" ColumnName="ms_case_specialist_note" />
+          <ScalarProperty Name="SalesAgentNotes" ColumnName="ms_sales_agent_notes" />
+          <ScalarProperty Name="StatusNote" ColumnName="ms_form_status_note" />
+          <ScalarProperty Name="CaseSpecialist" ColumnName="ms_form_case_specialist" />
+          <ScalarProperty Name="ApplicationSentToSpouseMethod" ColumnName="ms_app_sent_to_spouse_method" />
+          <ScalarProperty Name="ApplicationSentToSpouse" ColumnName="ms_app_sent_to_spouse" />
+          <ScalarProperty Name="SpouseExpectedReturnApplicationSentMethod" ColumnName="ms_spouse_expected_return_application_sent_method" />
+          <ScalarProperty Name="ReturnLabelNumber" ColumnName="ms_return_label_number" />
+          <ScalarProperty Name="ApplicationSentToCustomerMethod" ColumnName="ms_application_sent_to_customer_method" />
+          <ScalarProperty Name="ExpectedReturnApplicationMethod" ColumnName="ms_expected_return_applicaiton_method" />
+          <ScalarProperty Name="ActualApplicationSentDate" ColumnName="ms_actual_application_sent_date" />
+          <ScalarProperty Name="RequestedApplicationSentDate" ColumnName="ms_requested_application_sent_date" />
+          <ScalarProperty Name="MedsupId" ColumnName="medsup_id" />
+          <ScalarProperty Name="Key" ColumnName="ms_key" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DentalVisions">
+      <EntityTypeMapping TypeName="SQSalesToolLead.DentalVision">
+        <MappingFragment StoreEntitySet="dental_vision">
+          <ScalarProperty Name="LapseDate" ColumnName="den_lapse_date" />
+          <ScalarProperty Name="IssueDate" ColumnName="den_issue_date" />
+          <ScalarProperty Name="PolicyNumber" ColumnName="den_policy_number" />
+          <ScalarProperty Name="CompanyName" ColumnName="den_company_name" />
+          <ScalarProperty Name="Enroller" ColumnName="den_enrl_usr_key" />
+          <ScalarProperty Name="PolicyStatus" ColumnName="den_pls_key" />
+          <ScalarProperty Name="AnnualPremium" ColumnName="den_annual_premium" />
+          <ScalarProperty Name="ChangedOn" ColumnName="den_modified_date" />
+          <ScalarProperty Name="ChangedBy" ColumnName="den_modified_user" />
+          <ScalarProperty Name="AddedOn" ColumnName="den_add_date" />
+          <ScalarProperty Name="AddedBy" ColumnName="den_add_user" />
+          <ScalarProperty Name="IsDeleted" ColumnName="den_delete_flag" />
+          <ScalarProperty Name="IsActive" ColumnName="den_active_flag" />
+          <ScalarProperty Name="CommissionPaidDate" ColumnName="den_dvh_commission_paid_date" />
+          <ScalarProperty Name="CommissionAmount" ColumnName="den_dvh_commission_amount" />
+          <ScalarProperty Name="IsPaidFromCarrier" ColumnName="den_dvh_paid_from_carrier" />
+          <ScalarProperty Name="EffectiveDate" ColumnName="den_effective_date" />
+          <ScalarProperty Name="SubmissionDate" ColumnName="den_submission_date" />
+          <ScalarProperty Name="AccountId" ColumnName="den_act_key" />
+          <ScalarProperty Name="IndividualId" ColumnName="den_indv_key" />
+          <ScalarProperty Name="Key" ColumnName="den_key" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Mapdps">
+      <EntityTypeMapping TypeName="SQSalesToolLead.Mapdp">
+        <MappingFragment StoreEntitySet="mapdps">
+          <ScalarProperty Name="ReasonCodeKey" ColumnName="mapdp_msa_key" />
+          <ScalarProperty Name="CompanyName" ColumnName="mapdp_company_name" />
+          <ScalarProperty Name="PolicyStatus" ColumnName="madpd_pls_key" />
+          <ScalarProperty Name="AccountId" ColumnName="madpd_account_id" />
+          <ScalarProperty Name="LeadId" ColumnName="madpd_lead_id" />
+          <ScalarProperty Name="IndividualId" ColumnName="mapdp_indv_id" />
+          <ScalarProperty Name="IsDeleted" ColumnName="mapdp_delete_flag" />
+          <ScalarProperty Name="IsActive" ColumnName="mapdp_active_flag" />
+          <ScalarProperty Name="ChangedOn" ColumnName="mapdp_modified_date" />
+          <ScalarProperty Name="ChangedBy" ColumnName="mapdp_modified_user" />
+          <ScalarProperty Name="AddedOn" ColumnName="mapdp_add_date" />
+          <ScalarProperty Name="AddedBy" ColumnName="mapdp_add_user" />
+          <ScalarProperty Name="DtePurchasedPdp" ColumnName="mapdp_dte_purchased_pdp" />
+          <ScalarProperty Name="CommissionPaidDate" ColumnName="mapdp_commission_paid_date" />
+          <ScalarProperty Name="CommissionAmount" ColumnName="mapdp_commission_amount" />
+          <ScalarProperty Name="PaidFromCarrier" ColumnName="mapdp_paid_from_carrier" />
+          <ScalarProperty Name="LapseDate" ColumnName="mapdp_lapse_date" />
+          <ScalarProperty Name="MaIssueDate" ColumnName="mapdp_ma_issue_date" />
+          <ScalarProperty Name="SpouseMedicareId" ColumnName="mapdp_souce_medicare_id" />
+          <ScalarProperty Name="SpousePolicyIdNumber" ColumnName="mapdp_spouce_policy_id_nmbr" />
+          <ScalarProperty Name="SpouseEffectiveDate" ColumnName="mapdp_spouce_effective_date" />
+          <ScalarProperty Name="SpouseEnrollmentDate" ColumnName="mapdp_spouce_enrollment_date" />
+          <ScalarProperty Name="SpousePlanName" ColumnName="mapdp_spouce_plan_name" />
+          <ScalarProperty Name="SpousePlanType" ColumnName="mapdp_spouce_plan_type" />
+          <ScalarProperty Name="SpousePlanNumber" ColumnName="mapdp_spouce_plan_nmbr" />
+          <ScalarProperty Name="SpouseCarrier" ColumnName="mapdp_spouce_carrier" />
+          <ScalarProperty Name="SpouseType" ColumnName="mapdp_spouce_type" />
+          <ScalarProperty Name="VoiceSigSentDate" ColumnName="mapdp_voice_sig_sent_date" />
+          <ScalarProperty Name="CoventryPdpReferal" ColumnName="mapdp_coventry_pdp_referal" />
+          <ScalarProperty Name="Switcher" ColumnName="mapdp_switcher" />
+          <ScalarProperty Name="PolicyIdNumber" ColumnName="mapdp_policy_id_number" />
+          <ScalarProperty Name="MaritalStatus" ColumnName="mapdp_marital_status" />
+          <ScalarProperty Name="MedicareId" ColumnName="mapdp_medicare_id" />
+          <ScalarProperty Name="WritingNumber" ColumnName="mapdp_writing_nmbr" />
+          <ScalarProperty Name="EffectiveDate" ColumnName="mapdp_effective_date" />
+          <ScalarProperty Name="EnrollmentDate" ColumnName="mapdp_enrollment_date" />
+          <ScalarProperty Name="SpecialNotes" ColumnName="mapdp_special_notes" />
+          <ScalarProperty Name="PlanType" ColumnName="mapdp_plan_type" />
+          <ScalarProperty Name="PlanNumber" ColumnName="mapdp_plan_number" />
+          <ScalarProperty Name="PlanName" ColumnName="mapdp_plan_name" />
+          <ScalarProperty Name="Carrier" ColumnName="mapdp_carrier" />
+          <ScalarProperty Name="Enroller" ColumnName="mapdp_enroller" />
+          <ScalarProperty Name="Type" ColumnName="mapdp_type" />
+          <ScalarProperty Name="Key" ColumnName="mapdp_key" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AccountAttachments1">
+      <EntityTypeMapping TypeName="SQSalesToolLead.AccountAttachment">
+        <MappingFragment StoreEntitySet="account_attachments">
+          <ScalarProperty Name="Attachment" ColumnName="acta_attachment" />
+          <ScalarProperty Name="ChangedOn" ColumnName="acta_change_date" />
+          <ScalarProperty Name="ChangedBy" ColumnName="acta_change_user" />
+          <ScalarProperty Name="AddedOn" ColumnName="acta_add_date" />
+          <ScalarProperty Name="AddedBy" ColumnName="acta_add_user" />
+          <ScalarProperty Name="IsDeleted" ColumnName="acta_delete_flag" />
+          <ScalarProperty Name="FileDescription" ColumnName="acta_description" />
+          <ScalarProperty Name="FileName" ColumnName="acta_file_name" />
+          <ScalarProperty Name="AccountId" ColumnName="acta_act_key" />
+          <ScalarProperty Name="Id" ColumnName="acta_key" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AutoHomeQuotes">
+      <EntityTypeMapping TypeName="SQSalesToolLead.AutoHomeQuote">
+        <MappingFragment StoreEntitySet="autohome_quotes">
+          <ScalarProperty Name="CompanyName" ColumnName="ahq_company_name" />
+          <ScalarProperty Name="CurrentCarrierText" ColumnName="ahp_current_carrier" />
+          <ScalarProperty Name="AccountKey" ColumnName="ahq_act_key" />
+          <ScalarProperty Name="Umbrella" ColumnName="ahq_umbrella" />
+          <ScalarProperty Name="QuotedDate" ColumnName="ahq_quoted_date" />
+          <ScalarProperty Name="CurrentCarrierID" ColumnName="ahq_current_carrier" />
+          <ScalarProperty Name="QuotedCarrierID" ColumnName="ahq_quoted_carrier" />
+          <ScalarProperty Name="QuotedPremium" ColumnName="ahq_quoted_premium" />
+          <ScalarProperty Name="CurrentPremium" ColumnName="ahq_current_premium" />
+          <ScalarProperty Name="Saving" ColumnName="ahq_saving" />
+          <ScalarProperty Name="Type" ColumnName="ahq_type" />
+          <ScalarProperty Name="Id" ColumnName="ahq_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AutoHomePolicies1">
+      <EntityTypeMapping TypeName="SQSalesToolLead.AutoHomePolicy">
+        <MappingFragment StoreEntitySet="autohome_policies">
+          <ScalarProperty Name="AccountId" ColumnName="ahp_act_id" />
+          <ScalarProperty Name="CompanyName" ColumnName="ahp_company_name" />
+          <ScalarProperty Name="PolicyStatus" ColumnName="ahp_pls_key" />
+          <ScalarProperty Name="WritingAgent" ColumnName="ahp_wag_usr_key" />
+          <ScalarProperty Name="IndividualKey" ColumnName="ahp_indv_key" />
+          <ScalarProperty Name="CurrentCarrierText" ColumnName="ahp_current_carrier" />
+          <ScalarProperty Name="LapsedOn" ColumnName="aph_lapse_date" />
+          <ScalarProperty Name="BoundOn" ColumnName="ahp_bound_date" />
+          <ScalarProperty Name="IsDeleted" ColumnName="ahp_delete_flag" />
+          <ScalarProperty Name="IsActive" ColumnName="ahp_active_flag" />
+          <ScalarProperty Name="UmbrellaPolicy" ColumnName="ahp_umbrella_policy" />
+          <ScalarProperty Name="IsCoverageIncreased" ColumnName="ahp_coverage_increase" />
+          <ScalarProperty Name="EffectiveDate" ColumnName="ahp_effective_date" />
+          <ScalarProperty Name="CurrentMonthlyPremium" ColumnName="ahp_current_monthly_premium" />
+          <ScalarProperty Name="MonthlyPremium" ColumnName="ahp_monthly_premium" />
+          <ScalarProperty Name="PolicyNumber" ColumnName="ahp_policy_number" />
+          <ScalarProperty Name="Term" ColumnName="ahp_term" />
+          <ScalarProperty Name="CurrentCarrierID" ColumnName="ahp_current_carrier_key" />
+          <ScalarProperty Name="CarrierID" ColumnName="ahp_carrier_key" />
+          <ScalarProperty Name="PolicyType" ColumnName="ahp_type" />
+          <ScalarProperty Name="ID" ColumnName="ahp_id" />
+          <ComplexProperty Name="Added">
+            <ScalarProperty Name="On1" ColumnName="ahp_add_date" />
+            <ScalarProperty Name="By1" ColumnName="ahp_add_user" />
+          </ComplexProperty>
+          <ComplexProperty Name="Changed">
+            <ScalarProperty Name="On1" ColumnName="ahp_change_date" />
+            <ScalarProperty Name="By1" ColumnName="ahp_change_user" />
+          </ComplexProperty>
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserLs">
+      <EntityTypeMapping TypeName="SQSalesToolLead.UserL">
+        <MappingFragment StoreEntitySet="users">
+          <ScalarProperty Name="usr_phone_system" ColumnName="usr_phone_system" />
+          <ScalarProperty Name="usr_cisco_agent_extension2" ColumnName="usr_cisco_agent_extension2" />
+          <ScalarProperty Name="usr_cisco_agent_extension1" ColumnName="usr_cisco_agent_extension1" />
+          <ScalarProperty Name="usr_cisco_agent_password" ColumnName="usr_cisco_agent_password" />
+          <ScalarProperty Name="usr_cisco_agent_id" ColumnName="usr_cisco_agent_id" />
+          <ScalarProperty Name="usr_cisco_last_name" ColumnName="usr_cisco_last_name" />
+          <ScalarProperty Name="usr_cisco_first_name" ColumnName="usr_cisco_first_name" />
+          <ScalarProperty Name="usr_cisco_domain_address" ColumnName="usr_cisco_domain_address" />
+          <ScalarProperty Name="usr_phone_system_inbound_skillId" ColumnName="usr_phone_system_inbound_skillId" />
+          <ScalarProperty Name="usr_phone_system_inbound_skill" ColumnName="usr_phone_system_inbound_skill" />
+          <ScalarProperty Name="usr_phone_system_stationid" ColumnName="usr_phone_system_stationid" />
+          <ScalarProperty Name="usr_phone_system_station_type" ColumnName="usr_phone_system_station_type" />
+          <ScalarProperty Name="usr_alternate_product_flag" ColumnName="usr_alternate_product_flag" />
+          <ScalarProperty Name="usr_onboard_flag" ColumnName="usr_onboard_flag" />
+          <ScalarProperty Name="usr_acd_cap_flag" ColumnName="usr_acd_cap_flag" />
+          <ScalarProperty Name="usr_acd_status_flag" ColumnName="usr_acd_status_flag" />
+          <ScalarProperty Name="usr_acd_flag" ColumnName="usr_acd_flag" />
+          <ScalarProperty Name="usr_phone_system_id" ColumnName="usr_phone_system_id" />
+          <ScalarProperty Name="usr_phone_system_password" ColumnName="usr_phone_system_password" />
+          <ScalarProperty Name="usr_phone_system_username" ColumnName="usr_phone_system_username" />
+          <ScalarProperty Name="IsArcApiUser" ColumnName="usr_api_flag" />
+          <ScalarProperty Name="ArcAcdCap" ColumnName="usr_acdcap" />
+          <ScalarProperty Name="ArcId" ColumnName="usr_arc_id" />
+          <ScalarProperty Name="usr_reassignment_flag" ColumnName="usr_reassignment_flag" />
+          <ScalarProperty Name="usr_pwd" ColumnName="usr_pwd" />
+          <ScalarProperty Name="usr_net_login" ColumnName="usr_net_login" />
+          <ScalarProperty Name="usr_transfer_flag" ColumnName="usr_transfer_flag" />
+          <ScalarProperty Name="CsrFlag" ColumnName="usr_csr_flag" />
+          <ScalarProperty Name="RetentionFlag" ColumnName="usr_retention_flag" />
+          <ScalarProperty Name="TZ" ColumnName="usr_tz" />
+          <ScalarProperty Name="MobileEmail" ColumnName="usr_mobile_email" />
+          <ScalarProperty Name="CalEndAM" ColumnName="usr_cal_end_am" />
+          <ScalarProperty Name="CalEndHour" ColumnName="usr_cal_end_hour" />
+          <ScalarProperty Name="CalStartAM" ColumnName="usr_cal_start_am" />
+          <ScalarProperty Name="CalStartHour" ColumnName="usr_cal_start_hour" />
+          <ScalarProperty Name="ChangedOn" ColumnName="usr_change_date" />
+          <ScalarProperty Name="ChangedBy" ColumnName="usr_change_user" />
+          <ScalarProperty Name="AddedOn" ColumnName="usr_add_date" />
+          <ScalarProperty Name="AddedBy" ColumnName="usr_add_usr" />
+          <ScalarProperty Name="DeleteFlag" ColumnName="usr_delete_flag" />
+          <ScalarProperty Name="ActiveFlag" ColumnName="usr_active_flag" />
+          <ScalarProperty Name="LoginLandingPage" ColumnName="usr_login_landing_page" />
+          <ScalarProperty Name="SaveFilterCriteria" ColumnName="usr_save_filter_criteria" />
+          <ScalarProperty Name="AutoRefresh" ColumnName="usr_auto_refresh" />
+          <ScalarProperty Name="FlaggedLeadHighlight" ColumnName="usr_flagged_lead_highlight" />
+          <ScalarProperty Name="NewLeadHLInclNewlyAssigned" ColumnName="usr_new_lead_hl_incl_newly_assigned" />
+          <ScalarProperty Name="NewLeadHL" ColumnName="usr_new_lead_hl" />
+          <ScalarProperty Name="NewLeadBold" ColumnName="usr_new_lead_bold" />
+          <ScalarProperty Name="CalBackgroundHighlights" ColumnName="usr_cal_background_highlights" />
+          <ScalarProperty Name="DefaultCalView" ColumnName="usr_default_cal_view" />
+          <ScalarProperty Name="Custom4" ColumnName="usr_custom4" />
+          <ScalarProperty Name="Custom3" ColumnName="usr_custom3" />
+          <ScalarProperty Name="Custom2" ColumnName="usr_custom2" />
+          <ScalarProperty Name="Custom1" ColumnName="usr_custom1" />
+          <ScalarProperty Name="SoftphoneCMGeneral" ColumnName="usr_softphone_cm_general" />
+          <ScalarProperty Name="SoftphoneCMPersonal" ColumnName="usr_softphone_cm_personal" />
+          <ScalarProperty Name="SoftphoneSQGeneral" ColumnName="usr_softphone_sq_general" />
+          <ScalarProperty Name="SoftphoneSQPersonal" ColumnName="usr_softphone_sq_personal" />
+          <ScalarProperty Name="Note" ColumnName="usr_note" />
+          <ScalarProperty Name="Position" ColumnName="usr_position" />
+          <ScalarProperty Name="OtherPhoneExt" ColumnName="usr_other_phone_ext" />
+          <ScalarProperty Name="OtherPhone" ColumnName="usr_other_phone" />
+          <ScalarProperty Name="Fax" ColumnName="usr_fax" />
+          <ScalarProperty Name="MobilePhone" ColumnName="usr_mobile_phone" />
+          <ScalarProperty Name="WorkPhoneExt" ColumnName="usr_work_phone_ext" />
+          <ScalarProperty Name="WorkPhone" ColumnName="usr_work_phone" />
+          <ScalarProperty Name="Email" ColumnName="usr_email" />
+          <ScalarProperty Name="LastName" ColumnName="usr_last_name" />
+          <ScalarProperty Name="FirstName" ColumnName="usr_first_name" />
+          <ScalarProperty Name="Key" ColumnName="usr_key" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="statuses">
+      <EntityTypeMapping TypeName="SQSalesToolLead.StatusL">
+        <MappingFragment StoreEntitySet="statuses">
+          <ScalarProperty Name="sta_filter_customValue" ColumnName="sta_filter_customValue" />
+          <ScalarProperty Name="sta_filter_selection" ColumnName="sta_filter_selection" />
+          <ScalarProperty Name="sta_progress_flag" ColumnName="sta_progress_flag" />
+          <ScalarProperty Name="Level" ColumnName="sta_level" />
+          <ScalarProperty Name="Priority" ColumnName="sta_priority" />
+          <ScalarProperty Name="ChangedDate" ColumnName="sta_change_date" />
+          <ScalarProperty Name="ChangedBy" ColumnName="sta_change_user" />
+          <ScalarProperty Name="AddedOn" ColumnName="sta_add_date" />
+          <ScalarProperty Name="AddedBy" ColumnName="sta_add_user" />
+          <ScalarProperty Name="Title" ColumnName="sta_title" />
+          <ScalarProperty Name="Key" ColumnName="sta_key" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AccountHistories">
+      <EntityTypeMapping TypeName="SQSalesToolLead.AccountHistory">
+        <MappingFragment StoreEntitySet="account_history">
+          <ScalarProperty Name="Policykey" ColumnName="ach_policy_key" />
+          <ScalarProperty Name="PolicyStatusType" ColumnName="ach_policy_status_type" />
+          <ScalarProperty Name="PolicyStatusId" ColumnName="ach_policy_status_key" />
+          <ScalarProperty Name="IsUserOB" ColumnName="ach_usr_ob" />
+          <ScalarProperty Name="IsUserAP" ColumnName="ach_usr_ap" />
+          <ScalarProperty Name="IsUserTA" ColumnName="ach_usr_ta" />
+          <ScalarProperty Name="IsUserAssigned" ColumnName="ach_usr_assigned" />
+          <ScalarProperty Name="IsUserCSR" ColumnName="ach_usr_csr" />
+          <ScalarProperty Name="RuleId" ColumnName="ach_pv_key" />
+          <ScalarProperty Name="ArcContactId" ColumnName="ach_contactId" />
+          <ScalarProperty Name="ArcDINS" ColumnName="ach_dnis" />
+          <ScalarProperty Name="ArcTalkTime" ColumnName="ach_talktime" />
+          <ScalarProperty Name="IsDeliveredToArc" ColumnName="ach_delivered_to_arc" />
+          <ScalarProperty Name="NewSubstatus" ColumnName="ach_new_sub_status_key" />
+          <ScalarProperty Name="NewStatus" ColumnName="ach_new_status_key" />
+          <ScalarProperty Name="CurrentSubstatus" ColumnName="ach_cur_sub_status_key" />
+          <ScalarProperty Name="CurrentStatus" ColumnName="ach_cur_status_key" />
+          <ScalarProperty Name="Action" ColumnName="ach_action_key" />
+          <ScalarProperty Name="EntryType" ColumnName="ach_entryType" />
+          <ScalarProperty Name="Entry" ColumnName="ach_entry" />
+          <ScalarProperty Name="Datetime" ColumnName="ach_added_date" />
+          <ScalarProperty Name="User" ColumnName="ach_userid" />
+          <ScalarProperty Name="Comment" ColumnName="ach_comment" />
+          <ScalarProperty Name="AccountId" ColumnName="ach_account_key" />
+          <ScalarProperty Name="AccountHistoryId" ColumnName="ach_key" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EventCalendars1">
+      <EntityTypeMapping TypeName="SQSalesToolLead.EventCalendar">
+        <MappingFragment StoreEntitySet="eventcalendar">
+          <ScalarProperty Name="TimeZoneId" ColumnName="eve_timezone" />
+          <ScalarProperty Name="IsOpened" ColumnName="evc_isopened_flag" />
+          <ScalarProperty Name="AlertTimeBefore" ColumnName="evc_alert_time_before" />
+          <ScalarProperty Name="SpecificDateTimeFromNow" ColumnName="evc_specific_date_time_from_now" />
+          <ScalarProperty Name="IsSpecificDateTimeFromNow" ColumnName="evc_is_specific_date_time_from_now" />
+          <ScalarProperty Name="TimeFromNow" ColumnName="evc_time_from_now" />
+          <ScalarProperty Name="IsTimeFromNow" ColumnName="evc_is_time_from_now" />
+          <ScalarProperty Name="DismissUponStatusChange" ColumnName="evc_dismiss_upon_status_change" />
+          <ScalarProperty Name="AccountID" ColumnName="act_account_id" />
+          <ScalarProperty Name="IsDeleted" ColumnName="evc_delete_flag" />
+          <ScalarProperty Name="IsActive" ColumnName="evc_active_flag" />
+          <ScalarProperty Name="Dismissed" ColumnName="evc_dismissed" />
+          <ScalarProperty Name="Completed" ColumnName="evc_completed" />
+          <ScalarProperty Name="SnoozeAfter" ColumnName="evc_snooze_after" />
+          <ScalarProperty Name="EventStatus" ColumnName="evc_event_status" />
+          <ScalarProperty Name="EventType" ColumnName="evc_event_type" />
+          <ScalarProperty Name="CreateOutlookReminder" ColumnName="evc_create_outlook_reminder" />
+          <ScalarProperty Name="AlertTextSMS" ColumnName="evc_alert_text_sms" />
+          <ScalarProperty Name="AlertEmail" ColumnName="evc_alert_email" />
+          <ScalarProperty Name="AlertPopup" ColumnName="evc_alert_popup" />
+          <ScalarProperty Name="Description" ColumnName="evc_description" />
+          <ScalarProperty Name="Title" ColumnName="evc_title" />
+          <ScalarProperty Name="UserID" ColumnName="usr_user_id" />
+          <ScalarProperty Name="ID" ColumnName="evc_id" />
+          <ComplexProperty Name="Added">
+            <ScalarProperty Name="On1" ColumnName="evc_add_date" />
+            <ScalarProperty Name="By1" ColumnName="evc_add_user" />
+          </ComplexProperty>
+          <ComplexProperty Name="Changed">
+            <ScalarProperty Name="On1" ColumnName="evc_modified_date" />
+            <ScalarProperty Name="By1" ColumnName="evc_modified_user" />
+          </ComplexProperty>
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EmailQueues">
+      <EntityTypeMapping TypeName="SQSalesToolLead.EmailQueue">
+        <MappingFragment StoreEntitySet="email_queue">
+          <ScalarProperty Name="IsDeliveredToArc" ColumnName="eq_delivered_to_arc" />
+          <ScalarProperty Name="OverrideBCCHidden" ColumnName="aq_override_bcc_hidden" />
+          <ScalarProperty Name="OverrideBodyMessage" ColumnName="eq_override_message" />
+          <ScalarProperty Name="OverrideFormat" ColumnName="eq_override_format" />
+          <ScalarProperty Name="OverrideSubject" ColumnName="eq_override_subject" />
+          <ScalarProperty Name="OverrideBCC" ColumnName="eq_override_bcc" />
+          <ScalarProperty Name="OverrideCC" ColumnName="eq_override_cc" />
+          <ScalarProperty Name="OverrideTo" ColumnName="eq_override_to" />
+          <ScalarProperty Name="OverrideFrom" ColumnName="eq_override_from" />
+          <ScalarProperty Name="IsTemplateOverride" ColumnName="eq_is_template_override" />
+          <ScalarProperty Name="MainStatusID" ColumnName="eq_mainstatus_old" />
+          <ScalarProperty Name="ChangedOn" ColumnName="eq_modified_datetime" />
+          <ScalarProperty Name="Status" ColumnName="eq_status" />
+          <ScalarProperty Name="EmailTemplateKey" ColumnName="eq_eml_key" />
+          <ScalarProperty Name="RunDateTime" ColumnName="eq_run_datetime" />
+          <ScalarProperty Name="AccountKey" ColumnName="eq_acct_key" />
+          <ScalarProperty Name="key" ColumnName="eq_key" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ViewLeads">
+      <EntityTypeMapping TypeName="SQSalesToolLead.ViewLead">
+        <MappingFragment StoreEntitySet="vw_leads">
+          <ScalarProperty Name="SubstatusId" ColumnName="SubstatusId" />
+          <ScalarProperty Name="campaignId" ColumnName="campaignId" />
+          <ScalarProperty Name="csruserkey" ColumnName="csruserkey" />
+          <ScalarProperty Name="transferuserkey" ColumnName="transferuserkey" />
+          <ScalarProperty Name="assigneduserkey" ColumnName="assigneduserkey" />
+          <ScalarProperty Name="state" ColumnName="state" />
+          <ScalarProperty Name="leadCampaign" ColumnName="leadCampaign" />
+          <ScalarProperty Name="SubStatus1" ColumnName="SubStatus1" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="leadStatus" ColumnName="leadStatus" />
+          <ScalarProperty Name="OutpulseId" ColumnName="OutpulseId" />
+          <ScalarProperty Name="TA" ColumnName="TA" />
+          <ScalarProperty Name="CSR" ColumnName="CSR" />
+          <ScalarProperty Name="UserAssigned" ColumnName="userAssigned" />
+          <ScalarProperty Name="CellPhone" ColumnName="cellPhone" />
+          <ScalarProperty Name="EveningPhone" ColumnName="eveningPhone" />
+          <ScalarProperty Name="DayPhone" ColumnName="dayPhone" />
+          <ScalarProperty Name="Lastname" ColumnName="lastName" />
+          <ScalarProperty Name="FirstName" ColumnName="firstName" />
+          <ScalarProperty Name="CreatedOn" ColumnName="dateCreated" />
+          <ScalarProperty Name="BirthDate" ColumnName="dateOfBirth" />
+          <ScalarProperty Name="AddedOn" ColumnName="act_add_date" />
+          <ScalarProperty Name="AccountId" ColumnName="accountId" />
+          <ScalarProperty Name="LeadId" ColumnName="leadid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vw_proj_ForPrioritizationList">
+      <EntityTypeMapping TypeName="SQSalesToolLead.vw_proj_ForPrioritizationList">
+        <MappingFragment StoreEntitySet="vw_proj_ForPrioritizationList">
+          <ScalarProperty Name="act_key" ColumnName="act_key" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="FindIndividualByPhone" FunctionName="SQSalesToolLead.Store.proj_FindIndividualByPhone">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SQSalesToolLead.FindIndividualByPhoneResult">
+          <ScalarProperty Name="indv_key" ColumnName="indv_key" />
+          <ScalarProperty Name="indv_first_name" ColumnName="indv_first_name" />
+          <ScalarProperty Name="indv_last_name" ColumnName="indv_last_name" />
+          <ScalarProperty Name="indv_email" ColumnName="indv_email" />
+          <ScalarProperty Name="indv_external_reference_id" ColumnName="indv_external_reference_id" />
+          <ScalarProperty Name="indv_gender" ColumnName="indv_gender" />
+          <ScalarProperty Name="indv_smoking" ColumnName="indv_smoking" />
+          <ScalarProperty Name="indv_age" ColumnName="indv_age" />
+          <ScalarProperty Name="indv_day_phone" ColumnName="indv_day_phone" />
+          <ScalarProperty Name="indv_evening_phone" ColumnName="indv_evening_phone" />
+          <ScalarProperty Name="indv_cell_phone" ColumnName="indv_cell_phone" />
+          <ScalarProperty Name="indv_fax_nmbr" ColumnName="indv_fax_nmbr" />
+          <ScalarProperty Name="indv_address1" ColumnName="indv_address1" />
+          <ScalarProperty Name="indv_address2" ColumnName="indv_address2" />
+          <ScalarProperty Name="indv_city" ColumnName="indv_city" />
+          <ScalarProperty Name="indv_state_Id" ColumnName="indv_state_Id" />
+          <ScalarProperty Name="indv_zipcode" ColumnName="indv_zipcode" />
+          <ScalarProperty Name="indv_account_id" ColumnName="indv_account_id" />
+          <ScalarProperty Name="indv_relation" ColumnName="indv_relation" />
+          <ScalarProperty Name="indv_add_user" ColumnName="indv_add_user" />
+          <ScalarProperty Name="indv_birthday" ColumnName="indv_birthday" />
+          <ScalarProperty Name="indv_notes" ColumnName="indv_notes" />
+          <ScalarProperty Name="indv_add_date" ColumnName="indv_add_date" />
+          <ScalarProperty Name="indv_modified_user" ColumnName="indv_modified_user" />
+          <ScalarProperty Name="indv_modified_date" ColumnName="indv_modified_date" />
+          <ScalarProperty Name="indv_active_flag" ColumnName="indv_active_flag" />
+          <ScalarProperty Name="indv_delete_flag" ColumnName="indv_delete_flag" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="Leads">
+      <EntityTypeMapping TypeName="IsTypeOf(SQSalesToolLead.Lead)">
+        <MappingFragment StoreEntitySet="leads">
+          <ScalarProperty Name="lea_time_zone_appt" ColumnName="lea_time_zone_appt" />
+          <ScalarProperty Name="LastCalendarChangeAPUserDate" ColumnName="lea_last_calendar_change_ap_usr_date" />
+          <ScalarProperty Name="LastCalendarChangeOBUserDate" ColumnName="lea_last_calendar_change_ob_usr_date" />
+          <ScalarProperty Name="LastCalendarChangeTAUserDate" ColumnName="lea_last_calendar_change_ta_usr_date" />
+          <ScalarProperty Name="LastCalendarChangeCSRUserDate" ColumnName="lea_last_calendar_change_csr_usr_date" />
+          <ScalarProperty Name="LastCalendarChangeAssignedUserDate" ColumnName="lea_last_calendar_change_assigned_usr_date" />
+          <ScalarProperty Name="LastActionByAP" ColumnName="lea_last_action_ap" />
+          <ScalarProperty Name="LastActionByOB" ColumnName="lea_last_action_ob" />
+          <ScalarProperty Name="LastActionByTA" ColumnName="lea_last_action_ta" />
+          <ScalarProperty Name="LastActionByAssigned" ColumnName="lea_last_action_assigned" />
+          <ScalarProperty Name="LastActionByCSR" ColumnName="lea_last_action_csr" />
+          <ScalarProperty Name="LastActionAssignedOn" ColumnName="lea_last_action_date_assigned_usr" />
+          <ScalarProperty Name="LastActionAssignedBy" ColumnName="lea_last_action_assigned_usr" />
+          <ScalarProperty Name="LastActionCSROn" ColumnName="lea_last_action_date_csr_usr" />
+          <ScalarProperty Name="LastCallContactDate" ColumnName="lea_last_call_contact_date" />
+          <ScalarProperty Name="LastCallContactAPUserDate" ColumnName="lea_last_call_contact_ap_usr_date" />
+          <ScalarProperty Name="LastCallContactOBUserDate" ColumnName="lea_last_call_contact_ob_usr_date" />
+          <ScalarProperty Name="LastCallContactTAUserDate" ColumnName="lea_last_call_contact_ta_usr_date" />
+          <ScalarProperty Name="LastCallContactCSRUserDate" ColumnName="lea_last_call_contact_csr_usr_date" />
+          <ScalarProperty Name="LastCallContactAssignedUserDate" ColumnName="lea_last_call_contact_assigned_usr_date" />
+          <ScalarProperty Name="LastCallAttemptAPUserDate" ColumnName="lea_last_call_attempt_ap_usr_date" />
+          <ScalarProperty Name="LastCallAttemptOBUserDate" ColumnName="lea_last_call_attempt_ob_usr_date" />
+          <ScalarProperty Name="LastCallAttemptTAUserDate" ColumnName="lea_last_call_attempt_ta_usr_date" />
+          <ScalarProperty Name="LastCallAttemptCSRUserDate" ColumnName="lea_last_call_attempt_csr_usr_date" />
+          <ScalarProperty Name="LastCallAttemptAssignedUserDate" ColumnName="lea_last_call_attempt_assigned_usr_date" />
+          <ScalarProperty Name="LastCallAttemptDate" ColumnName="lea_last_call_attempt_date" />
+          <ScalarProperty Name="LastActionAPOn" ColumnName="lea_last_action_date_ap_usr" />
+          <ScalarProperty Name="LastActionAPBy" ColumnName="lea_last_action_ap_usr" />
+          <ScalarProperty Name="LastActionOBOn" ColumnName="lea_last_action_date_ob_usr" />
+          <ScalarProperty Name="LastActionOBBy" ColumnName="lea_last_action_ob_usr" />
+          <ScalarProperty Name="LastActionTAOn" ColumnName="lea_last_action_date_ta_usr" />
+          <ScalarProperty Name="LastActionTABy" ColumnName="lea_last_action_ta_usr" />
+          <ScalarProperty Name="LastActionCSRBy" ColumnName="lea_last_action_csr_usr" />
+          <ScalarProperty Name="ArcFraudScore" ColumnName="lea_fraudscore" />
+          <ScalarProperty Name="ArcEScore" ColumnName="lea_escore" />
+          <ScalarProperty Name="ArcTier" ColumnName="lea_tier" />
+          <ScalarProperty Name="ArcSubStatus" ColumnName="lea_arc_substatus" />
+          <ScalarProperty Name="IsDuplicate" ColumnName="lea_isduplicate" />
+          <ScalarProperty Name="LastCallDate" ColumnName="lea_last_call_date" />
+          <ScalarProperty Name="TrackingCode" ColumnName="lea_tracking_code" />
+          <ScalarProperty Name="EmailTrackingCode" ColumnName="lea_email_tracking_code" />
+          <ScalarProperty Name="ActionId" ColumnName="lea_last_action" />
+          <ScalarProperty Name="SubStatusId" ColumnName="lea_sub_status" />
+          <ScalarProperty Name="FirstContactAppointment" ColumnName="lea_first_contact_apt" />
+          <ScalarProperty Name="Group" ColumnName="lea_dte_group" />
+          <ScalarProperty Name="Company" ColumnName="lea_dte_company" />
+          <ScalarProperty Name="LastActionDate" ColumnName="lea_last_action_date" />
+          <ScalarProperty Name="SourceCode" ColumnName="lea_source_code" />
+          <ScalarProperty Name="PubSubId" ColumnName="lea_pub_sub_id" />
+          <ScalarProperty Name="TrackingInformation" ColumnName="lea_tracking_information" />
+          <ScalarProperty Name="CampaignId" ColumnName="lea_cmp_id" />
+          <ScalarProperty Name="StatusId" ColumnName="lea_status" />
+          <ScalarProperty Name="AccountId" ColumnName="lea_account_id" />
+          <ScalarProperty Name="AccountKey" ColumnName="lea_account_key" />
+          <ScalarProperty Name="SourceKey" ColumnName="lead_source_source_key" />
+          <ScalarProperty Name="IsDeleted" ColumnName="lea_delete_flag" />
+          <ScalarProperty Name="IsActive" ColumnName="lea_active_flag" />
+          <ScalarProperty Name="ChangedOn" ColumnName="lea_modified_date" />
+          <ScalarProperty Name="ChangedBy" ColumnName="lea_modified_user" />
+          <ScalarProperty Name="AddedOn" ColumnName="lea_add_date" />
+          <ScalarProperty Name="TimeCreated" ColumnName="lea_time_created" />
+          <ScalarProperty Name="AddedBy" ColumnName="lea_add_user" />
+          <ScalarProperty Name="IPAddress" ColumnName="lea_ip_address" />
+          <ScalarProperty Name="AdVariation" ColumnName="lea_ad_variation" />
+          <ScalarProperty Name="PublisherID" ColumnName="lea_publisher_id" />
+          <ScalarProperty Name="IndividualId" ColumnName="lea_individual_id" />
+          <ScalarProperty Name="Key" ColumnName="lea_key" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserSavedSearches">
+      <EntityTypeMapping TypeName="SQSalesToolLead.UserSavedSearch">
+        <MappingFragment StoreEntitySet="user_saved_search">
+          <ScalarProperty Name="SearchName" ColumnName="srh_searchname" />
+          <ScalarProperty Name="UserID" ColumnName="usr_user_id" />
+          <ScalarProperty Name="ID" ColumnName="srh_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserSavedSearchCriterias">
+      <EntityTypeMapping TypeName="SQSalesToolLead.UserSavedSearchCriteria">
+        <MappingFragment StoreEntitySet="user_saved_search_criteria">
+          <ScalarProperty Name="Value" ColumnName="crt_value" />
+          <ScalarProperty Name="SearchTypeID" ColumnName="crt_search_type_id" />
+          <ScalarProperty Name="SearchID" ColumnName="srh_search_id" />
+          <ScalarProperty Name="ID" ColumnName="crt_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="GetIndividualsByAccountID" FunctionName="SQSalesToolLead.Store.proj_GetIndividuals">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SQSalesToolLead.ViewIndividuals">
+          <ScalarProperty Name="AccountId" ColumnName="AccountId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+          <ScalarProperty Name="BirthDate" ColumnName="BirthDate" />
+          <ScalarProperty Name="SortOrder" ColumnName="SortOrder" />
+          <ScalarProperty Name="DayPhone" ColumnName="DayPhone" />
+          <ScalarProperty Name="EveningPhone" ColumnName="EveningPhone" />
+          <ScalarProperty Name="CellPhone" ColumnName="CellPhone" />
+          <ScalarProperty Name="OutpulseId" ColumnName="OutpulseId" />
+          <ScalarProperty Name="StatusIndv" ColumnName="StatusIndv" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="SubStatus" ColumnName="SubStatus" />
+          <ScalarProperty Name="NextCalendarEventDate" ColumnName="NextCalendarEventDate" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="ViewVehicles">
+      <EntityTypeMapping TypeName="SQSalesToolLead.ViewVehicle">
+        <MappingFragment StoreEntitySet="vw_Vehicles">
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="ComprehensiveDeductable" ColumnName="ComprehensiveDeductable" />
+          <ScalarProperty Name="CollisionDeductable" ColumnName="CollisionDeductable" />
+          <ScalarProperty Name="AnnualMilleage" ColumnName="AnnualMilleage" />
+          <ScalarProperty Name="Year" ColumnName="Year" />
+          <ScalarProperty Name="Model" ColumnName="Model" />
+          <ScalarProperty Name="Make" ColumnName="Make" />
+          <ScalarProperty Name="Key" ColumnName="Key" />
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+          <ScalarProperty Name="IndividualId" ColumnName="IndividualId" />
+          <ScalarProperty Name="AccountId" ColumnName="AccountId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ViewAutoHomeQuote">
+      <EntityTypeMapping TypeName="SQSalesToolLead.ViewAutoHomeQuote">
+        <MappingFragment StoreEntitySet="vw_AutoHomeQuotes">
+          <ScalarProperty Name="CurrentPremium" ColumnName="CurrentPremium" />
+          <ScalarProperty Name="QuoteType" ColumnName="QuoteType" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Carrier" ColumnName="Carrier" />
+          <ScalarProperty Name="QuotedPremium" ColumnName="QuotedPremium" />
+          <ScalarProperty Name="QuotedDate" ColumnName="QuotedDate" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="AccountId" ColumnName="AccountId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="account_history_sub_status">
+      <EntityTypeMapping TypeName="SQSalesToolLead.AccountHistorySubstatusII">
+        <MappingFragment StoreEntitySet="account_history_sub_status">
+          <ScalarProperty Name="Substatus2Id" ColumnName="achs_sub_status_ii_key" />
+          <ScalarProperty Name="AccountHistoryId" ColumnName="achs_ach_key" />
+          <ScalarProperty Name="Key" ColumnName="achs_key" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ViewAutoHomePolicy">
+      <EntityTypeMapping TypeName="SQSalesToolLead.ViewAutoHomePolicy">
+        <MappingFragment StoreEntitySet="vw_AutoHomePolicy">
+          <ScalarProperty Name="PolicyStatus" ColumnName="PolicyStatus" />
+          <ScalarProperty Name="PolicyTypeVal" ColumnName="PolicyTypeVal" />
+          <ScalarProperty Name="PolicyHolder" ColumnName="PolicyHolder" />
+          <ScalarProperty Name="BoundDate" ColumnName="BoundDate" />
+          <ScalarProperty Name="EffectiveDate" ColumnName="EffectiveDate" />
+          <ScalarProperty Name="UmbrellaPolicy" ColumnName="UmbrellaPolicy" />
+          <ScalarProperty Name="Term" ColumnName="Term" />
+          <ScalarProperty Name="MonthlyPremium" ColumnName="MonthlyPremium" />
+          <ScalarProperty Name="CurrentCarrier" ColumnName="CurrentCarrier" />
+          <ScalarProperty Name="Carrier" ColumnName="Carrier" />
+          <ScalarProperty Name="PolicyNumber" ColumnName="PolicyNumber" />
+          <ScalarProperty Name="PolicyType" ColumnName="PolicyType" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="AccountId" ColumnName="AccountId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Recipients">
+      <EntityTypeMapping TypeName="SQSalesToolLead.Recipeint">
+        <MappingFragment StoreEntitySet="email_recipients">
+          <ScalarProperty Name="UserId" ColumnName="rcp_usr_id" />
+          <ScalarProperty Name="EmailReportId" ColumnName="rcp_eml_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ReportInEmail">
+      <EntityTypeMapping TypeName="SQSalesToolLead.ReportInEmail">
+        <MappingFragment StoreEntitySet="email_report">
+          <ScalarProperty Name="Id" ColumnName="emr_id" />
+          <ScalarProperty Name="IsFiltered" ColumnName="emr_filter" />
+          <ScalarProperty Name="Frequency" ColumnName="emr_frequency" />
+          <ScalarProperty Name="FormatId" ColumnName="emr_format" />
+          <ScalarProperty Name="ReportId" ColumnName="emr_rpt_id" />
+          <ScalarProperty Name="EmailId" ColumnName="emr_eml_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Emails">
+      <EntityTypeMapping TypeName="SQSalesToolLead.Emails">
+        <MappingFragment StoreEntitySet="emails">
+          <ScalarProperty Name="LastSent" ColumnName="eml_last_sent" />
+          <ScalarProperty Name="IsSent" ColumnName="eml_sent_flag" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="eml_modified_by" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="eml_modified_on" />
+          <ScalarProperty Name="CreatedBy" ColumnName="eml_created_by" />
+          <ScalarProperty Name="CreatedOn" ColumnName="eml_created_on" />
+          <ScalarProperty Name="Body" ColumnName="eml_body" />
+          <ScalarProperty Name="Subject" ColumnName="eml_Subject" />
+          <ScalarProperty Name="Id" ColumnName="eml_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ReportFormat">
+      <EntityTypeMapping TypeName="SQSalesToolLead.ReportFormat">
+        <MappingFragment StoreEntitySet="report_format">
+          <ScalarProperty Name="Title" ColumnName="rft_title" />
+          <ScalarProperty Name="Id" ColumnName="rft_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ViewEmailRecipients">
+      <EntityTypeMapping TypeName="SQSalesToolLead.ViewEmailRecipients">
+        <MappingFragment StoreEntitySet="vwEmailRecipients">
+          <ScalarProperty Name="ReportId" ColumnName="ReportId" />
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="EmailId" ColumnName="EmailId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="policy_statuses">
+      <EntityTypeMapping TypeName="SQSalesToolLead.PolicyStatuses">
+        <MappingFragment StoreEntitySet="policy_statuses">
+          <ScalarProperty Name="Type" ColumnName="pls_type" />
+          <ScalarProperty Name="ChangedDate" ColumnName="pls_change_date" />
+          <ScalarProperty Name="ChangedBy" ColumnName="pls_change_user" />
+          <ScalarProperty Name="AddedDate" ColumnName="pls_add_date" />
+          <ScalarProperty Name="AddedBy" ColumnName="pls_add_user" />
+          <ScalarProperty Name="Name" ColumnName="pls_name" />
+          <ScalarProperty Name="Key" ColumnName="pls_key" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="IssueStatuses">
+      <EntityTypeMapping TypeName="SQSalesToolLead.IssueStatuses">
+        <MappingFragment StoreEntitySet="issue_statuses">
+          <ScalarProperty Name="ChangedOn" ColumnName="ist_change_date" />
+          <ScalarProperty Name="ChangedBy" ColumnName="ist_change_user" />
+          <ScalarProperty Name="AddedOn" ColumnName="ist_add_date" />
+          <ScalarProperty Name="AddedBy" ColumnName="ist_add_user" />
+          <ScalarProperty Name="Title" ColumnName="ist_title" />
+          <ScalarProperty Name="ID" ColumnName="ist_key" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="IssueStatusesHistory">
+      <EntityTypeMapping TypeName="SQSalesToolLead.IssueStatusesHistory">
+        <MappingFragment StoreEntitySet="issue_statuses_history">
+          <ScalarProperty Name="ChangedOn" ColumnName="ish_change_date" />
+          <ScalarProperty Name="ChangedBy" ColumnName="ish_change_user" />
+          <ScalarProperty Name="AddedOn" ColumnName="ish_add_date" />
+          <ScalarProperty Name="AddedBy" ColumnName="ish_add_user" />
+          <ScalarProperty Name="Comment" ColumnName="ish_comment" />
+          <ScalarProperty Name="IssueStatusID" ColumnName="ish_issue_statuses_key" />
+          <ScalarProperty Name="CarrierIssueID" ColumnName="ish_iss_key" />
+          <ScalarProperty Name="UserID" ColumnName="ish_userid" />
+          <ScalarProperty Name="AccountKey" ColumnName="ish_account_key" />
+          <ScalarProperty Name="ID" ColumnName="ish_key" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DuplicatesViews">
+      <EntityTypeMapping TypeName="SQSalesToolLead.DuplicatesView">
+        <MappingFragment StoreEntitySet="duplicates_view">
+          <ScalarProperty Name="ExistingLeadId" ColumnName="dv_existing_lead_id" />
+          <ScalarProperty Name="IncomingLeadId" ColumnName="dv_incoming_lead_id" />
+          <ScalarProperty Name="DuplicateRuleId" ColumnName="dv_rule_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="IndividualStatus">
+      <EntityTypeMapping TypeName="SQSalesToolLead.IndividualStatus">
+        <MappingFragment StoreEntitySet="individual_statuses">
+          <ScalarProperty Name="ChangedOn" ColumnName="ist_change_date" />
+          <ScalarProperty Name="ChangedBy" ColumnName="ist_change_user" />
+          <ScalarProperty Name="AddedOn" ColumnName="ist_add_date" />
+          <ScalarProperty Name="AddedBy" ColumnName="ist_add_user" />
+          <ScalarProperty Name="Title" ColumnName="ist_title" />
+          <ScalarProperty Name="ID" ColumnName="ist_key" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="IndividualPDPStatuses">
+      <EntityTypeMapping TypeName="SQSalesToolLead.IndividualPDPStatuses">
+        <MappingFragment StoreEntitySet="individual_pdp_statuses">
+          <ScalarProperty Name="ChangedOn" ColumnName="pdp_change_date" />
+          <ScalarProperty Name="ChangedBy" ColumnName="pdp_change_user" />
+          <ScalarProperty Name="AddedOn" ColumnName="pdp_add_date" />
+          <ScalarProperty Name="AddedBy" ColumnName="pdp_add_user" />
+          <ScalarProperty Name="Title" ColumnName="pdp_title" />
+          <ScalarProperty Name="ID" ColumnName="pdp_key" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ViewLeadMarketing">
+      <EntityTypeMapping TypeName="SQSalesToolLead.ViewLeadMarketing">
+        <MappingFragment StoreEntitySet="vw_LeadMarketing">
+          <ScalarProperty Name="SourceCode" ColumnName="SourceCode" />
+          <ScalarProperty Name="TrackingCode" ColumnName="TrackingCode" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="SubStatus" ColumnName="SubStatus" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Campaign" ColumnName="Campaign" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="AccountId" ColumnName="AccountId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EmailsForReport">
+      <EntityTypeMapping TypeName="SQSalesToolLead.EmailsForReport">
+        <MappingFragment StoreEntitySet="vw_EmailsForReport">
+          <ScalarProperty Name="DaysLastSent" ColumnName="DaysLastSent" />
+          <ScalarProperty Name="RowID" ColumnName="RowID" />
+          <ScalarProperty Name="Filter" ColumnName="Filter" />
+          <ScalarProperty Name="Frequency" ColumnName="Frequency" />
+          <ScalarProperty Name="Format" ColumnName="Format" />
+          <ScalarProperty Name="LastSent" ColumnName="LastSent" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="Body" ColumnName="Body" />
+          <ScalarProperty Name="Subject" ColumnName="Subject" />
+          <ScalarProperty Name="Recipients" ColumnName="Recipients" />
+          <ScalarProperty Name="EmailID" ColumnName="EmailID" />
+          <ScalarProperty Name="ReportID" ColumnName="ReportID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ViewMAPDPs">
+      <EntityTypeMapping TypeName="SQSalesToolLead.ViewMAPDP">
+        <MappingFragment StoreEntitySet="vw_MAPDPView">
+          <ScalarProperty Name="PolicyStatus" ColumnName="PolicyStatus" />
+          <ScalarProperty Name="AddedBy" ColumnName="AddedBy" />
+          <ScalarProperty Name="ChangedBy" ColumnName="ChangedBy" />
+          <ScalarProperty Name="AddedOn" ColumnName="AddedOn" />
+          <ScalarProperty Name="ChangedOn" ColumnName="ChangedOn" />
+          <ScalarProperty Name="Carrier" ColumnName="Carrier" />
+          <ScalarProperty Name="PolicyId" ColumnName="PolicyId" />
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+          <ScalarProperty Name="AccountId" ColumnName="AccountId" />
+          <ScalarProperty Name="IndividualId" ColumnName="IndividualId" />
+          <ScalarProperty Name="EffectiveDate" ColumnName="EffectiveDate" />
+          <ScalarProperty Name="EnrollmentDate" ColumnName="EnrollmentDate" />
+          <ScalarProperty Name="PlanType" ColumnName="PlanType" />
+          <ScalarProperty Name="PlanNumber" ColumnName="PlanNumber" />
+          <ScalarProperty Name="PlanName" ColumnName="PlanName" />
+          <ScalarProperty Name="CarrierId" ColumnName="CarrierId" />
+          <ScalarProperty Name="Enroller" ColumnName="Enroller" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Key" ColumnName="Key" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MedicalSupplements">
+      <EntityTypeMapping TypeName="SQSalesToolLead.MedicalSupplement">
+        <MappingFragment StoreEntitySet="vw_MedicalSupplements">
+          <ScalarProperty Name="SubmissionDate" ColumnName="SubmissionDate" />
+          <ScalarProperty Name="MedicareId" ColumnName="MedicareId" />
+          <ScalarProperty Name="PolicyStatus" ColumnName="PolicyStatus" />
+          <ScalarProperty Name="PolicyNumber" ColumnName="PolicyNumber" />
+          <ScalarProperty Name="CarrierId" ColumnName="CarrierId" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="AddedBy" ColumnName="AddedBy" />
+          <ScalarProperty Name="AddedOn" ColumnName="AddedOn" />
+          <ScalarProperty Name="ExpirationDate" ColumnName="ExpirationDate" />
+          <ScalarProperty Name="EffectiveDate" ColumnName="EffectiveDate" />
+          <ScalarProperty Name="IssueDate" ColumnName="IssueDate" />
+          <ScalarProperty Name="Plan" ColumnName="Plan" />
+          <ScalarProperty Name="AnnualPremium" ColumnName="AnnualPremium" />
+          <ScalarProperty Name="Carrier" ColumnName="Carrier" />
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+          <ScalarProperty Name="AccountId" ColumnName="AccountId" />
+          <ScalarProperty Name="IndividualId" ColumnName="IndividualId" />
+          <ScalarProperty Name="Key" ColumnName="Key" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="IssueTypes">
+      <EntityTypeMapping TypeName="SQSalesToolLead.IssueType">
+        <MappingFragment StoreEntitySet="issue_types">
+          <ScalarProperty Name="ChangedOn" ColumnName="itp_change_date" />
+          <ScalarProperty Name="ChangedBy" ColumnName="itp_change_user" />
+          <ScalarProperty Name="AddedOn" ColumnName="itp_add_date" />
+          <ScalarProperty Name="AddedBy" ColumnName="itp_add_user" />
+          <ScalarProperty Name="Name" ColumnName="itp_title" />
+          <ScalarProperty Name="Key" ColumnName="itp_key" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PostQueues">
+      <EntityTypeMapping TypeName="SQSalesToolLead.PostQueue">
+        <MappingFragment StoreEntitySet="post_queue">
+          <ScalarProperty Name="ResponseMessage" ColumnName="pq_response_message" />
+          <ScalarProperty Name="ResponseCode" ColumnName="pq_response_code" />
+          <ScalarProperty Name="MainStatusID" ColumnName="pq_mainstatus_old" />
+          <ScalarProperty Name="ChangedOn" ColumnName="pq_modified_datetime" />
+          <ScalarProperty Name="Status" ColumnName="pq_status" />
+          <ScalarProperty Name="PostTemplateKey" ColumnName="pq_post_key" />
+          <ScalarProperty Name="RunDateTime" ColumnName="pq_run_datetime" />
+          <ScalarProperty Name="AccountKey" ColumnName="pq_acct_key" />
+          <ScalarProperty Name="Key" ColumnName="pq_key" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LeadMetrics">
+      <EntityTypeMapping TypeName="SQSalesToolLead.LeadMetric">
+        <MappingFragment StoreEntitySet="vw_ForLeadMetric">
+          <ScalarProperty Name="AccountCreateDate" ColumnName="act_add_date" />
+          <ScalarProperty Name="StatusTitle" ColumnName="sta_title" />
+          <ScalarProperty Name="AccountHistoryComments" ColumnName="ach_comment" />
+          <ScalarProperty Name="QuotedDate" ColumnName="ahq_quoted_date" />
+          <ScalarProperty Name="AutoHomePolicyBoundDate" ColumnName="ahp_bound_date" />
+          <ScalarProperty Name="MedSuppSubmitDate" ColumnName="ms_submission_date" />
+          <ScalarProperty Name="DentalVisionSubmitDate" ColumnName="den_submission_date" />
+          <ScalarProperty Name="MAPDPEnrollmentDate" ColumnName="mapdp_enrollment_date" />
+          <ScalarProperty Name="ActionContactFlag" ColumnName="act_contact_flag" />
+          <ScalarProperty Name="CampaignTitle" ColumnName="cmp_title" />
+          <ScalarProperty Name="CampaignID" ColumnName="cmp_id" />
+          <ScalarProperty Name="UserKey" ColumnName="usr_key" />
+          <ScalarProperty Name="AccountHistoryAddedDate" ColumnName="ach_added_date" />
+          <ScalarProperty Name="SkillGroupID" ColumnName="skl_id" />
+          <ScalarProperty Name="LeadKey" ColumnName="lea_key" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ArcCases">
+      <EntityTypeMapping TypeName="SQSalesToolLead.ArcCases">
+        <MappingFragment StoreEntitySet="arc_cases">
+          <ScalarProperty Name="ArcIndividualKey" ColumnName="arc_indv_key" />
+          <ScalarProperty Name="Key" ColumnName="arc_key" />
+          <ScalarProperty Name="ArcRefreanceKey" ColumnName="arc_ref" />
+          <ScalarProperty Name="AccountKey" ColumnName="act_key" />
+          <ScalarProperty Name="LeadKey" ColumnName="lea_key" />
+          <ScalarProperty Name="CaseSpecialistExt" ColumnName="arc_policy_case_specialist_ext" />
+          <ScalarProperty Name="CaseSpecialistName" ColumnName="arc_policy_case_specialist" />
+          <ScalarProperty Name="CompanyCode" ColumnName="arc_policy_company" />
+          <ScalarProperty Name="Duration" ColumnName="arc_policy_duration" />
+          <ScalarProperty Name="FaceAmount" ColumnName="arc_policy_face_amt" />
+          <ScalarProperty Name="Status" ColumnName="arc_status" />
+          <ScalarProperty Name="Notes" ColumnName="arc_note" />
+          <ScalarProperty Name="ModifyOn" ColumnName="arc_modify_date" />
+          <ScalarProperty Name="AddOn" ColumnName="arc_add_date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="arc_history">
+      <EntityTypeMapping TypeName="SQSalesToolLead.ArcHistory">
+        <MappingFragment StoreEntitySet="arc_history">
+          <ScalarProperty Name="UserKey" ColumnName="arh_usr_key" />
+          <ScalarProperty Name="ArcKey" ColumnName="arh_arc_key" />
+          <ScalarProperty Name="Status" ColumnName="arh_status" />
+          <ScalarProperty Name="Notes" ColumnName="arh_notes" />
+          <ScalarProperty Name="ChangedOn" ColumnName="arh_modify_date" />
+          <ScalarProperty Name="AddedOn" ColumnName="arh_add_date" />
+          <ScalarProperty Name="Key" ColumnName="arh_key" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vw_ArcActions">
+      <EntityTypeMapping TypeName="SQSalesToolLead.vw_ArcActions">
+        <MappingFragment StoreEntitySet="vw_ArcActions">
+          <ScalarProperty Name="ArcAccountId" ColumnName="ArcAccountId" />
+          <ScalarProperty Name="AccountId" ColumnName="AccountId" />
+          <ScalarProperty Name="Reference" ColumnName="Reference" />
+          <ScalarProperty Name="IsDelivered" ColumnName="IsDelivered" />
+          <ScalarProperty Name="RefferedBy" ColumnName="RefferedBy" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Notes" ColumnName="Notes" />
+          <ScalarProperty Name="TimeSpan" ColumnName="TimeSpan" />
+          <ScalarProperty Name="ActionId" ColumnName="ActionId" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vw_ArcLetterLog">
+      <EntityTypeMapping TypeName="SQSalesToolLead.vw_ArcLetterLog">
+        <MappingFragment StoreEntitySet="vw_ArcLetterLog">
+          <ScalarProperty Name="Reference" ColumnName="Reference" />
+          <ScalarProperty Name="IsDelivered" ColumnName="IsDelivered" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="inContact_data">
+      <EntityTypeMapping TypeName="SQSalesToolLead.inContact_data">
+        <MappingFragment StoreEntitySet="inContact_data">
+          <ScalarProperty Name="disp_comment" ColumnName="disp_comment" />
+          <ScalarProperty Name="disp_name" ColumnName="disp_name" />
+          <ScalarProperty Name="disp_code" ColumnName="disp_code" />
+          <ScalarProperty Name="hold_time" ColumnName="hold_time" />
+          <ScalarProperty Name="logged" ColumnName="logged" />
+          <ScalarProperty Name="callback_time" ColumnName="callback_time" />
+          <ScalarProperty Name="abandon" ColumnName="abandon" />
+          <ScalarProperty Name="routing_time" ColumnName="routing_time" />
+          <ScalarProperty Name="abandon_time" ColumnName="abandon_time" />
+          <ScalarProperty Name="total_time" ColumnName="total_time" />
+          <ScalarProperty Name="acw_time" ColumnName="acw_time" />
+          <ScalarProperty Name="post_queue" ColumnName="post_queue" />
+          <ScalarProperty Name="agent_time" ColumnName="agent_time" />
+          <ScalarProperty Name="in_queue" ColumnName="in_queue" />
+          <ScalarProperty Name="pre_queue" ColumnName="pre_queue" />
+          <ScalarProperty Name="start_time" ColumnName="start_time" />
+          <ScalarProperty Name="start_date" ColumnName="start_date" />
+          <ScalarProperty Name="sla" ColumnName="sla" />
+          <ScalarProperty Name="team_name" ColumnName="team_name" />
+          <ScalarProperty Name="team_no" ColumnName="team_no" />
+          <ScalarProperty Name="agent_name" ColumnName="agent_name" />
+          <ScalarProperty Name="agent_no" ColumnName="agent_no" />
+          <ScalarProperty Name="campaign_name" ColumnName="campaign_name" />
+          <ScalarProperty Name="campaign_no" ColumnName="campaign_no" />
+          <ScalarProperty Name="skill_name" ColumnName="skill_name" />
+          <ScalarProperty Name="skill_no" ColumnName="skill_no" />
+          <ScalarProperty Name="ani_dialum" ColumnName="ani_dialum" />
+          <ScalarProperty Name="contact_name" ColumnName="contact_name" />
+          <ScalarProperty Name="media_name" ColumnName="media_name" />
+          <ScalarProperty Name="contact_code" ColumnName="contact_code" />
+          <ScalarProperty Name="master_contact_id" ColumnName="master_contact_id" />
+          <ScalarProperty Name="contact_id" ColumnName="contact_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vw_EventCalendar">
+      <EntityTypeMapping TypeName="IsTypeOf(SQSalesToolLead.vw_EventCalendar)">
+        <MappingFragment StoreEntitySet="vw_EventCalendar">
+          <ScalarProperty Name="eve_timezone" ColumnName="eve_timezone" />
+          <ScalarProperty Name="IsOpened" ColumnName="evc_isopened_flag" />
+          <ScalarProperty Name="IsDeleted" ColumnName="evc_delete_flag" />
+          <ScalarProperty Name="IsActive" ColumnName="evc_active_flag" />
+          <ScalarProperty Name="Add" ColumnName="evc_add_user" />
+          <ScalarProperty Name="Dismissed" ColumnName="evc_dismissed" />
+          <ScalarProperty Name="Completed" ColumnName="evc_completed" />
+          <ScalarProperty Name="SnoozeAfter" ColumnName="evc_snooze_after" />
+          <ScalarProperty Name="EventStatus" ColumnName="evc_event_status" />
+          <ScalarProperty Name="EventType" ColumnName="evc_event_type" />
+          <ScalarProperty Name="DismissUponStatusChange" ColumnName="evc_dismiss_upon_status_change" />
+          <ScalarProperty Name="CreateOutLookReminder" ColumnName="evc_create_outlook_reminder" />
+          <ScalarProperty Name="AlertTimieBefore" ColumnName="evc_alert_time_before" />
+          <ScalarProperty Name="AlertSMS" ColumnName="evc_alert_text_sms" />
+          <ScalarProperty Name="AlertEmail" ColumnName="evc_alert_email" />
+          <ScalarProperty Name="AlertPopup" ColumnName="evc_alert_popup" />
+          <ScalarProperty Name="SpecificDateTimeFromNow" ColumnName="evc_specific_date_time_from_now" />
+          <ScalarProperty Name="IsSpecificDateTimeFromNow" ColumnName="evc_is_specific_date_time_from_now" />
+          <ScalarProperty Name="TimeFromNow" ColumnName="evc_time_from_now" />
+          <ScalarProperty Name="IsTimeFromNow" ColumnName="evc_is_time_from_now" />
+          <ScalarProperty Name="Description" ColumnName="evc_description" />
+          <ScalarProperty Name="Title" ColumnName="evc_title" />
+          <ScalarProperty Name="UserID" ColumnName="usr_user_id" />
+          <ScalarProperty Name="AccountID" ColumnName="act_account_id" />
+          <ScalarProperty Name="ID" ColumnName="evc_id" />
+          <ScalarProperty Name="AccountKey" ColumnName="act_key" />
+          <ScalarProperty Name="evc_modified_date" ColumnName="evc_modified_date" />
+          <ScalarProperty Name="evc_modified_user" ColumnName="evc_modified_user" />
+          <ScalarProperty Name="evc_add_date" ColumnName="evc_add_date" />
+          <ScalarProperty Name="PrimaryName" ColumnName="PrimaryName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="FK_dental_vision_Carriers" TypeName="SQSalesToolLead.FK_dental_vision_Carriers" StoreEntitySet="dental_vision">
+      <EndProperty Name="DentalVision">
+        <ScalarProperty Name="Key" ColumnName="den_key" />
+      </EndProperty>
+      <EndProperty Name="Carrier">
+        <ScalarProperty Name="Key" ColumnName="den_carrier_id" />
+      </EndProperty>
+      <Condition ColumnName="den_carrier_id" IsNull="false" />
+    </AssociationSetMapping>
+    <EntitySetMapping Name="vw_ArcChangeAgent">
+      <EntityTypeMapping TypeName="SQSalesToolLead.vw_ArcChangeAgent">
+        <MappingFragment StoreEntitySet="vw_ArcChangeAgent">
+          <ScalarProperty Name="PolicyStatusId" ColumnName="ach_policy_status_key" />
+          <ScalarProperty Name="PolicyStatusType" ColumnName="ach_policy_status_type" />
+          <ScalarProperty Name="IsUserOb" ColumnName="ach_usr_ob" />
+          <ScalarProperty Name="IsUserAp" ColumnName="ach_usr_ap" />
+          <ScalarProperty Name="IsUserTA" ColumnName="ach_usr_ta" />
+          <ScalarProperty Name="IsUserAssigned" ColumnName="ach_usr_assigned" />
+          <ScalarProperty Name="IsUserCSR" ColumnName="ach_usr_csr" />
+          <ScalarProperty Name="RuleId" ColumnName="ach_pv_key" />
+          <ScalarProperty Name="ArcContactId" ColumnName="ach_contactId" />
+          <ScalarProperty Name="ArcDNS" ColumnName="ach_dnis" />
+          <ScalarProperty Name="ArcTalkTime" ColumnName="ach_talktime" />
+          <ScalarProperty Name="IsDeliveredToArc" ColumnName="ach_delivered_to_arc" />
+          <ScalarProperty Name="NewSubstatus" ColumnName="ach_new_sub_status_key" />
+          <ScalarProperty Name="NewStatus" ColumnName="ach_new_status_key" />
+          <ScalarProperty Name="CurrentSubstatus" ColumnName="ach_cur_sub_status_key" />
+          <ScalarProperty Name="CurrentStatus" ColumnName="ach_cur_status_key" />
+          <ScalarProperty Name="Action" ColumnName="ach_action_key" />
+          <ScalarProperty Name="EntryType" ColumnName="ach_entryType" />
+          <ScalarProperty Name="Datetime" ColumnName="ach_added_date" />
+          <ScalarProperty Name="User" ColumnName="ach_userid" />
+          <ScalarProperty Name="Comment" ColumnName="ach_comment" />
+          <ScalarProperty Name="AccountId" ColumnName="ach_account_key" />
+          <ScalarProperty Name="Entry" ColumnName="ach_entry" />
+          <ScalarProperty Name="AccountHistoryId" ColumnName="ach_key" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="policy_status_type">
+      <EntityTypeMapping TypeName="SQSalesToolLead.PolicyStatusType">
+        <MappingFragment StoreEntitySet="policy_status_type">
+          <ScalarProperty Name="ID" ColumnName="pst_value" />
+          <ScalarProperty Name="Name" ColumnName="pst_name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AccountHistoryEntries">
+      <EntityTypeMapping TypeName="SQSalesToolLead.AccountHistoryEntry">
+        <MappingFragment StoreEntitySet="vw_AccountHistory">
+          <ScalarProperty Name="ContactId" ColumnName="ach_contactId" />
+          <ScalarProperty Name="DNIS" ColumnName="ach_dnis" />
+          <ScalarProperty Name="TalkTime" ColumnName="ach_talktime" />
+          <ScalarProperty Name="PVTitle" ColumnName="PVTitle" />
+          <ScalarProperty Name="UserTypes" ColumnName="UserTypes" />
+          <ScalarProperty Name="AddedOn" ColumnName="ach_added_date" />
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+          <ScalarProperty Name="Comment" ColumnName="ach_comment" />
+          <ScalarProperty Name="AccountId" ColumnName="ach_account_key" />
+          <ScalarProperty Name="UserKey" ColumnName="ach_userid" />
+          <ScalarProperty Name="Entry" ColumnName="ach_entry" />
+          <ScalarProperty Name="EntryType" ColumnName="ach_entryType" />
+          <ScalarProperty Name="Key" ColumnName="ach_key" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="QueueInboundPersonals">
+      <EntityTypeMapping TypeName="SQSalesToolLead.QueueInboundPersonal">
+        <MappingFragment StoreEntitySet="queue_inbound_personal">
+          <ScalarProperty Name="QueueTimeStamp" ColumnName="qip_timestamp" />
+          <ScalarProperty Name="Status" ColumnName="qip_status" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="qip_mod_usr" />
+          <ScalarProperty Name="AddedBy" ColumnName="qip_add_usr" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="qip_mod_date" />
+          <ScalarProperty Name="AddDate" ColumnName="qip_add_date" />
+          <ScalarProperty Name="PhoneNumber" ColumnName="qip_phone_number" />
+          <ScalarProperty Name="ContactId" ColumnName="qip_contactID" />
+          <ScalarProperty Name="Skill" ColumnName="qip_skill" />
+          <ScalarProperty Name="Id" ColumnName="qip_key" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="QueueInboundACD">
+      <EntityTypeMapping TypeName="SQSalesToolLead.QueueInboundACD">
+        <MappingFragment StoreEntitySet="queue_inbound_acd">
+          <ScalarProperty Name="qia_call_taken_time" ColumnName="qia_call_taken_time" />
+          <ScalarProperty Name="qia_call_taken_by" ColumnName="qia_call_taken_by" />
+          <ScalarProperty Name="StateKey" ColumnName="qia_sta_key" />
+          <ScalarProperty Name="CampaignId" ColumnName="qia_cmp_id" />
+          <ScalarProperty Name="QueueTimeStamp" ColumnName="qia_timestamp" />
+          <ScalarProperty Name="Status" ColumnName="qia_status" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="qia_mod_usr" />
+          <ScalarProperty Name="AddedBy" ColumnName="qia_add_usr" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="qia_mod_date" />
+          <ScalarProperty Name="AddDate" ColumnName="qia_add_date" />
+          <ScalarProperty Name="PhoneNumber" ColumnName="qia_phone_number" />
+          <ScalarProperty Name="ContactId" ColumnName="qia_contactID" />
+          <ScalarProperty Name="Skill" ColumnName="qia_skill" />
+          <ScalarProperty Name="Id" ColumnName="qia_key" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AreaCodeToTimeZone">
+      <EntityTypeMapping TypeName="SQSalesToolLead.AreaCodeToTimeZone">
+        <MappingFragment StoreEntitySet="gal_areacode2timezone">
+          <ScalarProperty Name="Id" ColumnName="at_key" />
+          <ScalarProperty Name="StateId" ColumnName="at_state_id" />
+          <ScalarProperty Name="TimeZoneKey" ColumnName="at_timezone_key" />
+          <ScalarProperty Name="TimeZone" ColumnName="at_timezone" />
+          <ScalarProperty Name="AreaCode" ColumnName="at_areacode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="mapdp_reason_codes">
+      <EntityTypeMapping TypeName="SQSalesToolLead.MapdpReasonCodes">
+        <MappingFragment StoreEntitySet="mapdp_reason_codes">
+          <ScalarProperty Name="Reason" ColumnName="mar_reason" />
+          <ScalarProperty Name="Key" ColumnName="mar_key" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="medsup_app_type">
+      <EntityTypeMapping TypeName="SQSalesToolLead.MedsupAppType">
+        <MappingFragment StoreEntitySet="medsup_app_type">
+          <ScalarProperty Name="AppType" ColumnName="msa_app_type" />
+          <ScalarProperty Name="Key" ColumnName="msa_key" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="QueueAcdStatistics">
+      <EntityTypeMapping TypeName="SQSalesToolLead.QueueAcdStatistics">
+        <MappingFragment StoreEntitySet="queue_acd_statistics">
+          <ScalarProperty Name="qas_last_update" ColumnName="qas_last_update" />
+          <ScalarProperty Name="Reason" ColumnName="qas_reason" />
+          <ScalarProperty Name="IsEnabled" ColumnName="qas_is_enabled" />
+          <ScalarProperty Name="PVScheduleResult" ColumnName="qas_PV_schedule_result" />
+          <ScalarProperty Name="AcdCallTaken" ColumnName="qas_acd_call_taken" />
+          <ScalarProperty Name="NextRefresh" ColumnName="qas_next_refresh" />
+          <ScalarProperty Name="MinLevel" ColumnName="qas_min_level" />
+          <ScalarProperty Name="MaxQuota" ColumnName="qas_max_quota" />
+          <ScalarProperty Name="MaxAcd" ColumnName="qas_max_acd" />
+          <ScalarProperty Name="AcdCount" ColumnName="qas_acd_count" />
+          <ScalarProperty Name="QueueId" ColumnName="qas_agent_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="ACDToDial" FunctionName="SQSalesToolLead.Store.ACDToDial">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SQSalesToolLead.ACDToDial_Result">
+          <ScalarProperty Name="qia_key" ColumnName="qia_key" />
+          <ScalarProperty Name="qia_skill" ColumnName="qia_skill" />
+          <ScalarProperty Name="qia_contactID" ColumnName="qia_contactID" />
+          <ScalarProperty Name="qia_phone_number" ColumnName="qia_phone_number" />
+          <ScalarProperty Name="qia_add_date" ColumnName="qia_add_date" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetACDStatistics" FunctionName="SQSalesToolLead.Store.GetACDStatistics" />
+    <EntitySetMapping Name="individual_prescriptions">
+      <EntityTypeMapping TypeName="SQSalesToolLead.IndividualPrescriptions">
+        <MappingFragment StoreEntitySet="individual_prescriptions">
+          <ScalarProperty Name="IsDelete" ColumnName="drg_delete_flag" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="drg_modified_date" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="drg_modified_user" />
+          <ScalarProperty Name="AddedOn" ColumnName="drg_add_date" />
+          <ScalarProperty Name="AddedBy" ColumnName="drg_add_user" />
+          <ScalarProperty Name="SelectedInfoXml" ColumnName="drg_selected_info_xml" />
+          <ScalarProperty Name="PackageId" ColumnName="drg_package_id" />
+          <ScalarProperty Name="DosageId" ColumnName="drg_dosage_id" />
+          <ScalarProperty Name="AmountPer30Days" ColumnName="drg_amount_per_30_days" />
+          <ScalarProperty Name="DrugId" ColumnName="drg_id" />
+          <ScalarProperty Name="IndividualKey" ColumnName="drg_individual_key" />
+          <ScalarProperty Name="Key" ColumnName="drg_key" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="UpdateStatsCallTaken" FunctionName="SQSalesToolLead.Store.UpdateStatsCallTaken" />
+    <EntitySetMapping Name="vw_AccountEventCalendar">
+      <EntityTypeMapping TypeName="SQSalesToolLead.vw_AccountEventCalendar">
+        <MappingFragment StoreEntitySet="vw_AccountEventCalendar">
+          <ScalarProperty Name="TimeZoneId" ColumnName="eve_timezone" />
+          <ScalarProperty Name="IsOpened" ColumnName="evc_isopened_flag" />
+          <ScalarProperty Name="IsDeleted" ColumnName="evc_delete_flag" />
+          <ScalarProperty Name="IsActive" ColumnName="evc_active_flag" />
+          <ScalarProperty Name="Dismissed" ColumnName="evc_dismissed" />
+          <ScalarProperty Name="Completed" ColumnName="evc_completed" />
+          <ScalarProperty Name="SnoozeAfter" ColumnName="evc_snooze_after" />
+          <ScalarProperty Name="EventStatus" ColumnName="evc_event_status" />
+          <ScalarProperty Name="EventType" ColumnName="evc_event_type" />
+          <ScalarProperty Name="DismissUponStatusChange" ColumnName="evc_dismiss_upon_status_change" />
+          <ScalarProperty Name="CreateOutlookReminder" ColumnName="evc_create_outlook_reminder" />
+          <ScalarProperty Name="AlertTimeBefore" ColumnName="evc_alert_time_before" />
+          <ScalarProperty Name="AlertTextSMS" ColumnName="evc_alert_text_sms" />
+          <ScalarProperty Name="AlertEmail" ColumnName="evc_alert_email" />
+          <ScalarProperty Name="AlertPopup" ColumnName="evc_alert_popup" />
+          <ScalarProperty Name="SpecificDateTimeFromNow" ColumnName="evc_specific_date_time_from_now" />
+          <ScalarProperty Name="IsSpecificDateTimeFromNow" ColumnName="evc_is_specific_date_time_from_now" />
+          <ScalarProperty Name="TimeFromNow" ColumnName="evc_time_from_now" />
+          <ScalarProperty Name="IsTimeFromNow" ColumnName="evc_is_time_from_now" />
+          <ScalarProperty Name="Description" ColumnName="evc_description" />
+          <ScalarProperty Name="Title" ColumnName="evc_title" />
+          <ScalarProperty Name="UserID" ColumnName="usr_user_id" />
+          <ScalarProperty Name="AccountID" ColumnName="act_account_id" />
+          <ScalarProperty Name="ID" ColumnName="evc_id" />
+          <ComplexProperty Name="Added">
+            <ScalarProperty Name="On1" ColumnName="evc_add_date" />
+            <ScalarProperty Name="By1" ColumnName="evc_add_user" />
+          </ComplexProperty>
+          <ComplexProperty Name="Changed">
+            <ScalarProperty Name="On1" ColumnName="evc_modified_date" />
+            <ScalarProperty Name="By1" ColumnName="evc_modified_user" />
+          </ComplexProperty>
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ArcCompanyDirectory">
+      <EntityTypeMapping TypeName="SQSalesToolLead.ArcCompanyDirectory">
+        <MappingFragment StoreEntitySet="arc_company_directory">
+          <ScalarProperty Name="CompManager" ColumnName="acd_comp_mgr" />
+          <ScalarProperty Name="TransferExtension" ColumnName="acd_transfer_extension" />
+          <ScalarProperty Name="IcmExtension" ColumnName="acd_icm_extension" />
+          <ScalarProperty Name="TerminationDate" ColumnName="acd_termination_date" />
+          <ScalarProperty Name="LastName" ColumnName="acd_last_name" />
+          <ScalarProperty Name="FirstName" ColumnName="acd_first_name" />
+          <ScalarProperty Name="SalesManagerInitials" ColumnName="acd_sales_mgr_initials" />
+          <ScalarProperty Name="EndDate" ColumnName="acd_sub_end_date" />
+          <ScalarProperty Name="StartDate" ColumnName="acd_sub_start_date" />
+          <ScalarProperty Name="SubInitials" ColumnName="acd_sub_initials" />
+          <ScalarProperty Name="ClientGroup5" ColumnName="acd_client_group_5" />
+          <ScalarProperty Name="ClientGroup4" ColumnName="acd_client_group_4" />
+          <ScalarProperty Name="ClientGroup3" ColumnName="acd_client_group_3" />
+          <ScalarProperty Name="ClientGroup2" ColumnName="acd_client_group_2" />
+          <ScalarProperty Name="ClientGroup1" ColumnName="acd_client_group_1" />
+          <ScalarProperty Name="FaxNumber" ColumnName="acd_fax_number" />
+          <ScalarProperty Name="PhoneNumber" ColumnName="acd_phone_number" />
+          <ScalarProperty Name="Extension" ColumnName="acd_extension" />
+          <ScalarProperty Name="Assistant5" ColumnName="acd_assistant_5" />
+          <ScalarProperty Name="Assistant4" ColumnName="acd_assistant_4" />
+          <ScalarProperty Name="Assistant3" ColumnName="acd_assistant_3" />
+          <ScalarProperty Name="Assistant2" ColumnName="acd_assistant_2" />
+          <ScalarProperty Name="Assistant1" ColumnName="acd_assistant_1" />
+          <ScalarProperty Name="Department" ColumnName="acd_department" />
+          <ScalarProperty Name="Hours" ColumnName="acd_hours" />
+          <ScalarProperty Name="Title" ColumnName="acd_title" />
+          <ScalarProperty Name="Name" ColumnName="acd_name" />
+          <ScalarProperty Name="Alias" ColumnName="acd_alias" />
+          <ScalarProperty Name="UserId" ColumnName="acd_userid" />
+          <ScalarProperty Name="Initials" ColumnName="acd_initials" />
+          <ScalarProperty Name="Key" ColumnName="acd_key" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

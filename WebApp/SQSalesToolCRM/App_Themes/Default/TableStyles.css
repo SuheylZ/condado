@@ -1,0 +1,35 @@
+﻿/*Tables*/
+.standardTable{width:100%;text-align:left;vertical-align:top;padding:0px;margin:0px;border-collapse:collapse;border:0;}
+
+/*TR Spacers*/
+.tableTRSpacer5{height:5px;}
+.tableTRSpacer10{height:10px;}
+.tableTRSpacer15{height:15px;}
+.tableTRSpacer20{height:20px;}
+.tableTRSpacer30{height:30px;}
+
+/*TD Spacers*/
+.tableTDSpacer1{width:1px;}
+.tableTDSpacer2{width:2px;}
+.tableTDSpacer3{width:3px;}
+.tableTDSpacer4{width:4px;}
+.tableTDSpacer5{width:5px;}
+
+/*Tds*/
+.tableStandrdTD{width:100%;text-align:left;vertical-align:top;}
+.tableTDLeftTop{text-align:left;vertical-align:top;}
+.tableTDLeftMiddle{text-align:left;vertical-align:middle;}
+.tableTDLeftBottom{text-align:left;vertical-align:bottom;}
+.tableTDCenterTop{text-align:center;vertical-align:top;}
+.tableTDCenterMiddle{text-align:center;vertical-align:middle;}
+.tableTDCenterBottom{text-align:center;vertical-align:bottom;}
+.tableTDRightTop{text-align:right;vertical-align:top;}
+.tableTDRightMiddle{text-align:right;vertical-align:middle;}
+.tableTDRightBottom{text-align:right;vertical-align:bottom;}
+.tableTDJustifyTop{text-align:justify;vertical-align:top;}
+.tableTDJustifyMiddle{text-align:justify;vertical-align:middle;}
+.tableTDJustifyBottom{text-align:justify;vertical-align:bottom;}
+.tableTDW300{width:300px; }
+.tableTDW40P{width:40%; }
+.tableTDW102{width:102px; background: #4b6c9e; }
+.tableHeader{background: #4b6c9e; color:White;}

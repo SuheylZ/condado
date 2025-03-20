@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="GALModelStoreContainer" CdmEntityContainer="GALEngineEntities">
+    <EntitySetMapping Name="Application_Storage">
+      <EntityTypeMapping TypeName="GALModel.ApplicationStorage">
+        <MappingFragment StoreEntitySet="Application_Storage">
+          <ScalarProperty Name="Key" ColumnName="Key" />
+          <ScalarProperty Name="iValue" ColumnName="iValue" />
+          <ScalarProperty Name="fValue" ColumnName="fValue" />
+          <ScalarProperty Name="bValue" ColumnName="bValue" />
+          <ScalarProperty Name="uValue" ColumnName="uValue" />
+          <ScalarProperty Name="dValue" ColumnName="dValue" />
+          <ScalarProperty Name="tvalue" ColumnName="tvalue" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="queue_acd_statistics">
+      <EntityTypeMapping TypeName="GALModel.queueAcdStatistics">
+        <MappingFragment StoreEntitySet="queue_acd_statistics">
+          <ScalarProperty Name="qas_last_update" ColumnName="qas_last_update" />
+          <ScalarProperty Name="Reason" ColumnName="qas_reason" />
+          <ScalarProperty Name="IsEnabled" ColumnName="qas_is_enabled" />
+          <ScalarProperty Name="AgentID" ColumnName="qas_agent_id" />
+          <ScalarProperty Name="AcdCount" ColumnName="qas_acd_count" />
+          <ScalarProperty Name="MaxAcd" ColumnName="qas_max_acd" />
+          <ScalarProperty Name="MaxQuota" ColumnName="qas_max_quota" />
+          <ScalarProperty Name="MinLevel" ColumnName="qas_min_level" />
+          <ScalarProperty Name="NextRefresh" ColumnName="qas_next_refresh" />
+          <ScalarProperty Name="AcdCallTaken" ColumnName="qas_acd_call_taken" />
+          <ScalarProperty Name="PVScheduleResult" ColumnName="qas_PV_schedule_result" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="queue_inbound_acd">
+      <EntityTypeMapping TypeName="GALModel.queueInboundAcd">
+        <MappingFragment StoreEntitySet="queue_inbound_acd">
+          <ScalarProperty Name="CallTakenTime" ColumnName="qia_call_taken_time" />
+          <ScalarProperty Name="CallTakenBy" ColumnName="qia_call_taken_by" />
+          <ScalarProperty Name="Key" ColumnName="qia_key" />
+          <ScalarProperty Name="Skill" ColumnName="qia_skill" />
+          <ScalarProperty Name="ContactID" ColumnName="qia_contactID" />
+          <ScalarProperty Name="PhoneMumber" ColumnName="qia_phone_number" />
+          <ScalarProperty Name="AddDate" ColumnName="qia_add_date" />
+          <ScalarProperty Name="ModDate" ColumnName="qia_mod_date" />
+          <ScalarProperty Name="AddUser" ColumnName="qia_add_usr" />
+          <ScalarProperty Name="ModUser" ColumnName="qia_mod_usr" />
+          <ScalarProperty Name="Status" ColumnName="qia_status" />
+          <ScalarProperty Name="Timestamp" ColumnName="qia_timestamp" />
+          <ScalarProperty Name="CmpID" ColumnName="qia_cmp_id" />
+          <ScalarProperty Name="StaKey" ColumnName="qia_sta_key" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="ACDToDial" FunctionName="GALModel.Store.ACDToDial">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="GALModel.ACDToDial_Result">
+          <ScalarProperty Name="qia_key" ColumnName="qia_key" />
+          <ScalarProperty Name="qia_skill" ColumnName="qia_skill" />
+          <ScalarProperty Name="qia_contactID" ColumnName="qia_contactID" />
+          <ScalarProperty Name="qia_phone_number" ColumnName="qia_phone_number" />
+          <ScalarProperty Name="qia_add_date" ColumnName="qia_add_date" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetACDStatistics" FunctionName="GALModel.Store.GetACDStatistics" />
+    <FunctionImportMapping FunctionImportName="GetAgentListForACDUpdate" FunctionName="GALModel.Store.GetAgentListForACDUpdate" />
+    <FunctionImportMapping FunctionImportName="LeadBasicDisplayForAllAgents" FunctionName="GALModel.Store.LeadBasicDisplayAllAgents">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="GALModel.LeadBasicDisplayForAllAgents_Result">
+          <ScalarProperty Name="agent_l360_username" ColumnName="agent_l360_username" />
+          <ScalarProperty Name="avg_max" ColumnName="avg_max" />
+          <ScalarProperty Name="total_assigned_leads" ColumnName="total_assigned_leads" />
+          <ScalarProperty Name="agent_max" ColumnName="agent_max" />
+          <ScalarProperty Name="total_available_leads" ColumnName="total_available_leads" />
+          <ScalarProperty Name="total_assignable_leads" ColumnName="total_assignable_leads" />
+          <ScalarProperty Name="oldest_available" ColumnName="oldest_available" />
+          <ScalarProperty Name="newest_available" ColumnName="newest_available" />
+          <ScalarProperty Name="last_refresh" ColumnName="last_refresh" />
+          <ScalarProperty Name="IsEnabled" ColumnName="IsEnabled" />
+          <ScalarProperty Name="Reason" ColumnName="Reason" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="GALEngineListsDump">
+      <EntityTypeMapping TypeName="GALModel.GALEngineListsDump">
+        <MappingFragment StoreEntitySet="GALEngineListsDump">
+          <ScalarProperty Name="GWBListDump" ColumnName="GWBListDump" />
+          <ScalarProperty Name="ACDListDump" ColumnName="ACDListDump" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

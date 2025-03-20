@@ -1,0 +1,10 @@
+F:\Yasir Ali\Projects\LiveTFSNew\SelectCARE - WebApp\SalesTool.Schema\bin\Debug\SalesTool.Direct.dll
+F:\Yasir Ali\Projects\LiveTFSNew\SelectCARE - WebApp\SalesTool.Schema\bin\Debug\SalesTool.Direct.pdb
+F:\Yasir Ali\Projects\LiveTFSNew\SelectCARE - WebApp\SalesTool.Schema\obj\Debug\SalesTool.Direct.csprojResolveAssemblyReference.cache
+F:\Yasir Ali\Projects\LiveTFSNew\SelectCARE - WebApp\SalesTool.Schema\obj\Debug\SalesTool.Direct.dll
+F:\Yasir Ali\Projects\LiveTFSNew\SelectCARE - WebApp\SalesTool.Schema\obj\Debug\SalesTool.Direct.pdb
+D:\Suheyl\Projects\Condado\WebApp\SalesTool.Schema\bin\Debug\SalesTool.Direct.dll
+D:\Suheyl\Projects\Condado\WebApp\SalesTool.Schema\bin\Debug\SalesTool.Direct.pdb
+D:\Suheyl\Projects\Condado\WebApp\SalesTool.Schema\obj\Debug\SalesTool.Direct.csprojResolveAssemblyReference.cache
+D:\Suheyl\Projects\Condado\WebApp\SalesTool.Schema\obj\Debug\SalesTool.Direct.dll
+D:\Suheyl\Projects\Condado\WebApp\SalesTool.Schema\obj\Debug\SalesTool.Direct.pdb

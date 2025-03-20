@@ -1,0 +1,101 @@
+.qsf-demo-canvas {
+}
+
+    .qsf-demo-canvas .qsf-fb label {
+        width: 200px;
+    }
+
+
+/** Customize columns */
+.rcbHeader ul,
+.rcbFooter ul,
+.rcbItem ul,
+.rcbHovered ul,
+.rcbDisabled ul {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    display: inline-block;
+    list-style-type: none;
+}
+
+    .rcbHeader ul:after,
+    .rcbFooter ul:after,
+    .rcbItem ul:after,
+    .rcbHovered ul:after,
+    .rcbDisabled ul:after {
+        content: "";
+        clear: both;
+        visibility: hidden;
+    }
+
+.col1, .col2, .col3 {
+    margin: 0;
+    padding: 0 5px 0 0;
+    width: 120px;
+    line-height: 14px;
+    float: left;
+}
+
+.divLeadPgEvntClander {
+    float: left;
+    top: 0px;
+    right: 0;
+    width: 300px;
+    *width: 300px; /* * "*" for IE7 */
+    wid\9th: 290px; /* * Ending with \9 for IE8 */
+    max-height: 100%;
+    /*height: 100%;*/
+    /*margin-top: -10px;*/
+    /*margin-top: -18px;*/
+    margin-top: -12px;
+    border: 1px;
+    border-width: thin;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.divLeadPgAppointment {
+    position: relative;
+    font-weight: bold;
+    font-size: 16px;
+    top: -16px;
+    /*padding-top:-16px;*/
+    text-align: center;
+    /*left: 1350px;*/
+    /*top: -16px;*/
+    margin-top: 0px;
+    color: white;
+    background: #5D7B9D;
+    float: left;
+    top: 0;
+    left: 0;
+    width: 300px;
+    line-height: 30px;
+    margin-left: 1px;
+}
+ .GridPager a, .GridPager span
+    {
+     float: left;
+        display: block;
+        height: 15px;
+        width: 15px;
+        font-weight: bold;
+        text-align: center;
+        text-decoration: none;
+    }
+    .GridPager a
+    {
+        background-color: #f5f5f5;
+        color: #969696;
+        border: 1px solid #969696;
+    }
+    .GridPager span
+    {
+        /*background-color: #A1DCF2;*/
+        color: #000;
+        /*border: 1px solid #3AC0F2;*/
+    }
+    .GridPager tr {
+        float: left;
+    }

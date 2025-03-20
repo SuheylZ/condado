@@ -1,0 +1,3090 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SQSalesToolLead" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="LeadEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="AccountDetails" EntityType="SQSalesToolLead.AccountDetail" />
+    <EntitySet Name="AccountIndividualDetails" EntityType="SQSalesToolLead.AccountIndividualDetail" />
+    <EntitySet Name="Accounts" EntityType="SQSalesToolLead.Account" />
+    <EntitySet Name="BestCalls" EntityType="SQSalesToolLead.BestCall" />
+    <EntitySet Name="CarrierIssues" EntityType="SQSalesToolLead.CarrierIssue" />
+    <EntitySet Name="Carriers" EntityType="SQSalesToolLead.Carrier" />
+    <EntitySet Name="ContactInformations" EntityType="SQSalesToolLead.ContactInformation" />
+    <EntitySet Name="DriverIncidences" EntityType="SQSalesToolLead.DriverIncidence" />
+    <EntitySet Name="DriverInfos" EntityType="SQSalesToolLead.DriverInfo" />
+    <EntitySet Name="Homes" EntityType="SQSalesToolLead.Home" />
+    <EntitySet Name="IndividualDetails" EntityType="SQSalesToolLead.IndividualDetail" />
+    <EntitySet Name="Individuals" EntityType="SQSalesToolLead.Individual" />
+    <EntitySet Name="LeaAdditionalInfos" EntityType="SQSalesToolLead.LeadAdditionalInfo" />
+    <EntitySet Name="LeadNotes" EntityType="SQSalesToolLead.LeadNote" />
+    <EntitySet Name="LeadSources" EntityType="SQSalesToolLead.LeadSource" />
+    <EntitySet Name="LeadStatuses" EntityType="SQSalesToolLead.LeadStatus" />
+    <EntitySet Name="Medsups" EntityType="SQSalesToolLead.Medsup" />
+    <EntitySet Name="Plans" EntityType="SQSalesToolLead.Plan" />
+    <EntitySet Name="PolicyInformations" EntityType="SQSalesToolLead.PolicyInformation" />
+    <EntitySet Name="Vehicles" EntityType="SQSalesToolLead.Vehicle" />
+    <AssociationSet Name="FK__Account_D__Accou__76969D2E" Association="SQSalesToolLead.FK__Account_D__Accou__76969D2E">
+      <End Role="Accounts" EntitySet="Accounts" />
+      <End Role="Account_Detail" EntitySet="AccountDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK__account_i__Indiv__778AC167" Association="SQSalesToolLead.FK__account_i__Indiv__778AC167">
+      <End EntitySet="Individuals" Role="Individuals" />
+      <End EntitySet="AccountIndividualDetails" Role="account_individual_details" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Policy_In__Carri__04E4BC85" Association="SQSalesToolLead.FK__Policy_In__Carri__04E4BC85">
+      <End Role="Carriers" EntitySet="Carriers" />
+      <End Role="Policy_Information" EntitySet="PolicyInformations" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Individualcontact_information" Association="SQSalesToolLead.FK_Individualcontact_information">
+      <End EntitySet="Individuals" Role="Individuals" />
+      <End EntitySet="ContactInformations" Role="contact_information" />
+    </AssociationSet>
+    <AssociationSet Name="FK__driver_in__drive__7A672E12" Association="SQSalesToolLead.FK__driver_in__drive__7A672E12">
+      <End Role="driver_info" EntitySet="DriverInfos" />
+      <End Role="driver_incidence" EntitySet="DriverIncidences" />
+    </AssociationSet>
+    <AssociationSet Name="FK__homes__Individua__7B5B524B" Association="SQSalesToolLead.FK__homes__Individua__7B5B524B">
+      <End EntitySet="Individuals" Role="Individuals" />
+      <End EntitySet="Homes" Role="homes" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Individua__Indiv__7C4F7684" Association="SQSalesToolLead.FK__Individua__Indiv__7C4F7684">
+      <End EntitySet="Individuals" Role="Individuals" />
+      <End EntitySet="IndividualDetails" Role="Individual_Details" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Individua__Indiv__7D439ABD" Association="SQSalesToolLead.FK__Individua__Indiv__7D439ABD">
+      <End EntitySet="Individuals" Role="Individuals" />
+      <End EntitySet="IndividualDetails" Role="Individual_Details" />
+    </AssociationSet>
+    <AssociationSet Name="FK__vehicles__Indivi__07C12930" Association="SQSalesToolLead.FK__vehicles__Indivi__07C12930">
+      <End EntitySet="Individuals" Role="Individuals" />
+      <End EntitySet="Vehicles" Role="vehicles" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Policy_In__Plans__05D8E0BE" Association="SQSalesToolLead.FK__Policy_In__Plans__05D8E0BE">
+      <End Role="Plans" EntitySet="Plans" />
+      <End Role="Policy_Information" EntitySet="PolicyInformations" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Individuals_Accounts" Association="SQSalesToolLead.FK_Individuals_Accounts">
+      <End EntitySet="Accounts" Role="Account" />
+      <End EntitySet="Individuals" Role="Individual" />
+    </AssociationSet>
+    <AssociationSet Name="FK_driver_info_Individuals" Association="SQSalesToolLead.FK_driver_info_Individuals">
+      <End EntitySet="Individuals" Role="Individual" />
+      <End EntitySet="DriverInfos" Role="DriverInfo" />
+    </AssociationSet>
+    <EntitySet Name="medsupApplications" EntityType="SQSalesToolLead.medsupApplication" />
+    <AssociationSet Name="FK_medsupApplication_medsups" Association="SQSalesToolLead.FK_medsupApplication_medsups">
+      <End EntitySet="Medsups" Role="Medsup" />
+      <End EntitySet="medsupApplications" Role="medsupApplication" />
+    </AssociationSet>
+    <EntitySet Name="DentalVisions" EntityType="SQSalesToolLead.DentalVision" />
+    <EntitySet Name="Mapdps" EntityType="SQSalesToolLead.Mapdp" />
+    <EntitySet Name="Leads" EntityType="SQSalesToolLead.Lead" />
+    <AssociationSet Name="FK_Leads_Accounts" Association="SQSalesToolLead.FK_Leads_Accounts">
+      <End Role="Account" EntitySet="Accounts" />
+      <End Role="Lead" EntitySet="Leads" />
+    </AssociationSet>
+    <EntitySet Name="AccountAttachments1" EntityType="SQSalesToolLead.AccountAttachment" />
+    <AssociationSet Name="FK_account_template_attachments" Association="SQSalesToolLead.FK_account_template_attachments">
+      <End Role="Account" EntitySet="Accounts" />
+      <End Role="account_attachments" EntitySet="AccountAttachments1" />
+    </AssociationSet>
+    <EntitySet Name="AutoHomeQuotes" EntityType="SQSalesToolLead.AutoHomeQuote" />
+    <AssociationSet Name="FK_autohome_quotes_Accounts" Association="SQSalesToolLead.FK_autohome_quotes_Accounts">
+      <End Role="Account" EntitySet="Accounts" />
+      <End Role="AutoHomeQuote" EntitySet="AutoHomeQuotes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_carrier_issues_Accounts" Association="SQSalesToolLead.FK_carrier_issues_Accounts">
+      <End Role="Account" EntitySet="Accounts" />
+      <End Role="CarrierIssue" EntitySet="CarrierIssues" />
+    </AssociationSet>
+    <AssociationSet Name="FK_medsupApplication_Accounts" Association="SQSalesToolLead.FK_medsupApplication_Accounts">
+      <End Role="Account" EntitySet="Accounts" />
+      <End Role="medsupApplication" EntitySet="medsupApplications" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Leads_Leads" Association="SQSalesToolLead.FK_Leads_Leads">
+      <End Role="Lead" EntitySet="Leads" />
+      <End Role="Lead1" EntitySet="Leads" />
+    </AssociationSet>
+    <AssociationSet Name="FK_account_individual_details_Individuals" Association="SQSalesToolLead.FK_account_individual_details_Individuals">
+      <End Role="Individual" EntitySet="Individuals" />
+      <End Role="AccountIndividualDetail" EntitySet="AccountIndividualDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_best_call_Individuals1" Association="SQSalesToolLead.FK_best_call_Individuals1">
+      <End Role="Individual" EntitySet="Individuals" />
+      <End Role="BestCall" EntitySet="BestCalls" />
+    </AssociationSet>
+    <AssociationSet Name="FK_homes_Individuals" Association="SQSalesToolLead.FK_homes_Individuals">
+      <End Role="Individual" EntitySet="Individuals" />
+      <End Role="Home" EntitySet="Homes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Individual_Details_Individuals" Association="SQSalesToolLead.FK_Individual_Details_Individuals">
+      <End Role="Individual" EntitySet="Individuals" />
+      <End Role="IndividualDetail" EntitySet="IndividualDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_vehicles_Individuals" Association="SQSalesToolLead.FK_vehicles_Individuals">
+      <End Role="Individual" EntitySet="Individuals" />
+      <End Role="Vehicle" EntitySet="Vehicles" />
+    </AssociationSet>
+    <EntitySet Name="AutoHomePolicies1" EntityType="SQSalesToolLead.AutoHomePolicy" />
+    <AssociationSet Name="FK_autohome_policies_Carriers" Association="SQSalesToolLead.FK_autohome_policies_Carriers">
+      <End Role="Carrier" EntitySet="Carriers" />
+      <End Role="AutoHomePolicy" EntitySet="AutoHomePolicies1" />
+    </AssociationSet>
+    <AssociationSet Name="FK_autohome_policies_Carriers1" Association="SQSalesToolLead.FK_autohome_policies_Carriers1">
+      <End Role="Carrier" EntitySet="Carriers" />
+      <End Role="AutoHomePolicy" EntitySet="AutoHomePolicies1" />
+    </AssociationSet>
+    <EntitySet Name="UserLs" EntityType="SQSalesToolLead.UserL" />
+    <AssociationSet Name="FK_Accounts_users" Association="SQSalesToolLead.FK_Accounts_users">
+      <End Role="user" EntitySet="UserLs" />
+      <End Role="Account" EntitySet="Accounts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Accounts_users1" Association="SQSalesToolLead.FK_Accounts_users1">
+      <End Role="user" EntitySet="UserLs" />
+      <End Role="Account" EntitySet="Accounts" />
+    </AssociationSet>
+    <EntitySet Name="statuses" EntityType="SQSalesToolLead.StatusL" />
+    <AssociationSet Name="FK_Leads_statuses" Association="SQSalesToolLead.FK_Leads_statuses">
+      <End Role="status" EntitySet="statuses" />
+      <End Role="Lead" EntitySet="Leads" />
+    </AssociationSet>
+    <EntitySet Name="AccountHistories" EntityType="SQSalesToolLead.AccountHistory" />
+    <EntitySet Name="EventCalendars1" EntityType="SQSalesToolLead.EventCalendar" />
+    <AssociationSet Name="FK_eventcalendar_users" Association="SQSalesToolLead.FK_eventcalendar_users">
+      <End Role="UserL" EntitySet="UserLs" />
+      <End Role="EventCalendar" EntitySet="EventCalendars1" />
+    </AssociationSet>
+    <AssociationSet Name="FK_eventcalendar_Accounts" Association="SQSalesToolLead.FK_eventcalendar_Accounts">
+      <End Role="Account" EntitySet="Accounts" />
+      <End Role="EventCalendar" EntitySet="EventCalendars1" />
+    </AssociationSet>
+    <EntitySet Name="EmailQueues" EntityType="SQSalesToolLead.EmailQueue" />
+    <AssociationSet Name="FK_Accounts_TransferUser" Association="SQSalesToolLead.FK_Accounts_TransferUser">
+      <End Role="UserL" EntitySet="UserLs" />
+      <End Role="Account" EntitySet="Accounts" />
+    </AssociationSet>
+    <AssociationSet Name="FK__lea_addit__Lead___01142BA1" Association="SQSalesToolLead.FK__lea_addit__Lead___01142BA1">
+      <End Role="Lead" EntitySet="Leads" />
+      <End Role="LeadAdditionalInfo" EntitySet="LeaAdditionalInfos" />
+    </AssociationSet>
+    <AssociationSet Name="FK__lead_note__Lead___02084FDA" Association="SQSalesToolLead.FK__lead_note__Lead___02084FDA">
+      <End Role="Lead" EntitySet="Leads" />
+      <End Role="LeadNote" EntitySet="LeadNotes" />
+    </AssociationSet>
+    <EntitySet Name="ViewLeads" EntityType="SQSalesToolLead.ViewLead" />
+    <EntitySet Name="vw_proj_ForPrioritizationList" EntityType="SQSalesToolLead.vw_proj_ForPrioritizationList" />
+    <FunctionImport Name="FindIndividualByPhone" ReturnType="Collection(SQSalesToolLead.FindIndividualByPhoneResult)">
+      <Parameter Name="Ph1" Mode="In" Type="String" />
+      <Parameter Name="Ph2" Mode="In" Type="String" />
+      <Parameter Name="Ph3" Mode="In" Type="String" />
+    </FunctionImport>
+    <EntitySet Name="UserSavedSearches" EntityType="SQSalesToolLead.UserSavedSearch" />
+    <EntitySet Name="UserSavedSearchCriterias" EntityType="SQSalesToolLead.UserSavedSearchCriteria" />
+    <AssociationSet Name="FK_user_saved_search_criteria_user_saved_search" Association="SQSalesToolLead.FK_user_saved_search_criteria_user_saved_search">
+      <End Role="user_saved_search" EntitySet="UserSavedSearches" />
+      <End Role="user_saved_search_criteria" EntitySet="UserSavedSearchCriterias" />
+    </AssociationSet>
+    <AssociationSet Name="FK_user_saved_search_users" Association="SQSalesToolLead.FK_user_saved_search_users">
+      <End Role="UserL" EntitySet="UserLs" />
+      <End Role="user_saved_search" EntitySet="UserSavedSearches" />
+    </AssociationSet>
+    <FunctionImport Name="GetIndividualsByAccountID" ReturnType="Collection(SQSalesToolLead.ViewIndividuals)">
+      <Parameter Name="accountid" Mode="In" Type="Int64" />
+      <Parameter Name="userid" Mode="In" Type="Guid" />
+    </FunctionImport>
+    <EntitySet Name="ViewVehicles" EntityType="SQSalesToolLead.ViewVehicle" />
+    <EntitySet Name="ViewAutoHomeQuote" EntityType="SQSalesToolLead.ViewAutoHomeQuote" />
+    <EntitySet Name="account_history_sub_status" EntityType="SQSalesToolLead.AccountHistorySubstatusII" />
+    <EntitySet Name="ViewAutoHomePolicy" EntityType="SQSalesToolLead.ViewAutoHomePolicy" />
+    <EntitySet Name="Recipients" EntityType="SQSalesToolLead.Recipeint" />
+    <EntitySet Name="ReportInEmail" EntityType="SQSalesToolLead.ReportInEmail" />
+    <EntitySet Name="Emails" EntityType="SQSalesToolLead.Emails" />
+    <EntitySet Name="ReportFormat" EntityType="SQSalesToolLead.ReportFormat" />
+    <AssociationSet Name="FK__email_rec__rcp_e__2F90BA16" Association="SQSalesToolLead.FK__email_rec__rcp_e__2F90BA16">
+      <End Role="emails" EntitySet="Emails" />
+      <End Role="email_recipients" EntitySet="Recipients" />
+    </AssociationSet>
+    <AssociationSet Name="FK__email_rec__rcp_u__3084DE4F" Association="SQSalesToolLead.FK__email_rec__rcp_u__3084DE4F">
+      <End Role="UserL" EntitySet="UserLs" />
+      <End Role="email_recipients" EntitySet="Recipients" />
+    </AssociationSet>
+    <AssociationSet Name="FK__email_rep__emr_e__28E3BC87" Association="SQSalesToolLead.FK__email_rep__emr_e__28E3BC87">
+      <End Role="emails" EntitySet="Emails" />
+      <End Role="email_report" EntitySet="ReportInEmail" />
+    </AssociationSet>
+    <AssociationSet Name="FK__email_rep__emr_f__2BC02932" Association="SQSalesToolLead.FK__email_rep__emr_f__2BC02932">
+      <End Role="report_format" EntitySet="ReportFormat" />
+      <End Role="email_report" EntitySet="ReportInEmail" />
+    </AssociationSet>
+    <EntitySet Name="ViewEmailRecipients" EntityType="SQSalesToolLead.ViewEmailRecipients" />
+    <AssociationSet Name="FK_email_recipients_email_report" Association="SQSalesToolLead.FK_email_recipients_email_report">
+      <End Role="ReportInEmail" EntitySet="ReportInEmail" />
+      <End Role="Recipeint" EntitySet="Recipients" />
+    </AssociationSet>
+    <EntitySet Name="policy_statuses" EntityType="SQSalesToolLead.PolicyStatuses" />
+    <EntitySet Name="IssueStatuses" EntityType="SQSalesToolLead.IssueStatuses" />
+    <EntitySet Name="IssueStatusesHistory" EntityType="SQSalesToolLead.IssueStatusesHistory" />
+    <AssociationSet Name="FK_issue_statuses_history_accounts" Association="SQSalesToolLead.FK_issue_statuses_history_accounts">
+      <End Role="Account" EntitySet="Accounts" />
+      <End Role="issue_statuses_history" EntitySet="IssueStatusesHistory" />
+    </AssociationSet>
+    <AssociationSet Name="FK_issue_statuses_history_carrier_issues" Association="SQSalesToolLead.FK_issue_statuses_history_carrier_issues">
+      <End Role="CarrierIssue" EntitySet="CarrierIssues" />
+      <End Role="issue_statuses_history" EntitySet="IssueStatusesHistory" />
+    </AssociationSet>
+    <AssociationSet Name="FK_issue_statuses_history_issue_statuses" Association="SQSalesToolLead.FK_issue_statuses_history_issue_statuses">
+      <End Role="issue_statuses" EntitySet="IssueStatuses" />
+      <End Role="issue_statuses_history" EntitySet="IssueStatusesHistory" />
+    </AssociationSet>
+    <AssociationSet Name="FK_issue_statuses_history_users" Association="SQSalesToolLead.FK_issue_statuses_history_users">
+      <End Role="UserL" EntitySet="UserLs" />
+      <End Role="issue_statuses_history" EntitySet="IssueStatusesHistory" />
+    </AssociationSet>
+    <EntitySet Name="DuplicatesViews" EntityType="SQSalesToolLead.DuplicatesView" />
+    <AssociationSet Name="FK_duplicates_view_leads" Association="SQSalesToolLead.FK_duplicates_view_leads">
+      <End Role="Lead" EntitySet="Leads" />
+      <End Role="duplicates_view" EntitySet="DuplicatesViews" />
+    </AssociationSet>
+    <AssociationSet Name="FK_duplicates_view_leads1" Association="SQSalesToolLead.FK_duplicates_view_leads1">
+      <End Role="Lead" EntitySet="Leads" />
+      <End Role="duplicates_view" EntitySet="DuplicatesViews" />
+    </AssociationSet>
+    <EntitySet Name="IndividualStatus" EntityType="SQSalesToolLead.IndividualStatus" />
+    <AssociationSet Name="FK_Individuals_individual_statuses" Association="SQSalesToolLead.FK_Individuals_individual_statuses">
+      <End Role="individual_statuses" EntitySet="IndividualStatus" />
+      <End Role="Individual" EntitySet="Individuals" />
+    </AssociationSet>
+    <EntitySet Name="IndividualPDPStatuses" EntityType="SQSalesToolLead.IndividualPDPStatuses" />
+    <AssociationSet Name="FK_Individuals_individual_pdp_statuses" Association="SQSalesToolLead.FK_Individuals_individual_pdp_statuses">
+      <End Role="individual_pdp_statuses" EntitySet="IndividualPDPStatuses" />
+      <End Role="Individual" EntitySet="Individuals" />
+    </AssociationSet>
+    <EntitySet Name="ViewLeadMarketing" EntityType="SQSalesToolLead.ViewLeadMarketing" />
+    <EntitySet Name="EmailsForReport" EntityType="SQSalesToolLead.EmailsForReport" />
+    <EntitySet Name="ViewMAPDPs" EntityType="SQSalesToolLead.ViewMAPDP" />
+    <EntitySet Name="MedicalSupplements" EntityType="SQSalesToolLead.MedicalSupplement" />
+    <EntitySet Name="IssueTypes" EntityType="SQSalesToolLead.IssueType" />
+    <AssociationSet Name="FK_car_iss_itp_key" Association="SQSalesToolLead.FK_car_iss_itp_key">
+      <End Role="issue_types" EntitySet="IssueTypes" />
+      <End Role="CarrierIssue" EntitySet="CarrierIssues" />
+    </AssociationSet>
+    <AssociationSet Name="FK_autohome_policies_policy_statuses" Association="SQSalesToolLead.FK_autohome_policies_policy_statuses">
+      <End Role="PolicyStatuses" EntitySet="policy_statuses" />
+      <End Role="AutoHomePolicy" EntitySet="AutoHomePolicies1" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dental_vision_policy_statuses" Association="SQSalesToolLead.FK_dental_vision_policy_statuses">
+      <End Role="PolicyStatuses" EntitySet="policy_statuses" />
+      <End Role="DentalVision" EntitySet="DentalVisions" />
+    </AssociationSet>
+    <AssociationSet Name="FK_mapdps_policy_statuses" Association="SQSalesToolLead.FK_mapdps_policy_statuses">
+      <End Role="PolicyStatuses" EntitySet="policy_statuses" />
+      <End Role="Mapdp" EntitySet="Mapdps" />
+    </AssociationSet>
+    <AssociationSet Name="FK_medsups_policy_statuses" Association="SQSalesToolLead.FK_medsups_policy_statuses">
+      <End Role="PolicyStatuses" EntitySet="policy_statuses" />
+      <End Role="Medsup" EntitySet="Medsups" />
+    </AssociationSet>
+    <EntitySet Name="PostQueues" EntityType="SQSalesToolLead.PostQueue" />
+    <EntitySet Name="LeadMetrics" EntityType="SQSalesToolLead.LeadMetric" />
+    <FunctionImport Name="AddDummyPrimary">
+      <Parameter Name="id" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <EntitySet Name="ArcCases" EntityType="SQSalesToolLead.ArcCases" />
+    <AssociationSet Name="LeadArcCases" Association="SQSalesToolLead.LeadArcCases">
+      <End EntitySet="Leads" Role="Lead" />
+      <End EntitySet="ArcCases" Role="ArcCases" />
+    </AssociationSet>
+    <AssociationSet Name="AccountLead" Association="SQSalesToolLead.AccountLead">
+      <End EntitySet="Accounts" Role="Account" />
+      <End EntitySet="Leads" Role="Lead" />
+    </AssociationSet>
+    <AssociationSet Name="PrimaryIndividualAccount" Association="SQSalesToolLead.PrimaryIndividualAccount">
+      <End Role="Individual" EntitySet="Individuals" />
+      <End Role="Account" EntitySet="Accounts" />
+    </AssociationSet>
+    <AssociationSet Name="SecondaryIndividualAccount" Association="SQSalesToolLead.SecondaryIndividualAccount">
+      <End Role="Individual" EntitySet="Individuals" />
+      <End Role="Account" EntitySet="Accounts" />
+    </AssociationSet>
+    <AssociationSet Name="AccountArcCases" Association="SQSalesToolLead.AccountArcCases">
+      <End EntitySet="Accounts" Role="Account" />
+      <End EntitySet="ArcCases" Role="ArcCases" />
+    </AssociationSet>
+    <EntitySet Name="arc_history" EntityType="SQSalesToolLead.ArcHistory" />
+    <AssociationSet Name="FK_arc_history_arc_cases" Association="SQSalesToolLead.FK_arc_history_arc_cases">
+      <End EntitySet="ArcCases" Role="ArcCases" />
+      <End EntitySet="arc_history" Role="arc_history" />
+    </AssociationSet>
+    <AssociationSet Name="FK_arc_cases_Individuals" Association="SQSalesToolLead.FK_arc_cases_Individuals">
+      <End Role="Individual" EntitySet="Individuals" />
+      <End Role="ArcCases" EntitySet="ArcCases" />
+    </AssociationSet>
+    <AssociationSet Name="UserLArcHistory" Association="SQSalesToolLead.UserLArcHistory">
+      <End Role="UserL" EntitySet="UserLs" />
+      <End Role="ArcHistory" EntitySet="arc_history" />
+    </AssociationSet>
+    <AssociationSet Name="AccountAccountHistory" Association="SQSalesToolLead.AccountAccountHistory">
+      <End Role="Account" EntitySet="Accounts" />
+      <End Role="AccountHistory" EntitySet="AccountHistories" />
+    </AssociationSet>
+    <EntitySet Name="vw_ArcActions" EntityType="SQSalesToolLead.vw_ArcActions" />
+    <AssociationSet Name="UserL_AccountHistory" Association="SQSalesToolLead.UserL_AccountHistory">
+      <End Role="UserL" EntitySet="UserLs" />
+      <End Role="AccountHistory" EntitySet="AccountHistories" />
+    </AssociationSet>
+    <EntitySet Name="vw_ArcLetterLog" EntityType="SQSalesToolLead.vw_ArcLetterLog" />
+    <EntitySet Name="inContact_data" EntityType="SQSalesToolLead.inContact_data" />
+    <FunctionImport Name="proj_Arc_GetCreateOp" ReturnType="Collection(SQSalesToolLead.Arc_GetCreateOp_Result)">
+      <Parameter Name="StartDate" Mode="In" Type="DateTime" />
+      <Parameter Name="EndDate" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <EntitySet Name="vw_EventCalendar" EntityType="SQSalesToolLead.vw_EventCalendar" />
+    <AssociationSet Name="FK_dental_vision_Carriers" Association="SQSalesToolLead.FK_dental_vision_Carriers">
+      <End Role="Carrier" EntitySet="Carriers" />
+      <End Role="DentalVision" EntitySet="DentalVisions" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Accounts_Original_user" Association="SQSalesToolLead.FK_Accounts_Original_user">
+      <End Role="UserL" EntitySet="UserLs" />
+      <End Role="Account" EntitySet="Accounts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Accounts_Original_user1" Association="SQSalesToolLead.FK_Accounts_Original_user1">
+      <End Role="UserL" EntitySet="UserLs" />
+      <End Role="Account" EntitySet="Accounts" />
+    </AssociationSet>
+    <EntitySet Name="vw_ArcChangeAgent" EntityType="SQSalesToolLead.vw_ArcChangeAgent" />
+    <AssociationSet Name="Accountvw_ArcChangeAgent" Association="SQSalesToolLead.Accountvw_ArcChangeAgent">
+      <End Role="Account" EntitySet="Accounts" />
+      <End Role="vw_ArcChangeAgent" EntitySet="vw_ArcChangeAgent" />
+    </AssociationSet>
+    <EntitySet Name="policy_status_type" EntityType="SQSalesToolLead.PolicyStatusType" />
+    <EntitySet Name="AccountHistoryEntries" EntityType="SQSalesToolLead.AccountHistoryEntry" />
+    <EntitySet Name="QueueInboundPersonals" EntityType="SQSalesToolLead.QueueInboundPersonal" />
+    <EntitySet Name="QueueInboundACD" EntityType="SQSalesToolLead.QueueInboundACD" />
+    <EntitySet Name="AreaCodeToTimeZone" EntityType="SQSalesToolLead.AreaCodeToTimeZone" />
+    <EntitySet Name="mapdp_reason_codes" EntityType="SQSalesToolLead.MapdpReasonCodes" />
+    <EntitySet Name="medsup_app_type" EntityType="SQSalesToolLead.MedsupAppType" />
+    <AssociationSet Name="FK__mapdps__mapdp_ms__7425102E" Association="SQSalesToolLead.FK__mapdps__mapdp_ms__7425102E">
+      <End Role="mapdp_reason_codes" EntitySet="mapdp_reason_codes" />
+      <End Role="Mapdp" EntitySet="Mapdps" />
+    </AssociationSet>
+    <AssociationSet Name="FK__medsups__msa_app__7148A383" Association="SQSalesToolLead.FK__medsups__msa_app__7148A383">
+      <End Role="medsup_app_type" EntitySet="medsup_app_type" />
+      <End Role="Medsup" EntitySet="Medsups" />
+    </AssociationSet>
+    <EntitySet Name="QueueAcdStatistics" EntityType="SQSalesToolLead.QueueAcdStatistics" />
+    <FunctionImport Name="ACDToDial" ReturnType="Collection(SQSalesToolLead.ACDToDial_Result)">
+      <Parameter Name="agentID" Mode="In" Type="Guid" />
+    </FunctionImport>
+    <FunctionImport Name="GetACDStatistics" />
+    <EntitySet Name="individual_prescriptions" EntityType="SQSalesToolLead.IndividualPrescriptions" />
+    <AssociationSet Name="FK_individual_drug_prescriptions" Association="SQSalesToolLead.FK_individual_drug_prescriptions">
+      <End Role="Individual" EntitySet="Individuals" />
+      <End Role="IndividualPrescriptions" EntitySet="individual_prescriptions" />
+    </AssociationSet>
+    <FunctionImport Name="UpdateStatsCallTaken">
+      <Parameter Name="agentID" Mode="In" Type="Guid" />
+      <Parameter Name="acdqueueID" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <EntitySet Name="vw_AccountEventCalendar" EntityType="SQSalesToolLead.vw_AccountEventCalendar" />
+    <AssociationSet Name="Accountvw_AccountEventCalendar" Association="SQSalesToolLead.Accountvw_AccountEventCalendar">
+      <End Role="Account" EntitySet="Accounts" />
+      <End Role="vw_AccountEventCalendar" EntitySet="vw_AccountEventCalendar" />
+    </AssociationSet>
+    <AssociationSet Name="UserLvw_AccountEventCalendar" Association="SQSalesToolLead.UserLvw_AccountEventCalendar">
+      <End Role="UserL" EntitySet="UserLs" />
+      <End Role="vw_AccountEventCalendar" EntitySet="vw_AccountEventCalendar" />
+    </AssociationSet>
+    <EntitySet Name="ArcCompanyDirectory" EntityType="SQSalesToolLead.ArcCompanyDirectory" />
+  </EntityContainer>
+  <EntityType Name="AccountDetail">
+    <Key>
+      <PropertyRef Name="Key" />
+    </Key>
+    <Property Name="Key" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Id" Type="Int64" />
+    <Property Name="PolicyType" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="PolicyId" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="AddedBy" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="AddedOn" Type="DateTime" Precision="3" />
+    <Property Name="ChangedBy" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="ChangedOn" Type="DateTime" Precision="3" />
+    <Property Name="Accountkey" Type="Int64" Nullable="false" />
+    <NavigationProperty Name="Account" Relationship="SQSalesToolLead.FK__Account_D__Accou__76969D2E" FromRole="Account_Detail" ToRole="Accounts" />
+  </EntityType>
+  <EntityType Name="AccountIndividualDetail">
+    <Key>
+      <PropertyRef Name="Key" />
+    </Key>
+    <Property Name="Key" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Id" Type="Int64" Nullable="false" />
+    <Property Name="IsPrimary" Type="Boolean" />
+    <Property Name="AddedBy" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="AddedOn" Type="DateTime" Precision="3" />
+    <Property Name="ChangedBy" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="ChangedOn" Type="DateTime" Precision="3" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="IsDeleted" Type="Boolean" />
+    <Property Name="Individualkey" Type="Int64" Nullable="false" />
+    <NavigationProperty Name="Individual" Relationship="SQSalesToolLead.FK__account_i__Indiv__778AC167" FromRole="account_individual_details" ToRole="Individuals" />
+  </EntityType>
+  <EntityType Name="Account">
+    <Key>
+      <PropertyRef Name="Key" />
+    </Key>
+    <Property Name="Key" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PrimaryIndividualId" Type="Int64" />
+    <Property Name="PolicyType" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="PolicyId" Type="Int64" Nullable="true" />
+    <Property Name="AddedBy" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="AddedOn" Type="DateTime" Precision="3" />
+    <Property Name="ChangedBy" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="ChangedOn" Type="DateTime" Precision="3" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="IsDeleted" Type="Boolean" />
+    <NavigationProperty Name="AccountDetails" Relationship="SQSalesToolLead.FK__Account_D__Accou__76969D2E" FromRole="Accounts" ToRole="Account_Detail" />
+    <Property Type="Int64" Name="SecondaryIndividualId" />
+    <NavigationProperty Name="Individuals" Relationship="SQSalesToolLead.FK_Individuals_Accounts" FromRole="Account" ToRole="Individual" />
+    <Property Type="Int64" Name="PrimaryLeadKey" />
+    <NavigationProperty Name="Leads" Relationship="SQSalesToolLead.FK_Leads_Accounts" FromRole="Account" ToRole="Lead" />
+    <NavigationProperty Name="Attachments" Relationship="SQSalesToolLead.FK_account_template_attachments" FromRole="Account" ToRole="account_attachments" />
+    <NavigationProperty Name="AutoHomeQuotes" Relationship="SQSalesToolLead.FK_autohome_quotes_Accounts" FromRole="Account" ToRole="AutoHomeQuote" />
+    <NavigationProperty Name="CarrierIssues" Relationship="SQSalesToolLead.FK_carrier_issues_Accounts" FromRole="Account" ToRole="CarrierIssue" />
+    <NavigationProperty Name="MedicalSupplementsApps" Relationship="SQSalesToolLead.FK_medsupApplication_Accounts" FromRole="Account" ToRole="medsupApplication" />
+    <Property Type="Guid" Name="AssignedUserKey" />
+    <Property Type="Guid" Name="AssignedCsrKey" />
+    <NavigationProperty Name="User" Relationship="SQSalesToolLead.FK_Accounts_users" FromRole="Account" ToRole="user" />
+    <NavigationProperty Name="Csr" Relationship="SQSalesToolLead.FK_Accounts_users1" FromRole="Account" ToRole="user" />
+    <NavigationProperty Name="EventCalendars" Relationship="SQSalesToolLead.FK_eventcalendar_Accounts" FromRole="Account" ToRole="EventCalendar" />
+    <Property Type="DateTime" Name="NextEvenDate" Precision="0" />
+    <Property Type="Guid" Name="TransferUserKey" />
+    <Property Type="String" Name="ExternalAgent" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="TransferUser" Relationship="SQSalesToolLead.FK_Accounts_TransferUser" FromRole="Account" ToRole="UserL" />
+    <Property Type="String" Name="Notes" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="IssueStatusesHistory" Relationship="SQSalesToolLead.FK_issue_statuses_history_accounts" FromRole="Account" ToRole="issue_statuses_history" />
+    <Property Type="String" Name="LifeInfo" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="PrimaryLead" Relationship="SQSalesToolLead.AccountLead" FromRole="Account" ToRole="Lead" />
+    <NavigationProperty Name="PrimaryIndividual" Relationship="SQSalesToolLead.PrimaryIndividualAccount" FromRole="Account" ToRole="Individual" />
+    <NavigationProperty Name="SecondaryIndividual" Relationship="SQSalesToolLead.SecondaryIndividualAccount" FromRole="Account" ToRole="Individual" />
+    <NavigationProperty Name="ArcCases" Relationship="SQSalesToolLead.AccountArcCases" FromRole="Account" ToRole="ArcCases" />
+    <NavigationProperty Name="AccountHistory" Relationship="SQSalesToolLead.AccountAccountHistory" FromRole="Account" ToRole="AccountHistory" />
+    <Property Type="Int64" Name="AccountParent" />
+    <Property Name="AlternateProductUser" Type="Guid" />
+    <Property Name="OnBoardUser" Type="Guid" />
+    <NavigationProperty Name="OriginalUser" Relationship="SQSalesToolLead.FK_Accounts_Original_user" FromRole="Account" ToRole="UserL" />
+    <Property Type="Guid" Name="OriginalUserKey" />
+    <NavigationProperty Name="users" Relationship="SQSalesToolLead.FK_Accounts_Original_user1" FromRole="Account" ToRole="UserL" />
+    <NavigationProperty Name="vw_ArcChangeAgent" Relationship="SQSalesToolLead.Accountvw_ArcChangeAgent" FromRole="Account" ToRole="vw_ArcChangeAgent" />
+    <Property Name="NextCalenderDateAssigned" Type="DateTime" annotation:StoreGeneratedPattern="Computed" Precision="3" />
+    <Property Name="NextCalenderDate_CSR" Type="DateTime" annotation:StoreGeneratedPattern="Computed" Precision="3" />
+    <Property Name="NextCalenderDate_TA" Type="DateTime" annotation:StoreGeneratedPattern="Computed" Precision="3" />
+    <Property Name="NextCalenderDate_OB" Type="DateTime" annotation:StoreGeneratedPattern="Computed" Precision="3" />
+    <Property Name="NextCalenderDate_AP" Type="DateTime" annotation:StoreGeneratedPattern="Computed" Precision="3" />
+    <NavigationProperty Name="vw_AccountEventCalendar" Relationship="SQSalesToolLead.Accountvw_AccountEventCalendar" FromRole="Account" ToRole="vw_AccountEventCalendar" />
+  </EntityType>
+  <EntityType Name="BestCall">
+    <Key>
+      <PropertyRef Name="Key" />
+    </Key>
+    <Property Name="Key" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NumberCall" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+    <Property Name="TimeCall" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+    <Property Name="DateCall" Type="DateTime" Precision="3" />
+    <Property Name="IndividualId" Type="Int64" />
+    <Property Name="AppointmentSetHour" Type="String" MaxLength="5" Unicode="true" FixedLength="false" />
+    <Property Name="AppointSetMin" Type="String" MaxLength="5" Unicode="true" FixedLength="false" />
+    <Property Name="AppointmentSetDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="AddedBy" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="AddedOn" Type="DateTime" Precision="3" />
+    <Property Name="ChangedBy" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="ChangedOn" Type="DateTime" Precision="3" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="IsDeleted" Type="Boolean" />
+    <Property Type="Int32" Name="IndividualKey" />
+    <NavigationProperty Name="Individual" Relationship="SQSalesToolLead.FK_best_call_Individuals1" FromRole="BestCall" ToRole="Individual" />
+  </EntityType>
+  <EntityType Name="CarrierIssue">
+    <Key>
+      <PropertyRef Name="Key" />
+    </Key>
+    <Property Name="Key" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="None" />
+    <Property Name="DetectDate" Type="DateTime" Precision="0" />
+    <Property Name="ResolveDate" Type="DateTime" Precision="0" />
+    <Property Name="Issues" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="StatusNote" Type="String" MaxLength="250" Unicode="true" FixedLength="false" />
+    <Property Name="DetailedNote" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="DetailedNote2" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="DetailedNote3" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="DetailedNote4" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="ContactPerson" Type="String" MaxLength="150" Unicode="true" FixedLength="false" />
+    <Property Name="ContactNumber" Type="String" MaxLength="150" Unicode="true" FixedLength="false" />
+    <Property Name="ContactFax" Type="String" MaxLength="150" Unicode="true" FixedLength="false" />
+    <Property Name="CaseSpecialist" Type="String" MaxLength="250" Unicode="true" FixedLength="false" />
+    <Property Name="OpenResearchRequest" Type="String" MaxLength="250" Unicode="true" FixedLength="false" />
+    <Property Name="ResearchOpenDate" Type="DateTime" Precision="0" />
+    <Property Name="ResearchCloseDate" Type="DateTime" Precision="0" />
+    <Property Name="ResearchRequest" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="ResearchResponse" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="ResearchCaseSpecialist" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+    <Property Name="AddedBy" Type="String" MaxLength="150" Unicode="true" FixedLength="false" />
+    <Property Name="AddedOn" Type="DateTime" Precision="0" />
+    <Property Name="ChangedBy" Type="String" MaxLength="150" Unicode="true" FixedLength="false" />
+    <Property Name="ChangedOn" Type="DateTime" Precision="0" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="IsDeleted" Type="Boolean" />
+    <Property Type="Int64" Name="AccountId" />
+    <NavigationProperty Name="Account" Relationship="SQSalesToolLead.FK_carrier_issues_Accounts" FromRole="CarrierIssue" ToRole="Account" />
+    <NavigationProperty Name="IssueStatusesHistory" Relationship="SQSalesToolLead.FK_issue_statuses_history_carrier_issues" FromRole="CarrierIssue" ToRole="issue_statuses_history" />
+    <Property Type="String" Name="LastIssueStatus" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="IssueTypeId" />
+    <NavigationProperty Name="issue_types" Relationship="SQSalesToolLead.FK_car_iss_itp_key" FromRole="CarrierIssue" ToRole="issue_types" />
+  </EntityType>
+  <EntityType Name="Carrier">
+    <Key>
+      <PropertyRef Name="Key" />
+    </Key>
+    <Property Name="Key" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="250" Unicode="true" FixedLength="false" />
+    <Property Name="MsFlag" Type="Boolean" />
+    <Property Name="IsMapdp" Type="Boolean" />
+    <Property Name="IsDental" Type="Boolean" />
+    <Property Name="IsHome" Type="Boolean" />
+    <Property Name="IsAuto" Type="Boolean" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="IsDeleted" Type="Boolean" />
+    <Property Name="AddedBy" Type="Int64" />
+    <Property Name="AddedOn" Type="DateTime" Precision="3" />
+    <Property Name="ChangedBy" Type="Int64" />
+    <Property Name="ChangedOn" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="PolicyInformations" Relationship="SQSalesToolLead.FK__Policy_In__Carri__04E4BC85" FromRole="Carriers" ToRole="Policy_Information" />
+    <NavigationProperty Name="CarrierPolicies" Relationship="SQSalesToolLead.FK_autohome_policies_Carriers" FromRole="Carrier" ToRole="AutoHomePolicy" />
+    <NavigationProperty Name="CurrentCarrierPolicies" Relationship="SQSalesToolLead.FK_autohome_policies_Carriers1" FromRole="Carrier" ToRole="AutoHomePolicy" />
+    <NavigationProperty Name="dental_vision" Relationship="SQSalesToolLead.FK_dental_vision_Carriers" FromRole="Carrier" ToRole="DentalVision" />
+  </EntityType>
+  <EntityType Name="ContactInformation">
+    <Key>
+      <PropertyRef Name="Key" />
+      <PropertyRef Name="IndividualId" />
+    </Key>
+    <Property Name="Key" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IndividualId" Type="Int64" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="150" Unicode="true" FixedLength="false" />
+    <Property Name="Detail" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="IsDeleted" Type="Boolean" />
+    <Property Name="Individualkey" Type="Int64" Nullable="false" />
+    <NavigationProperty Name="Individual" Relationship="SQSalesToolLead.FK_Individualcontact_information" FromRole="contact_information" ToRole="Individuals" />
+  </EntityType>
+  <EntityType Name="DriverIncidence">
+    <Key>
+      <PropertyRef Name="Key" />
+    </Key>
+    <Property Name="Key" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Id" Type="Int64" />
+    <Property Name="Type" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Date1" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="ClaimPaidAmount" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="AddedBy" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="AddedOn" Type="DateTime" Precision="3" />
+    <Property Name="ChangedBy" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="ChangedOn" Type="DateTime" Precision="3" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="IsDeleted" Type="Boolean" />
+    <Property Name="DriverInformationKey" Type="Int64" Nullable="false" />
+    <NavigationProperty Name="DriverInfo" Relationship="SQSalesToolLead.FK__driver_in__drive__7A672E12" FromRole="driver_incidence" ToRole="driver_info" />
+  </EntityType>
+  <EntityType Name="DriverInfo">
+    <Key>
+      <PropertyRef Name="Key" />
+    </Key>
+    <Property Name="Key" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DlState" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+    <Property Name="MaritalStatus" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="LicenseStatus" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="AgeLicensed" Type="Int64" />
+    <Property Name="YearsAtResidence" Type="Int64" />
+    <Property Name="Occupation" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="YearsWithCompany" Type="Int64" />
+    <Property Name="YrsInField" Type="Int64" />
+    <Property Name="Education" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="NmbrIncidents" Type="Int64" />
+    <Property Name="St22" Type="String" MaxLength="150" Unicode="true" FixedLength="false" />
+    <Property Name="PolicyYears" Type="Int64" />
+    <Property Name="IndividualId" Type="Int64" />
+    <Property Name="AddedBy" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="AddedOn" Type="DateTime" Precision="3" />
+    <Property Name="ChangedBy" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="ChangedOn" Type="DateTime" Nullable="true" Precision="3" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="IsDeleted" Type="Boolean" Nullable="true" />
+    <NavigationProperty Name="DriverIncidences" Relationship="SQSalesToolLead.FK__driver_in__drive__7A672E12" FromRole="driver_info" ToRole="driver_incidence" />
+    <NavigationProperty Name="Individual" Relationship="SQSalesToolLead.FK_driver_info_Individuals" FromRole="DriverInfo" ToRole="Individual" />
+    <Property Type="String" Name="LisenceNumber" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="CurrentCarrier" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="LiabilityLimit" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="CurrentAutoXDate" Precision="0" />
+    <Property Type="String" Name="MedicalPayment" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Int64" Name="AccountId" />
+    <Property Type="String" Name="TicketsAccidentsClaims" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="IncidentType" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="IncidentDescription" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="IncidentDate" Precision="0" />
+    <Property Type="Decimal" Name="ClaimPaidAmount" Precision="19" Scale="4" />
+  </EntityType>
+  <EntityType Name="Home">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IndvId" Type="Int64" />
+    <Property Name="CurrentCarrier" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="CurrentXdateLeadInfo" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="YearBuilt" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+    <Property Name="DwellingType" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="DesignType" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="RoofAge" Type="Int64" />
+    <Property Name="RoofType" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="FoundationType" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="HeatingType" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="ExteriorWallType" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="NumberOfClaims" Type="Int64" />
+    <Property Name="NumberOfBedrooms" Type="Int64" />
+    <Property Name="SqFootage" Type="Int64" />
+    <Property Name="ReqCoverage" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+    <Property Name="AccountId" Type="Int64" />
+    <Property Name="AddedBy" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="AddedOn" Type="DateTime" Precision="3" />
+    <Property Name="ChangedBy" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="ChangedOn" Type="DateTime" Precision="3" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="IsDeleted" Type="Boolean" />
+    <Property Name="Individualkey" Type="Int64" Nullable="false" />
+    <NavigationProperty Name="Individual" Relationship="SQSalesToolLead.FK__homes__Individua__7B5B524B" FromRole="homes" ToRole="Individuals" />
+    <Property Type="Int64" Name="NumberOfBathrooms" />
+    <Property Type="String" Name="Address1" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Address2" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="City" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Byte" Name="StateId" />
+    <Property Type="String" Name="ZipCode" MaxLength="10" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="IndividualDetail">
+    <Key>
+      <PropertyRef Name="Key" />
+    </Key>
+    <Property Name="Key" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IndividualId" Type="Int64" Nullable="false" />
+    <Property Name="RelationshipDescription" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="RelatedIndividualId" Type="Int64" Nullable="false" />
+    <Property Name="AccountId" Type="Int64" Nullable="false" />
+    <Property Name="Individualindvkey" Type="Int64" Nullable="false" />
+    <Property Name="Individualsindvkey" Type="Int64" Nullable="false" />
+    <NavigationProperty Name="Individual" Relationship="SQSalesToolLead.FK__Individua__Indiv__7C4F7684" FromRole="Individual_Details" ToRole="Individuals" />
+  </EntityType>
+  <EntityType Name="Individual">
+    <Key>
+      <PropertyRef Name="Key" />
+    </Key>
+    <Property Name="Key" Nullable="false" annotation:StoreGeneratedPattern="Identity" Type="Int64" />
+    <Property Name="FirstName" Nullable="true" MaxLength="150" FixedLength="false" Unicode="true" Type="String" />
+    <Property Name="LastName" Nullable="true" MaxLength="150" FixedLength="false" Unicode="true" Type="String" />
+    <Property Name="Gender" MaxLength="10" FixedLength="false" Unicode="true" Type="String" />
+    <Property Name="Smoking" Type="Boolean" />
+    <Property Name="Age" Type="Int64" />
+    <Property Name="Address1" MaxLength="Max" FixedLength="false" Unicode="true" Type="String" />
+    <Property Name="Address2" MaxLength="Max" FixedLength="false" Unicode="true" Type="String" />
+    <Property Name="City" MaxLength="150" FixedLength="false" Unicode="true" Type="String" />
+    <Property Name="AccountId" Type="Int64" />
+    <Property Name="AddedBy" MaxLength="50" FixedLength="false" Unicode="true" Type="String" />
+    <Property Name="Birthday" Type="DateTime" Precision="0" />
+    <Property Name="AddedOn" Type="DateTime" Precision="3" />
+    <Property Name="ChangedBy" MaxLength="50" FixedLength="false" Unicode="true" Type="String" />
+    <Property Name="ChangedOn" Type="DateTime" Precision="3" />
+    <Property Name="IsActive" Type="Boolean" />
+    <NavigationProperty Name="AccountIndividualDetails" Relationship="SQSalesToolLead.FK__account_i__Indiv__778AC167" FromRole="Individuals" ToRole="account_individual_details" />
+    <NavigationProperty Name="ContactInformations" Relationship="SQSalesToolLead.FK_Individualcontact_information" FromRole="Individuals" ToRole="contact_information" />
+    <NavigationProperty Name="Homes" Relationship="SQSalesToolLead.FK__homes__Individua__7B5B524B" FromRole="Individuals" ToRole="homes" />
+    <NavigationProperty Name="IndividualDetails" Relationship="SQSalesToolLead.FK__Individua__Indiv__7C4F7684" FromRole="Individuals" ToRole="Individual_Details" />
+    <NavigationProperty Name="Vehicles" Relationship="SQSalesToolLead.FK__vehicles__Indivi__07C12930" FromRole="Individuals" ToRole="vehicles" />
+    <Property Name="DayPhone" Type="Int64" />
+    <Property Name="EveningPhone" Type="Int64" />
+    <Property Name="FaxNmbr" Type="Int64" />
+    <Property Name="CellPhone" Type="Int64" />
+    <Property Name="Notes" MaxLength="Max" FixedLength="false" Unicode="true" Type="String" />
+    <Property Name="Relation" MaxLength="50" FixedLength="false" Unicode="true" Type="String" />
+    <NavigationProperty Name="Account" Relationship="SQSalesToolLead.FK_Individuals_Accounts" FromRole="Individual" ToRole="Account" />
+    <Property Name="IsDeleted" Type="Boolean" />
+    <NavigationProperty Name="driver_info" Relationship="SQSalesToolLead.FK_driver_info_Individuals" FromRole="Individual" ToRole="DriverInfo" />
+    <Property Type="Byte" Name="StateID" />
+    <NavigationProperty Name="account_individual_details" Relationship="SQSalesToolLead.FK_account_individual_details_Individuals" FromRole="Individual" ToRole="AccountIndividualDetail" />
+    <NavigationProperty Name="best_call" Relationship="SQSalesToolLead.FK_best_call_Individuals1" FromRole="Individual" ToRole="BestCall" />
+    <NavigationProperty Name="homes" Relationship="SQSalesToolLead.FK_homes_Individuals" FromRole="Individual" ToRole="Home" />
+    <NavigationProperty Name="Individual_Details" Relationship="SQSalesToolLead.FK_Individual_Details_Individuals" FromRole="Individual" ToRole="IndividualDetail" />
+    <NavigationProperty Name="vehicles" Relationship="SQSalesToolLead.FK_vehicles_Individuals" FromRole="Individual" ToRole="Vehicle" />
+    <Property Type="String" Name="Email" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ExternalReferenceID" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Zipcode" Nullable="true" MaxLength="10" Unicode="true" FixedLength="false" />
+    <Property Type="Int32" Name="IndividualStatusID" />
+    <NavigationProperty Name="IndividualStatus" Relationship="SQSalesToolLead.FK_Individuals_individual_statuses" FromRole="Individual" ToRole="individual_statuses" />
+    <Property Type="Decimal" Name="HRASubsidyAmount" Precision="18" Scale="4" />
+    <Property Type="Int32" Name="IndividualPDPStatusID" />
+    <NavigationProperty Name="IndividualPDPStatuses" Relationship="SQSalesToolLead.FK_Individuals_individual_pdp_statuses" FromRole="Individual" ToRole="individual_pdp_statuses" />
+    <Property Type="String" Name="InboundPhone" MaxLength="20" FixedLength="false" Unicode="true" Nullable="true" />
+    <Property Type="String" Name="TCPAConsent" Nullable="true" a:SetterAccess="Internal" xmlns:a="http://schemas.microsoft.com/ado/2006/04/codegeneration" MaxLength="1" Unicode="true" FixedLength="true" />
+    <Property Type="Boolean" Name="IndividualEmailOptOut" Nullable="false" />
+    <Property Type="String" Name="indv_exist_ins" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Type="Decimal" Name="indv_exist_ins_amt" Precision="19" Scale="4" />
+    <Property Type="String" Name="indv_exist_ins_rplc" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Type="Decimal" Name="indv_desire_ins_amt" Precision="19" Scale="4" />
+    <Property Type="Decimal" Name="indv_desire_ins_alt_amt" Precision="19" Scale="4" />
+    <Property Type="Int32" Name="indv_desire_ins_term" />
+    <Property Type="Int32" Name="ApplicationState" />
+    <NavigationProperty Name="arc_cases" Relationship="SQSalesToolLead.FK_arc_cases_Individuals" FromRole="Individual" ToRole="ArcCases" />
+    <Property Type="Boolean" Name="IndividualEmailOptOutQueuedChange" Nullable="false" />
+    <Property Type="Boolean" Name="IndividualTCPAChanged" Nullable="false" />
+    <Property Type="String" Name="MiddleName" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Boolean" Name="IsChanged" Nullable="false" />
+    <Property Type="DateTime" Name="indv_ap_date" Precision="3" />
+    <Property Type="Boolean" Name="OnBoardDental" Nullable="false" />
+    <Property Type="Boolean" Name="OnBoardAutoHomeLife" Nullable="false" />
+    <Property Type="Boolean" Name="OnBoardAnnuity" Nullable="false" />
+    <Property Type="Boolean" Name="OnBoardInspection" Nullable="false" />
+    <Property Type="Boolean" Name="OnBoardApplicationeSign" Nullable="false" />
+    <Property Type="Boolean" Name="OnBoardBilling" Nullable="false" />
+    <Property Name="Last4SSN" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Type="Boolean" Name="OnBoardCsPrep" Nullable="false" />
+    <Property Type="Boolean" Name="OnBoardAutoHome" Nullable="false" />
+    <NavigationProperty Name="IndividualPrescriptions" Relationship="SQSalesToolLead.FK_individual_drug_prescriptions" FromRole="Individual" ToRole="IndividualPrescriptions" />
+  </EntityType>
+  <EntityType Name="LeadAdditionalInfo">
+    <Key>
+      <PropertyRef Name="Key" />
+    </Key>
+    <Property Name="Key" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CreditSelfRating" Type="String" MaxLength="30" Unicode="true" FixedLength="false" />
+    <Property Name="Reposession" Type="String" MaxLength="150" Unicode="true" FixedLength="false" />
+    <Property Name="Id" Type="Int64" />
+    <Property Name="AddedBy" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="AddedOn" Type="DateTime" Precision="3" />
+    <Property Name="ChangedBy" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="ChangedOn" Type="DateTime" Precision="3" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="IsDeleted" Type="Boolean" />
+    <Property Name="LeadKey" Type="Int64" Nullable="false" />
+    <NavigationProperty Name="Lead" Relationship="SQSalesToolLead.FK__lea_addit__Lead___01142BA1" FromRole="LeadAdditionalInfo" ToRole="Lead" />
+  </EntityType>
+  <EntityType Name="LeadNote">
+    <Key>
+      <PropertyRef Name="Key" />
+    </Key>
+    <Property Name="Key" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NoteLeadsKey" Type="Int64" />
+    <Property Name="Text" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="AddedBy" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="AddedOn" Type="DateTime" Precision="3" />
+    <Property Name="ChangedBy" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="ChangedOn" Type="DateTime" Precision="3" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="IsDeleted" Type="Boolean" />
+    <Property Name="LeadKey" Type="Int64" Nullable="false" />
+    <NavigationProperty Name="Lead" Relationship="SQSalesToolLead.FK__lead_note__Lead___02084FDA" FromRole="LeadNote" ToRole="Lead" />
+  </EntityType>
+  <EntityType Name="LeadSource">
+    <Key>
+      <PropertyRef Name="Key" />
+    </Key>
+    <Property Name="Key" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Text" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="AddedBy" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="AddedOn" Type="DateTime" Precision="3" />
+    <Property Name="ChangedBy" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="ChangedOn" Type="DateTime" Precision="3" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="IsDeleted" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="LeadStatus">
+    <Key>
+      <PropertyRef Name="Key" />
+    </Key>
+    <Property Name="Key" Type="Int64" Nullable="false" />
+    <Property Name="Text" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="AddedBy" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="AddedOn" Type="DateTime" Precision="3" />
+    <Property Name="ChangedBy" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="ChangedOn" Type="DateTime" Precision="3" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="IsDeleted" Type="Boolean" />
+    <Property Type="Int64" Name="LeadId" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Medsup">
+    <Key>
+      <PropertyRef Name="Key" />
+    </Key>
+    <Property Name="Key" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CarrierId" Type="Int64" />
+    <Property Name="Plan" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="GuarenteedIssue" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="GuarenteedIssueReason" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="PreviousPlan" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="AnnualPremium" Type="Double" />
+    <Property Name="IssueDate" Type="DateTime" Precision="3" />
+    <Property Name="EffectiveDate" Type="DateTime" Precision="3" />
+    <Property Name="Favkey" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="FavkeySentToCarrierDate" Type="DateTime" Precision="3" />
+    <Property Name="CancelDeclineDate" Type="DateTime" Precision="3" />
+    <Property Name="PaymentMethod" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="ReissueDate" Type="DateTime" Precision="3" />
+    <Property Name="LapseDate" Type="DateTime" Precision="3" />
+    <Property Name="PaidFromCarrier" Type="Boolean" />
+    <Property Name="CommissionAmount" Type="Double" />
+    <Property Name="CommissionPaidDate" Type="DateTime" Precision="3" />
+    <Property Name="AddedBy" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="AddedOn" Type="DateTime" Precision="3" />
+    <Property Name="ChangedBy" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="ChangedOn" Type="DateTime" Precision="3" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+    <Property Name="IndividualId" Type="Int64" />
+    <Property Name="LeadId" Type="Int64" />
+    <NavigationProperty Name="medsupApplications" Relationship="SQSalesToolLead.FK_medsupApplication_medsups" FromRole="Medsup" ToRole="medsupApplication" />
+    <Property Type="Int64" Name="AccountId" />
+    <Property Type="DateTime" Name="ExpirationDate" Precision="0" />
+    <Property Type="Int64" Name="PolicyStatus" />
+    <Property Type="Guid" Name="Enroller" />
+    <Property Type="String" Name="CompanyName" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="PolicyNumber" Nullable="true" MaxLength="100" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="PolicyStatus1" Relationship="SQSalesToolLead.FK_medsups_policy_statuses" FromRole="Medsup" ToRole="PolicyStatuses" />
+    <Property Type="String" Name="MedicareId" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="SubmissionDate" Precision="3" />
+    <Property Name="ApplicationTypeKey" Type="Int32" />
+    <NavigationProperty Name="medsup_app_type" Relationship="SQSalesToolLead.FK__medsups__msa_app__7148A383" FromRole="Medsup" ToRole="medsup_app_type" />
+  </EntityType>
+  <EntityType Name="Plan">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CarrierId" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Details" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Type" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="PolicyInformations" Relationship="SQSalesToolLead.FK__Policy_In__Plans__05D8E0BE" FromRole="Plans" ToRole="Policy_Information" />
+  </EntityType>
+  <EntityType Name="PolicyInformation">
+    <Key>
+      <PropertyRef Name="Key" />
+    </Key>
+    <Property Name="Key" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IndividualId" Type="Int64" Nullable="false" />
+    <Property Name="carrierId" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="carrierPlan" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="GuaranteedIssueReason" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="PreviousPlan" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="AnnualPremium" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="IssueDate" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="EffectiveDate" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="FavKey" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="FavkeySentToCarrierDate" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="CancelDeclineDate" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="PaymentMode" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="ReissueDate" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="MedsuppPaidFromCarrier" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="MedsuppCommissionAmount" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="MedsuppPaidDate" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="AddedBy" Type="Int64" />
+    <Property Name="AddedOn" Type="DateTime" Precision="3" />
+    <Property Name="ChangedBy" Type="Int64" />
+    <Property Name="ChangedOn" Type="DateTime" Precision="3" />
+    <Property Name="CarrierCarKey" Type="Int64" Nullable="false" />
+    <Property Name="PlanID" Type="Int64" Nullable="false" />
+    <NavigationProperty Name="Carrier" Relationship="SQSalesToolLead.FK__Policy_In__Carri__04E4BC85" FromRole="Policy_Information" ToRole="Carriers" />
+    <NavigationProperty Name="Plan" Relationship="SQSalesToolLead.FK__Policy_In__Plans__05D8E0BE" FromRole="Policy_Information" ToRole="Plans" />
+  </EntityType>
+  <EntityType Name="Vehicle">
+    <Key>
+      <PropertyRef Name="Key" />
+    </Key>
+    <Property Name="Key" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Year" Type="Int64" />
+    <Property Name="Make" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Model" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Submodel" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="AnnualMileage" Type="Int64" />
+    <Property Name="WeeklyCommuteDays" Type="Int64" />
+    <Property Name="PrimaryUse" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="ComprehensiveDeductable" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="CollisionDeductable" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="SecuritySystem" Type="String" MaxLength="70" Unicode="true" FixedLength="false" />
+    <Property Name="WhereParked" Type="String" MaxLength="250" Unicode="true" FixedLength="false" />
+    <Property Name="IndividualId" Type="Int64" />
+    <Property Name="PolicyId" Type="Int64" />
+    <Property Name="AddedBy" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="AddedOn" Type="DateTime" Precision="3" />
+    <Property Name="ChangedBy" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="ChangedOn" Type="DateTime" Precision="3" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="IsDeleted" Type="Boolean" />
+    <Property Name="Individualkey" Type="Int64" Nullable="false" />
+    <NavigationProperty Name="Individual" Relationship="SQSalesToolLead.FK__vehicles__Indivi__07C12930" FromRole="vehicles" ToRole="Individuals" />
+    <Property Type="Int64" Name="AccountId" />
+  </EntityType>
+  <Association Name="FK__Account_D__Accou__76969D2E">
+    <End Role="Accounts" Type="SQSalesToolLead.Account" Multiplicity="1" />
+    <End Role="Account_Detail" Type="SQSalesToolLead.AccountDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Accounts">
+        <PropertyRef Name="Key" />
+      </Principal>
+      <Dependent Role="Account_Detail">
+        <PropertyRef Name="Accountkey" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__account_i__Indiv__778AC167">
+    <End Type="SQSalesToolLead.Individual" Multiplicity="1" Role="Individuals" />
+    <End Type="SQSalesToolLead.AccountIndividualDetail" Multiplicity="*" Role="account_individual_details" />
+    <ReferentialConstraint>
+      <Principal Role="Individuals">
+        <PropertyRef Name="Key" />
+      </Principal>
+      <Dependent Role="account_individual_details">
+        <PropertyRef Name="Individualkey" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Policy_In__Carri__04E4BC85">
+    <End Role="Carriers" Type="SQSalesToolLead.Carrier" Multiplicity="1" />
+    <End Role="Policy_Information" Type="SQSalesToolLead.PolicyInformation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Carriers">
+        <PropertyRef Name="Key" />
+      </Principal>
+      <Dependent Role="Policy_Information">
+        <PropertyRef Name="CarrierCarKey" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Individualcontact_information">
+    <End Type="SQSalesToolLead.Individual" Multiplicity="1" Role="Individuals" />
+    <End Type="SQSalesToolLead.ContactInformation" Multiplicity="*" Role="contact_information" />
+    <ReferentialConstraint>
+      <Principal Role="Individuals">
+        <PropertyRef Name="Key" />
+      </Principal>
+      <Dependent Role="contact_information">
+        <PropertyRef Name="Individualkey" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__driver_in__drive__7A672E12">
+    <End Role="driver_info" Type="SQSalesToolLead.DriverInfo" Multiplicity="1" />
+    <End Role="driver_incidence" Type="SQSalesToolLead.DriverIncidence" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="driver_info">
+        <PropertyRef Name="Key" />
+      </Principal>
+      <Dependent Role="driver_incidence">
+        <PropertyRef Name="DriverInformationKey" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__homes__Individua__7B5B524B">
+    <End Type="SQSalesToolLead.Individual" Multiplicity="1" Role="Individuals" />
+    <End Type="SQSalesToolLead.Home" Multiplicity="*" Role="homes" />
+    <ReferentialConstraint>
+      <Principal Role="Individuals">
+        <PropertyRef Name="Key" />
+      </Principal>
+      <Dependent Role="homes">
+        <PropertyRef Name="Individualkey" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Individua__Indiv__7C4F7684">
+    <End Type="SQSalesToolLead.Individual" Multiplicity="1" Role="Individuals" />
+    <End Type="SQSalesToolLead.IndividualDetail" Multiplicity="*" Role="Individual_Details" />
+    <ReferentialConstraint>
+      <Principal Role="Individuals">
+        <PropertyRef Name="Key" />
+      </Principal>
+      <Dependent Role="Individual_Details">
+        <PropertyRef Name="Individualsindvkey" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Individua__Indiv__7D439ABD">
+    <End Type="SQSalesToolLead.Individual" Multiplicity="1" Role="Individuals" />
+    <End Type="SQSalesToolLead.IndividualDetail" Multiplicity="*" Role="Individual_Details" />
+    <ReferentialConstraint>
+      <Principal Role="Individuals">
+        <PropertyRef Name="Key" />
+      </Principal>
+      <Dependent Role="Individual_Details">
+        <PropertyRef Name="Individualindvkey" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__vehicles__Indivi__07C12930">
+    <End Type="SQSalesToolLead.Individual" Multiplicity="1" Role="Individuals" />
+    <End Type="SQSalesToolLead.Vehicle" Multiplicity="*" Role="vehicles" />
+    <ReferentialConstraint>
+      <Principal Role="Individuals">
+        <PropertyRef Name="Key" />
+      </Principal>
+      <Dependent Role="vehicles">
+        <PropertyRef Name="Individualkey" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Policy_In__Plans__05D8E0BE">
+    <End Role="Plans" Type="SQSalesToolLead.Plan" Multiplicity="1" />
+    <End Role="Policy_Information" Type="SQSalesToolLead.PolicyInformation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Plans">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Policy_Information">
+        <PropertyRef Name="PlanID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Individuals_Accounts">
+    <End Type="SQSalesToolLead.Account" Multiplicity="0..1" Role="Account" />
+    <End Type="SQSalesToolLead.Individual" Multiplicity="*" Role="Individual" />
+    <ReferentialConstraint>
+      <Principal Role="Account">
+        <PropertyRef Name="Key" />
+      </Principal>
+      <Dependent Role="Individual">
+        <PropertyRef Name="AccountId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_driver_info_Individuals">
+    <End Type="SQSalesToolLead.Individual" Multiplicity="0..1" Role="Individual" />
+    <End Type="SQSalesToolLead.DriverInfo" Multiplicity="*" Role="DriverInfo" />
+    <ReferentialConstraint>
+      <Principal Role="Individual">
+        <PropertyRef Name="Key" />
+      </Principal>
+      <Dependent Role="DriverInfo">
+        <PropertyRef Name="IndividualId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="medsupApplication">
+    <Key>
+      <PropertyRef Name="Key" />
+    </Key>
+    <Property Type="Int64" Name="Key" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int64" Name="MedsupId" Nullable="true" />
+    <Property Type="DateTime" Name="RequestedApplicationSentDate" Precision="0" />
+    <Property Type="DateTime" Name="ActualApplicationSentDate" Precision="3" />
+    <Property Type="String" Name="ExpectedReturnApplicationMethod" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ApplicationSentToCustomerMethod" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ReturnLabelNumber" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="SpouseExpectedReturnApplicationSentMethod" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Boolean" Name="ApplicationSentToSpouse" />
+    <Property Type="String" Name="ApplicationSentToSpouseMethod" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="CaseSpecialist" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="StatusNote" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="SalesAgentNotes" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="CaseSpecialistNote" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="CaseSpecialistNote2" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="CaseSpecialistNote3" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="Boolean" Name="IsActive" />
+    <Property Type="Boolean" Name="IsDeleted" />
+    <Property Type="String" Name="AddedBy" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="AddedOn" Precision="3" />
+    <Property Type="String" Name="ChangedBy" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="ChangedOn" Precision="3" />
+    <NavigationProperty Name="medsup" Relationship="SQSalesToolLead.FK_medsupApplication_medsups" FromRole="medsupApplication" ToRole="Medsup" />
+    <Property Type="DateTime" Name="SpouseRequestedApplicationSentDate" Precision="0" />
+    <Property Type="Int64" Name="AccountId" />
+    <Property Type="Int64" Name="IndividualId" />
+    <Property Type="String" Name="SubmitToCarrierCaseSpecialist" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="SentToCarrierMethod" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="PolicySubmitToCarrierDate" Precision="0" />
+    <Property Type="String" Name="SubmitToCarrierStatusNote" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="SpouseSentToCarrierMethod" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="SpousePolicySubmitToCarrierDate" Precision="0" />
+    <Property Type="String" Name="SentToCarrierTrackingNumber" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="CarrierStatusNote" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Account" Relationship="SQSalesToolLead.FK_medsupApplication_Accounts" FromRole="medsupApplication" ToRole="Account" />
+  </EntityType>
+  <Association Name="FK_medsupApplication_medsups">
+    <End Type="SQSalesToolLead.Medsup" Multiplicity="0..1" Role="Medsup" />
+    <End Type="SQSalesToolLead.medsupApplication" Multiplicity="*" Role="medsupApplication" />
+    <ReferentialConstraint>
+      <Principal Role="Medsup">
+        <PropertyRef Name="Key" />
+      </Principal>
+      <Dependent Role="medsupApplication">
+        <PropertyRef Name="MedsupId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="DentalVision">
+    <Key>
+      <PropertyRef Name="Key" />
+    </Key>
+    <Property Type="Int64" Name="Key" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int64" Name="IndividualId" />
+    <Property Type="Int64" Name="AccountId" />
+    <Property Type="DateTime" Name="SubmissionDate" Precision="0" />
+    <Property Type="DateTime" Name="EffectiveDate" Precision="0" />
+    <Property Type="Boolean" Name="IsPaidFromCarrier" />
+    <Property Type="Decimal" Name="CommissionAmount" Precision="19" Scale="4" />
+    <Property Type="DateTime" Name="CommissionPaidDate" Precision="0" />
+    <Property Type="Boolean" Name="IsActive" />
+    <Property Type="Boolean" Name="IsDeleted" />
+    <Property Type="String" Name="AddedBy" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="AddedOn" Precision="3" />
+    <Property Type="String" Name="ChangedBy" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="ChangedOn" Precision="3" />
+    <Property Type="Decimal" Name="AnnualPremium" Precision="19" Scale="4" />
+    <Property Type="Int64" Name="PolicyStatus" />
+    <Property Type="Guid" Name="Enroller" />
+    <Property Type="String" Name="CompanyName" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="PolicyNumber" Nullable="true" MaxLength="100" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="PolicyStatus1" Relationship="SQSalesToolLead.FK_dental_vision_policy_statuses" FromRole="DentalVision" ToRole="PolicyStatuses" />
+    <Property Type="DateTime" Name="IssueDate" Precision="3" />
+    <Property Type="DateTime" Name="LapseDate" Precision="3" />
+    <NavigationProperty Name="Carriers" Relationship="SQSalesToolLead.FK_dental_vision_Carriers" FromRole="DentalVision" ToRole="Carrier" />
+  </EntityType>
+  <EntityType Name="Mapdp">
+    <Key>
+      <PropertyRef Name="Key" />
+    </Key>
+    <Property Type="Int64" Name="Key" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int64" Name="Type" />
+    <Property Type="Guid" Name="Enroller" />
+    <Property Type="Int64" Name="Carrier" />
+    <Property Type="String" Name="PlanName" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="PlanNumber" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="PlanType" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="SpecialNotes" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="EnrollmentDate" Precision="3" />
+    <Property Type="DateTime" Name="EffectiveDate" Precision="3" />
+    <Property Type="String" Name="WritingNumber" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="MedicareId" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="MaritalStatus" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="PolicyIdNumber" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Switcher" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Type="Boolean" Name="CoventryPdpReferal" />
+    <Property Type="DateTime" Name="VoiceSigSentDate" Precision="3" />
+    <Property Type="String" Name="SpouseType" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="SpouseCarrier" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="SpousePlanNumber" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="SpousePlanType" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="SpousePlanName" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="SpouseEnrollmentDate" Precision="3" />
+    <Property Type="DateTime" Name="SpouseEffectiveDate" Precision="3" />
+    <Property Type="String" Name="SpousePolicyIdNumber" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="SpouseMedicareId" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="MaIssueDate" Precision="3" />
+    <Property Type="DateTime" Name="LapseDate" Precision="3" />
+    <Property Type="Boolean" Name="PaidFromCarrier" />
+    <Property Type="Double" Name="CommissionAmount" />
+    <Property Type="DateTime" Name="CommissionPaidDate" Precision="3" />
+    <Property Type="Boolean" Name="DtePurchasedPdp" />
+    <Property Type="String" Name="AddedBy" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="AddedOn" Precision="3" />
+    <Property Type="String" Name="ChangedBy" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="ChangedOn" Precision="3" />
+    <Property Type="Boolean" Name="IsActive" />
+    <Property Type="Boolean" Name="IsDeleted" />
+    <Property Type="Int64" Name="IndividualId" />
+    <Property Type="Int64" Name="LeadId" />
+    <Property Type="Int64" Name="AccountId" />
+    <Property Type="Int64" Name="PolicyStatus" />
+    <Property Type="String" Name="CompanyName" MaxLength="255" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="PolicyStatus1" Relationship="SQSalesToolLead.FK_mapdps_policy_statuses" FromRole="Mapdp" ToRole="PolicyStatuses" />
+    <Property Name="ReasonCodeKey" Type="Int32" />
+    <NavigationProperty Name="mapdp_reason_codes" Relationship="SQSalesToolLead.FK__mapdps__mapdp_ms__7425102E" FromRole="Mapdp" ToRole="mapdp_reason_codes" />
+  </EntityType>
+  <EntityType Name="Lead">
+    <Key>
+      <PropertyRef Name="Key" />
+    </Key>
+    <Property Type="Int64" Name="Key" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int64" Name="IndividualId" />
+    <Property Type="Int64" Name="AccountId" Nullable="false" />
+    <Property Type="String" Name="TimeCreated" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="AddedBy" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="AddedOn" Precision="3" />
+    <Property Type="String" Name="ChangedBy" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="ChangedOn" Precision="3" />
+    <Property Type="Boolean" Name="IsActive" />
+    <Property Type="Boolean" Name="IsDeleted" />
+    <Property Type="Int64" Name="AccountKey" />
+    <NavigationProperty Name="Account" Relationship="SQSalesToolLead.FK_Leads_Accounts" FromRole="Lead" ToRole="Account" />
+    <Property Type="Int32" Name="StatusId" />
+    <Property Type="Int32" Name="SubStatusId" />
+    <Property Type="Int32" Name="ActionId" />
+    <Property Type="DateTime" Name="LastActionDate" Precision="3" />
+    <Property Type="String" Name="TrackingCode" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="SourceCode" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="EmailTrackingCode" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="PubSubId" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="TrackingInformation" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="Int64" Name="SourceKey" Nullable="false" />
+    <Property Type="Int32" Name="CampaignId" Nullable="true" />
+    <NavigationProperty Name="StatusL" Relationship="SQSalesToolLead.FK_Leads_statuses" FromRole="Lead" ToRole="status" />
+    <Property Type="String" Name="PublisherID" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="AdVariation" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="IPAddress" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Company" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Group" MaxLength="100" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="lea_additional_info" Relationship="SQSalesToolLead.FK__lea_addit__Lead___01142BA1" FromRole="Lead" ToRole="LeadAdditionalInfo" />
+    <NavigationProperty Name="lead_notes" Relationship="SQSalesToolLead.FK__lead_note__Lead___02084FDA" FromRole="Lead" ToRole="LeadNote" />
+    <Property Type="DateTime" Name="FirstContactAppointment" Precision="3" />
+    <Property Type="DateTime" Name="LastCallDate" Precision="3" />
+    <Property Type="Boolean" Name="IsDuplicate" />
+    <NavigationProperty Name="duplicates_view" Relationship="SQSalesToolLead.FK_duplicates_view_leads" FromRole="Lead" ToRole="duplicates_view" />
+    <NavigationProperty Name="duplicates_view1" Relationship="SQSalesToolLead.FK_duplicates_view_leads1" FromRole="Lead" ToRole="duplicates_view" />
+    <Property Type="String" Name="ArcSubStatus" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="ArcTier" />
+    <Property Type="Int32" Name="ArcEScore" />
+    <Property Type="Int32" Name="ArcFraudScore" />
+    <NavigationProperty Name="ArcCases" Relationship="SQSalesToolLead.LeadArcCases" FromRole="Lead" ToRole="ArcCases" />
+    <Property Type="String" Name="LastActionCSRBy" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="LastActionTABy" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="LastActionTAOn" Precision="3" />
+    <Property Type="String" Name="LastActionOBBy" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="LastActionOBOn" Precision="3" />
+    <Property Type="String" Name="LastActionAPBy" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="LastActionAPOn" Precision="3" />
+    <Property Type="DateTime" Name="LastCallAttemptDate" Precision="3" />
+    <Property Type="DateTime" Name="LastCallAttemptAssignedUserDate" Precision="3" />
+    <Property Type="DateTime" Name="LastCallAttemptCSRUserDate" Precision="3" />
+    <Property Type="DateTime" Name="LastCallAttemptTAUserDate" Precision="3" />
+    <Property Type="DateTime" Name="LastCallAttemptOBUserDate" Precision="3" />
+    <Property Type="DateTime" Name="LastCallAttemptAPUserDate" Precision="3" />
+    <Property Type="DateTime" Name="LastCallContactAssignedUserDate" Precision="3" />
+    <Property Type="DateTime" Name="LastCallContactCSRUserDate" Precision="3" />
+    <Property Type="DateTime" Name="LastCallContactTAUserDate" Precision="3" />
+    <Property Type="DateTime" Name="LastCallContactOBUserDate" Precision="3" />
+    <Property Type="DateTime" Name="LastCallContactAPUserDate" Precision="3" />
+    <Property Type="DateTime" Name="LastCallContactDate" Precision="3" />
+    <Property Type="DateTime" Name="LastActionCSROn" Precision="3" />
+    <Property Type="String" Name="LastActionAssignedBy" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="LastActionAssignedOn" Precision="3" />
+    <Property Type="Int32" Name="LastActionByCSR" />
+    <Property Type="Int32" Name="LastActionByAssigned" />
+    <Property Type="Int32" Name="LastActionByTA" />
+    <Property Type="Int32" Name="LastActionByOB" />
+    <Property Type="Int32" Name="LastActionByAP" />
+    <Property Type="DateTime" Name="LastCalendarChangeAssignedUserDate" Precision="3" />
+    <Property Type="DateTime" Name="LastCalendarChangeCSRUserDate" Precision="3" />
+    <Property Type="DateTime" Name="LastCalendarChangeTAUserDate" Precision="3" />
+    <Property Type="DateTime" Name="LastCalendarChangeOBUserDate" Precision="3" />
+    <Property Type="DateTime" Name="LastCalendarChangeAPUserDate" Precision="3" />
+    <Property Name="lea_time_zone_appt" Type="Int32" />
+  </EntityType>
+  <Association Name="FK_Leads_Accounts">
+    <End Type="SQSalesToolLead.Account" Role="Account" Multiplicity="1" />
+    <End Type="SQSalesToolLead.Lead" Role="Lead" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Account">
+        <PropertyRef Name="Key" />
+      </Principal>
+      <Dependent Role="Lead">
+        <PropertyRef Name="AccountId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="AccountAttachment">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int64" Name="AccountId" Nullable="false" />
+    <Property Type="String" Name="FileName" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="FileDescription" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Type="Boolean" Name="IsDeleted" />
+    <Property Type="String" Name="AddedBy" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="AddedOn" Precision="0" />
+    <Property Type="String" Name="ChangedBy" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="ChangedOn" Precision="0" />
+    <NavigationProperty Name="Account" Relationship="SQSalesToolLead.FK_account_template_attachments" FromRole="account_attachments" ToRole="Account" />
+    <Property Type="Binary" Name="Attachment" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <Association Name="FK_account_template_attachments">
+    <End Type="SQSalesToolLead.Account" Role="Account" Multiplicity="1" />
+    <End Type="SQSalesToolLead.AccountAttachment" Role="account_attachments" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Account">
+        <PropertyRef Name="Key" />
+      </Principal>
+      <Dependent Role="account_attachments">
+        <PropertyRef Name="AccountId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="AutoHomeQuote">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int64" Name="Id" Nullable="false" />
+    <Property Type="Int32" Name="Type" />
+    <Property Type="Int32" Name="Saving" />
+    <Property Type="Decimal" Name="CurrentPremium" Precision="19" Scale="4" />
+    <Property Type="Decimal" Name="QuotedPremium" Precision="19" Scale="4" />
+    <Property Type="Int32" Name="QuotedCarrierID" />
+    <Property Type="Int32" Name="CurrentCarrierID" />
+    <Property Type="DateTime" Name="QuotedDate" Precision="0" />
+    <Property Type="Int32" Name="Umbrella" />
+    <Property Type="Int64" Name="AccountKey" />
+    <NavigationProperty Name="Account" Relationship="SQSalesToolLead.FK_autohome_quotes_Accounts" FromRole="AutoHomeQuote" ToRole="Account" />
+    <Property Type="String" Name="CurrentCarrierText" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CompanyName" MaxLength="255" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <Association Name="FK_autohome_quotes_Accounts">
+    <End Type="SQSalesToolLead.Account" Role="Account" Multiplicity="0..1" />
+    <End Type="SQSalesToolLead.AutoHomeQuote" Role="AutoHomeQuote" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Account">
+        <PropertyRef Name="Key" />
+      </Principal>
+      <Dependent Role="AutoHomeQuote">
+        <PropertyRef Name="AccountKey" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_carrier_issues_Accounts">
+    <End Type="SQSalesToolLead.Account" Role="Account" Multiplicity="0..1" />
+    <End Type="SQSalesToolLead.CarrierIssue" Role="CarrierIssue" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Account">
+        <PropertyRef Name="Key" />
+      </Principal>
+      <Dependent Role="CarrierIssue">
+        <PropertyRef Name="AccountId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_medsupApplication_Accounts">
+    <End Type="SQSalesToolLead.Account" Role="Account" Multiplicity="0..1" />
+    <End Type="SQSalesToolLead.medsupApplication" Role="medsupApplication" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Account">
+        <PropertyRef Name="Key" />
+      </Principal>
+      <Dependent Role="medsupApplication">
+        <PropertyRef Name="AccountId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Leads_Leads">
+    <End Type="SQSalesToolLead.Lead" Role="Lead" Multiplicity="1" />
+    <End Type="SQSalesToolLead.Lead" Role="Lead1" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Lead">
+        <PropertyRef Name="Key" />
+      </Principal>
+      <Dependent Role="Lead1">
+        <PropertyRef Name="Key" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_account_individual_details_Individuals">
+    <End Type="SQSalesToolLead.Individual" Role="Individual" Multiplicity="1" />
+    <End Type="SQSalesToolLead.AccountIndividualDetail" Role="AccountIndividualDetail" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Individual">
+        <PropertyRef Name="Key" />
+      </Principal>
+      <Dependent Role="AccountIndividualDetail">
+        <PropertyRef Name="Key" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_best_call_Individuals1">
+    <End Type="SQSalesToolLead.Individual" Role="Individual" Multiplicity="0..1" />
+    <End Type="SQSalesToolLead.BestCall" Role="BestCall" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Individual">
+        <PropertyRef Name="Key" />
+      </Principal>
+      <Dependent Role="BestCall">
+        <PropertyRef Name="IndividualId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_homes_Individuals">
+    <End Type="SQSalesToolLead.Individual" Role="Individual" Multiplicity="0..1" />
+    <End Type="SQSalesToolLead.Home" Role="Home" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Individual">
+        <PropertyRef Name="Key" />
+      </Principal>
+      <Dependent Role="Home">
+        <PropertyRef Name="IndvId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Individual_Details_Individuals">
+    <End Type="SQSalesToolLead.Individual" Role="Individual" Multiplicity="1" />
+    <End Type="SQSalesToolLead.IndividualDetail" Role="IndividualDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Individual">
+        <PropertyRef Name="Key" />
+      </Principal>
+      <Dependent Role="IndividualDetail">
+        <PropertyRef Name="IndividualId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_vehicles_Individuals">
+    <End Type="SQSalesToolLead.Individual" Role="Individual" Multiplicity="0..1" />
+    <End Type="SQSalesToolLead.Vehicle" Role="Vehicle" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Individual">
+        <PropertyRef Name="Key" />
+      </Principal>
+      <Dependent Role="Vehicle">
+        <PropertyRef Name="IndividualId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="AutoHomePolicy">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Int64" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="PolicyType" />
+    <Property Type="Int64" Name="CarrierID" />
+    <Property Type="Int64" Name="CurrentCarrierID" />
+    <Property Type="Int32" Name="Term" />
+    <Property Type="String" Name="PolicyNumber" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="Decimal" Name="MonthlyPremium" Precision="19" Scale="4" />
+    <Property Type="Decimal" Name="CurrentMonthlyPremium" Precision="19" Scale="4" />
+    <Property Type="DateTime" Name="EffectiveDate" Precision="0" />
+    <Property Type="Boolean" Name="IsCoverageIncreased" />
+    <Property Type="Int32" Name="UmbrellaPolicy" />
+    <Property Name="Added" Type="SQSalesToolLead.History1" Nullable="false" />
+    <Property Name="Changed" Type="SQSalesToolLead.History1" Nullable="false" />
+    <Property Type="Boolean" Name="IsActive" />
+    <Property Type="Boolean" Name="IsDeleted" />
+    <NavigationProperty Name="Carrier" Relationship="SQSalesToolLead.FK_autohome_policies_Carriers" FromRole="AutoHomePolicy" ToRole="Carrier" />
+    <NavigationProperty Name="CurrentCarrier" Relationship="SQSalesToolLead.FK_autohome_policies_Carriers1" FromRole="AutoHomePolicy" ToRole="Carrier" />
+    <Property Type="DateTime" Name="BoundOn" Precision="3" />
+    <Property Type="DateTime" Name="LapsedOn" Precision="3" />
+    <Property Type="String" Name="CurrentCarrierText" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="Int64" Name="IndividualKey" />
+    <Property Type="Guid" Name="WritingAgent" Nullable="true" />
+    <Property Type="Int64" Name="PolicyStatus" />
+    <Property Type="String" Name="CompanyName" MaxLength="255" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="PolicyStatus1" Relationship="SQSalesToolLead.FK_autohome_policies_policy_statuses" FromRole="AutoHomePolicy" ToRole="PolicyStatuses" />
+    <Property Type="Int64" Name="AccountId" />
+  </EntityType>
+  <ComplexType Name="History1">
+    <Property Type="String" Name="By1" Nullable="true" />
+    <Property Type="DateTime" Name="On1" Nullable="true" />
+  </ComplexType>
+  <Association Name="FK_autohome_policies_Carriers">
+    <End Type="SQSalesToolLead.Carrier" Role="Carrier" Multiplicity="0..1" />
+    <End Type="SQSalesToolLead.AutoHomePolicy" Role="AutoHomePolicy" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Carrier">
+        <PropertyRef Name="Key" />
+      </Principal>
+      <Dependent Role="AutoHomePolicy">
+        <PropertyRef Name="CarrierID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_autohome_policies_Carriers1">
+    <End Type="SQSalesToolLead.Carrier" Role="Carrier" Multiplicity="0..1" />
+    <End Type="SQSalesToolLead.AutoHomePolicy" Role="AutoHomePolicy" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Carrier">
+        <PropertyRef Name="Key" />
+      </Principal>
+      <Dependent Role="AutoHomePolicy">
+        <PropertyRef Name="CurrentCarrierID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="UserL">
+    <Key>
+      <PropertyRef Name="Key" />
+    </Key>
+    <Property Type="Guid" Name="Key" Nullable="false" />
+    <Property Type="String" Name="FirstName" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="LastName" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Email" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="WorkPhone" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="WorkPhoneExt" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="MobilePhone" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Fax" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="OtherPhone" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="OtherPhoneExt" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Position" MaxLength="75" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Note" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="SoftphoneSQPersonal" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="SoftphoneSQGeneral" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="SoftphoneCMPersonal" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="SoftphoneCMGeneral" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Custom1" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Custom2" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Custom3" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Custom4" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Type="Boolean" Name="DefaultCalView" Nullable="false" />
+    <Property Type="Boolean" Name="CalBackgroundHighlights" />
+    <Property Type="Boolean" Name="NewLeadBold" />
+    <Property Type="Boolean" Name="NewLeadHL" />
+    <Property Type="Boolean" Name="NewLeadHLInclNewlyAssigned" />
+    <Property Type="Boolean" Name="FlaggedLeadHighlight" />
+    <Property Type="Int32" Name="AutoRefresh" />
+    <Property Type="Boolean" Name="SaveFilterCriteria" />
+    <Property Type="Int16" Name="LoginLandingPage" Nullable="false" />
+    <Property Type="Boolean" Name="ActiveFlag" />
+    <Property Type="Boolean" Name="DeleteFlag" />
+    <Property Type="String" Name="AddedBy" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="AddedOn" Precision="0" />
+    <Property Type="String" Name="ChangedBy" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="ChangedOn" Precision="0" />
+    <Property Type="Byte" Name="CalStartHour" />
+    <Property Type="Boolean" Name="CalStartAM" />
+    <Property Type="Byte" Name="CalEndHour" />
+    <Property Type="Boolean" Name="CalEndAM" />
+    <Property Type="String" Name="MobileEmail" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Type="Byte" Name="TZ" />
+    <Property Type="Boolean" Name="RetentionFlag" />
+    <Property Type="Boolean" Name="CsrFlag" />
+    <NavigationProperty Name="UserAccounts" Relationship="SQSalesToolLead.FK_Accounts_users" FromRole="user" ToRole="Account" />
+    <NavigationProperty Name="CsrAccounts" Relationship="SQSalesToolLead.FK_Accounts_users1" FromRole="user" ToRole="Account" />
+    <NavigationProperty Name="EventCalendars" Relationship="SQSalesToolLead.FK_eventcalendar_users" FromRole="UserL" ToRole="EventCalendar" />
+    <Property Type="Boolean" Name="usr_transfer_flag" />
+    <NavigationProperty Name="TUAccounts" Relationship="SQSalesToolLead.FK_Accounts_TransferUser" FromRole="UserL" ToRole="Account" />
+    <NavigationProperty Name="user_saved_search" Relationship="SQSalesToolLead.FK_user_saved_search_users" FromRole="UserL" ToRole="user_saved_search" />
+    <NavigationProperty Name="email_recipients" Relationship="SQSalesToolLead.FK__email_rec__rcp_u__3084DE4F" FromRole="UserL" ToRole="email_recipients" />
+    <NavigationProperty Name="issue_statuses_history" Relationship="SQSalesToolLead.FK_issue_statuses_history_users" FromRole="UserL" ToRole="issue_statuses_history" />
+    <Property Type="String" Name="usr_net_login" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="usr_pwd" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Type="Boolean" Name="usr_reassignment_flag" />
+    <Property Type="String" Name="ArcId" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="ArcAcdCap" />
+    <Property Type="Boolean" Name="IsArcApiUser" />
+    <NavigationProperty Name="ArcHistory" Relationship="SQSalesToolLead.UserLArcHistory" FromRole="UserL" ToRole="ArcHistory" />
+    <Property Type="String" Name="usr_phone_system_username" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="usr_phone_system_password" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="usr_phone_system_id" MaxLength="200" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="AccountHistory" Relationship="SQSalesToolLead.UserL_AccountHistory" FromRole="UserL" ToRole="AccountHistory" />
+    <Property Type="Boolean" Name="usr_acd_flag" />
+    <Property Type="Boolean" Name="usr_acd_status_flag" />
+    <Property Type="Boolean" Name="usr_acd_cap_flag" />
+    <Property Type="Boolean" Name="usr_onboard_flag" />
+    <Property Type="Boolean" Name="usr_alternate_product_flag" />
+    <NavigationProperty Name="Accounts" Relationship="SQSalesToolLead.FK_Accounts_Original_user" FromRole="UserL" ToRole="Account" />
+    <Property Type="String" Name="usr_phone_system_station_type" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="usr_phone_system_stationid" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Accounts1" Relationship="SQSalesToolLead.FK_Accounts_Original_user1" FromRole="UserL" ToRole="Account" />
+    <Property Type="String" Name="usr_phone_system_inbound_skill" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="usr_phone_system_inbound_skillId" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="usr_cisco_domain_address" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="usr_cisco_first_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="usr_cisco_last_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="usr_cisco_agent_id" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="usr_cisco_agent_password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="usr_cisco_agent_extension1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="usr_cisco_agent_extension2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="usr_phone_system" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="vw_AccountEventCalendar" Relationship="SQSalesToolLead.UserLvw_AccountEventCalendar" FromRole="UserL" ToRole="vw_AccountEventCalendar" />
+  </EntityType>
+  <Association Name="FK_Accounts_users">
+    <End Type="SQSalesToolLead.UserL" Role="user" Multiplicity="0..1" />
+    <End Type="SQSalesToolLead.Account" Role="Account" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="user">
+        <PropertyRef Name="Key" />
+      </Principal>
+      <Dependent Role="Account">
+        <PropertyRef Name="AssignedUserKey" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Accounts_users1">
+    <End Type="SQSalesToolLead.UserL" Role="user" Multiplicity="0..1" />
+    <End Type="SQSalesToolLead.Account" Role="Account" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="user">
+        <PropertyRef Name="Key" />
+      </Principal>
+      <Dependent Role="Account">
+        <PropertyRef Name="AssignedCsrKey" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="StatusL">
+    <Key>
+      <PropertyRef Name="Key" />
+    </Key>
+    <Property Type="Int32" Name="Key" Nullable="false" />
+    <Property Type="String" Name="Title" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="AddedBy" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="AddedOn" Precision="0" />
+    <Property Type="String" Name="ChangedBy" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="ChangedDate" Precision="0" />
+    <Property Type="Int32" Name="Priority" />
+    <Property Type="Byte" Name="Level" />
+    <NavigationProperty Name="Leads" Relationship="SQSalesToolLead.FK_Leads_statuses" FromRole="status" ToRole="Lead" />
+    <Property Type="Boolean" Name="sta_progress_flag" />
+    <Property Type="Int16" Name="sta_filter_selection" />
+    <Property Type="String" Name="sta_filter_customValue" MaxLength="200" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <Association Name="FK_Leads_statuses">
+    <End Type="SQSalesToolLead.StatusL" Role="status" Multiplicity="0..1" />
+    <End Type="SQSalesToolLead.Lead" Role="Lead" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="status">
+        <PropertyRef Name="Key" />
+      </Principal>
+      <Dependent Role="Lead">
+        <PropertyRef Name="StatusId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="AccountHistory">
+    <Key>
+      <PropertyRef Name="AccountHistoryId" />
+    </Key>
+    <Property Type="Int64" Name="AccountHistoryId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int64" Name="AccountId" />
+    <Property Type="String" Name="Comment" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="Guid" Name="User" />
+    <Property Type="DateTime" Name="Datetime" Precision="3" />
+    <Property Type="String" Name="Entry" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="Byte" Name="EntryType" />
+    <Property Type="Int64" Name="Action" />
+    <Property Type="Int64" Name="CurrentStatus" />
+    <Property Type="Int64" Name="CurrentSubstatus" />
+    <Property Type="Int64" Name="NewStatus" />
+    <Property Type="Int64" Name="NewSubstatus" />
+    <Property Type="Boolean" Name="IsDeliveredToArc" Nullable="false" />
+    <Property Type="Int32" Name="ArcTalkTime" />
+    <Property Type="String" Name="ArcDINS" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ArcContactId" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Account" Relationship="SQSalesToolLead.AccountAccountHistory" FromRole="AccountHistory" ToRole="Account" />
+    <NavigationProperty Name="UserL" Relationship="SQSalesToolLead.UserL_AccountHistory" FromRole="AccountHistory" ToRole="UserL" />
+    <Property Type="Int32" Name="RuleId" />
+    <Property Type="Boolean" Name="IsUserCSR" />
+    <Property Type="Boolean" Name="IsUserAssigned" />
+    <Property Type="Boolean" Name="IsUserTA" />
+    <Property Type="Boolean" Name="IsUserAP" />
+    <Property Type="Boolean" Name="IsUserOB" />
+    <Property Type="Int64" Name="PolicyStatusId" />
+    <Property Type="Int32" Name="PolicyStatusType" />
+    <Property Type="Int32" Name="Policykey" />
+  </EntityType>
+  <EntityType Name="EventCalendar">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Int64" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Guid" Name="UserID" Nullable="false" />
+    <Property Type="String" Name="Title" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Description" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="Boolean" Name="AlertPopup" Nullable="false" />
+    <Property Type="Boolean" Name="AlertEmail" Nullable="false" />
+    <Property Type="Boolean" Name="AlertTextSMS" Nullable="false" />
+    <Property Type="Boolean" Name="CreateOutlookReminder" Nullable="false" />
+    <Property Type="Boolean" Name="DismissUponStatusChange" Nullable="false" />
+    <Property Type="Int32" Name="EventType" Nullable="false" />
+    <Property Type="Int32" Name="EventStatus" Nullable="false" />
+    <Property Type="Int32" Name="SnoozeAfter" Nullable="false" />
+    <Property Type="Boolean" Name="Completed" Nullable="false" />
+    <Property Type="Boolean" Name="Dismissed" Nullable="false" />
+    <Property Type="Boolean" Name="IsActive" Nullable="false" />
+    <Property Type="Boolean" Name="IsDeleted" Nullable="false" />
+    <Property Name="Added" Type="SQSalesToolLead.History1" Nullable="false" />
+    <Property Name="Changed" Type="SQSalesToolLead.History1" Nullable="false" />
+    <NavigationProperty Name="User" Relationship="SQSalesToolLead.FK_eventcalendar_users" FromRole="EventCalendar" ToRole="UserL" />
+    <Property Type="Int64" Name="AccountID" Nullable="false" />
+    <NavigationProperty Name="Account" Relationship="SQSalesToolLead.FK_eventcalendar_Accounts" FromRole="EventCalendar" ToRole="Account" />
+    <Property Type="Boolean" Name="IsTimeFromNow" Nullable="false" DefaultValue="true" />
+    <Property Type="Int32" Name="TimeFromNow" Nullable="false" />
+    <Property Type="Boolean" Name="IsSpecificDateTimeFromNow" Nullable="false" />
+    <Property Type="DateTime" Name="SpecificDateTimeFromNow" Nullable="false" Precision="0" />
+    <Property Type="Int32" Name="AlertTimeBefore" Nullable="false" />
+    <Property Type="Boolean" Name="IsOpened" Nullable="true" />
+    <Property Type="Int32" Name="TimeZoneId" />
+  </EntityType>
+  <Association Name="FK_eventcalendar_users">
+    <End Type="SQSalesToolLead.UserL" Role="UserL" Multiplicity="1" />
+    <End Type="SQSalesToolLead.EventCalendar" Role="EventCalendar" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UserL">
+        <PropertyRef Name="Key" />
+      </Principal>
+      <Dependent Role="EventCalendar">
+        <PropertyRef Name="UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_eventcalendar_Accounts">
+    <End Type="SQSalesToolLead.Account" Role="Account" Multiplicity="1" />
+    <End Type="SQSalesToolLead.EventCalendar" Role="EventCalendar" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Account">
+        <PropertyRef Name="Key" />
+      </Principal>
+      <Dependent Role="EventCalendar">
+        <PropertyRef Name="AccountID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="EmailQueue">
+    <Key>
+      <PropertyRef Name="key" />
+    </Key>
+    <Property Type="Int64" Name="key" Nullable="false" />
+    <Property Type="Int64" Name="AccountKey" />
+    <Property Type="DateTime" Name="RunDateTime" Precision="3" />
+    <Property Type="Int32" Name="EmailTemplateKey" />
+    <Property Type="Int16" Name="Status" />
+    <Property Type="DateTime" Name="ChangedOn" Precision="3" />
+    <Property Type="Int32" Name="MainStatusID" />
+    <Property Type="Boolean" Name="IsTemplateOverride" />
+    <Property Type="String" Name="OverrideFrom" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="OverrideTo" MaxLength="800" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="OverrideCC" MaxLength="800" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="OverrideBCC" MaxLength="800" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="OverrideSubject" MaxLength="300" FixedLength="false" Unicode="true" />
+    <Property Type="Boolean" Name="OverrideFormat" />
+    <Property Type="String" Name="OverrideBodyMessage" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="OverrideBCCHidden" MaxLength="800" FixedLength="false" Unicode="true" />
+    <Property Type="Boolean" Name="IsDeliveredToArc" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_Accounts_TransferUser">
+    <End Type="SQSalesToolLead.UserL" Role="UserL" Multiplicity="0..1" />
+    <End Type="SQSalesToolLead.Account" Role="Account" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UserL">
+        <PropertyRef Name="Key" />
+      </Principal>
+      <Dependent Role="Account">
+        <PropertyRef Name="TransferUserKey" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__lea_addit__Lead___01142BA1">
+    <End Type="SQSalesToolLead.Lead" Role="Lead" Multiplicity="1" />
+    <End Type="SQSalesToolLead.LeadAdditionalInfo" Role="LeadAdditionalInfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Lead">
+        <PropertyRef Name="Key" />
+      </Principal>
+      <Dependent Role="LeadAdditionalInfo">
+        <PropertyRef Name="LeadKey" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__lead_note__Lead___02084FDA">
+    <End Type="SQSalesToolLead.Lead" Role="Lead" Multiplicity="1" />
+    <End Type="SQSalesToolLead.LeadNote" Role="LeadNote" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Lead">
+        <PropertyRef Name="Key" />
+      </Principal>
+      <Dependent Role="LeadNote">
+        <PropertyRef Name="LeadKey" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="ViewLead">
+    <Key>
+      <PropertyRef Name="LeadId" />
+      <PropertyRef Name="AccountId" />
+      <PropertyRef Name="OutpulseId" />
+      <PropertyRef Name="campaignId" />
+    </Key>
+    <Property Type="Int64" Name="LeadId" Nullable="false" />
+    <Property Type="Int64" Name="AccountId" Nullable="false" />
+    <Property Type="DateTime" Name="AddedOn" Precision="3" />
+    <Property Type="DateTime" Name="BirthDate" Precision="0" />
+    <Property Type="DateTime" Name="CreatedOn" Precision="3" />
+    <Property Type="String" Name="FirstName" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Lastname" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Type="Decimal" Name="DayPhone" Precision="10" Scale="0" />
+    <Property Type="Decimal" Name="EveningPhone" Precision="10" Scale="0" />
+    <Property Type="Decimal" Name="CellPhone" Precision="10" Scale="0" />
+    <Property Type="String" Name="UserAssigned" MaxLength="401" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="CSR" MaxLength="401" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="TA" MaxLength="401" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="OutpulseId" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="leadStatus" MaxLength="207" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="Status" />
+    <Property Type="String" Name="SubStatus1" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="leadCampaign" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="state" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Type="Guid" Name="assigneduserkey" />
+    <Property Type="Guid" Name="transferuserkey" />
+    <Property Type="Guid" Name="csruserkey" />
+    <Property Type="Int32" Name="campaignId" Nullable="false" />
+    <Property Type="Int32" Name="SubstatusId" />
+  </EntityType>
+  <EntityType Name="vw_proj_ForPrioritizationList">
+    <Key>
+      <PropertyRef Name="act_key" />
+    </Key>
+    <Property Type="Int64" Name="act_key" Nullable="false" />
+  </EntityType>
+  <ComplexType Name="FindIndividualByPhoneResult">
+    <Property Type="Int64" Name="indv_key" Nullable="false" />
+    <Property Type="String" Name="indv_first_name" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="indv_last_name" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="indv_email" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="indv_external_reference_id" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="indv_gender" Nullable="true" MaxLength="10" />
+    <Property Type="Boolean" Name="indv_smoking" Nullable="true" />
+    <Property Type="Int64" Name="indv_age" Nullable="true" />
+    <Property Type="Decimal" Name="indv_day_phone" Nullable="true" Precision="10" Scale="0" />
+    <Property Type="Decimal" Name="indv_evening_phone" Nullable="true" Precision="10" Scale="0" />
+    <Property Type="Decimal" Name="indv_cell_phone" Nullable="true" Precision="10" Scale="0" />
+    <Property Type="Decimal" Name="indv_fax_nmbr" Nullable="true" Precision="10" Scale="0" />
+    <Property Type="String" Name="indv_address1" Nullable="true" />
+    <Property Type="String" Name="indv_address2" Nullable="true" />
+    <Property Type="String" Name="indv_city" Nullable="true" MaxLength="150" />
+    <Property Type="Byte" Name="indv_state_Id" Nullable="true" />
+    <Property Type="String" Name="indv_zipcode" Nullable="true" MaxLength="10" />
+    <Property Type="Int64" Name="indv_account_id" Nullable="true" />
+    <Property Type="String" Name="indv_relation" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="indv_add_user" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="indv_birthday" Nullable="true" Precision="16" />
+    <Property Type="String" Name="indv_notes" Nullable="true" />
+    <Property Type="DateTime" Name="indv_add_date" Nullable="true" Precision="23" />
+    <Property Type="String" Name="indv_modified_user" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="indv_modified_date" Nullable="true" Precision="23" />
+    <Property Type="Boolean" Name="indv_active_flag" Nullable="true" />
+    <Property Type="Boolean" Name="indv_delete_flag" Nullable="true" />
+  </ComplexType>
+  <EntityType Name="UserSavedSearch">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Int64" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Guid" Name="UserID" Nullable="false" />
+    <Property Type="String" Name="SearchName" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="SavedSearchCriteria" Relationship="SQSalesToolLead.FK_user_saved_search_criteria_user_saved_search" FromRole="user_saved_search" ToRole="user_saved_search_criteria" />
+    <NavigationProperty Name="User" Relationship="SQSalesToolLead.FK_user_saved_search_users" FromRole="user_saved_search" ToRole="UserL" />
+  </EntityType>
+  <EntityType Name="UserSavedSearchCriteria">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Int64" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int64" Name="SearchID" Nullable="false" />
+    <Property Type="Int32" Name="SearchTypeID" Nullable="false" />
+    <Property Type="String" Name="Value" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="user_saved_search" Relationship="SQSalesToolLead.FK_user_saved_search_criteria_user_saved_search" FromRole="user_saved_search_criteria" ToRole="user_saved_search" />
+  </EntityType>
+  <Association Name="FK_user_saved_search_criteria_user_saved_search">
+    <End Type="SQSalesToolLead.UserSavedSearch" Role="user_saved_search" Multiplicity="1" />
+    <End Type="SQSalesToolLead.UserSavedSearchCriteria" Role="user_saved_search_criteria" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="user_saved_search">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="user_saved_search_criteria">
+        <PropertyRef Name="SearchID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_user_saved_search_users">
+    <End Type="SQSalesToolLead.UserL" Role="UserL" Multiplicity="1" />
+    <End Type="SQSalesToolLead.UserSavedSearch" Role="user_saved_search" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UserL">
+        <PropertyRef Name="Key" />
+      </Principal>
+      <Dependent Role="user_saved_search">
+        <PropertyRef Name="UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <ComplexType Name="ViewIndividuals">
+    <Property Type="Int64" Name="AccountId" Nullable="true" />
+    <Property Type="Int64" Name="Id" Nullable="false" />
+    <Property Type="String" Name="FirstName" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="LastName" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="FullName" Nullable="false" MaxLength="301" />
+    <Property Type="DateTime" Name="BirthDate" Nullable="true" Precision="16" />
+    <Property Type="Int32" Name="SortOrder" Nullable="false" />
+    <Property Type="Decimal" Name="DayPhone" Nullable="true" Precision="10" Scale="0" />
+    <Property Type="Decimal" Name="EveningPhone" Nullable="true" Precision="10" Scale="0" />
+    <Property Type="Decimal" Name="CellPhone" Nullable="true" Precision="10" Scale="0" />
+    <Property Type="String" Name="OutpulseId" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="StatusIndv" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="Status" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="SubStatus" Nullable="true" MaxLength="200" />
+    <Property Type="DateTime" Name="NextCalendarEventDate" Nullable="true" Precision="23" />
+  </ComplexType>
+  <EntityType Name="ViewVehicle">
+    <Key>
+      <PropertyRef Name="FullName" />
+      <PropertyRef Name="Key" />
+    </Key>
+    <Property Type="Int64" Name="AccountId" />
+    <Property Type="Int64" Name="IndividualId" />
+    <Property Type="String" Name="FullName" Nullable="false" MaxLength="300" FixedLength="false" Unicode="true" />
+    <Property Type="Int64" Name="Key" Nullable="false" />
+    <Property Type="String" Name="Make" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Model" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Int64" Name="Year" />
+    <Property Type="Int64" Name="AnnualMilleage" />
+    <Property Type="String" Name="CollisionDeductable" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ComprehensiveDeductable" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Boolean" Name="IsActive" />
+  </EntityType>
+  <EntityType Name="ViewAutoHomeQuote">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="QuoteType" />
+    </Key>
+    <Property Type="Int64" Name="AccountId" />
+    <Property Type="Int64" Name="Id" Nullable="false" />
+    <Property Type="DateTime" Name="QuotedDate" Precision="0" />
+    <Property Type="Decimal" Name="QuotedPremium" Precision="19" Scale="4" />
+    <Property Type="String" Name="Carrier" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="Type" />
+    <Property Type="String" Name="QuoteType" Nullable="false" MaxLength="8" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="CurrentPremium" Precision="19" Scale="4" />
+  </EntityType>
+  <EntityType Name="AccountHistorySubstatusII">
+    <Key>
+      <PropertyRef Name="Key" />
+    </Key>
+    <Property Type="Int64" Name="Key" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int64" Name="AccountHistoryId" />
+    <Property Type="Int64" Name="Substatus2Id" />
+  </EntityType>
+  <EntityType Name="ViewAutoHomePolicy">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="PolicyType" />
+      <PropertyRef Name="Term" />
+      <PropertyRef Name="PolicyHolder" />
+      <PropertyRef Name="PolicyStatus" />
+    </Key>
+    <Property Type="Int64" Name="AccountId" />
+    <Property Type="Int64" Name="Id" Nullable="false" />
+    <Property Type="String" Name="PolicyType" Nullable="false" MaxLength="8" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="PolicyNumber" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Carrier" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="CurrentCarrier" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="MonthlyPremium" Precision="19" Scale="4" />
+    <Property Type="String" Name="Term" Nullable="false" MaxLength="9" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="UmbrellaPolicy" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="EffectiveDate" Precision="0" />
+    <Property Type="DateTime" Name="BoundDate" Precision="3" />
+    <Property Type="String" Name="PolicyHolder" Nullable="false" MaxLength="301" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="PolicyTypeVal" />
+    <Property Type="String" Name="PolicyStatus" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Recipeint">
+    <Key>
+      <PropertyRef Name="EmailReportId" />
+    </Key>
+    <Property Type="Int32" Name="EmailReportId" Nullable="false" />
+    <Property Type="Guid" Name="UserId" />
+    <NavigationProperty Name="users" Relationship="SQSalesToolLead.FK__email_rec__rcp_u__3084DE4F" FromRole="email_recipients" ToRole="UserL" />
+    <NavigationProperty Name="email_report" Relationship="SQSalesToolLead.FK_email_recipients_email_report" FromRole="Recipeint" ToRole="ReportInEmail" />
+  </EntityType>
+  <EntityType Name="ReportInEmail">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="EmailId" Nullable="false" />
+    <Property Type="Int32" Name="ReportId" Nullable="false" />
+    <Property Type="Byte" Name="FormatId" Nullable="false" />
+    <Property Type="Byte" Name="Frequency" Nullable="false" />
+    <Property Type="Boolean" Name="IsFiltered" Nullable="false" />
+    <NavigationProperty Name="Emails" Relationship="SQSalesToolLead.FK__email_rep__emr_e__28E3BC87" FromRole="email_report" ToRole="emails" />
+    <NavigationProperty Name="report_format" Relationship="SQSalesToolLead.FK__email_rep__emr_f__2BC02932" FromRole="email_report" ToRole="report_format" />
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <NavigationProperty Name="email_recipients" Relationship="SQSalesToolLead.FK_email_recipients_email_report" FromRole="ReportInEmail" ToRole="Recipeint" />
+  </EntityType>
+  <EntityType Name="Emails">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" />
+    <Property Type="String" Name="Subject" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Body" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="CreatedOn" Precision="0" />
+    <Property Type="String" Name="CreatedBy" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="ModifiedOn" Precision="0" />
+    <Property Type="String" Name="ModifiedBy" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Recipients" Relationship="SQSalesToolLead.FK__email_rec__rcp_e__2F90BA16" FromRole="emails" ToRole="email_recipients" />
+    <NavigationProperty Name="Reports" Relationship="SQSalesToolLead.FK__email_rep__emr_e__28E3BC87" FromRole="emails" ToRole="email_report" />
+    <Property Type="Boolean" Name="IsSent" />
+    <Property Type="DateTime" Name="LastSent" Precision="3" />
+  </EntityType>
+  <EntityType Name="ReportFormat">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Byte" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Title" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="email_report" Relationship="SQSalesToolLead.FK__email_rep__emr_f__2BC02932" FromRole="report_format" ToRole="email_report" />
+  </EntityType>
+  <Association Name="FK__email_rec__rcp_e__2F90BA16">
+    <End Type="SQSalesToolLead.Emails" Role="emails" Multiplicity="1" />
+    <End Type="SQSalesToolLead.Recipeint" Role="email_recipients" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="emails">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="email_recipients">
+        <PropertyRef Name="EmailReportId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__email_rec__rcp_u__3084DE4F">
+    <End Type="SQSalesToolLead.UserL" Role="UserL" Multiplicity="0..1" />
+    <End Type="SQSalesToolLead.Recipeint" Role="email_recipients" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UserL">
+        <PropertyRef Name="Key" />
+      </Principal>
+      <Dependent Role="email_recipients">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__email_rep__emr_e__28E3BC87">
+    <End Type="SQSalesToolLead.Emails" Role="emails" Multiplicity="1" />
+    <End Type="SQSalesToolLead.ReportInEmail" Role="email_report" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="emails">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="email_report">
+        <PropertyRef Name="EmailId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__email_rep__emr_f__2BC02932">
+    <End Type="SQSalesToolLead.ReportFormat" Role="report_format" Multiplicity="1" />
+    <End Type="SQSalesToolLead.ReportInEmail" Role="email_report" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="report_format">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="email_report">
+        <PropertyRef Name="FormatId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="ViewEmailRecipients">
+    <Key>
+      <PropertyRef Name="EmailId" />
+      <PropertyRef Name="UserId" />
+      <PropertyRef Name="FullName" />
+      <PropertyRef Name="ReportId" />
+    </Key>
+    <Property Type="Int32" Name="EmailId" Nullable="false" />
+    <Property Type="Guid" Name="UserId" Nullable="false" />
+    <Property Type="String" Name="FullName" Nullable="false" MaxLength="401" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="ReportId" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_email_recipients_email_report">
+    <End Type="SQSalesToolLead.ReportInEmail" Role="ReportInEmail" Multiplicity="1" />
+    <End Type="SQSalesToolLead.Recipeint" Role="Recipeint" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="ReportInEmail">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Recipeint">
+        <PropertyRef Name="EmailReportId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="PolicyStatuses">
+    <Key>
+      <PropertyRef Name="Key" />
+    </Key>
+    <Property Type="Int64" Name="Key" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Name" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Type="Guid" Name="AddedBy" />
+    <Property Type="DateTime" Name="AddedDate" Precision="3" />
+    <Property Type="Guid" Name="ChangedBy" />
+    <Property Type="DateTime" Name="ChangedDate" Precision="3" />
+    <Property Type="Int32" Name="Type" />
+    <NavigationProperty Name="autohome_policies" Relationship="SQSalesToolLead.FK_autohome_policies_policy_statuses" FromRole="PolicyStatuses" ToRole="AutoHomePolicy" />
+    <NavigationProperty Name="dental_vision" Relationship="SQSalesToolLead.FK_dental_vision_policy_statuses" FromRole="PolicyStatuses" ToRole="DentalVision" />
+    <NavigationProperty Name="mapdps" Relationship="SQSalesToolLead.FK_mapdps_policy_statuses" FromRole="PolicyStatuses" ToRole="Mapdp" />
+    <NavigationProperty Name="medsups" Relationship="SQSalesToolLead.FK_medsups_policy_statuses" FromRole="PolicyStatuses" ToRole="Medsup" />
+  </EntityType>
+  <EntityType Name="IssueStatuses">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Title" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="AddedBy" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="AddedOn" Precision="0" />
+    <Property Type="String" Name="ChangedBy" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="ChangedOn" Precision="0" />
+    <NavigationProperty Name="IssueStatusesHistory" Relationship="SQSalesToolLead.FK_issue_statuses_history_issue_statuses" FromRole="issue_statuses" ToRole="issue_statuses_history" />
+  </EntityType>
+  <EntityType Name="IssueStatusesHistory">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Int64" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int64" Name="AccountKey" />
+    <Property Type="Guid" Name="UserID" />
+    <Property Type="Int64" Name="CarrierIssueID" Nullable="false" />
+    <Property Type="Int32" Name="IssueStatusID" />
+    <Property Type="String" Name="Comment" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="AddedBy" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="AddedOn" Precision="0" />
+    <Property Type="String" Name="ChangedBy" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="ChangedOn" Precision="0" />
+    <NavigationProperty Name="Accounts" Relationship="SQSalesToolLead.FK_issue_statuses_history_accounts" FromRole="issue_statuses_history" ToRole="Account" />
+    <NavigationProperty Name="CarrierIssue" Relationship="SQSalesToolLead.FK_issue_statuses_history_carrier_issues" FromRole="issue_statuses_history" ToRole="CarrierIssue" />
+    <NavigationProperty Name="IssueStatus" Relationship="SQSalesToolLead.FK_issue_statuses_history_issue_statuses" FromRole="issue_statuses_history" ToRole="issue_statuses" />
+    <NavigationProperty Name="Users" Relationship="SQSalesToolLead.FK_issue_statuses_history_users" FromRole="issue_statuses_history" ToRole="UserL" />
+  </EntityType>
+  <Association Name="FK_issue_statuses_history_accounts">
+    <End Type="SQSalesToolLead.Account" Role="Account" Multiplicity="0..1" />
+    <End Type="SQSalesToolLead.IssueStatusesHistory" Role="issue_statuses_history" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Account">
+        <PropertyRef Name="Key" />
+      </Principal>
+      <Dependent Role="issue_statuses_history">
+        <PropertyRef Name="AccountKey" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_issue_statuses_history_carrier_issues">
+    <End Type="SQSalesToolLead.CarrierIssue" Role="CarrierIssue" Multiplicity="1" />
+    <End Type="SQSalesToolLead.IssueStatusesHistory" Role="issue_statuses_history" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CarrierIssue">
+        <PropertyRef Name="Key" />
+      </Principal>
+      <Dependent Role="issue_statuses_history">
+        <PropertyRef Name="CarrierIssueID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_issue_statuses_history_issue_statuses">
+    <End Type="SQSalesToolLead.IssueStatuses" Role="issue_statuses" Multiplicity="0..1" />
+    <End Type="SQSalesToolLead.IssueStatusesHistory" Role="issue_statuses_history" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="issue_statuses">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="issue_statuses_history">
+        <PropertyRef Name="IssueStatusID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_issue_statuses_history_users">
+    <End Type="SQSalesToolLead.UserL" Role="UserL" Multiplicity="0..1" />
+    <End Type="SQSalesToolLead.IssueStatusesHistory" Role="issue_statuses_history" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UserL">
+        <PropertyRef Name="Key" />
+      </Principal>
+      <Dependent Role="issue_statuses_history">
+        <PropertyRef Name="UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="DuplicatesView">
+    <Key>
+      <PropertyRef Name="DuplicateRuleId" />
+      <PropertyRef Name="IncomingLeadId" />
+      <PropertyRef Name="ExistingLeadId" />
+    </Key>
+    <Property Type="Int32" Name="DuplicateRuleId" Nullable="false" />
+    <Property Type="Int64" Name="IncomingLeadId" Nullable="false" />
+    <Property Type="Int64" Name="ExistingLeadId" Nullable="false" />
+    <NavigationProperty Name="IncomingLead" Relationship="SQSalesToolLead.FK_duplicates_view_leads" FromRole="duplicates_view" ToRole="Lead" />
+    <NavigationProperty Name="ExistingLead" Relationship="SQSalesToolLead.FK_duplicates_view_leads1" FromRole="duplicates_view" ToRole="Lead" />
+  </EntityType>
+  <Association Name="FK_duplicates_view_leads">
+    <End Type="SQSalesToolLead.Lead" Role="Lead" Multiplicity="1" />
+    <End Type="SQSalesToolLead.DuplicatesView" Role="duplicates_view" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Lead">
+        <PropertyRef Name="Key" />
+      </Principal>
+      <Dependent Role="duplicates_view">
+        <PropertyRef Name="IncomingLeadId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_duplicates_view_leads1">
+    <End Type="SQSalesToolLead.Lead" Role="Lead" Multiplicity="1" />
+    <End Type="SQSalesToolLead.DuplicatesView" Role="duplicates_view" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Lead">
+        <PropertyRef Name="Key" />
+      </Principal>
+      <Dependent Role="duplicates_view">
+        <PropertyRef Name="ExistingLeadId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="IndividualStatus">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Title" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="AddedBy" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="AddedOn" Precision="0" />
+    <Property Type="String" Name="ChangedBy" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="ChangedOn" Precision="0" />
+    <NavigationProperty Name="Individuals" Relationship="SQSalesToolLead.FK_Individuals_individual_statuses" FromRole="individual_statuses" ToRole="Individual" />
+  </EntityType>
+  <Association Name="FK_Individuals_individual_statuses">
+    <End Type="SQSalesToolLead.IndividualStatus" Role="individual_statuses" Multiplicity="0..1" />
+    <End Type="SQSalesToolLead.Individual" Role="Individual" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="individual_statuses">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Individual">
+        <PropertyRef Name="IndividualStatusID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="IndividualPDPStatuses">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Title" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="AddedBy" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="AddedOn" Precision="0" />
+    <Property Type="String" Name="ChangedBy" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="ChangedOn" Precision="0" />
+    <NavigationProperty Name="Individuals" Relationship="SQSalesToolLead.FK_Individuals_individual_pdp_statuses" FromRole="individual_pdp_statuses" ToRole="Individual" />
+  </EntityType>
+  <Association Name="FK_Individuals_individual_pdp_statuses">
+    <End Type="SQSalesToolLead.IndividualPDPStatuses" Role="individual_pdp_statuses" Multiplicity="0..1" />
+    <End Type="SQSalesToolLead.Individual" Role="Individual" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="individual_pdp_statuses">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Individual">
+        <PropertyRef Name="IndividualPDPStatusID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="ViewLeadMarketing">
+    <Key>
+      <PropertyRef Name="AccountId" />
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int64" Name="AccountId" Nullable="false" />
+    <Property Type="Int64" Name="Id" Nullable="false" />
+    <Property Type="String" Name="Campaign" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Status" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="SubStatus" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="DateCreated" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="TrackingCode" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="SourceCode" MaxLength="200" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="EmailsForReport">
+    <Key>
+      <PropertyRef Name="ReportID" />
+      <PropertyRef Name="EmailID" />
+      <PropertyRef Name="RowID" />
+      <PropertyRef Name="DaysLastSent" />
+    </Key>
+    <Property Type="Int32" Name="ReportID" Nullable="false" />
+    <Property Type="Int32" Name="EmailID" Nullable="false" />
+    <Property Type="String" Name="Recipients" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Subject" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Body" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="ModifiedOn" Precision="0" />
+    <Property Type="DateTime" Name="LastSent" Precision="3" />
+    <Property Type="Byte" Name="Format" Nullable="false" />
+    <Property Type="Byte" Name="Frequency" Nullable="false" />
+    <Property Type="Boolean" Name="Filter" Nullable="false" />
+    <Property Type="Int64" Name="RowID" Nullable="false" />
+    <Property Type="Int32" Name="DaysLastSent" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ViewMAPDP">
+    <Key>
+      <PropertyRef Name="Key" />
+      <PropertyRef Name="FullName" />
+      <PropertyRef Name="PolicyStatus" />
+    </Key>
+    <Property Type="Int64" Name="Key" Nullable="false" />
+    <Property Type="Int64" Name="Type" />
+    <Property Type="Guid" Name="Enroller" Nullable="true" />
+    <Property Type="Int64" Name="CarrierId" />
+    <Property Type="String" Name="PlanName" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="PlanNumber" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="PlanType" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="EnrollmentDate" Precision="3" />
+    <Property Type="DateTime" Name="EffectiveDate" Precision="3" />
+    <Property Type="Int64" Name="IndividualId" />
+    <Property Type="Int64" Name="AccountId" />
+    <Property Type="String" Name="FullName" Nullable="false" MaxLength="301" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="PolicyId" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Carrier" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="ChangedOn" Precision="3" />
+    <Property Type="DateTime" Name="AddedOn" Precision="3" />
+    <Property Type="String" Name="ChangedBy" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="AddedBy" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="PolicyStatus" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="MedicalSupplement">
+    <Key>
+      <PropertyRef Name="Key" />
+      <PropertyRef Name="FullName" />
+      <PropertyRef Name="PolicyStatus" />
+      <PropertyRef Name="MedicareId" />
+    </Key>
+    <Property Type="Int64" Name="Key" Nullable="false" />
+    <Property Type="Int64" Name="IndividualId" />
+    <Property Type="Int64" Name="AccountId" />
+    <Property Type="String" Name="FullName" Nullable="false" MaxLength="301" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Carrier" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Type="Double" Name="AnnualPremium" />
+    <Property Type="String" Name="Plan" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="IssueDate" Precision="3" />
+    <Property Type="DateTime" Name="EffectiveDate" Precision="3" />
+    <Property Type="DateTime" Name="ExpirationDate" Precision="0" />
+    <Property Type="DateTime" Name="AddedOn" Precision="3" />
+    <Property Type="String" Name="AddedBy" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="ModifiedOn" Precision="3" />
+    <Property Type="String" Name="ModifiedBy" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Int64" Name="CarrierId" />
+    <Property Type="String" Name="PolicyNumber" Nullable="true" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="PolicyStatus" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="MedicareId" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="SubmissionDate" Precision="3" />
+  </EntityType>
+  <EntityType Name="IssueType">
+    <Key>
+      <PropertyRef Name="Key" />
+    </Key>
+    <Property Type="Int32" Name="Key" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="AddedBy" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="AddedOn" Precision="0" />
+    <Property Type="String" Name="ChangedBy" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="ChangedOn" Precision="0" />
+    <NavigationProperty Name="carrier_issues" Relationship="SQSalesToolLead.FK_car_iss_itp_key" FromRole="issue_types" ToRole="CarrierIssue" />
+  </EntityType>
+  <Association Name="FK_car_iss_itp_key">
+    <End Type="SQSalesToolLead.IssueType" Role="issue_types" Multiplicity="0..1" />
+    <End Type="SQSalesToolLead.CarrierIssue" Role="CarrierIssue" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="issue_types">
+        <PropertyRef Name="Key" />
+      </Principal>
+      <Dependent Role="CarrierIssue">
+        <PropertyRef Name="IssueTypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_autohome_policies_policy_statuses">
+    <End Type="SQSalesToolLead.PolicyStatuses" Role="PolicyStatuses" Multiplicity="0..1" />
+    <End Type="SQSalesToolLead.AutoHomePolicy" Role="AutoHomePolicy" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PolicyStatuses">
+        <PropertyRef Name="Key" />
+      </Principal>
+      <Dependent Role="AutoHomePolicy">
+        <PropertyRef Name="PolicyStatus" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dental_vision_policy_statuses">
+    <End Type="SQSalesToolLead.PolicyStatuses" Role="PolicyStatuses" Multiplicity="0..1" />
+    <End Type="SQSalesToolLead.DentalVision" Role="DentalVision" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PolicyStatuses">
+        <PropertyRef Name="Key" />
+      </Principal>
+      <Dependent Role="DentalVision">
+        <PropertyRef Name="PolicyStatus" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_mapdps_policy_statuses">
+    <End Type="SQSalesToolLead.PolicyStatuses" Role="PolicyStatuses" Multiplicity="0..1" />
+    <End Type="SQSalesToolLead.Mapdp" Role="Mapdp" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PolicyStatuses">
+        <PropertyRef Name="Key" />
+      </Principal>
+      <Dependent Role="Mapdp">
+        <PropertyRef Name="PolicyStatus" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_medsups_policy_statuses">
+    <End Type="SQSalesToolLead.PolicyStatuses" Role="PolicyStatuses" Multiplicity="0..1" />
+    <End Type="SQSalesToolLead.Medsup" Role="Medsup" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PolicyStatuses">
+        <PropertyRef Name="Key" />
+      </Principal>
+      <Dependent Role="Medsup">
+        <PropertyRef Name="PolicyStatus" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="PostQueue">
+    <Key>
+      <PropertyRef Name="Key" />
+    </Key>
+    <Property Type="Int64" Name="Key" Nullable="false" />
+    <Property Type="Int64" Name="AccountKey" />
+    <Property Type="DateTime" Name="RunDateTime" Precision="3" />
+    <Property Type="Int32" Name="PostTemplateKey" />
+    <Property Type="Int16" Name="Status" />
+    <Property Type="DateTime" Name="ChangedOn" Precision="3" />
+    <Property Type="Int32" Name="MainStatusID" />
+    <Property Type="String" Name="ResponseCode" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ResponseMessage" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="LeadMetric">
+    <Key>
+      <PropertyRef Name="LeadKey" />
+    </Key>
+    <Property Type="Int64" Name="LeadKey" Nullable="false" />
+    <Property Type="Int16" Name="SkillGroupID" />
+    <Property Type="DateTime" Name="AccountHistoryAddedDate" Precision="3" />
+    <Property Type="Guid" Name="UserKey" />
+    <Property Type="Int32" Name="CampaignID" />
+    <Property Type="String" Name="CampaignTitle" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Type="Boolean" Name="ActionContactFlag" />
+    <Property Type="DateTime" Name="MAPDPEnrollmentDate" Precision="3" />
+    <Property Type="DateTime" Name="DentalVisionSubmitDate" Precision="0" />
+    <Property Type="DateTime" Name="MedSuppSubmitDate" Precision="3" />
+    <Property Type="DateTime" Name="AutoHomePolicyBoundDate" Precision="3" />
+    <Property Type="DateTime" Name="QuotedDate" Precision="0" />
+    <Property Type="String" Name="AccountHistoryComments" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="StatusTitle" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="AccountCreateDate" Precision="3" />
+  </EntityType>
+  <EntityType Name="ArcCases">
+    <Key>
+      <PropertyRef Name="Key" />
+    </Key>
+    <Property Name="Key" Nullable="false" Type="Int64" />
+    <Property Name="AddOn" Precision="3" Type="DateTime" />
+    <Property Name="ModifyOn" Precision="3" Type="DateTime" />
+    <Property Name="Notes" MaxLength="Max" FixedLength="false" Unicode="true" Type="String" />
+    <Property Name="Status" MaxLength="50" FixedLength="false" Unicode="true" Type="String" />
+    <Property Name="FaceAmount" Precision="19" Scale="4" Type="Decimal" />
+    <Property Name="Duration" Type="Int32" />
+    <Property Name="CompanyCode" MaxLength="20" FixedLength="false" Unicode="true" Type="String" />
+    <Property Name="CaseSpecialistName" MaxLength="500" FixedLength="false" Unicode="true" Type="String" />
+    <Property Name="CaseSpecialistExt" Type="Int32" />
+    <Property Name="LeadKey" Type="Int64" />
+    <Property Name="AccountKey" Type="Int64" />
+    <Property Name="ArcRefreanceKey" MaxLength="20" FixedLength="false" Unicode="true" Type="String" />
+    <NavigationProperty Name="PrimaryLead" Relationship="SQSalesToolLead.LeadArcCases" FromRole="ArcCases" ToRole="Lead" />
+    <NavigationProperty Name="Account" Relationship="SQSalesToolLead.AccountArcCases" FromRole="ArcCases" ToRole="Account" />
+    <NavigationProperty Name="ArcHistory" Relationship="SQSalesToolLead.FK_arc_history_arc_cases" FromRole="ArcCases" ToRole="arc_history" />
+    <Property Type="Int64" Name="ArcIndividualKey" />
+    <NavigationProperty Name="ArcIndividual" Relationship="SQSalesToolLead.FK_arc_cases_Individuals" FromRole="ArcCases" ToRole="Individual" />
+  </EntityType>
+  <Association Name="LeadArcCases">
+    <End Type="SQSalesToolLead.Lead" Multiplicity="0..1" Role="Lead" />
+    <End Type="SQSalesToolLead.ArcCases" Multiplicity="*" Role="ArcCases" />
+    <ReferentialConstraint>
+      <Principal Role="Lead">
+        <PropertyRef Name="Key" />
+      </Principal>
+      <Dependent Role="ArcCases">
+        <PropertyRef Name="LeadKey" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="AccountLead">
+    <End Type="SQSalesToolLead.Account" Multiplicity="*" Role="Account" />
+    <End Type="SQSalesToolLead.Lead" Multiplicity="0..1" Role="Lead" />
+    <ReferentialConstraint>
+      <Principal Role="Lead">
+        <PropertyRef Name="Key" />
+      </Principal>
+      <Dependent Role="Account">
+        <PropertyRef Name="PrimaryLeadKey" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="PrimaryIndividualAccount">
+    <End Type="SQSalesToolLead.Individual" Role="Individual" Multiplicity="0..1" />
+    <End Type="SQSalesToolLead.Account" Role="Account" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Individual">
+        <PropertyRef Name="Key" />
+      </Principal>
+      <Dependent Role="Account">
+        <PropertyRef Name="PrimaryIndividualId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="SecondaryIndividualAccount">
+    <End Type="SQSalesToolLead.Individual" Role="Individual" Multiplicity="0..1" />
+    <End Type="SQSalesToolLead.Account" Role="Account" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Individual">
+        <PropertyRef Name="Key" />
+      </Principal>
+      <Dependent Role="Account">
+        <PropertyRef Name="SecondaryIndividualId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="AccountArcCases">
+    <End Type="SQSalesToolLead.Account" Multiplicity="0..1" Role="Account" />
+    <End Type="SQSalesToolLead.ArcCases" Multiplicity="*" Role="ArcCases" />
+    <ReferentialConstraint>
+      <Principal Role="Account">
+        <PropertyRef Name="Key" />
+      </Principal>
+      <Dependent Role="ArcCases">
+        <PropertyRef Name="AccountKey" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="ArcHistory">
+    <Key>
+      <PropertyRef Name="Key" />
+    </Key>
+    <Property Type="Int64" Name="Key" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="DateTime" Name="AddedOn" Precision="3" />
+    <Property Type="DateTime" Name="ChangedOn" Precision="3" />
+    <Property Type="String" Name="Notes" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Status" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Int64" Name="ArcKey" Nullable="false" />
+    <Property Type="Guid" Name="UserKey" />
+    <NavigationProperty Name="arc_cases" Relationship="SQSalesToolLead.FK_arc_history_arc_cases" FromRole="arc_history" ToRole="ArcCases" />
+    <NavigationProperty Name="UserL" Relationship="SQSalesToolLead.UserLArcHistory" FromRole="ArcHistory" ToRole="UserL" />
+  </EntityType>
+  <Association Name="FK_arc_history_arc_cases">
+    <End Type="SQSalesToolLead.ArcCases" Multiplicity="1" Role="ArcCases" />
+    <End Type="SQSalesToolLead.ArcHistory" Multiplicity="*" Role="arc_history" />
+    <ReferentialConstraint>
+      <Principal Role="ArcCases">
+        <PropertyRef Name="Key" />
+      </Principal>
+      <Dependent Role="arc_history">
+        <PropertyRef Name="ArcKey" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_arc_cases_Individuals">
+    <End Type="SQSalesToolLead.Individual" Role="Individual" Multiplicity="0..1" />
+    <End Type="SQSalesToolLead.ArcCases" Role="ArcCases" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Individual">
+        <PropertyRef Name="Key" />
+      </Principal>
+      <Dependent Role="ArcCases">
+        <PropertyRef Name="ArcIndividualKey" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="UserLArcHistory">
+    <End Type="SQSalesToolLead.UserL" Role="UserL" Multiplicity="0..1" />
+    <End Type="SQSalesToolLead.ArcHistory" Role="ArcHistory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UserL">
+        <PropertyRef Name="Key" />
+      </Principal>
+      <Dependent Role="ArcHistory">
+        <PropertyRef Name="UserKey" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="AccountAccountHistory">
+    <End Type="SQSalesToolLead.Account" Role="Account" Multiplicity="0..1" />
+    <End Type="SQSalesToolLead.AccountHistory" Role="AccountHistory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Account">
+        <PropertyRef Name="Key" />
+      </Principal>
+      <Dependent Role="AccountHistory">
+        <PropertyRef Name="AccountId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="vw_ArcActions">
+    <Key>
+      <PropertyRef Name="ActionId" />
+      <PropertyRef Name="AccountId" />
+      <PropertyRef Name="Reference" />
+    </Key>
+    <Property Type="Int64" Name="Code" />
+    <Property Type="Int64" Name="ActionId" Nullable="false" />
+    <Property Type="DateTime" Name="TimeSpan" Precision="3" />
+    <Property Type="String" Name="Notes" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Description" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="RefferedBy" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Type="Boolean" Name="IsDelivered" Nullable="false" />
+    <Property Type="String" Name="Reference" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Type="Int64" Name="AccountId" Nullable="false" />
+    <Property Type="Int32" Name="ArcAccountId" />
+  </EntityType>
+  <Association Name="UserL_AccountHistory">
+    <End Type="SQSalesToolLead.UserL" Role="UserL" Multiplicity="0..1" />
+    <End Type="SQSalesToolLead.AccountHistory" Role="AccountHistory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UserL">
+        <PropertyRef Name="Key" />
+      </Principal>
+      <Dependent Role="AccountHistory">
+        <PropertyRef Name="User" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="vw_ArcLetterLog">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="Name" />
+      <PropertyRef Name="Code" />
+      <PropertyRef Name="IsDelivered" />
+    </Key>
+    <Property Type="Int64" Name="Id" Nullable="false" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="Code" Nullable="false" />
+    <Property Type="DateTime" Name="Date" Precision="3" />
+    <Property Type="Int16" Name="Status" />
+    <Property Type="Boolean" Name="IsDelivered" Nullable="false" />
+    <Property Type="String" Name="Reference" MaxLength="20" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="inContact_data">
+    <Key>
+      <PropertyRef Name="contact_id" />
+      <PropertyRef Name="master_contact_id" />
+    </Key>
+    <Property Type="Int64" Name="contact_id" Nullable="false" />
+    <Property Type="Int64" Name="master_contact_id" Nullable="false" />
+    <Property Type="Int32" Name="contact_code" Nullable="false" />
+    <Property Type="String" Name="media_name" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="contact_name" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ani_dialum" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="skill_no" />
+    <Property Type="String" Name="skill_name" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="campaign_no" />
+    <Property Type="String" Name="campaign_name" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="agent_no" />
+    <Property Type="String" Name="agent_name" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="team_no" />
+    <Property Type="String" Name="team_name" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="sla" />
+    <Property Type="String" Name="start_date" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="start_time" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="pre_queue" />
+    <Property Type="Int32" Name="in_queue" />
+    <Property Type="Int32" Name="agent_time" />
+    <Property Type="Int32" Name="post_queue" />
+    <Property Type="Int32" Name="acw_time" />
+    <Property Type="Int32" Name="total_time" />
+    <Property Type="Int32" Name="abandon_time" />
+    <Property Type="Int32" Name="routing_time" />
+    <Property Type="Boolean" Name="abandon" />
+    <Property Type="Int32" Name="callback_time" />
+    <Property Type="Boolean" Name="logged" />
+    <Property Type="Int32" Name="hold_time" />
+    <Property Type="Int32" Name="disp_code" />
+    <Property Type="String" Name="disp_name" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="disp_comment" MaxLength="500" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <ComplexType Name="Arc_GetCreateOp_Result">
+    <Property Type="Int64" Name="ID" Nullable="false" />
+    <Property Type="DateTime" Name="Timestamp" Nullable="true" Precision="23" />
+    <Property Type="String" Name="DNIS" Nullable="true" MaxLength="4" />
+    <Property Type="Int32" Name="TalkTime" Nullable="true" />
+    <Property Type="String" Name="ARC_ID" Nullable="true" MaxLength="25" />
+  </ComplexType>
+  <EntityType Name="vw_EventCalendar">
+    <Key>
+      <PropertyRef Name="AccountKey" />
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="AccountID" />
+      <PropertyRef Name="UserID" />
+      <PropertyRef Name="Title" />
+      <PropertyRef Name="IsTimeFromNow" />
+      <PropertyRef Name="TimeFromNow" />
+      <PropertyRef Name="IsSpecificDateTimeFromNow" />
+      <PropertyRef Name="SpecificDateTimeFromNow" />
+      <PropertyRef Name="AlertPopup" />
+      <PropertyRef Name="AlertEmail" />
+      <PropertyRef Name="AlertSMS" />
+      <PropertyRef Name="AlertTimieBefore" />
+      <PropertyRef Name="CreateOutLookReminder" />
+      <PropertyRef Name="DismissUponStatusChange" />
+      <PropertyRef Name="EventType" />
+      <PropertyRef Name="EventStatus" />
+      <PropertyRef Name="SnoozeAfter" />
+      <PropertyRef Name="Completed" />
+      <PropertyRef Name="Dismissed" />
+      <PropertyRef Name="IsActive" />
+      <PropertyRef Name="IsDeleted" />
+    </Key>
+    <Property Name="AccountKey" Nullable="false" Type="Int64" />
+    <Property Name="PrimaryName" MaxLength="301" FixedLength="false" Unicode="true" Type="String" />
+    <Property Name="ID" Nullable="false" Type="Int64" />
+    <Property Name="AccountID" Nullable="false" Type="Int64" />
+    <Property Name="UserID" Nullable="false" Type="Guid" />
+    <Property Name="Title" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" Type="String" />
+    <Property Name="Description" MaxLength="Max" FixedLength="false" Unicode="true" Type="String" />
+    <Property Name="IsTimeFromNow" Nullable="false" Type="Boolean" />
+    <Property Name="TimeFromNow" Nullable="false" Type="Int32" />
+    <Property Name="IsSpecificDateTimeFromNow" Nullable="false" Type="Boolean" />
+    <Property Name="SpecificDateTimeFromNow" Nullable="false" Precision="0" Type="DateTime" />
+    <Property Name="AlertPopup" Nullable="false" Type="Boolean" />
+    <Property Name="AlertEmail" Nullable="false" Type="Boolean" />
+    <Property Name="AlertSMS" Nullable="false" Type="Boolean" />
+    <Property Name="AlertTimieBefore" Nullable="false" Type="Int32" />
+    <Property Name="CreateOutLookReminder" Nullable="false" Type="Boolean" />
+    <Property Name="DismissUponStatusChange" Nullable="false" Type="Boolean" />
+    <Property Name="EventType" Nullable="false" Type="Int32" />
+    <Property Name="EventStatus" Nullable="false" Type="Int32" />
+    <Property Name="SnoozeAfter" Nullable="false" Type="Int32" />
+    <Property Name="Completed" Nullable="false" Type="Boolean" />
+    <Property Name="Dismissed" Nullable="false" Type="Boolean" />
+    <Property Name="Add" MaxLength="50" FixedLength="false" Unicode="true" Type="String" />
+    <Property Name="evc_add_date" Precision="3" Type="DateTime" />
+    <Property Name="evc_modified_user" MaxLength="50" FixedLength="false" Unicode="true" Type="String" />
+    <Property Name="evc_modified_date" Precision="3" Type="DateTime" />
+    <Property Name="IsActive" Nullable="false" Type="Boolean" />
+    <Property Name="IsDeleted" Nullable="false" Type="Boolean" />
+    <Property Name="IsOpened" Type="Boolean" />
+    <Property Name="eve_timezone" Type="Int32" />
+  </EntityType>
+  <Association Name="FK_dental_vision_Carriers">
+    <End Type="SQSalesToolLead.Carrier" Role="Carrier" Multiplicity="0..1" />
+    <End Type="SQSalesToolLead.DentalVision" Role="DentalVision" Multiplicity="*" />
+  </Association>
+  <Association Name="FK_Accounts_Original_user">
+    <End Type="SQSalesToolLead.UserL" Role="UserL" Multiplicity="0..1" />
+    <End Type="SQSalesToolLead.Account" Role="Account" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UserL">
+        <PropertyRef Name="Key" />
+      </Principal>
+      <Dependent Role="Account">
+        <PropertyRef Name="OriginalUserKey" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Accounts_Original_user1">
+    <End Type="SQSalesToolLead.UserL" Role="UserL" Multiplicity="0..1" />
+    <End Type="SQSalesToolLead.Account" Role="Account" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UserL">
+        <PropertyRef Name="Key" />
+      </Principal>
+      <Dependent Role="Account">
+        <PropertyRef Name="OriginalUserKey" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="vw_ArcChangeAgent">
+    <Key>
+      <PropertyRef Name="AccountHistoryId" />
+      <PropertyRef Name="AccountId" />
+    </Key>
+    <Property Type="Int64" Name="AccountHistoryId" Nullable="false" />
+    <Property Type="String" Name="Entry" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="Int64" Name="AccountId" Nullable="false" />
+    <Property Type="String" Name="Comment" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="Guid" Name="User" />
+    <Property Type="DateTime" Name="Datetime" Precision="3" />
+    <Property Type="Byte" Name="EntryType" />
+    <Property Type="Int64" Name="Action" />
+    <Property Type="Int64" Name="CurrentStatus" />
+    <Property Type="Int64" Name="CurrentSubstatus" />
+    <Property Type="Int64" Name="NewStatus" />
+    <Property Type="Int64" Name="NewSubstatus" />
+    <Property Type="Boolean" Name="IsDeliveredToArc" Nullable="false" />
+    <Property Type="Int32" Name="ArcTalkTime" />
+    <Property Type="String" Name="ArcDNS" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ArcContactId" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="RuleId" />
+    <Property Type="Boolean" Name="IsUserCSR" />
+    <Property Type="Boolean" Name="IsUserAssigned" />
+    <Property Type="Boolean" Name="IsUserTA" />
+    <Property Type="Boolean" Name="IsUserAp" />
+    <Property Type="Boolean" Name="IsUserOb" />
+    <Property Type="Int32" Name="PolicyStatusType" />
+    <Property Type="Int64" Name="PolicyStatusId" />
+    <NavigationProperty Name="Account" Relationship="SQSalesToolLead.Accountvw_ArcChangeAgent" FromRole="vw_ArcChangeAgent" ToRole="Account" />
+  </EntityType>
+  <Association Name="Accountvw_ArcChangeAgent">
+    <End Type="SQSalesToolLead.Account" Role="Account" Multiplicity="1" />
+    <End Type="SQSalesToolLead.vw_ArcChangeAgent" Role="vw_ArcChangeAgent" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Account">
+        <PropertyRef Name="Key" />
+      </Principal>
+      <Dependent Role="vw_ArcChangeAgent">
+        <PropertyRef Name="AccountId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="PolicyStatusType">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="String" Name="Name" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="ID" Nullable="false" />
+  </EntityType>
+  <EntityType Name="AccountHistoryEntry">
+    <Key>
+      <PropertyRef Name="Key" />
+    </Key>
+    <Property Type="Int64" Name="Key" Nullable="false" />
+    <Property Type="Byte" Name="EntryType" />
+    <Property Type="String" Name="Entry" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="Guid" Name="UserKey" />
+    <Property Type="Int64" Name="AccountId" />
+    <Property Type="String" Name="Comment" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="FullName" MaxLength="401" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Type="DateTime" Name="AddedOn" Precision="3" />
+    <Property Type="String" Name="UserTypes" MaxLength="128" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="PVTitle" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="TalkTime" />
+    <Property Type="String" Name="DNIS" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ContactId" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="QueueInboundPersonal">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int64" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Skill" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ContactId" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="PhoneNumber" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="AddDate" Precision="3" />
+    <Property Type="DateTime" Name="ModifiedDate" Precision="3" />
+    <Property Type="String" Name="AddedBy" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ModifiedBy" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Status" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="QueueTimeStamp" Precision="3" />
+  </EntityType>
+  <EntityType Name="QueueInboundACD">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Skill" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="ContactId" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="PhoneNumber" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="AddDate" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="AddedBy" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="ModifiedBy" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Status" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="QueueTimeStamp" Type="DateTime" Precision="3" />
+    <Property Name="CampaignId" Type="Int32" />
+    <Property Name="StateKey" Type="Guid" />
+    <Property Name="qia_call_taken_by" Type="Guid" />
+    <Property Name="qia_call_taken_time" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="AreaCodeToTimeZone">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="AreaCode" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+    <Property Name="TimeZone" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="TimeZoneKey" Type="Int32" />
+    <Property Name="StateId" Type="Guid" />
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="MapdpReasonCodes">
+    <Key>
+      <PropertyRef Name="Key" />
+    </Key>
+    <Property Name="Key" Type="Int32" Nullable="false" />
+    <Property Name="Reason" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="MapDPs" Relationship="SQSalesToolLead.FK__mapdps__mapdp_ms__7425102E" FromRole="mapdp_reason_codes" ToRole="Mapdp" />
+  </EntityType>
+  <EntityType Name="MedsupAppType">
+    <Key>
+      <PropertyRef Name="Key" />
+    </Key>
+    <Property Name="Key" Type="Int32" Nullable="false" />
+    <Property Name="AppType" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="MedicalSupplements" Relationship="SQSalesToolLead.FK__medsups__msa_app__7148A383" FromRole="medsup_app_type" ToRole="Medsup" />
+  </EntityType>
+  <Association Name="FK__mapdps__mapdp_ms__7425102E">
+    <End Type="SQSalesToolLead.MapdpReasonCodes" Role="mapdp_reason_codes" Multiplicity="0..1" />
+    <End Type="SQSalesToolLead.Mapdp" Role="Mapdp" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="mapdp_reason_codes">
+        <PropertyRef Name="Key" />
+      </Principal>
+      <Dependent Role="Mapdp">
+        <PropertyRef Name="ReasonCodeKey" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__medsups__msa_app__7148A383">
+    <End Type="SQSalesToolLead.MedsupAppType" Role="medsup_app_type" Multiplicity="0..1" />
+    <End Type="SQSalesToolLead.Medsup" Role="Medsup" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="medsup_app_type">
+        <PropertyRef Name="Key" />
+      </Principal>
+      <Dependent Role="Medsup">
+        <PropertyRef Name="ApplicationTypeKey" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="QueueAcdStatistics">
+    <Key>
+      <PropertyRef Name="QueueId" />
+    </Key>
+    <Property Name="QueueId" Type="Guid" Nullable="false" />
+    <Property Name="AcdCount" Type="Int32" />
+    <Property Name="MaxAcd" Type="Int32" />
+    <Property Name="MaxQuota" Type="Int32" />
+    <Property Name="MinLevel" Type="Int32" />
+    <Property Name="NextRefresh" Type="Int32" />
+    <Property Name="AcdCallTaken" Type="Int32" />
+    <Property Name="PVScheduleResult" Type="Int32" />
+    <Property Name="IsEnabled" Type="Boolean" />
+    <Property Name="Reason" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="qas_last_update" Type="DateTime" Precision="3" />
+  </EntityType>
+  <ComplexType Name="ACDToDial_Result">
+    <Property Type="Int64" Name="qia_key" Nullable="false" />
+    <Property Type="String" Name="qia_skill" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="qia_contactID" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="qia_phone_number" Nullable="true" MaxLength="100" />
+    <Property Type="DateTime" Name="qia_add_date" Nullable="true" Precision="23" />
+  </ComplexType>
+  <EntityType Name="IndividualPrescriptions">
+    <Key>
+      <PropertyRef Name="Key" />
+    </Key>
+    <Property Name="Key" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IndividualKey" Type="Int64" Nullable="false" />
+    <Property Name="DrugId" Type="Int32" Nullable="false" />
+    <Property Name="AmountPer30Days" Type="Int32" Nullable="false" />
+    <Property Name="DosageId" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="PackageId" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="SelectedInfoXml" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="AddedBy" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="AddedOn" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ModifiedBy" Type="Int32" />
+    <Property Name="ModifiedOn" Type="DateTime" Precision="3" />
+    <Property Name="IsDelete" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Individuals" Relationship="SQSalesToolLead.FK_individual_drug_prescriptions" FromRole="IndividualPrescriptions" ToRole="Individual" />
+  </EntityType>
+  <Association Name="FK_individual_drug_prescriptions">
+    <End Type="SQSalesToolLead.Individual" Role="Individual" Multiplicity="1" />
+    <End Type="SQSalesToolLead.IndividualPrescriptions" Role="IndividualPrescriptions" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Individual">
+        <PropertyRef Name="Key" />
+      </Principal>
+      <Dependent Role="IndividualPrescriptions">
+        <PropertyRef Name="IndividualKey" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="vw_AccountEventCalendar">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Int64" Name="ID" Nullable="false" />
+    <Property Type="Int64" Name="AccountID" Nullable="false" />
+    <Property Type="Guid" Name="UserID" Nullable="false" />
+    <Property Type="String" Name="Title" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Description" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="Boolean" Name="IsTimeFromNow" Nullable="false" />
+    <Property Type="Int32" Name="TimeFromNow" Nullable="false" />
+    <Property Type="Boolean" Name="IsSpecificDateTimeFromNow" Nullable="false" />
+    <Property Type="DateTime" Name="SpecificDateTimeFromNow" Nullable="false" Precision="0" />
+    <Property Type="Boolean" Name="AlertPopup" Nullable="false" />
+    <Property Type="Boolean" Name="AlertEmail" Nullable="false" />
+    <Property Type="Boolean" Name="AlertTextSMS" Nullable="false" />
+    <Property Type="Int32" Name="AlertTimeBefore" Nullable="false" />
+    <Property Type="Boolean" Name="CreateOutlookReminder" Nullable="false" />
+    <Property Type="Boolean" Name="DismissUponStatusChange" Nullable="false" />
+    <Property Type="Int32" Name="EventType" Nullable="false" />
+    <Property Type="Int32" Name="EventStatus" Nullable="false" />
+    <Property Type="Int32" Name="SnoozeAfter" Nullable="false" />
+    <Property Type="Boolean" Name="Completed" Nullable="false" />
+    <Property Type="Boolean" Name="Dismissed" Nullable="false" />
+    <Property Type="Boolean" Name="IsActive" Nullable="false" />
+    <Property Type="Boolean" Name="IsDeleted" Nullable="false" />
+    <Property Type="Boolean" Name="IsOpened" />
+    <Property Type="Int32" Name="TimeZoneId" />
+    <Property Name="Added" Type="SQSalesToolLead.History1" Nullable="false" />
+    <Property Name="Changed" Type="SQSalesToolLead.History1" Nullable="false" />
+    <NavigationProperty Name="Account" Relationship="SQSalesToolLead.Accountvw_AccountEventCalendar" FromRole="vw_AccountEventCalendar" ToRole="Account" />
+    <NavigationProperty Name="User" Relationship="SQSalesToolLead.UserLvw_AccountEventCalendar" FromRole="vw_AccountEventCalendar" ToRole="UserL" />
+  </EntityType>
+  <Association Name="Accountvw_AccountEventCalendar">
+    <End Type="SQSalesToolLead.Account" Role="Account" Multiplicity="1" />
+    <End Type="SQSalesToolLead.vw_AccountEventCalendar" Role="vw_AccountEventCalendar" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Account">
+        <PropertyRef Name="Key" />
+      </Principal>
+      <Dependent Role="vw_AccountEventCalendar">
+        <PropertyRef Name="AccountID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="UserLvw_AccountEventCalendar">
+    <End Type="SQSalesToolLead.UserL" Role="UserL" Multiplicity="1" />
+    <End Type="SQSalesToolLead.vw_AccountEventCalendar" Role="vw_AccountEventCalendar" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UserL">
+        <PropertyRef Name="Key" />
+      </Principal>
+      <Dependent Role="vw_AccountEventCalendar">
+        <PropertyRef Name="UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="ArcCompanyDirectory">
+    <Key>
+      <PropertyRef Name="Key" />
+    </Key>
+    <Property Name="Key" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Initials" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="UserId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Alias" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Name" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="Title" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Hours" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Department" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Assistant1" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Assistant2" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Assistant3" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Assistant4" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Assistant5" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Extension" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PhoneNumber" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="FaxNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ClientGroup1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ClientGroup2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ClientGroup3" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ClientGroup4" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ClientGroup5" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="SubInitials" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="StartDate" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="EndDate" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="SalesManagerInitials" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="FirstName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="LastName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="TerminationDate" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="IcmExtension" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="TransferExtension" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="CompManager" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+</Schema>

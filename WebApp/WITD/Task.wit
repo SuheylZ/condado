@@ -1,0 +1,173 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<workItemType xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="12.0.0.0" Name="Task" source="task.xml" xmlns="http://schemas.microsoft.com/dsltools/WITDesigner">
+  <States>
+    <state Name="To Do">
+      <Source>
+        <transitionMoniker Name="/Task/To Do~In Progress" />
+        <transitionMoniker Name="/Task/To Do~Done" />
+        <transitionMoniker Name="/Task/To Do~Removed" />
+      </Source>
+      <fields>
+        <stateFieldConstraint Id="78072adf-e8c1-4e4b-985e-cc74312086f1" ruleTag="- ">
+          <fieldMoniker Name="/Task/Closed Date" />
+        </stateFieldConstraint>
+      </fields>
+    </state>
+    <state Name="In Progress">
+      <Source>
+        <transitionMoniker Name="/Task/In Progress~Done" />
+        <transitionMoniker Name="/Task/In Progress~Removed" />
+        <transitionMoniker Name="/Task/In Progress~To Do" />
+      </Source>
+      <fields>
+        <stateFieldConstraint Id="364503cd-16df-4997-ae02-cebe8e5e3bab" ruleTag="- ">
+          <fieldMoniker Name="/Task/Closed Date" />
+        </stateFieldConstraint>
+      </fields>
+    </state>
+    <state Name="Done">
+      <Source>
+        <transitionMoniker Name="/Task/Done~In Progress" />
+        <transitionMoniker Name="/Task/Done~To Do" />
+      </Source>
+      <fields>
+        <stateFieldConstraint Id="be99ed97-6e9b-4e59-bf40-16a9da1e55e1" ruleTag="- ">
+          <fieldMoniker Name="/Task/Blocked" />
+        </stateFieldConstraint>
+        <stateFieldConstraint Id="5996401f-33f8-44b0-a39c-ad5b04dc4190" ruleTag="- ">
+          <fieldMoniker Name="/Task/Remaining Work" />
+        </stateFieldConstraint>
+        <stateFieldConstraint Id="11968f84-0de3-48e1-b35d-dc580235b74d" ruleTag="+ ">
+          <fieldMoniker Name="/Task/Closed Date" />
+        </stateFieldConstraint>
+      </fields>
+    </state>
+    <state Name="Removed">
+      <Source>
+        <transitionMoniker Name="/Task/Removed~To Do" />
+      </Source>
+      <fields>
+        <stateFieldConstraint Id="ee993fd0-20e1-428d-82e2-96cd9115e6e8" ruleTag="- ">
+          <fieldMoniker Name="/Task/Blocked" />
+        </stateFieldConstraint>
+        <stateFieldConstraint Id="46930656-0c79-4004-a9da-e38d3aee7f08" ruleTag="- ">
+          <fieldMoniker Name="/Task/Remaining Work" />
+        </stateFieldConstraint>
+      </fields>
+    </state>
+  </States>
+  <Fields>
+    <field Name="Closed Date" referenceName="Microsoft.VSTS.Common.ClosedDate" />
+    <field Name="Remaining Work" referenceName="Microsoft.VSTS.Scheduling.RemainingWork" />
+    <field Name="Blocked" referenceName="Microsoft.VSTS.CMMI.Blocked" />
+  </Fields>
+  <Transitions>
+    <transition Id="88c79eb0-ad87-418b-a590-2e8ddb0e0131" Name="To Do~In Progress">
+      <Target>
+        <stateMoniker Name="/Task/In Progress" />
+      </Target>
+      <Reasons>
+        <reason Name="Work started" />
+      </Reasons>
+      <actions>
+        <action Name="Microsoft.VSTS.Actions.StartWork" />
+      </actions>
+    </transition>
+    <transition Id="2f8bd527-ea39-470c-a3a5-43aa2c445a8d" Name="In Progress~Done">
+      <Target>
+        <stateMoniker Name="/Task/Done" />
+      </Target>
+      <Reasons>
+        <reason Name="Work finished" />
+      </Reasons>
+      <actions>
+        <action Name="Microsoft.VSTS.Actions.Checkin" />
+      </actions>
+      <fields>
+        <transitionFieldConstraint ruleTag="* ">
+          <fieldMoniker Name="/Task/Closed Date" />
+        </transitionFieldConstraint>
+      </fields>
+    </transition>
+    <transition Id="067b34ef-803b-452e-ba44-b4ecf24a9bf9" Name="To Do~Done">
+      <Target>
+        <stateMoniker Name="/Task/Done" />
+      </Target>
+      <Reasons>
+        <reason Name="Work finished" />
+      </Reasons>
+      <actions>
+        <action Name="Microsoft.VSTS.Actions.Checkin" />
+      </actions>
+      <fields>
+        <transitionFieldConstraint ruleTag="* ">
+          <fieldMoniker Name="/Task/Closed Date" />
+        </transitionFieldConstraint>
+      </fields>
+    </transition>
+    <transition Id="6c4bae09-dcd5-43bb-a0d7-65cd32009388" Name="~To Do">
+      <Target>
+        <stateMoniker Name="/Task/To Do" />
+      </Target>
+      <Reasons>
+        <reason Name="New task" />
+      </Reasons>
+    </transition>
+    <transition Id="27d20fed-816f-49c9-a9a2-174e85d9b60f" Name="To Do~Removed">
+      <Target>
+        <stateMoniker Name="/Task/Removed" />
+      </Target>
+      <Reasons>
+        <reason Name="Removed from the backlog" />
+      </Reasons>
+    </transition>
+    <transition Id="809396aa-189a-4514-9a2d-01806197157e" Name="In Progress~Removed">
+      <Target>
+        <stateMoniker Name="/Task/Removed" />
+      </Target>
+      <Reasons>
+        <reason Name="Removed from the backlog" />
+      </Reasons>
+    </transition>
+    <transition Id="d24d3a52-0303-45c0-bd63-7e377cfb39bb" Name="Done~In Progress">
+      <Target>
+        <stateMoniker Name="/Task/In Progress" />
+      </Target>
+      <Reasons>
+        <reason Name="Additional work found" />
+      </Reasons>
+      <fields>
+        <transitionFieldConstraint ruleTag="+ ">
+          <fieldMoniker Name="/Task/Remaining Work" />
+        </transitionFieldConstraint>
+      </fields>
+    </transition>
+    <transition Id="52d946ea-20cd-412d-80d9-02ae45fdf928" Name="Done~To Do">
+      <Target>
+        <stateMoniker Name="/Task/To Do" />
+      </Target>
+      <Reasons>
+        <reason Name="Additional work found" />
+      </Reasons>
+    </transition>
+    <transition Id="4b418223-30f2-4a45-bbfc-42c2bc4cffdb" Name="In Progress~To Do">
+      <Target>
+        <stateMoniker Name="/Task/To Do" />
+      </Target>
+      <Reasons>
+        <reason Name="Work stopped" />
+      </Reasons>
+      <actions>
+        <action Name="Microsoft.VSTS.Actions.StopWork" />
+      </actions>
+    </transition>
+    <transition Id="f28230f1-807e-428f-9702-a785dc473f4c" Name="Removed~To Do">
+      <Target>
+        <stateMoniker Name="/Task/To Do" />
+      </Target>
+      <Reasons>
+        <reason Name="Reconsidering the Task" />
+      </Reasons>
+    </transition>
+  </Transitions>
+</workItemType>

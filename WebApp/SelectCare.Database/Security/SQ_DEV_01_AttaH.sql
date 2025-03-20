@@ -1,0 +1,2 @@
+﻿CREATE USER [SQ_DEV_01\AttaH] FOR LOGIN [SQ_DEV_01\AttaH];
+

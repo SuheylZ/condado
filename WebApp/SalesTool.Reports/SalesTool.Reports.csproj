@@ -1,0 +1,245 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{19380CBD-E912-469D-86EA-557C6220EA6B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SalesTool.Reports</RootNamespace>
+    <AssemblyName>SalesTool.Reports</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Telerik.Reporting">
+      <HintPath>..\Dependencies\Telerik.Reporting\Lib\Telerik.Reporting.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CarrierMix.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CarrierMix.Designer.cs">
+      <DependentUpon>CarrierMix.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Commision.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Commision.Designer.cs">
+      <DependentUpon>Commision.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FillFormSpeed.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FillFormSpeed.Designer.cs">
+      <DependentUpon>FillFormSpeed.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StackRankings.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="StackRankings.Designer.cs">
+      <DependentUpon>StackRankings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Scorecard.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Scorecard.Designer.cs">
+      <DependentUpon>Scorecard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CaseSpecialist.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CaseSpecialist.Designer.cs">
+      <DependentUpon>CaseSpecialist.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Falloff.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Falloff.Designer.cs">
+      <DependentUpon>Falloff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Goal.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Goal.Designer.cs">
+      <DependentUpon>Goal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Premium.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Premium.Designer.cs">
+      <DependentUpon>Premium.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubmitEnrollment.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SubmitEnrollment.Designer.cs">
+      <DependentUpon>SubmitEnrollment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PrioritizedListReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PrioritizedListReport.Designer.cs">
+      <DependentUpon>PrioritizedListReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LeadVolume.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="LeadVolume.Designer.cs">
+      <DependentUpon>LeadVolume.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IncentiveTracking.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="IncentiveTracking.Designer.cs">
+      <DependentUpon>IncentiveTracking.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QuotaTracking.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="QuotaTracking.Designer.cs">
+      <DependentUpon>QuotaTracking.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pipeline.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Pipeline.Designer.cs">
+      <DependentUpon>Pipeline.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="CPAByAgent.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CPAByAgent.Designer.cs">
+      <DependentUpon>CPAByAgent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportManager.cs" />
+    <Compile Include="Sample.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Sample.Designer.cs">
+      <DependentUpon>Sample.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="CarrierMix.resx">
+      <DependentUpon>CarrierMix.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Commision.resx">
+      <DependentUpon>Commision.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FillFormSpeed.resx">
+      <DependentUpon>FillFormSpeed.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StackRankings.resx">
+      <DependentUpon>StackRankings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Scorecard.resx">
+      <DependentUpon>Scorecard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CaseSpecialist.resx">
+      <DependentUpon>CaseSpecialist.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Falloff.resx">
+      <DependentUpon>Falloff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Goal.resx">
+      <DependentUpon>Goal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Premium.resx">
+      <DependentUpon>Premium.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubmitEnrollment.resx">
+      <DependentUpon>SubmitEnrollment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrioritizedListReport.resx">
+      <DependentUpon>PrioritizedListReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LeadVolume.resx">
+      <DependentUpon>LeadVolume.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IncentiveTracking.resx">
+      <DependentUpon>IncentiveTracking.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuotaTracking.resx">
+      <DependentUpon>QuotaTracking.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pipeline.resx">
+      <DependentUpon>Pipeline.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CPAByAgent.resx">
+      <DependentUpon>CPAByAgent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sample.resx">
+      <DependentUpon>Sample.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\select-care-logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SC_logo.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

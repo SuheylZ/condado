@@ -1,0 +1,53 @@
+﻿CREATE TABLE [dbo].[mapdps] (
+    [mapdp_key]                    BIGINT           IDENTITY (1, 1) NOT FOR REPLICATION NOT NULL,
+    [mapdp_type]                   BIGINT           NULL,
+    [mapdp_enroller]               UNIQUEIDENTIFIER NULL,
+    [mapdp_carrier]                BIGINT           NULL,
+    [mapdp_plan_name]              NVARCHAR (200)   NULL,
+    [mapdp_plan_number]            NVARCHAR (50)    NULL,
+    [mapdp_plan_type]              NVARCHAR (50)    NULL,
+    [mapdp_special_notes]          NVARCHAR (MAX)   NULL,
+    [mapdp_enrollment_date]        DATETIME         NULL,
+    [mapdp_effective_date]         DATETIME         NULL,
+    [mapdp_writing_nmbr]           NVARCHAR (100)   NULL,
+    [mapdp_medicare_id]            NVARCHAR (50)    NULL,
+    [mapdp_marital_status]         NVARCHAR (50)    NULL,
+    [mapdp_policy_id_number]       NVARCHAR (MAX)   NULL,
+    [mapdp_switcher]               NVARCHAR (10)    NULL,
+    [mapdp_coventry_pdp_referal]   BIT              NULL,
+    [mapdp_voice_sig_sent_date]    DATETIME         NULL,
+    [mapdp_spouce_type]            NVARCHAR (50)    NULL,
+    [mapdp_spouce_carrier]         NVARCHAR (50)    NULL,
+    [mapdp_spouce_plan_nmbr]       NVARCHAR (50)    NULL,
+    [mapdp_spouce_plan_type]       NVARCHAR (100)   NULL,
+    [mapdp_spouce_plan_name]       NVARCHAR (MAX)   NULL,
+    [mapdp_spouce_enrollment_date] DATETIME         NULL,
+    [mapdp_spouce_effective_date]  DATETIME         NULL,
+    [mapdp_spouce_policy_id_nmbr]  NVARCHAR (30)    NULL,
+    [mapdp_souce_medicare_id]      NVARCHAR (50)    NULL,
+    [mapdp_ma_issue_date]          DATETIME         NULL,
+    [mapdp_lapse_date]             DATETIME         NULL,
+    [mapdp_paid_from_carrier]      BIT              NULL,
+    [mapdp_commission_amount]      FLOAT (53)       NULL,
+    [mapdp_commission_paid_date]   DATETIME         NULL,
+    [mapdp_dte_purchased_pdp]      BIT              NULL,
+    [mapdp_add_user]               NVARCHAR (100)   NULL,
+    [mapdp_add_date]               DATETIME         NULL,
+    [mapdp_modified_user]          NVARCHAR (50)    NULL,
+    [mapdp_modified_date]          DATETIME         NULL,
+    [mapdp_active_flag]            BIT              NULL,
+    [mapdp_delete_flag]            BIT              NULL,
+    [mapdp_indv_id]                BIGINT           NULL,
+    [madpd_lead_id]                BIGINT           NULL,
+    [madpd_account_id]             BIGINT           NULL,
+    [madpd_pls_key]                BIGINT           NULL,
+    [mapdp_company_name]           NVARCHAR (255)   NULL,
+    CONSTRAINT [PK_mapdps] PRIMARY KEY CLUSTERED ([mapdp_key] ASC),
+    CONSTRAINT [FK_mapdps_policy_statuses] FOREIGN KEY ([madpd_pls_key]) REFERENCES [dbo].[policy_statuses] ([pls_key])
+);
+
+
+GO
+CREATE NONCLUSTERED INDEX [IX_mapdps]
+    ON [dbo].[mapdps]([mapdp_key] ASC, [madpd_account_id] ASC, [mapdp_carrier] ASC, [mapdp_delete_flag] ASC, [mapdp_indv_id] ASC);
+

@@ -1,0 +1,291 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="GALModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityContainer Name="GALModelStoreContainer">
+          <EntitySet Name="Application_Storage" EntityType="GALModel.Store.Application_Storage" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="GALEngineListsDump" EntityType="GALModel.Store.GALEngineListsDump" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="queue_acd_statistics" EntityType="GALModel.Store.queue_acd_statistics" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="queue_inbound_acd" EntityType="GALModel.Store.queue_inbound_acd" store:Type="Tables" Schema="dbo" />
+        </EntityContainer>
+        <EntityType Name="Application_Storage">
+          <Key>
+            <PropertyRef Name="Key" />
+          </Key>
+          <Property Name="Key" Type="nvarchar" Nullable="false" MaxLength="40" />
+          <Property Name="iValue" Type="int" />
+          <Property Name="fValue" Type="numeric" Precision="10" Scale="4" />
+          <Property Name="bValue" Type="bit" />
+          <Property Name="uValue" Type="uniqueidentifier" />
+          <Property Name="dValue" Type="datetime" />
+          <Property Name="tvalue" Type="text" />
+        </EntityType>
+        <EntityType Name="GALEngineListsDump">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ACDListDump" Type="varchar(max)" />
+          <Property Name="GWBListDump" Type="varchar(max)" />
+        </EntityType>
+        <EntityType Name="queue_acd_statistics">
+          <Key>
+            <PropertyRef Name="qas_agent_id" />
+          </Key>
+          <Property Name="qas_agent_id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="qas_acd_count" Type="int" />
+          <Property Name="qas_max_acd" Type="int" />
+          <Property Name="qas_max_quota" Type="int" />
+          <Property Name="qas_min_level" Type="int" />
+          <Property Name="qas_next_refresh" Type="int" />
+          <Property Name="qas_acd_call_taken" Type="int" />
+          <Property Name="qas_PV_schedule_result" Type="int" />
+          <Property Name="qas_is_enabled" Type="bit" />
+          <Property Name="qas_reason" Type="nvarchar" MaxLength="25" />
+          <Property Name="qas_last_update" Type="datetime" />
+        </EntityType>
+        <EntityType Name="queue_inbound_acd">
+          <Key>
+            <PropertyRef Name="qia_key" />
+          </Key>
+          <Property Name="qia_key" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="qia_skill" Type="varchar" MaxLength="100" />
+          <Property Name="qia_contactID" Type="varchar" MaxLength="100" />
+          <Property Name="qia_phone_number" Type="varchar" MaxLength="100" />
+          <Property Name="qia_add_date" Type="datetime" />
+          <Property Name="qia_mod_date" Type="datetime" />
+          <Property Name="qia_add_usr" Type="varchar" MaxLength="100" />
+          <Property Name="qia_mod_usr" Type="varchar" MaxLength="100" />
+          <Property Name="qia_status" Type="varchar" MaxLength="100" />
+          <Property Name="qia_timestamp" Type="datetime" />
+          <Property Name="qia_cmp_id" Type="int" />
+          <Property Name="qia_sta_key" Type="uniqueidentifier" />
+          <Property Name="qia_call_taken_by" Type="uniqueidentifier" />
+          <Property Name="qia_call_taken_time" Type="datetime" />
+        </EntityType>
+        <Function Name="ACDToDial" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="agentID" Type="uniqueidentifier" Mode="In" />
+        </Function>
+        <Function Name="GetACDStatistics" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="GetAgentListForACDUpdate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="inboundQueueID" Type="bigint" Mode="In" />
+        </Function>
+        <Function Name="LeadBasicDisplayAllAgents" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="GALModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="GALEngineEntities" p1:LazyLoadingEnabled="true">
+          <EntitySet Name="Application_Storage" EntityType="GALModel.ApplicationStorage" />
+          <EntitySet Name="queue_acd_statistics" EntityType="GALModel.queueAcdStatistics" />
+          <EntitySet Name="queue_inbound_acd" EntityType="GALModel.queueInboundAcd" />
+          <FunctionImport Name="ACDToDial" ReturnType="Collection(GALModel.ACDToDial_Result)">
+          <Parameter Name="agentID" Mode="In" Type="Guid" />
+          </FunctionImport>
+          <FunctionImport Name="GetACDStatistics" />
+          <FunctionImport Name="UpdateStatsCallTaken">
+            <Parameter Name="agentID" Mode="In" Type="Guid" />
+            <Parameter Name="acdqueueID" Mode="In" Type="Int64" />
+          </FunctionImport>
+          <FunctionImport Name="GetAgentListForACDUpdate" ReturnType="Collection(Guid)">
+          <Parameter Name="inboundQueueID" Mode="In" Type="Int64" />
+          </FunctionImport>
+          <FunctionImport Name="LeadBasicDisplayForAllAgents" ReturnType="Collection(GALModel.LeadBasicDisplayForAllAgents_Result)" />
+          <EntitySet Name="GALEngineListsDump" EntityType="GALModel.GALEngineListsDump" />
+        </EntityContainer>
+        <EntityType Name="ApplicationStorage">
+          <Key>
+            <PropertyRef Name="Key" />
+          </Key>
+          <Property Name="Key" Type="String" Nullable="false" MaxLength="40" Unicode="true" FixedLength="false" />
+          <Property Name="iValue" Type="Int32" />
+          <Property Name="fValue" Type="Decimal" Precision="10" Scale="4" />
+          <Property Name="bValue" Type="Boolean" />
+          <Property Name="uValue" Type="Guid" />
+          <Property Name="dValue" Type="DateTime" Precision="3" />
+          <Property Name="tvalue" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="queueAcdStatistics">
+          <Key>
+            <PropertyRef Name="AgentID" />
+          </Key>
+          <Property Name="AgentID" Type="Guid" Nullable="false" />
+          <Property Name="AcdCount" Type="Int32" />
+          <Property Name="MaxAcd" Type="Int32" />
+          <Property Name="MaxQuota" Type="Int32" />
+          <Property Name="MinLevel" Type="Int32" />
+          <Property Name="NextRefresh" Type="Int32" />
+          <Property Name="AcdCallTaken" Type="Int32" />
+          <Property Name="PVScheduleResult" Type="Int32" />
+          <Property Type="Boolean" Name="IsEnabled" />
+          <Property Type="String" Name="Reason" MaxLength="25" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="qas_last_update" Precision="3" />
+        </EntityType>
+        <EntityType Name="queueInboundAcd">
+          <Key>
+            <PropertyRef Name="Key" />
+          </Key>
+          <Property Name="Key" Type="Int64" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="Skill" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="ContactID" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="PhoneMumber" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="AddDate" Type="DateTime" Precision="3" />
+          <Property Name="ModDate" Type="DateTime" Precision="3" />
+          <Property Name="AddUser" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="ModUser" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="Status" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="Timestamp" Type="DateTime" Precision="3" />
+          <Property Name="CmpID" Type="Int32" />
+          <Property Name="StaKey" Type="Guid" />
+          <Property Type="Guid" Name="CallTakenBy" />
+          <Property Type="DateTime" Name="CallTakenTime" Precision="3" />
+        </EntityType>
+        <ComplexType Name="ACDToDial_Result">
+          <Property Type="Int64" Name="qia_key" Nullable="false" />
+          <Property Type="String" Name="qia_skill" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="qia_contactID" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="qia_phone_number" Nullable="true" MaxLength="100" />
+          <Property Type="DateTime" Name="qia_add_date" Nullable="true" Precision="23" />
+        </ComplexType>
+        <ComplexType Name="LeadBasicDisplayForAllAgents_Result">
+          <Property Type="Guid" Name="agent_l360_username" Nullable="false" />
+          <Property Type="Int32" Name="avg_max" Nullable="true" />
+          <Property Type="Int32" Name="total_assigned_leads" Nullable="true" />
+          <Property Type="Int32" Name="agent_max" Nullable="true" />
+          <Property Type="Int32" Name="total_available_leads" Nullable="true" />
+          <Property Type="Int32" Name="total_assignable_leads" Nullable="true" />
+          <Property Type="DateTime" Name="oldest_available" Nullable="true" Precision="23" />
+          <Property Type="DateTime" Name="newest_available" Nullable="true" Precision="23" />
+          <Property Type="DateTime" Name="last_refresh" Nullable="false" Precision="23" />
+          <Property Type="Boolean" Name="IsEnabled" Nullable="true" />
+          <Property Type="String" Name="Reason" Nullable="true" MaxLength="25" />
+        </ComplexType>
+        <EntityType Name="GALEngineListsDump">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int64" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="ACDListDump" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="GWBListDump" MaxLength="Max" FixedLength="false" Unicode="false" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="GALModelStoreContainer" CdmEntityContainer="GALEngineEntities">
+          <EntitySetMapping Name="Application_Storage">
+            <EntityTypeMapping TypeName="GALModel.ApplicationStorage">
+              <MappingFragment StoreEntitySet="Application_Storage">
+                <ScalarProperty Name="Key" ColumnName="Key" />
+                <ScalarProperty Name="iValue" ColumnName="iValue" />
+                <ScalarProperty Name="fValue" ColumnName="fValue" />
+                <ScalarProperty Name="bValue" ColumnName="bValue" />
+                <ScalarProperty Name="uValue" ColumnName="uValue" />
+                <ScalarProperty Name="dValue" ColumnName="dValue" />
+                <ScalarProperty Name="tvalue" ColumnName="tvalue" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="queue_acd_statistics">
+            <EntityTypeMapping TypeName="GALModel.queueAcdStatistics">
+              <MappingFragment StoreEntitySet="queue_acd_statistics">
+                <ScalarProperty Name="qas_last_update" ColumnName="qas_last_update" />
+                <ScalarProperty Name="Reason" ColumnName="qas_reason" />
+                <ScalarProperty Name="IsEnabled" ColumnName="qas_is_enabled" />
+                <ScalarProperty Name="AgentID" ColumnName="qas_agent_id" />
+                <ScalarProperty Name="AcdCount" ColumnName="qas_acd_count" />
+                <ScalarProperty Name="MaxAcd" ColumnName="qas_max_acd" />
+                <ScalarProperty Name="MaxQuota" ColumnName="qas_max_quota" />
+                <ScalarProperty Name="MinLevel" ColumnName="qas_min_level" />
+                <ScalarProperty Name="NextRefresh" ColumnName="qas_next_refresh" />
+                <ScalarProperty Name="AcdCallTaken" ColumnName="qas_acd_call_taken" />
+                <ScalarProperty Name="PVScheduleResult" ColumnName="qas_PV_schedule_result" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="queue_inbound_acd">
+            <EntityTypeMapping TypeName="GALModel.queueInboundAcd">
+              <MappingFragment StoreEntitySet="queue_inbound_acd">
+                <ScalarProperty Name="CallTakenTime" ColumnName="qia_call_taken_time" />
+                <ScalarProperty Name="CallTakenBy" ColumnName="qia_call_taken_by" />
+                <ScalarProperty Name="Key" ColumnName="qia_key" />
+                <ScalarProperty Name="Skill" ColumnName="qia_skill" />
+                <ScalarProperty Name="ContactID" ColumnName="qia_contactID" />
+                <ScalarProperty Name="PhoneMumber" ColumnName="qia_phone_number" />
+                <ScalarProperty Name="AddDate" ColumnName="qia_add_date" />
+                <ScalarProperty Name="ModDate" ColumnName="qia_mod_date" />
+                <ScalarProperty Name="AddUser" ColumnName="qia_add_usr" />
+                <ScalarProperty Name="ModUser" ColumnName="qia_mod_usr" />
+                <ScalarProperty Name="Status" ColumnName="qia_status" />
+                <ScalarProperty Name="Timestamp" ColumnName="qia_timestamp" />
+                <ScalarProperty Name="CmpID" ColumnName="qia_cmp_id" />
+                <ScalarProperty Name="StaKey" ColumnName="qia_sta_key" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="ACDToDial" FunctionName="GALModel.Store.ACDToDial">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="GALModel.ACDToDial_Result">
+                <ScalarProperty Name="qia_key" ColumnName="qia_key" />
+                <ScalarProperty Name="qia_skill" ColumnName="qia_skill" />
+                <ScalarProperty Name="qia_contactID" ColumnName="qia_contactID" />
+                <ScalarProperty Name="qia_phone_number" ColumnName="qia_phone_number" />
+                <ScalarProperty Name="qia_add_date" ColumnName="qia_add_date" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="GetACDStatistics" FunctionName="GALModel.Store.GetACDStatistics" />
+          <FunctionImportMapping FunctionImportName="GetAgentListForACDUpdate" FunctionName="GALModel.Store.GetAgentListForACDUpdate" />
+          <FunctionImportMapping FunctionImportName="LeadBasicDisplayForAllAgents" FunctionName="GALModel.Store.LeadBasicDisplayAllAgents">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="GALModel.LeadBasicDisplayForAllAgents_Result">
+                <ScalarProperty Name="agent_l360_username" ColumnName="agent_l360_username" />
+                <ScalarProperty Name="avg_max" ColumnName="avg_max" />
+                <ScalarProperty Name="total_assigned_leads" ColumnName="total_assigned_leads" />
+                <ScalarProperty Name="agent_max" ColumnName="agent_max" />
+                <ScalarProperty Name="total_available_leads" ColumnName="total_available_leads" />
+                <ScalarProperty Name="total_assignable_leads" ColumnName="total_assignable_leads" />
+                <ScalarProperty Name="oldest_available" ColumnName="oldest_available" />
+                <ScalarProperty Name="newest_available" ColumnName="newest_available" />
+                <ScalarProperty Name="last_refresh" ColumnName="last_refresh" />
+                <ScalarProperty Name="IsEnabled" ColumnName="IsEnabled" />
+                <ScalarProperty Name="Reason" ColumnName="Reason" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <EntitySetMapping Name="GALEngineListsDump">
+            <EntityTypeMapping TypeName="GALModel.GALEngineListsDump">
+              <MappingFragment StoreEntitySet="GALEngineListsDump">
+                <ScalarProperty Name="GWBListDump" ColumnName="GWBListDump" />
+                <ScalarProperty Name="ACDListDump" ColumnName="ACDListDump" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

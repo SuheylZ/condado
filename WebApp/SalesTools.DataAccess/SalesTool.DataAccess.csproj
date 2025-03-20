@@ -1,0 +1,207 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{EA889ABA-40A6-4D1C-82E8-AECFF1561E71}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SalesTool.DataAccess</RootNamespace>
+    <AssemblyName>SalesTool.DataAccess</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <GenerateSerializationAssemblies>Auto</GenerateSerializationAssemblies>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=4.4.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net40\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdministrationActions\CampaignCostActions.cs" />
+    <Compile Include="AdministrationActions\AlertsActions.cs" />
+    <Compile Include="AdministrationActions\DuplicateRecords.cs" />
+    <Compile Include="AdministrationActions\GlobalSettingsAction.cs" />
+    <Compile Include="AdministrationActions\InContactDataAction.cs" />
+    <Compile Include="AdministrationActions\AppointmentBuilderActions.cs" />
+    <Compile Include="AdministrationActions\IndividualPrescriptionActions.cs" />
+    <Compile Include="AdministrationActions\ListReassignmentAccount.cs" />
+    <Compile Include="AdministrationActions\PhoneBarActions.cs" />
+    <Compile Include="AdministrationActions\ReAssignmentRuleActions.cs" />
+    <Compile Include="Arc\ArcActions.cs" />
+    <Compile Include="Dashboard\AnnouncementActions.cs" />
+    <Compile Include="DuplicateRules\DuplicateEngine.cs" />
+    <Compile Include="AdministrationActions\ListRetentionAccount.cs" />
+    <Compile Include="AdministrationActions\ListPrioritizationAccount.cs" />
+    <Compile Include="AdministrationActions\LocalActions.cs" />
+    <Compile Include="AdministrationActions\CustomReportsAction.cs" />
+    <Compile Include="AdministrationActions\ManageStates.cs" />
+    <Compile Include="AdministrationActions\ReportColumnsAction.cs" />
+    <Compile Include="AdministrationActions\StatusActions.cs" />
+    <Compile Include="AdministrationActions\UserMultiBusinesses.cs" />
+    <Compile Include="DuplicateRules\DuplicateColumn.cs" />
+    <Compile Include="DuplicateRules\DuplicateRule.cs" />
+    <Compile Include="DuplicateRules\QueryFilter.cs" />
+    <Compile Include="DuplicateRules\QueryHolder.cs" />
+    <Compile Include="DuplicateRules\QueryOperator.cs" />
+    <Compile Include="DuplicateRules\UniOperator.cs" />
+    <Compile Include="EfExtensions.cs" />
+    <Compile Include="EntityCloner.cs" />
+    <Compile Include="GlobalAppSettings.cs" />
+    <Compile Include="LeadActions\AccountActions.cs" />
+    <Compile Include="LeadActions\AccountAttachmentsActions.cs" />
+    <Compile Include="LeadActions\Account_DetailActions.cs" />
+    <Compile Include="BaseActions.cs" />
+    <Compile Include="LeadActions\AutoHomePolicyActions.cs" />
+    <Compile Include="LeadActions\AutoHomeQuoteActions.cs" />
+    <Compile Include="LeadActions\BaseQueryDataActions.cs" />
+    <Compile Include="LeadActions\Best_CallActions.cs" />
+    <Compile Include="AdministrationActions\CampaignActions.cs" />
+    <Compile Include="AdministrationActions\CompanyActions.cs" />
+    <Compile Include="ConstantEntities.cs" />
+    <Compile Include="DBEngine.cs" />
+    <Compile Include="LeadActions\CarrierActions.cs" />
+    <Compile Include="LeadActions\CarrierIssueActions.cs" />
+    <Compile Include="LeadActions\LeadMetricActions.cs" />
+    <Compile Include="LeadActions\PostQueueActions.cs" />
+    <Compile Include="LeadActions\DentalVisionActions.cs" />
+    <Compile Include="LeadActions\DriverActions.cs" />
+    <Compile Include="LeadActions\DriverIncidenceActions.cs" />
+    <Compile Include="LeadActions\Driver_InfoActions.cs" />
+    <Compile Include="AdministrationActions\EmailActions.cs" />
+    <Compile Include="ExtendedClasses.cs" />
+    <Compile Include="AdministrationActions\FilterAreaActions.cs" />
+    <Compile Include="LeadActions\EmailActions.cs" />
+    <Compile Include="LeadActions\EventCalendarActions.cs" />
+    <Compile Include="LeadActions\HomeActions.cs" />
+    <Compile Include="LeadActions\IndividualPDPStatusActions.cs" />
+    <Compile Include="LeadActions\IndividualsActions.cs" />
+    <Compile Include="LeadActions\IndividualDetailActions.cs" />
+    <Compile Include="AdministrationActions\LeadRuleDetails.cs" />
+    <Compile Include="AdministrationActions\LeadRules.cs" />
+    <Compile Include="LeadActions\IndividualStatusActions.cs" />
+    <Compile Include="LeadActions\IssueStatusActions.cs" />
+    <Compile Include="LeadActions\IssueStatusHistoryActions.cs" />
+    <Compile Include="LeadActions\leadView.cs" />
+    <Compile Include="LeadActions\AccountHistoryActions.cs" />
+    <Compile Include="LeadActions\PolicyActions.cs" />
+    <Compile Include="LeadActions\EmailQueueActions.cs" />
+    <Compile Include="LeadActions\PolicyStatusesActions.cs" />
+    <Compile Include="LeadActions\UserSavedSearchActions.cs" />
+    <Compile Include="Models\Dashboad.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Dashboad.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Leads.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Leads.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="LeadActions\LeadsActions.cs" />
+    <Compile Include="LeadActions\LeadNotesActions.cs" />
+    <Compile Include="LeadActions\Lead_SourceActions.cs" />
+    <Compile Include="LeadActions\LeadStatusActions.cs" />
+    <Compile Include="LeadActions\Lea_additional_info_Actions.cs" />
+    <Compile Include="LeadActions\MapdpActions.cs" />
+    <Compile Include="LeadActions\MedsupActions.cs" />
+    <Compile Include="LeadActions\MedsupApplicationActions.cs" />
+    <Compile Include="LeadActions\MedsupCarrierIssuesActiions.cs" />
+    <Compile Include="Models\Model1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="AdministrationActions\PostsActions.cs" />
+    <Compile Include="AdministrationActions\PrioritizationRules.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="AdministrationActions\QuickLinkActions.cs" />
+    <Compile Include="AdministrationActions\QuickLinkSkillGroupsActions.cs" />
+    <Compile Include="AdministrationActions\RoleActions.cs" />
+    <Compile Include="AdministrationActions\SkillGroupActions.cs" />
+    <Compile Include="AdministrationActions\SQTablesActions.cs" />
+    <Compile Include="AdministrationActions\TagFieldActions.cs" />
+    <Compile Include="AdministrationActions\UserActions.cs" />
+    <Compile Include="LeadActions\VehiclesActions.cs" />
+    <Compile Include="SqlFluent.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config" />
+    <EntityDeploy Include="Models\Model.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Model1.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <EntityDeploy Include="Models\Leads.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Leads.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <EntityDeploy Include="Models\Dashboad.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Dashboad.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Models\Dashboad.edmx.diagram">
+      <DependentUpon>Dashboad.edmx</DependentUpon>
+    </None>
+    <None Include="Models\Leads.edmx.diagram">
+      <DependentUpon>Leads.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="DataSources\SalesTool.DataAccess.Models.DashboardEntities.datasource" />
+    <None Include="DataSources\SalesTool.DataAccess.Models.LeadEntities.datasource" />
+    <None Include="DataSources\SalesTool.DataAccess.Models.SalesToolEntities.datasource" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,251 @@
+﻿/*
+========================================================
+File Name: Fieldset.css
+Date:      Friday, November 9, 2012
+
+Purpose:   This file describes all the styles used by fieldset on all the forms of this web applictaion
+            any change in the design of form required must be placed here. 
+
+Caution:   DO NOT put any other styling elements here other than the fieldset. For other styles either use default.css or create a new css file.   
+========================================================
+*/
+fieldset.condadocompare
+{
+    border: 1px solid #999999;
+    margin: 2px 0 0 0;
+    padding: 0px 10px 10px;
+}
+
+fieldset.condadocompare legend
+{
+    margin-left: 1em;
+    font-size: 15px;
+    font-family: 'Segoe UI';
+}
+
+
+fieldset.condadocompare ul
+{
+    padding: 0px 2px 2px 2px;
+    list-style: none;
+}
+fieldset.condadocompare li {
+    border-width: 1px;
+    border-color: #E0E6ED;
+    /*position: relative;*/
+    padding: 0.2em;
+    vertical-align: middle;
+    border-bottom-style: solid;
+}
+fieldset.condadocompare li.none
+{
+    border-width: 0px;
+    border-color: #E0E6ED;
+    /*position: relative;*/
+    padding-bottom: 0.3em;
+    vertical-align: middle;
+    border-bottom-style: solid;
+}
+fieldset.condadocompare li.buttons
+{
+    border-width: 1px;
+    border-color: #C0C0C0;
+    text-align: center;
+    line-height: 1.0px;
+    padding-top: 0.6em;
+    border-top-style: solid;
+}
+fieldset.condadocompare li.header {
+    border-width: 1px;
+    /*position: relative;*/
+    padding: 0.2em;
+    vertical-align: middle;
+    border-bottom-style: none;
+    background-color: #EAEAEA;
+}
+fieldset.condadocompare label {
+    /*position: relative;*/
+    clear: left;
+    float: left;
+    width: 32%;
+    margin-right: 5px;
+    margin-left: 5px;
+    text-align: right;
+    line-height: 1.9em;
+    color: #808080;
+}
+
+fieldset.condadocompare label2
+{
+    /*position: relative;*/
+    clear: left;
+    float: left;
+    width: 32%;
+    margin-right: 5px;
+    text-align: left;
+    line-height: 1.9em;
+}
+
+fieldset.condadocompare .rcbInputCell input[type=text]
+{
+    border: 0px;
+     background: none repeat scroll 0 0 ;
+}
+
+
+fieldset.condadocompare input[type=text], input[type=password], select, textarea {
+    padding: 1px;
+    font-size: 1.0em;
+    border: 0px solid #FFFFFF;
+    color: #666666;
+    width: 200px;
+    z-index: 1;
+    background-color: #FFFFFF;
+}
+
+
+/*
+SZ [Jan 10, 2013] Added for telerik box on Manage Campaign 
+*/
+fieldset.condadocompare span#input
+{
+    padding: 1px;
+    /*text-align:right;*/
+    height: 180px;
+    z-index: 1; 
+    display:inline-table;
+}
+
+fieldset.condadocompare span#input2
+{
+    padding: 1px;
+    z-index: 1; 
+    display:inline-table;
+}
+fieldset.condadocompare input[type=checkbox]
+{
+    color: #1E1903;
+    z-index: 1;
+    vertical-align: bottom;
+}
+
+fieldset.condadocompare button
+{
+    padding: 1px 4px 1px 4px;
+    font-size: 0.9em;
+    border: 1px solid #5D7B9D;
+    color: #FFFFFF;
+    background: #5D7B9D;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+fieldset.condadocompare button:hover
+{
+    border: 1px solid #5D7B9D;
+    background: #8CA3BB;
+    text-decoration: none;
+}
+
+
+fieldset.condadocompare input[type=submit]
+{
+    padding: 1px 4px 1px 4px;
+    font-size: 0.9em;
+    border: 1px solid #5D7B9D;
+    color: #FFFFFF;
+    background: #5D7B9D;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+fieldset.condadocompare input[type=submit]:hover
+{
+    border: 1px solid #5D7B9D;
+    background: #8CA3BB;
+    text-decoration: none;
+}
+
+fieldset.condadocompare input[type=submit]:active
+{
+    border-style: solid;
+    border-width: 1px;
+    border-color: #303030 #C0C0C0 #C0C0C0 #303030;
+    background: #8CA3BB;
+    text-decoration: none;
+}
+
+div.buttons
+{
+    padding: 10px;
+    text-align: center;
+}
+div.buttons input[type=submit]
+{
+    padding: 1px 4px 1px 4px;
+    font-size: 0.9em;
+    border: 1px solid #5D7B9D;
+    color: #FFFFFF;
+    background: #5D7B9D;
+    cursor: pointer;
+} 
+
+div.buttons input[type=submit]:hover
+{ 
+    border: 1px solid #5D7B9D;
+    background: #8CA3BB;
+}
+
+div.buttons input[type=submit]:active
+{
+    border-style: solid;
+    border-width: 1px;
+    border-color: #303030 #C0C0C0 #C0C0C0 #303030;
+    background: #8CA3BB;
+}
+
+span.information
+{
+    color: #0066FF;
+    font-family: 'Segoe UI';
+    font-size: 12px;
+}
+
+span.exception
+{
+    color: #FF0000;
+    font-family: 'Segoe UI';
+    font-size: 12px;
+}
+
+
+RadButton RadButton_ rbSkinnedButton
+{
+    text-decoration:none !important;
+}
+
+input.riTextBox
+{
+   padding: 1px !important;
+   font-size: 1.0em;
+   border: 0px solid #5D7B9D !important;
+   color: #1E1903 !important;
+   background: #EAEAEA !important;
+   width: 250px;
+   z-index: 1;   
+}
+
+div.compareSectionheading {
+    padding: 3px;
+    background-color: #5D7B9D;
+    color: #FFFFFF;
+    text-transform: uppercase;
+}
+
+div.formHeader {
+    background-color: #5D7B9D;
+    color: #FFFFFF;
+    font-size: 14px;
+    text-transform: uppercase;
+    text-align: center;
+}

@@ -1,0 +1,536 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <Name>SelectCare.Database.SQS</Name>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>4.1</ProjectVersion>
+    <ProjectGuid>{ecdd2eb6-1e51-4305-a14d-cc42d662f500}</ProjectGuid>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql110DatabaseSchemaProvider</DSP>
+    <OutputType>Database</OutputType>
+    <RootPath>
+    </RootPath>
+    <RootNamespace>SelectCare.Database</RootNamespace>
+    <AssemblyName>SelectCare.Database</AssemblyName>
+    <ModelCollation>1033,CI</ModelCollation>
+    <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
+    <DeployToDatabase>True</DeployToDatabase>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetLanguage>CS</TargetLanguage>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <SqlServerVerification>False</SqlServerVerification>
+    <IncludeCompositeObjects>True</IncludeCompositeObjects>
+    <TargetDatabaseSet>True</TargetDatabaseSet>
+    <SccProjectName>SAK</SccProjectName>
+    <SccProvider>SAK</SccProvider>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccLocalPath>SAK</SccLocalPath>
+    <DefaultCollation>SQL_Latin1_General_CP1_CI_AS</DefaultCollation>
+    <DefaultFilegroup>PRIMARY</DefaultFilegroup>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <!-- VS10 without SP1 will not have VisualStudioVersion set, so do that here -->
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <!-- Default to the v10.0 targets path if the targets file for the current VS version is not found -->
+    <SSDTExists Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets')">True</SSDTExists>
+    <VisualStudioVersion Condition="'$(SSDTExists)' == ''">10.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <ItemGroup>
+    <Folder Include="Properties" />
+    <Folder Include="dbo\" />
+    <Folder Include="dbo\Tables\" />
+    <Folder Include="Security\" />
+    <Folder Include="dbo\SQS" />
+    <Folder Include="dbo\SQS\Functions" />
+    <Folder Include="dbo\SQS\Stored Procedures" />
+    <Folder Include="dbo\SQS\User Defined Types" />
+    <Folder Include="dbo\SQS\Views" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="dbo\Tables\skill_group_statues1.sql" />
+    <Build Include="dbo\Tables\account_attachments.sql" />
+    <Build Include="dbo\Tables\leads.sql" />
+    <Build Include="dbo\Tables\skill_group_statuses.sql" />
+    <Build Include="dbo\Tables\policy_status_type.sql" />
+    <Build Include="dbo\Tables\aspnet_PersonalizationAllUsers.sql" />
+    <Build Include="dbo\Tables\user_saved_search.sql" />
+    <Build Include="dbo\Tables\audit_type.sql" />
+    <Build Include="dbo\Tables\gal_pvsched2agentgroups.sql" />
+    <Build Include="dbo\Tables\user_saved_search_criteria.sql" />
+    <Build Include="dbo\Tables\Individuals.sql" />
+    <Build Include="dbo\Tables\user_permissions.sql" />
+    <Build Include="dbo\Tables\gal_pvsched2agents.sql" />
+    <Build Include="dbo\Tables\account_history_sub_status.sql" />
+    <Build Include="dbo\Tables\campaigns.sql" />
+    <Build Include="dbo\Tables\gal_groups_prerendered.sql" />
+    <Build Include="dbo\Tables\arc_user_map.sql" />
+    <Build Include="dbo\Tables\autohome_quote_types.sql" />
+    <Build Include="dbo\Tables\campaign_cost.sql" />
+    <Build Include="dbo\Tables\gal_pv_status_exclusion.sql" />
+    <Build Include="dbo\Tables\campaign_type.sql" />
+    <Build Include="dbo\Tables\dental_vision.sql" />
+    <Build Include="dbo\Tables\email_queue.sql" />
+    <Build Include="dbo\Tables\list_prioritization.sql" />
+    <Build Include="dbo\Tables\L360_ActionLog.sql" />
+    <Build Include="dbo\Tables\L360_Actions.sql" />
+    <Build Include="dbo\Tables\skill_groups.sql" />
+    <Build Include="dbo\Tables\L360_CalEvent.sql" />
+    <Build Include="dbo\Tables\L360_AssignmentLog.sql" />
+    <Build Include="dbo\Tables\skill_group_users.sql" />
+    <Build Include="dbo\Tables\L360_Agents.sql" />
+    <Build Include="dbo\Tables\autohome_policies.sql" />
+    <Build Include="dbo\Tables\L360_Statues.sql" />
+    <Build Include="dbo\Tables\L360_StatusLog.sql" />
+    <Build Include="dbo\Tables\quick_links_skills.sql" />
+    <Build Include="dbo\Tables\lead_status.sql" />
+    <Build Include="dbo\Tables\quick_links.sql" />
+    <Build Include="dbo\Tables\arc_cases.sql" />
+    <Build Include="dbo\Tables\duplicates_view.sql" />
+    <Build Include="dbo\Tables\L360_Campaigns.sql" />
+    <Build Include="dbo\Tables\outpluse_type.sql" />
+    <Build Include="dbo\Tables\gal_campaign2agent.sql" />
+    <Build Include="dbo\Tables\companies.sql" />
+    <Build Include="dbo\Tables\arc_history.sql" />
+    <Build Include="dbo\Tables\SignalR_Bindings.sql" />
+    <Build Include="dbo\Tables\policy_statuses.sql" />
+    <Build Include="dbo\Tables\field_tags.sql" />
+    <Build Include="dbo\Tables\lead_source.sql" />
+    <Build Include="dbo\Tables\aspnet_WebEvent_Events.sql" />
+    <Build Include="dbo\Tables\account_history_entry_type.sql" />
+    <Build Include="dbo\Tables\list_retention.sql" />
+    <Build Include="dbo\Tables\email_report.sql" />
+    <Build Include="dbo\Tables\IndividualsTemp.sql" />
+    <Build Include="dbo\Tables\mapdps_type.sql" />
+    <Build Include="dbo\Tables\area_filters.sql" />
+    <Build Include="dbo\Tables\email_recipients.sql" />
+    <Build Include="dbo\Tables\mapdps.sql" />
+    <Build Include="dbo\Tables\application_tables.sql" />
+    <Build Include="dbo\Tables\medsups.sql" />
+    <Build Include="dbo\Tables\aspnet_SchemaVersions.sql" />
+    <Build Include="dbo\Tables\duplicate_rules_column.sql" />
+    <Build Include="dbo\Tables\statuses.sql" />
+    <Build Include="dbo\Tables\gal_leads_temp.sql" />
+    <Build Include="dbo\Tables\roles.sql" />
+    <Build Include="dbo\Tables\L360_ActionLog2.sql" />
+    <Build Include="dbo\Tables\Numbers.sql" />
+    <Build Include="dbo\Tables\state_licensure.sql" />
+    <Build Include="dbo\Tables\aspnet_Users.sql" />
+    <Build Include="dbo\Tables\dashboard_announcements.sql" />
+    <Build Include="dbo\Tables\gal_timezones.sql" />
+    <Build Include="dbo\Tables\email_templates_override.sql" />
+    <Build Include="dbo\Tables\gal_systemoptions.sql" />
+    <Build Include="dbo\Tables\aspnet_Membership.sql" />
+    <Build Include="dbo\Tables\status_emails.sql" />
+    <Build Include="dbo\Tables\gal_states.sql" />
+    <Build Include="dbo\Tables\aspnet_Applications.sql" />
+    <Build Include="dbo\Tables\timezones.sql" />
+    <Build Include="dbo\Tables\list_reassignment.sql" />
+    <Build Include="dbo\Tables\gal_stategroupstates.sql" />
+    <Build Include="dbo\Tables\aspnet_Profile.sql" />
+    <Build Include="dbo\Tables\dashboard_report_types.sql" />
+    <Build Include="dbo\Tables\email_attachments.sql" />
+    <Build Include="dbo\Tables\states.sql" />
+    <Build Include="dbo\Tables\aspnet_UsersInRoles.sql" />
+    <Build Include="dbo\Tables\L360_LeadData.sql" />
+    <Build Include="dbo\Tables\email_templates.sql" />
+    <Build Include="dbo\Tables\gal_campaigns.sql" />
+    <Build Include="dbo\Tables\aspnet_PersonalizationPerUser.sql" />
+    <Build Include="dbo\Tables\dashboard_section.sql" />
+    <Build Include="dbo\Tables\lead_reassignment_rules.sql" />
+    <Build Include="dbo\Tables\gal_stategroups.sql" />
+    <Build Include="dbo\Tables\gal_pv_counts.sql" />
+    <Build Include="dbo\Tables\reports.sql" />
+    <Build Include="dbo\Tables\L360_LeadIds1.sql" />
+    <Build Include="dbo\Tables\L360_LeadIds2.sql" />
+    <Build Include="dbo\Tables\gal_stategroup2agentgroup.sql" />
+    <Build Include="dbo\Tables\gal_admin.sql" />
+    <Build Include="dbo\Tables\gal_new_counts.sql" />
+    <Build Include="dbo\Tables\gal_assignments.sql" />
+    <Build Include="dbo\Tables\phone_skill2state.sql" />
+    <Build Include="dbo\Tables\L360_LeadData2.sql" />
+    <Build Include="dbo\Tables\Carriers.sql" />
+    <Build Include="dbo\Tables\gal_agentgroups.sql" />
+    <Build Include="dbo\Tables\users.sql" />
+    <Build Include="dbo\Tables\emails.sql" />
+    <Build Include="dbo\Tables\phone_skill2user.sql" />
+    <Build Include="dbo\Tables\autohome_quotes.sql" />
+    <Build Include="dbo\Tables\phone_skills.sql" />
+    <Build Include="dbo\Tables\actions.sql" />
+    <Build Include="dbo\Tables\aspnet_Paths.sql" />
+    <Build Include="dbo\Tables\Accounts.sql" />
+    <Build Include="dbo\Tables\gal_campaigngroups.sql" />
+    <Build Include="dbo\Tables\lead_rule_details.sql" />
+    <Build Include="dbo\Tables\status_substatus.sql" />
+    <Build Include="dbo\Tables\vehicles.sql" />
+    <Build Include="dbo\Tables\posts.sql" />
+    <Build Include="dbo\Tables\audit_log.sql" />
+    <Build Include="dbo\Tables\inContact_data.sql" />
+    <Build Include="dbo\Tables\lead_prioritization_rules.sql" />
+    <Build Include="dbo\Tables\account_individual_details.sql" />
+    <Build Include="dbo\Tables\action_emails.sql" />
+    <Build Include="dbo\Tables\account_history.sql" />
+    <Build Include="dbo\Tables\gal_campaigngroup2agentgroup.sql" />
+    <Build Include="dbo\Tables\action_posts.sql" />
+    <Build Include="dbo\Tables\lead_retention_rules.sql" />
+    <Build Include="dbo\Tables\report_format.sql" />
+    <Build Include="dbo\Tables\Policy_Information.sql" />
+    <Build Include="dbo\Tables\quoted_date.sql" />
+    <Build Include="dbo\Tables\statesTemp.sql" />
+    <Build Include="dbo\Tables\gal_agegroups.sql" />
+    <Build Include="dbo\Tables\Plans.sql" />
+    <Build Include="dbo\Tables\medsupApplication.sql" />
+    <Build Include="dbo\Tables\status_actions.sql" />
+    <Build Include="dbo\Tables\lead_notes.sql" />
+    <Build Include="dbo\Tables\alert_type.sql" />
+    <Build Include="dbo\Tables\status_posts.sql" />
+    <Build Include="dbo\Tables\lea_additional_info.sql" />
+    <Build Include="dbo\Tables\gal_agegroup2agentgroup.sql" />
+    <Build Include="dbo\Tables\alerts.sql" />
+    <Build Include="dbo\Tables\status_tagfields.sql" />
+    <Build Include="dbo\Tables\Individual_Details.sql" />
+    <Build Include="dbo\Tables\issue_types.sql" />
+    <Build Include="dbo\Tables\duplicate_merge_column.sql" />
+    <Build Include="dbo\Tables\homes.sql" />
+    <Build Include="dbo\Tables\post_queue.sql" />
+    <Build Include="dbo\Tables\individual_pdp_statuses.sql" />
+    <Build Include="dbo\Tables\eventcalendar.sql" />
+    <Build Include="dbo\Tables\gal_agents.sql" />
+    <Build Include="dbo\Tables\individual_statuses.sql" />
+    <Build Include="dbo\Tables\issue_statuses_history.sql" />
+    <Build Include="dbo\Tables\driver_info.sql" />
+    <Build Include="dbo\Tables\queue_inbound_personal.sql" />
+    <Build Include="dbo\Tables\issue_statuses.sql" />
+    <Build Include="dbo\Tables\driver_incidence.sql" />
+    <Build Include="dbo\Tables\dashboard_reports.sql" />
+    <Build Include="dbo\Tables\report_columns.sql" />
+    <Build Include="dbo\Tables\contact_information.sql" />
+    <Build Include="dbo\Tables\duplicate_management.sql" />
+    <Build Include="dbo\Tables\basedata.sql" />
+    <Build Include="dbo\Tables\carrier_issues.sql" />
+    <Build Include="dbo\Tables\Application_Storage.sql" />
+    <Build Include="dbo\Tables\queue_inbound_acd.sql" />
+    <Build Include="dbo\Tables\aspnet_Roles.sql" />
+    <Build Include="dbo\Tables\Sheet1_.sql" />
+    <Build Include="dbo\Tables\report_tags.sql" />
+    <Build Include="dbo\Tables\best_call.sql" />
+    <Build Include="dbo\Tables\Overrides.sql" />
+    <Build Include="dbo\Tables\report_users.sql" />
+    <Build Include="dbo\Tables\Account_Detail.sql" />
+    <Build Include="dbo\Tables\user_multibusiness.sql" />
+    <Build Include="dbo\Tables\gal_areacode2timezone.sql" />
+    <Build Include="Security\aspnet_Membership_FullAccess.sql" />
+    <Build Include="Security\aspnet_Membership_ReportingAccess.sql" />
+    <Build Include="Security\aspnet_Profile_FullAccess.sql" />
+    <Build Include="Security\aspnet_Profile_ReportingAccess.sql" />
+    <Build Include="Security\aspnet_Roles_FullAccess.sql" />
+    <Build Include="Security\aspnet_Roles_BasicAccess.sql" />
+    <Build Include="Security\aspnet_Roles_ReportingAccess.sql" />
+    <Build Include="Security\aspnet_Personalization_FullAccess.sql" />
+    <Build Include="Security\aspnet_Personalization_BasicAccess.sql" />
+    <Build Include="Security\aspnet_Personalization_ReportingAccess.sql" />
+    <Build Include="Security\aspnet_WebEvent_FullAccess.sql" />
+    <Build Include="Security\aspnet_Membership_BasicAccess.sql" />
+    <Build Include="Security\aspnet_Profile_BasicAccess.sql" />
+    <Build Include="Security\SelectCare.sql" />
+    <Build Include="Security\SelectCARE_1.sql" />
+    <Build Include="Security\SQSENIOR_Developers.sql" />
+    <Build Include="Security\NETWORK SERVICE.sql" />
+    <Build Include="Security\SQAH_tmcnerney.sql" />
+    <Build Include="Security\SQSENIOR_bschmank.sql" />
+    <Build Include="Security\SQAH_selectcare.sql" />
+    <Build Include="Security\SQSENIOR_sqluser.sql" />
+    <Build Include="Security\SQSENIOR_bbertsch.sql" />
+    <Build Include="Security\SQ_DEV_01_AttaH.sql" />
+    <Build Include="Security\RoleMemberships.sql" />
+    <Build Include="Security\aspnet_Membership_BasicAccess_1.sql" />
+    <Build Include="Security\aspnet_Membership_FullAccess_1.sql" />
+    <Build Include="Security\aspnet_Membership_ReportingAccess_1.sql" />
+    <Build Include="Security\aspnet_Personalization_BasicAccess_1.sql" />
+    <Build Include="Security\aspnet_Personalization_FullAccess_1.sql" />
+    <Build Include="Security\aspnet_Personalization_ReportingAccess_1.sql" />
+    <Build Include="Security\aspnet_Profile_BasicAccess_1.sql" />
+    <Build Include="Security\aspnet_Profile_FullAccess_1.sql" />
+    <Build Include="Security\aspnet_Profile_ReportingAccess_1.sql" />
+    <Build Include="Security\aspnet_Roles_BasicAccess_1.sql" />
+    <Build Include="Security\aspnet_Roles_FullAccess_1.sql" />
+    <Build Include="Security\aspnet_Roles_ReportingAccess_1.sql" />
+    <Build Include="Security\aspnet_WebEvent_FullAccess_1.sql" />
+    <Build Include="Security\LinkedServer.sql" />
+    <Build Include="Security\Reports.sql" />
+    <Build Include="dbo\SQS\Functions\base64_decode.sql" />
+    <Build Include="dbo\SQS\Functions\base64_encode.sql" />
+    <Build Include="dbo\SQS\Functions\CalculateOutPulseId.sql" />
+    <Build Include="dbo\SQS\Functions\DistinctList.sql" />
+    <Build Include="dbo\SQS\Functions\DoesTableExist.sql" />
+    <Build Include="dbo\SQS\Functions\fn_AccountNextCalDateAP.sql" />
+    <Build Include="dbo\SQS\Functions\fn_AccountNextCalDateAssigned.sql" />
+    <Build Include="dbo\SQS\Functions\fn_AccountNextCalDateCSR.sql" />
+    <Build Include="dbo\SQS\Functions\fn_AccountNextCalDateOB.sql" />
+    <Build Include="dbo\SQS\Functions\fn_AccountNextCalDateTA.sql" />
+    <Build Include="dbo\SQS\Functions\fn_AH_GetUserType.sql" />
+    <Build Include="dbo\SQS\Functions\GetAgents.sql" />
+    <Build Include="dbo\SQS\Functions\GetConsent.sql" />
+    <Build Include="dbo\SQS\Functions\GetPrimaryPersonId.sql" />
+    <Build Include="dbo\SQS\Functions\GetSpecialists.sql" />
+    <Build Include="dbo\SQS\Functions\GetUsers.sql" />
+    <Build Include="dbo\SQS\Functions\IsSQLWithNewLayout.sql" />
+    <Build Include="dbo\SQS\Functions\LastStatusChangeDate.sql" />
+    <Build Include="dbo\SQS\Functions\LeadCount.sql" />
+    <Build Include="dbo\SQS\Functions\LeadIds.sql" />
+    <Build Include="dbo\SQS\Functions\LevelSeconds.sql" />
+    <Build Include="dbo\SQS\Functions\MACount.sql" />
+    <Build Include="dbo\SQS\Functions\MedSuppCount.sql" />
+    <Build Include="dbo\SQS\Functions\OutpulseId.sql" />
+    <Build Include="dbo\SQS\Functions\PVCount.sql" />
+    <Build Include="dbo\SQS\Functions\PVScheduleResult.sql" />
+    <Build Include="dbo\SQS\Functions\PVStatusExclusion.sql" />
+    <Build Include="dbo\SQS\Functions\RelatedAccountIds.sql" />
+    <Build Include="dbo\SQS\Functions\ResolveDate.sql" />
+    <Build Include="dbo\SQS\Functions\SplitString.sql" />
+    <Build Include="dbo\SQS\Functions\sq_user_full_name.sql" />
+    <Build Include="dbo\SQS\Functions\TimeZoneFilter.sql" />
+    <Build Include="dbo\SQS\Stored Procedures\Accounts_GetIndividualInfo_ForAQE.sql" />
+    <Build Include="dbo\SQS\Stored Procedures\Accounts_GetIndividualInfo_ForQE.sql" />
+    <Build Include="dbo\SQS\Stored Procedures\aspnet_AnyDataInTables.sql" />
+    <Build Include="dbo\SQS\Stored Procedures\aspnet_Applications_CreateApplication.sql" />
+    <Build Include="dbo\SQS\Stored Procedures\aspnet_CheckSchemaVersion.sql" />
+    <Build Include="dbo\SQS\Stored Procedures\aspnet_CreateUser.sql" />
+    <Build Include="dbo\SQS\Stored Procedures\aspnet_Membership_ChangePasswordQuestionAndAnswer.sql" />
+    <Build Include="dbo\SQS\Stored Procedures\aspnet_Membership_CreateUser.sql" />
+    <Build Include="dbo\SQS\Stored Procedures\aspnet_Membership_FindUsersByEmail.sql" />
+    <Build Include="dbo\SQS\Stored Procedures\aspnet_Membership_FindUsersByName.sql" />
+    <Build Include="dbo\SQS\Stored Procedures\aspnet_Membership_GetAllUsers.sql" />
+    <Build Include="dbo\SQS\Stored Procedures\aspnet_Membership_GetNumberOfUsersOnline.sql" />
+    <Build Include="dbo\SQS\Stored Procedures\aspnet_Membership_GetPassword.sql" />
+    <Build Include="dbo\SQS\Stored Procedures\aspnet_Membership_GetPasswordWithFormat.sql" />
+    <Build Include="dbo\SQS\Stored Procedures\aspnet_Membership_GetUserByEmail.sql" />
+    <Build Include="dbo\SQS\Stored Procedures\aspnet_Membership_GetUserByName.sql" />
+    <Build Include="dbo\SQS\Stored Procedures\aspnet_Membership_GetUserByUserId.sql" />
+    <Build Include="dbo\SQS\Stored Procedures\aspnet_Membership_ResetPassword.sql" />
+    <Build Include="dbo\SQS\Stored Procedures\aspnet_Membership_SetPassword.sql" />
+    <Build Include="dbo\SQS\Stored Procedures\aspnet_Membership_UnlockUser.sql" />
+    <Build Include="dbo\SQS\Stored Procedures\aspnet_Membership_UpdateUser.sql" />
+    <Build Include="dbo\SQS\Stored Procedures\aspnet_Membership_UpdateUserInfo.sql" />
+    <Build Include="dbo\SQS\Stored Procedures\aspnet_Paths_CreatePath.sql" />
+    <Build Include="dbo\SQS\Stored Procedures\aspnet_Personalization_GetApplicationId.sql" />
+    <Build Include="dbo\SQS\Stored Procedures\aspnet_PersonalizationAdministration_DeleteAllState.sql" />
+    <Build Include="dbo\SQS\Stored Procedures\aspnet_PersonalizationAdministration_FindState.sql" />
+    <Build Include="dbo\SQS\Stored Procedures\aspnet_PersonalizationAdministration_GetCountOfState.sql" />
+    <Build Include="dbo\SQS\Stored Procedures\aspnet_PersonalizationAdministration_ResetSharedState.sql" />
+    <Build Include="dbo\SQS\Stored Procedures\aspnet_PersonalizationAdministration_ResetUserState.sql" />
+    <Build Include="dbo\SQS\Stored Procedures\aspnet_PersonalizationAllUsers_GetPageSettings.sql" />
+    <Build Include="dbo\SQS\Stored Procedures\aspnet_PersonalizationAllUsers_ResetPageSettings.sql" />
+    <Build Include="dbo\SQS\Stored Procedures\aspnet_PersonalizationAllUsers_SetPageSettings.sql" />
+    <Build Include="dbo\SQS\Stored Procedures\aspnet_PersonalizationPerUser_GetPageSettings.sql" />
+    <Build Include="dbo\SQS\Stored Procedures\aspnet_PersonalizationPerUser_ResetPageSettings.sql" />
+    <Build Include="dbo\SQS\Stored Procedures\aspnet_PersonalizationPerUser_SetPageSettings.sql" />
+    <Build Include="dbo\SQS\Stored Procedures\aspnet_Profile_DeleteInactiveProfiles.sql" />
+    <Build Include="dbo\SQS\Stored Procedures\aspnet_Profile_DeleteProfiles.sql" />
+    <Build Include="dbo\SQS\Stored Procedures\aspnet_Profile_GetNumberOfInactiveProfiles.sql" />
+    <Build Include="dbo\SQS\Stored Procedures\aspnet_Profile_GetProfiles.sql" />
+    <Build Include="dbo\SQS\Stored Procedures\aspnet_Profile_GetProperties.sql" />
+    <Build Include="dbo\SQS\Stored Procedures\aspnet_Profile_SetProperties.sql" />
+    <Build Include="dbo\SQS\Stored Procedures\aspnet_RegisterSchemaVersion.sql" />
+    <Build Include="dbo\SQS\Stored Procedures\aspnet_Roles_CreateRole.sql" />
+    <Build Include="dbo\SQS\Stored Procedures\aspnet_Roles_DeleteRole.sql" />
+    <Build Include="dbo\SQS\Stored Procedures\aspnet_Roles_GetAllRoles.sql" />
+    <Build Include="dbo\SQS\Stored Procedures\aspnet_Roles_RoleExists.sql" />
+    <Build Include="dbo\SQS\Stored Procedures\aspnet_Setup_RemoveAllRoleMembers.sql" />
+    <Build Include="dbo\SQS\Stored Procedures\aspnet_Setup_RestorePermissions.sql" />
+    <Build Include="dbo\SQS\Stored Procedures\aspnet_UnRegisterSchemaVersion.sql" />
+    <Build Include="dbo\SQS\Stored Procedures\aspnet_Users_CreateUser.sql" />
+    <Build Include="dbo\SQS\Stored Procedures\aspnet_Users_DeleteUser.sql" />
+    <Build Include="dbo\SQS\Stored Procedures\aspnet_UsersInRoles_AddUsersToRoles.sql" />
+    <Build Include="dbo\SQS\Stored Procedures\aspnet_UsersInRoles_FindUsersInRole.sql" />
+    <Build Include="dbo\SQS\Stored Procedures\aspnet_UsersInRoles_GetRolesForUser.sql" />
+    <Build Include="dbo\SQS\Stored Procedures\aspnet_UsersInRoles_GetUsersInRoles.sql" />
+    <Build Include="dbo\SQS\Stored Procedures\aspnet_UsersInRoles_IsUserInRole.sql" />
+    <Build Include="dbo\SQS\Stored Procedures\aspnet_UsersInRoles_RemoveUsersFromRoles.sql" />
+    <Build Include="dbo\SQS\Stored Procedures\aspnet_WebEvent_LogEvent.sql" />
+    <Build Include="dbo\SQS\Stored Procedures\dashboard_AddAnnouncementBySection.sql" />
+    <Build Include="dbo\SQS\Stored Procedures\dashboard_DeleteAnnouncement.sql" />
+    <Build Include="dbo\SQS\Stored Procedures\dashboard_GetAnnouncementBySection.sql" />
+    <Build Include="dbo\SQS\Stored Procedures\dashboard_GetReports.sql" />
+    <Build Include="dbo\SQS\Stored Procedures\dashboard_UpdateAnnouncement.sql" />
+    <Build Include="dbo\SQS\Stored Procedures\GAL_Rpt_AgentMatrix.sql" />
+    <Build Include="dbo\SQS\Stored Procedures\GAL_Rpt_CampaignMatrix.sql" />
+    <Build Include="dbo\SQS\Stored Procedures\GAL_Rpt_GroupMatrix.sql" />
+    <Build Include="dbo\SQS\Stored Procedures\GALDisplay.sql" />
+    <Build Include="dbo\SQS\Stored Procedures\GALDisplayUpdate.sql" />
+    <Build Include="dbo\SQS\Stored Procedures\GetAllCampaigns.sql" />
+    <Build Include="dbo\SQS\Stored Procedures\LeadBasicDisplay.sql" />
+    <Build Include="dbo\SQS\Stored Procedures\LeadToDial.sql" />
+    <Build Include="dbo\SQS\Stored Procedures\proj_AddDummyPrimary.sql" />
+    <Build Include="dbo\SQS\Stored Procedures\proj_Arc_UpdateAccountHistoryChangeAgentDeliveryStatus.sql" />
+    <Build Include="dbo\SQS\Stored Procedures\proj_Arc_UpdateAccountHistoryDeliveryStatusByKey.sql" />
+    <Build Include="dbo\SQS\Stored Procedures\proj_Arc_UpdateConsentDeliveryStatus.sql" />
+    <Build Include="dbo\SQS\Stored Procedures\proj_Arc_UpdateIndividualContactStatus.sql" />
+    <Build Include="dbo\SQS\Stored Procedures\proj_Arc_UpdateLetterLogDeliveryStatus.sql" />
+    <Build Include="dbo\SQS\Stored Procedures\proj_Arc_UpdateStopLetterDeliveryStatus.sql" />
+    <Build Include="dbo\SQS\Stored Procedures\proj_AssignCalenderDates.sql" />
+    <Build Include="dbo\SQS\Stored Procedures\proj_CheckAgentFirstCall.sql" />
+    <Build Include="dbo\SQS\Stored Procedures\proj_CheckTimerAlertGAL.sql" />
+    <Build Include="dbo\SQS\Stored Procedures\proj_DuplicatePriorityChange.sql" />
+    <Build Include="dbo\SQS\Stored Procedures\proj_FilterResolver.sql" />
+    <Build Include="dbo\SQS\Stored Procedures\proj_FindIndividualByPhone.sql" />
+    <Build Include="dbo\SQS\Stored Procedures\proj_GetAgentMatrix.sql" />
+    <Build Include="dbo\SQS\Stored Procedures\proj_GetCallType.sql" />
+    <Build Include="dbo\SQS\Stored Procedures\proj_GetCampaignTotals.sql" />
+    <Build Include="dbo\SQS\Stored Procedures\proj_GetConsent.sql" />
+    <Build Include="dbo\SQS\Stored Procedures\proj_GetDuplicateComparisonRecords.sql" />
+    <Build Include="dbo\SQS\Stored Procedures\proj_GetEventTimeZone.sql" />
+    <Build Include="dbo\SQS\Stored Procedures\proj_GetGroupMatrix.sql" />
+    <Build Include="dbo\SQS\Stored Procedures\proj_GetIndividuals.sql" />
+    <Build Include="dbo\SQS\Stored Procedures\proj_GetIndividualsByAccountID.sql" />
+    <Build Include="dbo\SQS\Stored Procedures\proj_GetNextPriorityAccount.sql" />
+    <Build Include="dbo\SQS\Stored Procedures\proj_GetNextSubStatus.sql" />
+    <Build Include="dbo\SQS\Stored Procedures\proj_GetOutpulseIdByLeadId.sql" />
+    <Build Include="dbo\SQS\Stored Procedures\proj_GetPrioritizedList.sql" />
+    <Build Include="dbo\SQS\Stored Procedures\proj_GetPrioritizedListEx.sql" />
+    <Build Include="dbo\SQS\Stored Procedures\proj_GetUserbyId.sql" />
+    <Build Include="dbo\SQS\Stored Procedures\proj_GetUserPhoneSystemUserNameByPhoneNumber.sql" />
+    <Build Include="dbo\SQS\Stored Procedures\proj_Log.sql" />
+    <Build Include="dbo\SQS\Stored Procedures\proj_PrioritizationPriorityChange.sql" />
+    <Build Include="dbo\SQS\Stored Procedures\proj_ReassignmentPriorityChange.sql" />
+    <Build Include="dbo\SQS\Stored Procedures\proj_ReorderFilters.sql" />
+    <Build Include="dbo\SQS\Stored Procedures\proj_RetentionPriorityChange.sql" />
+    <Build Include="dbo\SQS\Stored Procedures\proj_ScreenPop.sql" />
+    <Build Include="dbo\SQS\Stored Procedures\proj_SearchAccountByAnyField.sql" />
+    <Build Include="dbo\SQS\Stored Procedures\proj_SearchAccountByArcReference.sql" />
+    <Build Include="dbo\SQS\Stored Procedures\proj_SearchAccountByFirstName.sql" />
+    <Build Include="dbo\SQS\Stored Procedures\proj_SearchAccountById.sql" />
+    <Build Include="dbo\SQS\Stored Procedures\proj_SearchAccountByLastName.sql" />
+    <Build Include="dbo\SQS\Stored Procedures\proj_SearchAccountByName.sql" />
+    <Build Include="dbo\SQS\Stored Procedures\proj_SearchAccountByPhone.sql" />
+    <Build Include="dbo\SQS\Stored Procedures\proj_SetConsent.sql" />
+    <Build Include="dbo\SQS\Stored Procedures\proj_ShowLog.sql" />
+    <Build Include="dbo\SQS\Stored Procedures\proj_StatusPriorityChange.sql" />
+    <Build Include="dbo\SQS\Stored Procedures\proj_UpdateAgentFirstCall.sql" />
+    <Build Include="dbo\SQS\Stored Procedures\proj_UpdateEventCalendarIsOpenedFlag.sql" />
+    <Build Include="dbo\SQS\Stored Procedures\report_CarrierMix.sql" />
+    <Build Include="dbo\SQS\Stored Procedures\report_CaseSpecialist.sql" />
+    <Build Include="dbo\SQS\Stored Procedures\report_CPA_By_Agent.sql" />
+    <Build Include="dbo\SQS\Stored Procedures\report_FallOff.sql" />
+    <Build Include="dbo\SQS\Stored Procedures\report_FillFormSpeed.sql" />
+    <Build Include="dbo\SQS\Stored Procedures\report_GetPoliciesSoldAH.sql" />
+    <Build Include="dbo\SQS\Stored Procedures\report_GoalTrackingAnnually.sql" />
+    <Build Include="dbo\SQS\Stored Procedures\report_GoalTrackingMonthly.sql" />
+    <Build Include="dbo\SQS\Stored Procedures\report_IncentiveTracking.sql" />
+    <Build Include="dbo\SQS\Stored Procedures\report_LeadMetrics4Dashboard.sql" />
+    <Build Include="dbo\SQS\Stored Procedures\report_LeadsByStatus.sql" />
+    <Build Include="dbo\SQS\Stored Procedures\report_LeadsBySubStatus.sql" />
+    <Build Include="dbo\SQS\Stored Procedures\report_leadVolume.sql" />
+    <Build Include="dbo\SQS\Stored Procedures\report_Pipeline.sql" />
+    <Build Include="dbo\SQS\Stored Procedures\report_PrioritizedList.sql" />
+    <Build Include="dbo\SQS\Stored Procedures\report_QuotaTracking.sql" />
+    <Build Include="dbo\SQS\Stored Procedures\report_SalesMetrics4Dashboard.sql" />
+    <Build Include="dbo\SQS\Stored Procedures\report_SubmitEnrollment.sql" />
+    <Build Include="dbo\SQS\Stored Procedures\report_SubmitEnrollmentForChart.sql" />
+    <Build Include="dbo\SQS\Stored Procedures\spDashboardViewAgeGroups.sql" />
+    <Build Include="dbo\SQS\Stored Procedures\spDashboardViewCampaignGroups.sql" />
+    <Build Include="dbo\SQS\Stored Procedures\spDashboardViewStateGroups.sql" />
+    <Build Include="dbo\SQS\Stored Procedures\spGalInserts.sql" />
+    <Build Include="dbo\SQS\Stored Procedures\spGalUpdate.sql" />
+    <Build Include="dbo\SQS\Stored Procedures\spPhoneNumberFix.sql" />
+    <Build Include="dbo\SQS\Stored Procedures\spPlUpdate.sql" />
+    <Build Include="dbo\SQS\Stored Procedures\spRaUpdate.sql" />
+    <Build Include="dbo\SQS\Stored Procedures\spRaUpdate2.sql" />
+    <Build Include="dbo\SQS\Stored Procedures\spRptDaily.sql" />
+    <Build Include="dbo\SQS\Stored Procedures\spRptDailyAms.sql" />
+    <Build Include="dbo\SQS\Stored Procedures\spRptWklyAms.sql" />
+    <Build Include="dbo\SQS\Stored Procedures\spRptWklyMatrix.sql" />
+    <Build Include="dbo\SQS\Stored Procedures\spRptWklySqah.sql" />
+    <Build Include="dbo\SQS\Stored Procedures\UpdateGrid_AG2AG.sql" />
+    <Build Include="dbo\SQS\Stored Procedures\UpdateGrid_AG2CG.sql" />
+    <Build Include="dbo\SQS\Stored Procedures\UpdateGrid_AG2SG.sql" />
+    <Build Include="dbo\SQS\User Defined Types\GuidList.sql" />
+    <Build Include="dbo\SQS\User Defined Types\IntList.sql" />
+    <Build Include="dbo\SQS\User Defined Types\LongList.sql" />
+    <Build Include="dbo\SQS\User Defined Types\PriorityTable.sql" />
+    <Build Include="dbo\SQS\Views\_dta_mv_0.sql" />
+    <Build Include="dbo\SQS\Views\_dta_mv_26.sql" />
+    <Build Include="dbo\SQS\Views\_dta_mv_8.sql" />
+    <Build Include="dbo\SQS\Views\assigned_csr.sql" />
+    <Build Include="dbo\SQS\Views\assigned_ta.sql" />
+    <Build Include="dbo\SQS\Views\assigned_user.sql" />
+    <Build Include="dbo\SQS\Views\autohome_policy_types.sql" />
+    <Build Include="dbo\SQS\Views\consent_types.sql" />
+    <Build Include="dbo\SQS\Views\DailyAgentLead_View.sql" />
+    <Build Include="dbo\SQS\Views\DailyAgentLead_View2.sql" />
+    <Build Include="dbo\SQS\Views\gal_leads.sql" />
+    <Build Include="dbo\SQS\Views\gal_leads_new.sql" />
+    <Build Include="dbo\SQS\Views\gal_leads2.sql" />
+    <Build Include="dbo\SQS\Views\policy_statuses_DV.sql" />
+    <Build Include="dbo\SQS\Views\policy_statuses_MAPDP.sql" />
+    <Build Include="dbo\SQS\Views\policy_statuses_MedSups.sql" />
+    <Build Include="dbo\SQS\Views\primaryHealthPolicies.sql" />
+    <Build Include="dbo\SQS\Views\secondaryHealthPolicies.sql" />
+    <Build Include="dbo\SQS\Views\status0.sql" />
+    <Build Include="dbo\SQS\Views\status1.sql" />
+    <Build Include="dbo\SQS\Views\status2.sql" />
+    <Build Include="dbo\SQS\Views\SubmittedDate_View.sql" />
+    <Build Include="dbo\SQS\Views\vw_AccountHistory.sql" />
+    <Build Include="dbo\SQS\Views\vw_AcdCapList.sql" />
+    <Build Include="dbo\SQS\Views\vw_ArcActions.sql" />
+    <Build Include="dbo\SQS\Views\vw_ArcChangeAgent.sql" />
+    <Build Include="dbo\SQS\Views\vw_ArcLetterLog.sql" />
+    <Build Include="dbo\SQS\Views\vw_aspnet_Applications.sql" />
+    <Build Include="dbo\SQS\Views\vw_aspnet_MembershipUsers.sql" />
+    <Build Include="dbo\SQS\Views\vw_aspnet_Profiles.sql" />
+    <Build Include="dbo\SQS\Views\vw_aspnet_Roles.sql" />
+    <Build Include="dbo\SQS\Views\vw_aspnet_Users.sql" />
+    <Build Include="dbo\SQS\Views\vw_aspnet_UsersInRoles.sql" />
+    <Build Include="dbo\SQS\Views\vw_aspnet_WebPartState_Paths.sql" />
+    <Build Include="dbo\SQS\Views\vw_aspnet_WebPartState_Shared.sql" />
+    <Build Include="dbo\SQS\Views\vw_aspnet_WebPartState_User.sql" />
+    <Build Include="dbo\SQS\Views\vw_AutoHomePolicy.sql" />
+    <Build Include="dbo\SQS\Views\vw_AutoHomeQuotes.sql" />
+    <Build Include="dbo\SQS\Views\vw_DuplicateColumns.sql" />
+    <Build Include="dbo\SQS\Views\vw_EmailsForReport.sql" />
+    <Build Include="dbo\SQS\Views\vw_EventCalendar.sql" />
+    <Build Include="dbo\SQS\Views\vw_FilterLeads.sql" />
+    <Build Include="dbo\SQS\Views\vw_ForLeadMetric.sql" />
+    <Build Include="dbo\SQS\Views\vw_IndividualPluse.sql" />
+    <Build Include="dbo\SQS\Views\vw_Individuals.sql" />
+    <Build Include="dbo\SQS\Views\vw_LeadMarketing.sql" />
+    <Build Include="dbo\SQS\Views\vw_leads.sql" />
+    <Build Include="dbo\SQS\Views\vw_MAPDPView.sql" />
+    <Build Include="dbo\SQS\Views\vw_MedicalSupplements.sql" />
+    <Build Include="dbo\SQS\Views\vw_MedSuplementDetail.sql" />
+    <Build Include="dbo\SQS\Views\vw_proj_ForPrioritizationList.sql" />
+    <Build Include="dbo\SQS\Views\vw_QuickLinks.sql" />
+    <Build Include="dbo\SQS\Views\vw_ReconciliationReport.sql" />
+    <Build Include="dbo\SQS\Views\vw_Roles.sql" />
+    <Build Include="dbo\SQS\Views\vw_SeniorPolicies.sql" />
+    <Build Include="dbo\SQS\Views\vw_Vehicles.sql" />
+    <Build Include="dbo\SQS\Views\vwAgent2StateLicense.sql" />
+    <Build Include="dbo\SQS\Views\vwCurrentCampaignAssignments.sql" />
+    <Build Include="dbo\SQS\Views\vwEmailRecipients.sql" />
+  </ItemGroup>
+</Project>

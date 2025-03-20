@@ -1,0 +1,16 @@
+D:\Suheyl\Projects\Condado\OLEBridge\obj\Release\OLEBridge.csprojResolveAssemblyReference.cache
+D:\Suheyl\Projects\Condado\OLEBridge\obj\Release\OLEBridge.MainForm.resources
+D:\Suheyl\Projects\Condado\OLEBridge\obj\Release\OLEBridge.Properties.Resources.resources
+D:\Suheyl\Projects\Condado\OLEBridge\obj\Release\OLEBridge.csproj.GenerateResource.Cache
+D:\Suheyl\Projects\Condado\OLEBridge\bin\Release\OLEBridge.exe.config
+D:\Suheyl\Projects\Condado\OLEBridge\bin\Release\OLEBridge.exe
+D:\Suheyl\Projects\Condado\OLEBridge\bin\Release\OLEBridge.pdb
+D:\Suheyl\Projects\Condado\OLEBridge\bin\Release\Microsoft.AspNet.SignalR.Client.dll
+D:\Suheyl\Projects\Condado\OLEBridge\bin\Release\Newtonsoft.Json.dll
+D:\Suheyl\Projects\Condado\OLEBridge\bin\Release\Microsoft.AspNet.SignalR.Client.xml
+D:\Suheyl\Projects\Condado\OLEBridge\bin\Release\Newtonsoft.Json.xml
+D:\Suheyl\Projects\Condado\OLEBridge\obj\Release\OLEBridge.exe
+D:\Suheyl\Projects\Condado\OLEBridge\obj\Release\OLEBridge.pdb
+D:\Suheyl\Projects\Condado\OLEBridge\bin\Release\NLog.config
+D:\Suheyl\Projects\Condado\OLEBridge\bin\Release\NLog.dll
+D:\Suheyl\Projects\Condado\OLEBridge\bin\Release\NLog.xml

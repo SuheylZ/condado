@@ -1,0 +1,409 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="SelectCARE_SQL_DEVModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityContainer Name="SelectCARE_SQL_DEVModelStoreContainer">
+          <EntitySet Name="SignalR_Central_Bindings" EntityType="SelectCARE_SQL_DEVModel.Store.SignalR_Central_Bindings" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="users" EntityType="SelectCARE_SQL_DEVModel.Store.users" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="gal_login_acd_statistics" EntityType="SelectCARE_SQL_DEVModel.Store.gal_login_acd_statistics" store:Type="Views" store:Schema="dbo" store:Name="gal_login_acd_statistics">
+            <DefiningQuery>SELECT 
+      [gal_login_acd_statistics].[qas_agent_id] AS [qas_agent_id], 
+      [gal_login_acd_statistics].[qas_acd_count] AS [qas_acd_count], 
+      [gal_login_acd_statistics].[qas_max_acd] AS [qas_max_acd], 
+      [gal_login_acd_statistics].[qas_max_quota] AS [qas_max_quota], 
+      [gal_login_acd_statistics].[qas_min_level] AS [qas_min_level], 
+      [gal_login_acd_statistics].[qas_next_refresh] AS [qas_next_refresh], 
+      [gal_login_acd_statistics].[qas_acd_call_taken] AS [qas_acd_call_taken], 
+      [gal_login_acd_statistics].[qas_PV_schedule_result] AS [qas_PV_schedule_result], 
+      [gal_login_acd_statistics].[qas_is_enabled] AS [qas_is_enabled], 
+      [gal_login_acd_statistics].[qas_reason] AS [qas_reason], 
+      [gal_login_acd_statistics].[qas_last_update] AS [qas_last_update]
+      FROM [dbo].[gal_login_acd_statistics] AS [gal_login_acd_statistics]</DefiningQuery>
+          </EntitySet>
+        </EntityContainer>
+        <EntityType Name="SignalR_Central_Bindings">
+          <Key>
+            <PropertyRef Name="Token" />
+          </Key>
+          <Property Name="Token" Type="varchar" Nullable="false" MaxLength="40" />
+          <Property Name="UserKey" Type="varchar" Nullable="false" MaxLength="40" />
+          <Property Name="ConnectionID" Type="varchar" Nullable="false" MaxLength="40" />
+          <Property Name="ConnectedTime" Type="datetime" />
+          <Property Name="DisconnectedTime" Type="datetime" />
+        </EntityType>
+        <EntityType Name="users">
+          <Key>
+            <PropertyRef Name="usr_key" />
+          </Key>
+          <Property Name="usr_key" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="usr_first_name" Type="nvarchar" Nullable="false" MaxLength="200" />
+          <Property Name="usr_last_name" Type="nvarchar" Nullable="false" MaxLength="200" />
+          <Property Name="usr_email" Type="nvarchar" Nullable="false" MaxLength="200" />
+          <Property Name="usr_work_phone" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="usr_work_phone_ext" Type="nvarchar" MaxLength="25" />
+          <Property Name="usr_mobile_phone" Type="nvarchar" MaxLength="50" />
+          <Property Name="usr_fax" Type="nvarchar" MaxLength="50" />
+          <Property Name="usr_other_phone" Type="nvarchar" MaxLength="50" />
+          <Property Name="usr_other_phone_ext" Type="nvarchar" MaxLength="25" />
+          <Property Name="usr_position" Type="nvarchar" MaxLength="75" />
+          <Property Name="usr_note" Type="nvarchar" MaxLength="200" />
+          <Property Name="usr_softphone_sq_personal" Type="nvarchar" Nullable="false" MaxLength="100" />
+          <Property Name="usr_softphone_sq_general" Type="nvarchar" Nullable="false" MaxLength="100" />
+          <Property Name="usr_softphone_cm_personal" Type="nvarchar" MaxLength="100" />
+          <Property Name="usr_softphone_cm_general" Type="nvarchar" MaxLength="100" />
+          <Property Name="usr_custom1" Type="nvarchar" MaxLength="200" />
+          <Property Name="usr_custom2" Type="nvarchar" MaxLength="200" />
+          <Property Name="usr_custom3" Type="nvarchar" MaxLength="200" />
+          <Property Name="usr_custom4" Type="nvarchar" MaxLength="200" />
+          <Property Name="usr_default_cal_view" Type="bit" Nullable="false" />
+          <Property Name="usr_cal_background_highlights" Type="bit" />
+          <Property Name="usr_new_lead_bold" Type="bit" />
+          <Property Name="usr_new_lead_hl" Type="bit" />
+          <Property Name="usr_new_lead_hl_incl_newly_assigned" Type="bit" />
+          <Property Name="usr_flagged_lead_highlight" Type="bit" />
+          <Property Name="usr_auto_refresh" Type="int" />
+          <Property Name="usr_save_filter_criteria" Type="bit" />
+          <Property Name="usr_login_landing_page" Type="smallint" Nullable="false" />
+          <Property Name="usr_cal_start_hour" Type="tinyint" />
+          <Property Name="usr_cal_start_am" Type="bit" />
+          <Property Name="usr_cal_end_hour" Type="tinyint" />
+          <Property Name="usr_cal_end_am" Type="bit" />
+          <Property Name="usr_mobile_email" Type="nvarchar" MaxLength="200" />
+          <Property Name="usr_tz" Type="tinyint" />
+          <Property Name="usr_retention_flag" Type="bit" />
+          <Property Name="usr_csr_flag" Type="bit" />
+          <Property Name="usr_transfer_flag" Type="bit" />
+          <Property Name="usr_alternate_product_flag" Type="bit" />
+          <Property Name="usr_onboard_flag" Type="bit" />
+          <Property Name="usr_net_login" Type="nvarchar" MaxLength="100" />
+          <Property Name="usr_pwd" Type="nvarchar" MaxLength="256" />
+          <Property Name="usr_reassignment_flag" Type="bit" />
+          <Property Name="usr_arc_id" Type="nvarchar" MaxLength="25" />
+          <Property Name="usr_acdcap" Type="int" />
+          <Property Name="usr_api_flag" Type="bit" />
+          <Property Name="usr_acd_flag" Type="bit" />
+          <Property Name="usr_acd_status_flag" Type="bit" />
+          <Property Name="usr_acd_cap_flag" Type="bit" />
+          <Property Name="usr_phone_system_username" Type="nvarchar" MaxLength="200" />
+          <Property Name="usr_phone_system_password" Type="nvarchar" MaxLength="200" />
+          <Property Name="usr_phone_system_id" Type="nvarchar" MaxLength="200" />
+          <Property Name="usr_phone_system_stationid" Type="nvarchar" MaxLength="50" />
+          <Property Name="usr_phone_system_station_type" Type="nvarchar" MaxLength="50" />
+          <Property Name="usr_phone_system_inbound_skill" Type="nvarchar" MaxLength="200" />
+          <Property Name="usr_active_flag" Type="bit" />
+          <Property Name="usr_delete_flag" Type="bit" />
+          <Property Name="usr_add_usr" Type="nvarchar" MaxLength="50" />
+          <Property Name="usr_add_date" Type="smalldatetime" />
+          <Property Name="usr_change_user" Type="nvarchar" MaxLength="50" />
+          <Property Name="usr_change_date" Type="smalldatetime" />
+          <Property Name="usr_phone_system_inbound_skillId" Type="varchar" MaxLength="10" />
+          <Property Name="usr_cisco_domain_address" Type="varchar" MaxLength="50" />
+          <Property Name="usr_cisco_first_name" Type="varchar" MaxLength="50" />
+          <Property Name="usr_cisco_last_name" Type="varchar" MaxLength="50" />
+          <Property Name="usr_cisco_agent_id" Type="varchar" MaxLength="50" />
+          <Property Name="usr_cisco_agent_password" Type="varchar" MaxLength="50" />
+          <Property Name="usr_cisco_agent_extension1" Type="varchar" MaxLength="50" />
+          <Property Name="usr_cisco_agent_extension2" Type="varchar" MaxLength="50" />
+          <Property Name="usr_phone_system" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'SelectCARE_SQS.dbo.gal_login_acd_statistics' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="gal_login_acd_statistics">
+          <Key>
+            <PropertyRef Name="qas_agent_id" />
+          </Key>
+          <Property Name="qas_agent_id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="qas_acd_count" Type="int" />
+          <Property Name="qas_max_acd" Type="int" />
+          <Property Name="qas_max_quota" Type="int" />
+          <Property Name="qas_min_level" Type="int" />
+          <Property Name="qas_next_refresh" Type="int" />
+          <Property Name="qas_acd_call_taken" Type="int" />
+          <Property Name="qas_PV_schedule_result" Type="int" />
+          <Property Name="qas_is_enabled" Type="bit" />
+          <Property Name="qas_reason" Type="nvarchar" MaxLength="250" />
+          <Property Name="qas_last_update" Type="datetime" />
+        </EntityType>
+        <Function Name="GetACDStatistics" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="LeadBasicDisplayAllAgents" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="SelectCARE_SQL_DEVModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation">
+        <EntityContainer Name="SignalREntities" p1:LazyLoadingEnabled="true">
+          <EntitySet Name="users" EntityType="SelectCARE_SQL_DEVModel.users" />
+          <EntitySet Name="SignalR_Central_Bindings" EntityType="SelectCARE_SQL_DEVModel.SignalR_Bindings" />
+          <EntitySet Name="gal_login_acd_statistics" EntityType="SelectCARE_SQL_DEVModel.gal_login_acd_statistics" />
+          <FunctionImport Name="LeadBasicDisplayAllAgents" ReturnType="Collection(SelectCARE_SQL_DEVModel.LeadBasicDisplayAllAgents_Result)" />
+          <FunctionImport Name="GetACDStatistics" />
+        </EntityContainer>
+        <EntityType Name="users">
+          <Key>
+            <PropertyRef Name="usr_key" />
+          </Key>
+          <Property Type="Guid" Name="usr_key" Nullable="false" />
+          <Property Type="String" Name="usr_first_name" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="usr_last_name" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="usr_email" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="usr_work_phone" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="usr_work_phone_ext" MaxLength="25" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="usr_mobile_phone" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="usr_fax" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="usr_other_phone" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="usr_other_phone_ext" MaxLength="25" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="usr_position" MaxLength="75" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="usr_note" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="usr_softphone_sq_personal" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="usr_softphone_sq_general" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="usr_softphone_cm_personal" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="usr_softphone_cm_general" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="usr_custom1" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="usr_custom2" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="usr_custom3" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="usr_custom4" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="Boolean" Name="usr_default_cal_view" Nullable="false" />
+          <Property Type="Boolean" Name="usr_cal_background_highlights" />
+          <Property Type="Boolean" Name="usr_new_lead_bold" />
+          <Property Type="Boolean" Name="usr_new_lead_hl" />
+          <Property Type="Boolean" Name="usr_new_lead_hl_incl_newly_assigned" />
+          <Property Type="Boolean" Name="usr_flagged_lead_highlight" />
+          <Property Type="Int32" Name="usr_auto_refresh" />
+          <Property Type="Boolean" Name="usr_save_filter_criteria" />
+          <Property Type="Int16" Name="usr_login_landing_page" Nullable="false" />
+          <Property Type="Byte" Name="usr_cal_start_hour" />
+          <Property Type="Boolean" Name="usr_cal_start_am" />
+          <Property Type="Byte" Name="usr_cal_end_hour" />
+          <Property Type="Boolean" Name="usr_cal_end_am" />
+          <Property Type="String" Name="usr_mobile_email" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="Byte" Name="usr_tz" />
+          <Property Type="Boolean" Name="usr_retention_flag" />
+          <Property Type="Boolean" Name="usr_csr_flag" />
+          <Property Type="Boolean" Name="usr_transfer_flag" />
+          <Property Type="Boolean" Name="usr_alternate_product_flag" />
+          <Property Type="Boolean" Name="usr_onboard_flag" />
+          <Property Type="String" Name="usr_net_login" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="usr_pwd" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Type="Boolean" Name="usr_reassignment_flag" />
+          <Property Type="String" Name="usr_arc_id" MaxLength="25" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="usr_acdcap" />
+          <Property Type="Boolean" Name="usr_api_flag" />
+          <Property Type="Boolean" Name="usr_acd_flag" />
+          <Property Type="Boolean" Name="usr_acd_status_flag" />
+          <Property Type="Boolean" Name="usr_acd_cap_flag" />
+          <Property Type="String" Name="usr_phone_system_username" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="usr_phone_system_password" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="usr_phone_system_id" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="usr_phone_system_stationid" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="usr_phone_system_station_type" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="usr_phone_system_inbound_skill" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="Boolean" Name="usr_active_flag" />
+          <Property Type="Boolean" Name="usr_delete_flag" />
+          <Property Type="String" Name="usr_add_usr" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="usr_add_date" Precision="0" />
+          <Property Type="String" Name="usr_change_user" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="usr_change_date" Precision="0" />
+          <Property Type="String" Name="usr_phone_system_inbound_skillId" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="usr_phone_system" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="usr_cisco_domain_address" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="usr_cisco_first_name" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="usr_cisco_last_name" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="usr_cisco_agent_id" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="usr_cisco_agent_password" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="usr_cisco_agent_extension1" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="usr_cisco_agent_extension2" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="SignalR_Bindings">
+          <Key>
+            <PropertyRef Name="Token" />
+          </Key>
+          <Property Type="String" Name="Token" Nullable="false" MaxLength="40" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="UserKey" Nullable="false" MaxLength="40" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ConnectionID" Nullable="false" MaxLength="40" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="ConnectedTime" Precision="3" />
+          <Property Type="DateTime" Name="DisconnectedTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="gal_login_acd_statistics">
+          <Key>
+            <PropertyRef Name="AgentId" />
+          </Key>
+          <Property Type="Guid" Name="AgentId" Nullable="false" />
+          <Property Type="Int32" Name="AcdCount" />
+          <Property Type="Int32" Name="MaxAcd" />
+          <Property Type="Int32" Name="MaxQuota" />
+          <Property Type="Int32" Name="MinLevel" />
+          <Property Type="Int32" Name="NextRefresh" />
+          <Property Type="Int32" Name="AcdCallTaken" />
+          <Property Type="Int32" Name="PVScheduleResult" />
+          <Property Type="Boolean" Name="IsEnabled" />
+          <Property Type="String" Name="Reason" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="LastRun" Precision="3" />
+        </EntityType>
+        <ComplexType Name="LeadBasicDisplayAllAgents_Result">
+          <Property Type="Guid" Name="agent_l360_username" Nullable="false" />
+          <Property Type="Int32" Name="avg_max" Nullable="true" />
+          <Property Type="Int32" Name="total_assigned_leads" Nullable="true" />
+          <Property Type="Int32" Name="agent_max" Nullable="true" />
+          <Property Type="Int32" Name="total_available_leads" Nullable="true" />
+          <Property Type="Int32" Name="total_assignable_leads" Nullable="true" />
+          <Property Type="DateTime" Name="oldest_available" Nullable="true" Precision="23" />
+          <Property Type="DateTime" Name="newest_available" Nullable="true" Precision="23" />
+          <Property Type="DateTime" Name="last_refresh" Nullable="false" Precision="23" />
+          <Property Type="Boolean" Name="IsEnabled" Nullable="true" />
+          <Property Type="String" Name="Reason" Nullable="true" MaxLength="250" />
+        </ComplexType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="SelectCARE_SQL_DEVModelStoreContainer" CdmEntityContainer="SignalREntities">
+          <EntitySetMapping Name="users">
+            <EntityTypeMapping TypeName="SelectCARE_SQL_DEVModel.users">
+              <MappingFragment StoreEntitySet="users">
+                <ScalarProperty Name="usr_cisco_agent_extension2" ColumnName="usr_cisco_agent_extension2" />
+                <ScalarProperty Name="usr_cisco_agent_extension1" ColumnName="usr_cisco_agent_extension1" />
+                <ScalarProperty Name="usr_cisco_agent_password" ColumnName="usr_cisco_agent_password" />
+                <ScalarProperty Name="usr_cisco_agent_id" ColumnName="usr_cisco_agent_id" />
+                <ScalarProperty Name="usr_cisco_last_name" ColumnName="usr_cisco_last_name" />
+                <ScalarProperty Name="usr_cisco_first_name" ColumnName="usr_cisco_first_name" />
+                <ScalarProperty Name="usr_cisco_domain_address" ColumnName="usr_cisco_domain_address" />
+                <ScalarProperty Name="usr_phone_system" ColumnName="usr_phone_system" />
+                <ScalarProperty Name="usr_phone_system_inbound_skillId" ColumnName="usr_phone_system_inbound_skillId" />
+                <ScalarProperty Name="usr_change_date" ColumnName="usr_change_date" />
+                <ScalarProperty Name="usr_change_user" ColumnName="usr_change_user" />
+                <ScalarProperty Name="usr_add_date" ColumnName="usr_add_date" />
+                <ScalarProperty Name="usr_add_usr" ColumnName="usr_add_usr" />
+                <ScalarProperty Name="usr_delete_flag" ColumnName="usr_delete_flag" />
+                <ScalarProperty Name="usr_active_flag" ColumnName="usr_active_flag" />
+                <ScalarProperty Name="usr_phone_system_inbound_skill" ColumnName="usr_phone_system_inbound_skill" />
+                <ScalarProperty Name="usr_phone_system_station_type" ColumnName="usr_phone_system_station_type" />
+                <ScalarProperty Name="usr_phone_system_stationid" ColumnName="usr_phone_system_stationid" />
+                <ScalarProperty Name="usr_phone_system_id" ColumnName="usr_phone_system_id" />
+                <ScalarProperty Name="usr_phone_system_password" ColumnName="usr_phone_system_password" />
+                <ScalarProperty Name="usr_phone_system_username" ColumnName="usr_phone_system_username" />
+                <ScalarProperty Name="usr_acd_cap_flag" ColumnName="usr_acd_cap_flag" />
+                <ScalarProperty Name="usr_acd_status_flag" ColumnName="usr_acd_status_flag" />
+                <ScalarProperty Name="usr_acd_flag" ColumnName="usr_acd_flag" />
+                <ScalarProperty Name="usr_api_flag" ColumnName="usr_api_flag" />
+                <ScalarProperty Name="usr_acdcap" ColumnName="usr_acdcap" />
+                <ScalarProperty Name="usr_arc_id" ColumnName="usr_arc_id" />
+                <ScalarProperty Name="usr_reassignment_flag" ColumnName="usr_reassignment_flag" />
+                <ScalarProperty Name="usr_pwd" ColumnName="usr_pwd" />
+                <ScalarProperty Name="usr_net_login" ColumnName="usr_net_login" />
+                <ScalarProperty Name="usr_onboard_flag" ColumnName="usr_onboard_flag" />
+                <ScalarProperty Name="usr_alternate_product_flag" ColumnName="usr_alternate_product_flag" />
+                <ScalarProperty Name="usr_transfer_flag" ColumnName="usr_transfer_flag" />
+                <ScalarProperty Name="usr_csr_flag" ColumnName="usr_csr_flag" />
+                <ScalarProperty Name="usr_retention_flag" ColumnName="usr_retention_flag" />
+                <ScalarProperty Name="usr_tz" ColumnName="usr_tz" />
+                <ScalarProperty Name="usr_mobile_email" ColumnName="usr_mobile_email" />
+                <ScalarProperty Name="usr_cal_end_am" ColumnName="usr_cal_end_am" />
+                <ScalarProperty Name="usr_cal_end_hour" ColumnName="usr_cal_end_hour" />
+                <ScalarProperty Name="usr_cal_start_am" ColumnName="usr_cal_start_am" />
+                <ScalarProperty Name="usr_cal_start_hour" ColumnName="usr_cal_start_hour" />
+                <ScalarProperty Name="usr_login_landing_page" ColumnName="usr_login_landing_page" />
+                <ScalarProperty Name="usr_save_filter_criteria" ColumnName="usr_save_filter_criteria" />
+                <ScalarProperty Name="usr_auto_refresh" ColumnName="usr_auto_refresh" />
+                <ScalarProperty Name="usr_flagged_lead_highlight" ColumnName="usr_flagged_lead_highlight" />
+                <ScalarProperty Name="usr_new_lead_hl_incl_newly_assigned" ColumnName="usr_new_lead_hl_incl_newly_assigned" />
+                <ScalarProperty Name="usr_new_lead_hl" ColumnName="usr_new_lead_hl" />
+                <ScalarProperty Name="usr_new_lead_bold" ColumnName="usr_new_lead_bold" />
+                <ScalarProperty Name="usr_cal_background_highlights" ColumnName="usr_cal_background_highlights" />
+                <ScalarProperty Name="usr_default_cal_view" ColumnName="usr_default_cal_view" />
+                <ScalarProperty Name="usr_custom4" ColumnName="usr_custom4" />
+                <ScalarProperty Name="usr_custom3" ColumnName="usr_custom3" />
+                <ScalarProperty Name="usr_custom2" ColumnName="usr_custom2" />
+                <ScalarProperty Name="usr_custom1" ColumnName="usr_custom1" />
+                <ScalarProperty Name="usr_softphone_cm_general" ColumnName="usr_softphone_cm_general" />
+                <ScalarProperty Name="usr_softphone_cm_personal" ColumnName="usr_softphone_cm_personal" />
+                <ScalarProperty Name="usr_softphone_sq_general" ColumnName="usr_softphone_sq_general" />
+                <ScalarProperty Name="usr_softphone_sq_personal" ColumnName="usr_softphone_sq_personal" />
+                <ScalarProperty Name="usr_note" ColumnName="usr_note" />
+                <ScalarProperty Name="usr_position" ColumnName="usr_position" />
+                <ScalarProperty Name="usr_other_phone_ext" ColumnName="usr_other_phone_ext" />
+                <ScalarProperty Name="usr_other_phone" ColumnName="usr_other_phone" />
+                <ScalarProperty Name="usr_fax" ColumnName="usr_fax" />
+                <ScalarProperty Name="usr_mobile_phone" ColumnName="usr_mobile_phone" />
+                <ScalarProperty Name="usr_work_phone_ext" ColumnName="usr_work_phone_ext" />
+                <ScalarProperty Name="usr_work_phone" ColumnName="usr_work_phone" />
+                <ScalarProperty Name="usr_email" ColumnName="usr_email" />
+                <ScalarProperty Name="usr_last_name" ColumnName="usr_last_name" />
+                <ScalarProperty Name="usr_first_name" ColumnName="usr_first_name" />
+                <ScalarProperty Name="usr_key" ColumnName="usr_key" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SignalR_Central_Bindings">
+            <EntityTypeMapping TypeName="SelectCARE_SQL_DEVModel.SignalR_Bindings">
+              <MappingFragment StoreEntitySet="SignalR_Central_Bindings">
+                <ScalarProperty Name="DisconnectedTime" ColumnName="DisconnectedTime" />
+                <ScalarProperty Name="ConnectedTime" ColumnName="ConnectedTime" />
+                <ScalarProperty Name="ConnectionID" ColumnName="ConnectionID" />
+                <ScalarProperty Name="UserKey" ColumnName="UserKey" />
+                <ScalarProperty Name="Token" ColumnName="Token" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="gal_login_acd_statistics">
+            <EntityTypeMapping TypeName="SelectCARE_SQL_DEVModel.gal_login_acd_statistics">
+              <MappingFragment StoreEntitySet="gal_login_acd_statistics">
+                <ScalarProperty Name="LastRun" ColumnName="qas_last_update" />
+                <ScalarProperty Name="Reason" ColumnName="qas_reason" />
+                <ScalarProperty Name="IsEnabled" ColumnName="qas_is_enabled" />
+                <ScalarProperty Name="PVScheduleResult" ColumnName="qas_PV_schedule_result" />
+                <ScalarProperty Name="AcdCallTaken" ColumnName="qas_acd_call_taken" />
+                <ScalarProperty Name="NextRefresh" ColumnName="qas_next_refresh" />
+                <ScalarProperty Name="MinLevel" ColumnName="qas_min_level" />
+                <ScalarProperty Name="MaxQuota" ColumnName="qas_max_quota" />
+                <ScalarProperty Name="MaxAcd" ColumnName="qas_max_acd" />
+                <ScalarProperty Name="AcdCount" ColumnName="qas_acd_count" />
+                <ScalarProperty Name="AgentId" ColumnName="qas_agent_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="LeadBasicDisplayAllAgents" FunctionName="SelectCARE_SQL_DEVModel.Store.LeadBasicDisplayAllAgents">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="SelectCARE_SQL_DEVModel.LeadBasicDisplayAllAgents_Result">
+                <ScalarProperty Name="agent_l360_username" ColumnName="agent_l360_username" />
+                <ScalarProperty Name="avg_max" ColumnName="avg_max" />
+                <ScalarProperty Name="total_assigned_leads" ColumnName="total_assigned_leads" />
+                <ScalarProperty Name="agent_max" ColumnName="agent_max" />
+                <ScalarProperty Name="total_available_leads" ColumnName="total_available_leads" />
+                <ScalarProperty Name="total_assignable_leads" ColumnName="total_assignable_leads" />
+                <ScalarProperty Name="oldest_available" ColumnName="oldest_available" />
+                <ScalarProperty Name="newest_available" ColumnName="newest_available" />
+                <ScalarProperty Name="last_refresh" ColumnName="last_refresh" />
+                <ScalarProperty Name="IsEnabled" ColumnName="IsEnabled" />
+                <ScalarProperty Name="Reason" ColumnName="Reason" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="GetACDStatistics" FunctionName="SelectCARE_SQL_DEVModel.Store.GetACDStatistics" />
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+        <DesignerProperty Name="UseLegacyProvider" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams />
+  </Designer>
+</edmx:Edmx>

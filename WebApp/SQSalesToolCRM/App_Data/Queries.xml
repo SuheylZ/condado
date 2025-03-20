@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<queries>
+  <query id="1" alias="campaign" name="campaigns" sql="SELECT lea_key, cmp_title, cmp_id, cmp_alt_title, cmp_cpt_key, cmp_email, cmp_cpl, cmp_description, cmp_sp_outpulse_id, cmp_sp_outpulse_type,
+  cmp_cpy_key FROM leads INNER JOIN campaigns  ON lea_cmp_id = cmp_id"/>
+  <query id="2" alias="campaign type" name="campaign_type" sql=""/>
+  <query id="3" alias="accounts" name="accounts" sql="SELECT     act_assigned_usr, act_assigned_csr, act_add_date, act_modified_date, act_notes, act_external_agent, act_lead_primary_lead_key FROM Accounts inner join leads on leads.lea_account_id = act_key"/>
+  <query id="4" alias="leads" name="leads" sql="SELECT lea_key, lea_add_date, lea_modified_date, lea_account_id, lea_last_call_date, lea_email_tracking_code, lea_tracking_information, lea_ip_address 
+         FROM leads" />
+  <query id="5" alias="users" name="users" sql=""/>
+  <query id="6" alias="actions" name="actions" sql="SELECT     leads.lea_key, actions.act_key, actions.act_title, leads.lea_last_action_date
+  FROM         leads INNER JOIN
+  actions ON leads.lea_last_action = actions.act_key"/>
+  <query id="7" alias="statuses" name="status0" sql="SELECT     lea_key, sta_key, sta_title
+  FROM         leads  INNER JOIN
+  statuses  ON lea_status = sta_key
+"/>
+  <query id="8" alias="skill groups" name="skill_groups" sql=""/>
+  <query id="9" alias="individuals" name="individuals" sql="SELECT     lea_key, indv_key, indv_first_name, indv_last_name, indv_smoking, indv_gender,
+  indv_address2, indv_address1, indv_age, indv_city, indv_account_id, indv_add_user,
+  indv_birthday, indv_add_date, indv_modified_user, indv_modified_date, indv_active_flag,
+  indv_delete_flag, indv_day_phone, indv_evening_phone, indv_cell_phone, indv_fax_nmbr,
+  indv_state_Id, indv_zipcode, indv_relation, indv_notes, indv_email,
+  indv_external_reference_id
+  FROM         Individuals INNER JOIN leads  ON indv_account_id = lea_account_id"/>
+  <query id="10" alias="sub status i" name="status1" sql="SELECT    lea_key, sta_key, sta_title
+  FROM         leads  INNER JOIN
+  statuses  ON lea_sub_status = sta_key"/>
+  <query id="11" alias="sub status ii" name="status2" sql=""/>
+  <query id="12" alias="assigned users" name="assigned_user" sql="SELECT    lea_key, usr_key, usr_first_name, usr_last_name
+  FROM         leads  INNER JOIN
+  Accounts  ON lea_account_id = act_key INNER JOIN
+  users  ON act_assigned_usr = usr_key"/>
+  <query id="14" alias="assigned csr" name="assigned_csr" sql="SELECT     lea_key, usr_key, usr_first_name, usr_last_name
+  FROM         leads  INNER JOIN
+  Accounts ON lea_account_id = act_key INNER JOIN
+  users  ON act_assigned_csr = usr_key"/>
+  <query id="15" alias="assigned ta" name="assigned_ta" sql="SELECT     lea_key, usr_key, usr_first_name, usr_last_name
+  FROM         leads  INNER JOIN
+  Accounts  ON lea_account_id = act_key INNER JOIN
+  users  ON act_transfer_user = usr_key"/>
+  <query id="16" alias="policies" name="autohome_policies" sql=""/>
+  <query id="17" alias="mapdps" name="mapdps" sql=""/>
+  <query id="18" alias="medsups" name="medsups" sql=""/>
+  <query id="19" alias="dentalvision" name="dental_vision" sql=""/>
+  <query id="20" alias="carrierissues" name="carrier_issues" sql=""/>
+  <query id="21" alias="autohomequotes" name="autohome_quotes" sql=""/>
+  <query id="22" alias="autohomepolicies" name="autphome_policies" sql=""/>
+  <query id="23" alias="carriers" name="carriers" sql=""/>
+  <query id="24" alias="plan" name="plans" sql=""/>
+  <query id="25" alias="policyinformation" name="policy_information" sql=""/>
+  <query id="26" alias="policystatus" name="policy_statuses" sql=""/>
+  <query id="27" alias="individuals" name="individuals" sql=""/>
+  <query id="28" alias="campaigntype" name="campaign_type" sql=""/>
+  <query id="29" alias="carriers" name="carriers" sql=""/>
+  <query id="30" alias="mapdps type" name="mapdps_type" sql=""/>
+  <query id="31" alias="company" name="companies" sql=""/>
+  <query id="32" alias="outpulse type" name="outpulse_type" sql=""/>
+  <query id="33" alias="autohome quote type" name="autohome_quote_types" sql=""/>
+
+
+  <query id="91" alias="PrimaryIndividual" name="individuals" sql="SELECT     L.lea_key, I.indv_key, I.indv_first_name, I.indv_last_name, I.indv_smoking, I.indv_gender, I.indv_address2, I.indv_address1, I.indv_age, I.indv_city,
+  I.indv_account_id, I.indv_add_user, I.indv_birthday, I.indv_add_date, I.indv_modified_user, I.indv_modified_date, I.indv_active_flag, I.indv_delete_flag,
+  I.indv_day_phone, I.indv_evening_phone, I.indv_cell_phone, I.indv_fax_nmbr, I.indv_state_Id, I.indv_zipcode, I.indv_relation, I.indv_notes, I.indv_email,
+  I.indv_external_reference_id
+  FROM         leads AS L INNER JOIN
+  Accounts ON L.lea_account_id = Accounts.act_key INNER JOIN
+  Individuals AS I ON Accounts.act_primary_individual_id = I.indv_key"/>
+  <query id="92" alias="SecondaryIndividual" name="individuals" sql="SELECT     L.lea_key, I.indv_key, I.indv_first_name, I.indv_last_name, I.indv_smoking, I.indv_gender, I.indv_address2, I.indv_address1, I.indv_age, I.indv_city,
+  I.indv_account_id, I.indv_add_user, I.indv_birthday, I.indv_add_date, I.indv_modified_user, I.indv_modified_date, I.indv_active_flag, I.indv_delete_flag,
+  I.indv_day_phone, I.indv_evening_phone, I.indv_cell_phone, I.indv_fax_nmbr, I.indv_state_Id, I.indv_zipcode, I.indv_relation, I.indv_notes, I.indv_email,
+  I.indv_external_reference_id
+  FROM         leads AS L INNER JOIN
+  Accounts ON L.lea_account_id = Accounts.act_key INNER JOIN
+  Individuals AS I ON Accounts.act_secondary_individual_id = I.indv_key"/>
+</queries>

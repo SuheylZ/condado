@@ -1,0 +1,16 @@
+F:\Yasir Ali\Projects\LiveTFSNew\SelectCARE - WebApp\SalesTools.DataAccess\bin\Debug\SalesTool.DataAccess.dll.config
+F:\Yasir Ali\Projects\LiveTFSNew\SelectCARE - WebApp\SalesTools.DataAccess\bin\Debug\SalesTool.DataAccess.dll
+F:\Yasir Ali\Projects\LiveTFSNew\SelectCARE - WebApp\SalesTools.DataAccess\bin\Debug\SalesTool.DataAccess.pdb
+F:\Yasir Ali\Projects\LiveTFSNew\SelectCARE - WebApp\SalesTools.DataAccess\bin\Debug\EntityFramework.dll
+F:\Yasir Ali\Projects\LiveTFSNew\SelectCARE - WebApp\SalesTools.DataAccess\bin\Debug\EntityFramework.xml
+F:\Yasir Ali\Projects\LiveTFSNew\SelectCARE - WebApp\SalesTools.DataAccess\obj\Debug\SalesTool.DataAccess.csprojResolveAssemblyReference.cache
+F:\Yasir Ali\Projects\LiveTFSNew\SelectCARE - WebApp\SalesTools.DataAccess\obj\Debug\SalesTool.DataAccess.dll
+F:\Yasir Ali\Projects\LiveTFSNew\SelectCARE - WebApp\SalesTools.DataAccess\obj\Debug\SalesTool.DataAccess.pdb
+D:\Suheyl\Projects\Condado\WebApp\SalesTools.DataAccess\bin\Debug\SalesTool.DataAccess.dll.config
+D:\Suheyl\Projects\Condado\WebApp\SalesTools.DataAccess\bin\Debug\SalesTool.DataAccess.dll
+D:\Suheyl\Projects\Condado\WebApp\SalesTools.DataAccess\bin\Debug\SalesTool.DataAccess.pdb
+D:\Suheyl\Projects\Condado\WebApp\SalesTools.DataAccess\bin\Debug\EntityFramework.dll
+D:\Suheyl\Projects\Condado\WebApp\SalesTools.DataAccess\bin\Debug\EntityFramework.xml
+D:\Suheyl\Projects\Condado\WebApp\SalesTools.DataAccess\obj\Debug\SalesTool.DataAccess.dll
+D:\Suheyl\Projects\Condado\WebApp\SalesTools.DataAccess\obj\Debug\SalesTool.DataAccess.pdb
+D:\Suheyl\Projects\Condado\WebApp\SalesTools.DataAccess\obj\Debug\SalesTool.DataAccess.csprojResolveAssemblyReference.cache

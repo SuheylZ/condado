@@ -1,0 +1,224 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30501.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SalesTool.DataAccess", "SalesTools.DataAccess\SalesTool.DataAccess.csproj", "{EA889ABA-40A6-4D1C-82E8-AECFF1561E71}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{AF6CFE99-EE4E-44BF-A742-986A2238B1A6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SalesTool.Direct", "SalesTool.Schema\SalesTool.Direct.csproj", "{F807F00A-496A-40E1-8F50-11F36FBC0F5E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SalesTool.DataAccess.Tests", "SalesTool.DataAccess.Tests\SalesTool.DataAccess.Tests.csproj", "{E7AD5DF4-246F-48B8-AEB6-210B1328933C}"
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "SQSalesToolCRM(1)", "http://localhost:10487", "{F4DFD34D-85FE-42B0-9EFB-5853BDB7B2CE}"
+	ProjectSection(WebsiteProperties) = preProject
+		SccProjectName = "SAK"
+		SccAuxPath = "SAK"
+		SccLocalPath = "SAK"
+		SccProvider = "SAK"
+		UseIISExpress = "true"
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		ProjectReferences = "{F807F00A-496A-40E1-8F50-11F36FBC0F5E}|SalesTool.Direct.dll;{19380cbd-e912-469d-86ea-557c6220ea6b}|SalesTool.Reports.dll;{ebf89257-4d42-4ee6-92d8-c3f3ebc01a91}|SelectCare.ArcApi.Infrastructure.dll;{82a1bfbb-47f0-4123-86ec-78c17a96b8ec}|UserControlLibrary.dll;{34a5e568-564d-415b-a067-37e0ed9ec3ab}|SelectCare.WebService.DataFormats.dll;{ea889aba-40a6-4d1c-82e8-aecff1561e71}|SalesTool.DataAccess.dll;"
+		Debug.AspNetCompiler.VirtualPath = "/SQSalesToolCRM"
+		Debug.AspNetCompiler.PhysicalPath = "SQSalesToolCRM\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\SQSalesToolCRM\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "true"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/SQSalesToolCRM"
+		Release.AspNetCompiler.PhysicalPath = "SQSalesToolCRM\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\SQSalesToolCRM\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "true"
+		Release.AspNetCompiler.Debug = "False"
+		SlnRelativePath = "SQSalesToolCRM\"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SalesTool.Reports", "SalesTool.Reports\SalesTool.Reports.csproj", "{19380CBD-E912-469D-86EA-557C6220EA6B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SelectCare.ArcApi.Infrastructure", "SelectCare.ArcApi\SelectCare.ArcApi.Infrastructure.csproj", "{EBF89257-4D42-4EE6-92D8-C3F3EBC01A91}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SelectCare.Arc.Client", "SelectCARE.ARC.Client\SelectCare.Arc.Client.csproj", "{C50333F9-7C7B-4970-B1D9-26A4FEC32887}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SelectCARE.CallDataSync", "SelectCARE.CallDataSync\SelectCARE.CallDataSync.csproj", "{3EA06B1B-3336-444E-86D0-D2E33AA95BE5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SelectCare.ARC.Web", "SelectCare.ARC.Web\SelectCare.ARC.Web.csproj", "{A9C22951-E806-4E81-9BEE-9D93C73485CE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SignalR_Engine", "SignalR_Engine\SignalR_Engine.csproj", "{94DD1ED6-3448-4FA4-9C0C-7F832D5125B4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserControlLibrary", "UserControlLibrary\UserControlLibrary.csproj", "{82A1BFBB-47F0-4123-86EC-78C17A96B8EC}"
+EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "SelectCare.Database.SQS", "SelectCare.Database\SelectCare.Database.SQS.sqlproj", "{ECDD2EB6-1E51-4305-A14D-CC42D662F500}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Databases", "Databases", "{96C7C241-51E1-40A1-958F-545CE43DBAE8}"
+EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "SelectCare.Database.SQL", "SelectCare.Database\SelectCare.Database.SQL.sqlproj", "{E76DE2A3-78FE-443B-9531-CE00BF5CD172}"
+EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "SelectCare.Database.SQAH", "SelectCare.Database\SelectCare.Database.SQAH.sqlproj", "{074D42EB-E639-4513-B706-F5852D45C003}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SelectCare.WebService.DataFormats", "..\SelectCare.WebService.DataFormats\SelectCare.WebService.DataFormats.csproj", "{34A5E568-564D-415B-A067-37E0ED9EC3AB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SelectCare.Arc.Communicator", "..\..\SignalR\SC.Communicator\SelectCare.Arc.Communicator.csproj", "{86C65F6E-FA80-4484-AC69-43AF337C42BF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SelectCARE.ARC.Bridge", "SelectCare.ARC.Bridge\SelectCARE.ARC.Bridge.csproj", "{03940B05-7069-4BDC-A893-1A74145255BD}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 18
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://tfs1.condadogroup.com:8080/tfs/selectquotecollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = SalesTools.DataAccess\\SalesTool.DataAccess.csproj
+		SccProjectName1 = SalesTools.DataAccess
+		SccLocalPath1 = SalesTools.DataAccess
+		SccProjectUniqueName2 = SalesTool.Schema\\SalesTool.Direct.csproj
+		SccProjectName2 = SalesTool.Schema
+		SccLocalPath2 = SalesTool.Schema
+		SccProjectUniqueName3 = SalesTool.DataAccess.Tests\\SalesTool.DataAccess.Tests.csproj
+		SccProjectName3 = SalesTool.DataAccess.Tests
+		SccLocalPath3 = SalesTool.DataAccess.Tests
+		SccWebProject4 = true
+		SccProjectUniqueName4 = http://localhost:10487
+		SccProjectName4 = SQSalesToolCRM
+		SccLocalPath4 = SQSalesToolCRM
+		SccProjectEnlistmentChoice4 = 2
+		SccProjectUniqueName5 = SalesTool.Reports\\SalesTool.Reports.csproj
+		SccProjectName5 = SalesTool.Reports
+		SccLocalPath5 = SalesTool.Reports
+		SccProjectUniqueName6 = SelectCare.ArcApi\\SelectCare.ArcApi.Infrastructure.csproj
+		SccProjectName6 = SelectCare.ArcApi
+		SccLocalPath6 = SelectCare.ArcApi
+		SccProjectUniqueName7 = SelectCARE.ARC.Client\\SelectCare.Arc.Client.csproj
+		SccProjectName7 = SelectCARE.ARC.Client
+		SccLocalPath7 = SelectCARE.ARC.Client
+		SccProjectUniqueName8 = SelectCARE.CallDataSync\\SelectCARE.CallDataSync.csproj
+		SccProjectName8 = SelectCARE.CallDataSync
+		SccLocalPath8 = SelectCARE.CallDataSync
+		SccProjectUniqueName9 = SelectCare.ARC.Web\\SelectCare.ARC.Web.csproj
+		SccProjectName9 = SelectCare.ARC.Web
+		SccLocalPath9 = SelectCare.ARC.Web
+		SccProjectUniqueName10 = SignalR_Engine\\SignalR_Engine.csproj
+		SccProjectName10 = SignalR_Engine
+		SccLocalPath10 = SignalR_Engine
+		SccProjectUniqueName11 = UserControlLibrary\\UserControlLibrary.csproj
+		SccProjectName11 = UserControlLibrary
+		SccLocalPath11 = UserControlLibrary
+		SccProjectUniqueName12 = SelectCare.Database\\SelectCare.Database.SQS.sqlproj
+		SccProjectTopLevelParentUniqueName12 = SQSalesToolSolution.sln
+		SccProjectName12 = SelectCare.Database
+		SccLocalPath12 = SelectCare.Database
+		SccProjectUniqueName13 = SelectCare.Database\\SelectCare.Database.SQL.sqlproj
+		SccProjectTopLevelParentUniqueName13 = SQSalesToolSolution.sln
+		SccProjectName13 = SelectCare.Database
+		SccLocalPath13 = SelectCare.Database
+		SccProjectUniqueName14 = SelectCare.Database\\SelectCare.Database.SQAH.sqlproj
+		SccProjectTopLevelParentUniqueName14 = SQSalesToolSolution.sln
+		SccProjectName14 = SelectCare.Database
+		SccLocalPath14 = SelectCare.Database
+		SccProjectUniqueName15 = ..\\SelectCare.WebService.DataFormats\\SelectCare.WebService.DataFormats.csproj
+		SccProjectName15 = ../SignalR_Engine/SelectCare.WebService.DataFormats
+		SccLocalPath15 = ..\\SelectCare.WebService.DataFormats
+		SccProjectUniqueName16 = ..\\..\\SignalR\\SC.Communicator\\SelectCare.Arc.Communicator.csproj
+		SccProjectName16 = SelectCARE.ARC.Comunicator/Communicator
+		SccLocalPath16 = ..\\..\\SignalR\\SC.Communicator
+		SccProjectUniqueName17 = SelectCare.ARC.Bridge\\SelectCARE.ARC.Bridge.csproj
+		SccProjectName17 = SelectCare.ARC.Bridge
+		SccLocalPath17 = SelectCare.ARC.Bridge
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EA889ABA-40A6-4D1C-82E8-AECFF1561E71}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA889ABA-40A6-4D1C-82E8-AECFF1561E71}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA889ABA-40A6-4D1C-82E8-AECFF1561E71}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA889ABA-40A6-4D1C-82E8-AECFF1561E71}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F807F00A-496A-40E1-8F50-11F36FBC0F5E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F807F00A-496A-40E1-8F50-11F36FBC0F5E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F807F00A-496A-40E1-8F50-11F36FBC0F5E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F807F00A-496A-40E1-8F50-11F36FBC0F5E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E7AD5DF4-246F-48B8-AEB6-210B1328933C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E7AD5DF4-246F-48B8-AEB6-210B1328933C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E7AD5DF4-246F-48B8-AEB6-210B1328933C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E7AD5DF4-246F-48B8-AEB6-210B1328933C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F4DFD34D-85FE-42B0-9EFB-5853BDB7B2CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F4DFD34D-85FE-42B0-9EFB-5853BDB7B2CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F4DFD34D-85FE-42B0-9EFB-5853BDB7B2CE}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{F4DFD34D-85FE-42B0-9EFB-5853BDB7B2CE}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{19380CBD-E912-469D-86EA-557C6220EA6B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{19380CBD-E912-469D-86EA-557C6220EA6B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{19380CBD-E912-469D-86EA-557C6220EA6B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{19380CBD-E912-469D-86EA-557C6220EA6B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EBF89257-4D42-4EE6-92D8-C3F3EBC01A91}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EBF89257-4D42-4EE6-92D8-C3F3EBC01A91}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EBF89257-4D42-4EE6-92D8-C3F3EBC01A91}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EBF89257-4D42-4EE6-92D8-C3F3EBC01A91}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C50333F9-7C7B-4970-B1D9-26A4FEC32887}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C50333F9-7C7B-4970-B1D9-26A4FEC32887}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C50333F9-7C7B-4970-B1D9-26A4FEC32887}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C50333F9-7C7B-4970-B1D9-26A4FEC32887}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3EA06B1B-3336-444E-86D0-D2E33AA95BE5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3EA06B1B-3336-444E-86D0-D2E33AA95BE5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3EA06B1B-3336-444E-86D0-D2E33AA95BE5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3EA06B1B-3336-444E-86D0-D2E33AA95BE5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A9C22951-E806-4E81-9BEE-9D93C73485CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A9C22951-E806-4E81-9BEE-9D93C73485CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A9C22951-E806-4E81-9BEE-9D93C73485CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A9C22951-E806-4E81-9BEE-9D93C73485CE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{94DD1ED6-3448-4FA4-9C0C-7F832D5125B4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{94DD1ED6-3448-4FA4-9C0C-7F832D5125B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{94DD1ED6-3448-4FA4-9C0C-7F832D5125B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{94DD1ED6-3448-4FA4-9C0C-7F832D5125B4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{82A1BFBB-47F0-4123-86EC-78C17A96B8EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{82A1BFBB-47F0-4123-86EC-78C17A96B8EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{82A1BFBB-47F0-4123-86EC-78C17A96B8EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{82A1BFBB-47F0-4123-86EC-78C17A96B8EC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ECDD2EB6-1E51-4305-A14D-CC42D662F500}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ECDD2EB6-1E51-4305-A14D-CC42D662F500}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ECDD2EB6-1E51-4305-A14D-CC42D662F500}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{ECDD2EB6-1E51-4305-A14D-CC42D662F500}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ECDD2EB6-1E51-4305-A14D-CC42D662F500}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ECDD2EB6-1E51-4305-A14D-CC42D662F500}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{E76DE2A3-78FE-443B-9531-CE00BF5CD172}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E76DE2A3-78FE-443B-9531-CE00BF5CD172}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E76DE2A3-78FE-443B-9531-CE00BF5CD172}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{E76DE2A3-78FE-443B-9531-CE00BF5CD172}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E76DE2A3-78FE-443B-9531-CE00BF5CD172}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E76DE2A3-78FE-443B-9531-CE00BF5CD172}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{074D42EB-E639-4513-B706-F5852D45C003}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{074D42EB-E639-4513-B706-F5852D45C003}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{074D42EB-E639-4513-B706-F5852D45C003}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{074D42EB-E639-4513-B706-F5852D45C003}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{074D42EB-E639-4513-B706-F5852D45C003}.Release|Any CPU.Build.0 = Release|Any CPU
+		{074D42EB-E639-4513-B706-F5852D45C003}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{34A5E568-564D-415B-A067-37E0ED9EC3AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{34A5E568-564D-415B-A067-37E0ED9EC3AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{34A5E568-564D-415B-A067-37E0ED9EC3AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{34A5E568-564D-415B-A067-37E0ED9EC3AB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{86C65F6E-FA80-4484-AC69-43AF337C42BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{86C65F6E-FA80-4484-AC69-43AF337C42BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{86C65F6E-FA80-4484-AC69-43AF337C42BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{86C65F6E-FA80-4484-AC69-43AF337C42BF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{03940B05-7069-4BDC-A893-1A74145255BD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{03940B05-7069-4BDC-A893-1A74145255BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{03940B05-7069-4BDC-A893-1A74145255BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{03940B05-7069-4BDC-A893-1A74145255BD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{ECDD2EB6-1E51-4305-A14D-CC42D662F500} = {96C7C241-51E1-40A1-958F-545CE43DBAE8}
+		{E76DE2A3-78FE-443B-9531-CE00BF5CD172} = {96C7C241-51E1-40A1-958F-545CE43DBAE8}
+		{074D42EB-E639-4513-B706-F5852D45C003} = {96C7C241-51E1-40A1-958F-545CE43DBAE8}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		EnterpriseLibraryConfigurationToolBinariesPathV6 = packages\EnterpriseLibrary.Common.6.0.1304.0\lib\NET45;packages\EnterpriseLibrary.Data.6.0.1304.0\lib\NET45
+		EnterpriseLibraryConfigurationToolBinariesPath = packages\Unity.2.1.505.0\lib\NET35;packages\Unity.Interception.2.1.505.0\lib\NET35;packages\EnterpriseLibrary.Common.5.0.505.0\lib\NET35;packages\EnterpriseLibrary.Caching.5.0.505.0\lib\NET35
+	EndGlobalSection
+EndGlobal

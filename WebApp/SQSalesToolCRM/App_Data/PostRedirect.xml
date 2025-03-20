@@ -1,0 +1,230 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<formats>
+  <format id="4" title="Basic" url="">
+    <entity name="CampaignId" default=""/>
+    <entity name="StatusId" default=""/>
+    <entity name="Lead_Pub_ID" default=""/>
+    <entity name="Lead_Ad_Variation" default=""/>
+    <entity name="Lead_IP_Address" default=""/>
+    <entity name="Lead_DTE_Company_Name" default=""/>
+    <entity name="Lead_Group" default=""/>
+    <entity name="Lead_Tracking_Code" default=""/>
+    <entity name="Lead_Tracking_Information" default=""/>
+    <entity name="Lead_Source_Code" default=""/>
+    <entity name="Lead_Pub_Sub_ID" default=""/>
+    <entity name="Lead_Email_Tracking_Code" default=""/>
+    <entity name="Leads_First_Contact_Appointment" default=""/>
+    <entity name="Account_External_Agent" default=""/>
+    <entity name="Account_Life_Information" default=""/>
+    
+    <entity name="Primary_Reference_ID" default=""/>
+    <entity name="Primary_Notes" default=""/>
+    <entity name="Primary_FirstName" default="" key="First_Name"/>
+    <entity name="Primary_LastName" key="Last_Name"/>
+    <entity name="Primary_Gender" default="" key="Gender"/>
+    <entity name="Primary_DayPhone" default="" type="phone" key="Work_Phone"/>
+    <entity name="Primary_EveningPhone" default="" type="phone"  key="Evening_Phone"/>
+    <entity name="Primary_MobilePhone" default="" type="phone" key="Cell_Phone"/>
+    <entity name="Primary_Email" default="" type="email"/>
+    <entity name="Primary_Fax" default="" type="phone"/>
+    <entity name="Primary_Address1" default="" key="Address"/>
+    <entity name="Primary_Address2" default=""/>
+    <entity name="Primary_City" default="" key="City"/>
+    <entity name="PrimaryState" default="" key="State"/>
+    <entity name="Primary_Zip" default="" key="Zip"/>
+    <entity name="Primary_BirthDate" default="" type="date" key="Birthdate"/>
+    <entity name="Primary_Tobacco" default=""/>
+    <entity name="Primary_HRASubsidyAmount" default=""/>
+    <entity name="primary_tcpa_consent" default=""/>
+    
+    <entity name="Secondary_Reference_ID" default=""/>
+    <entity name="Secondary_Notes" default=""/>
+    <entity name="Secondary_FirstName" default=""/>
+    <entity name="Secondary_LastName" default=""/>
+    <entity name="Secondary_Gender" default=""/>
+    <entity name="Secondary_DayPhone" default="" type="phone"/>
+    <entity name="Secondary_EveningPhone" default="" type="phone"/>
+    <entity name="Secondary_MobilePhone" default="" type="phone"/>
+    <entity name="Secondary_Email" default="" type="email"/>
+    <entity name="Secondary_Fax" default="" type="phone"/>
+    <entity name="Secondary_Address1" default=""/>
+    <entity name="Secondary_Address2" default=""/>
+    <entity name="Secondary_City" default=""/>
+    <entity name="SecondaryState" default=""/>
+    <entity name="Secondary_Zip" default=""/>
+    <entity name="Secondary_BirthDate" default="" type="date"/>
+    <entity name="Secondary_Tobacco" default=""/>
+    <entity name="Secondary_HRASubsidyAmount" default=""/>
+    <entity name="secondary_tcpa_consent" default=""/>
+
+    <entityRepeater name="Driver" iterations="3" marker="NNN" startFrom="1" endAt="3">
+      <entity name="DriverNNN_DlState" default=""/>
+      <entity name="DriverNNN_MaritalStatus" default=""/>
+      <entity name="DriverNNN_LicenseStatus" default=""/>
+      <entity name="DriverNNN_AgeLicensed" default=""/>
+      <entity name="DriverNNN_YearsAtResidence" default=""/>
+      <entity name="DriverNNN_Occupation" default=""/>
+      <entity name="DriverNNN_YearsWithCompany" default=""/>
+      <entity name="DriverNNN_YrsInField" default=""/>
+      <entity name="DriverNNN_Education" default=""/>
+      <entity name="DriverNNN_NmbrIncidents" default=""/>
+      <entity name="DriverNNN_Sr22" default=""/>
+      <entity name="DriverNNN_PolicyYears" default=""/>
+      <entity name="DriverNNN_LicenseNumber" default=""/>
+      <entity name="DriverNNN_CurrentCarrier" default=""/>
+      <entity name="DriverNNN_LiabilityLimit" default=""/>
+      <entity name="DriverNNN_CurrentAutoXDate" default=""/>
+      <entity name="DriverNNN_MedicalPayment" default=""/>
+      <entity name="DriverNNN_TicketsAccidentsClaims" default=""/>
+      <entity name="DriverNNN_IncidentType" default=""/>
+      <entity name="DriverNNN_IncidentDescription" default=""/>
+      <entity name="DriverNNN_IncidentDate" default=""/>
+      <entity name="DriverNNN_ClaimPaidAmount" default=""/>
+    </entityRepeater>
+    <entityRepeater name="Vehicle" iterations="3" marker="NNN" startFrom="1" endAt="3">
+      <entity name="VehicleNNN_Year" default="" />
+      <entity name="VehicleNNN_Make" default="" />
+      <entity name="VehicleNNN_Model" default="" />
+      <entity name="VehicleNNN_Submodel" default="" />
+      <entity name="VehicleNNN_AnnualMileage" default="" />
+      <entity name="VehicleNNN_WeeklyCommuteDays" default="" />
+      <entity name="VehicleNNN_PrimaryUse" default="" />
+      <entity name="VehicleNNN_ComprehensiveDeductable" default="" />
+      <entity name="VehicleNNN_CollisionDeductable" default="" />
+      <entity name="VehicleNNN_SecuritySystem" default="" />
+      <entity name="VehicleNNN_WhereParked" default="" />
+    </entityRepeater>
+    <entityRepeater name="Home" iterations="3" marker="NNN" startFrom="1" endAt="3">
+      <entity name="HomeNNN_CurrentCarrier" default="" />
+      <entity name="HomeNNN_CurrentXdateLeadInfo" default="" />
+      <entity name="HomeNNN_YearBuilt" default="" />
+      <entity name="HomeNNN_DwellingType" default="" />
+      <entity name="HomeNNN_DesignType" default="" />
+      <entity name="HomeNNN_RoofAge" default="" />
+      <entity name="HomeNNN_RoofType" default="" />
+      <entity name="HomeNNN_FoundationType" default="" />
+      <entity name="HomeNNN_HeatingType" default="" />
+      <entity name="HomeNNN_ExteriorWallType" default="" />
+      <entity name="HomeNNN_NumberOfClaims" default="" />
+      <entity name="HomeNNN_NumberOfBedrooms" default="" />
+      <entity name="HomeNNN_SqFootage" default="" />
+      <entity name="HomeNNN_ReqCoverage" default="" />
+      <entity name="HomeNNN_NumberOfBathrooms" default="" />
+    </entityRepeater>
+  </format>
+
+  <format id="5" title="" url="">
+    <entity name="CampaignId" default=""/>
+    <entity name="StatusId" default=""/>
+    <entity name="Lead_Pub_ID" default=""/>
+    <entity name="Lead_Ad_Variation" default=""/>
+    <entity name="Lead_IP_Address" default=""/>
+    <entity name="Lead_DTE_Company_Name" default=""/>
+    <entity name="Lead_Group" default=""/>
+    
+    <entity name="Leads_First_Contact_Appointment" default=""/>
+    <entity name="Lead_Tracking_Code" default=""/>
+    <entity name="Lead_Tracking_Information" default=""/>
+    <entity name="Lead_Source_Code" default=""/>
+    <entity name="Lead_Pub_Sub_ID" default=""/>
+    <entity name="Lead_Email_Tracking_Code" default=""/>
+    
+    <entity name="Account_External_Agent" default=""/>
+    <entity name="Account_Life_Information" default=""/>
+    
+    <entity name="Primary_Reference_ID" default=""/>
+    <entity name="Primary_Notes" default=""/>
+    <entity name="Primary_FirstName" default="" key="First_Name"/>
+    <entity name="Primary_LastName" key="Last_Name"/>
+    <entity name="Primary_Gender" default="" key="Gender"/>
+    <entity name="Primary_DayPhone" default="" type="phone" key="Work_Phone"/>
+    <entity name="Primary_EveningPhone" default="" type="phone"  key="Evening_Phone"/>
+    <entity name="Primary_MobilePhone" default="" type="phone" key="Cell_Phone"/>
+    <entity name="Primary_Email" default="" type="email"/>
+    <entity name="Primary_Fax" default="" type="phone"/>
+    <entity name="Primary_Address1" default="" key="Address"/>
+    <entity name="Primary_Address2" default=""/>
+    <entity name="Primary_City" default="" key="City"/>
+    <entity name="PrimaryState" default="" key="State"/>
+    <entity name="Primary_Zip" default="" key="Zip"/>
+    <entity name="Primary_BirthDate" default="" type="date" key="Birthdate"/>
+    <entity name="Primary_Tobacco" default=""/>
+    <entity name="Primary_HRASubsidyAmount" default=""/>
+    <entity name="primary_tcpa_consent" default=""/>
+    
+    <entity name="Secondary_Reference_ID" default=""/>
+    <entity name="Secondary_Notes" default=""/>
+    <entity name="Secondary_FirstName" default=""/>
+    <entity name="Secondary_LastName" default=""/>
+    <entity name="Secondary_Gender" default=""/>
+    <entity name="Secondary_DayPhone" default="" type="phone"/>
+    <entity name="Secondary_EveningPhone" default="" type="phone"/>
+    <entity name="Secondary_MobilePhone" default="" type="phone"/>
+    <entity name="Secondary_Email" default="" type="email"/>
+    <entity name="Secondary_Fax" default="" type="phone"/>
+    <entity name="Secondary_Address1" default=""/>
+    <entity name="Secondary_Address2" default=""/>
+    <entity name="Secondary_City" default=""/>
+    <entity name="SecondaryState" default=""/>
+    <entity name="Secondary_Zip" default=""/>
+    <entity name="Secondary_BirthDate" default="" type="date"/>
+    <entity name="Secondary_Tobacco" default=""/>
+    <entity name="Secondary_HRASubsidyAmount" default=""/>
+    <entity name="secondary_tcpa_consent" default=""/>
+
+    <entityRepeater name="Driver" iterations="3" marker="NNN" startFrom="1" endAt="3">
+      <entity name="DriverNNN_DlState" default=""/>
+      <entity name="DriverNNN_MaritalStatus" default=""/>
+      <entity name="DriverNNN_LicenseStatus" default=""/>
+      <entity name="DriverNNN_AgeLicensed" default=""/>
+      <entity name="DriverNNN_YearsAtResidence" default=""/>
+      <entity name="DriverNNN_Occupation" default=""/>
+      <entity name="DriverNNN_YearsWithCompany" default=""/>
+      <entity name="DriverNNN_YrsInField" default=""/>
+      <entity name="DriverNNN_Education" default=""/>
+      <entity name="DriverNNN_NmbrIncidents" default=""/>
+      <entity name="DriverNNN_Sr22" default=""/>
+      <entity name="DriverNNN_PolicyYears" default=""/>
+      <entity name="DriverNNN_LicenseNumber" default=""/>
+      <entity name="DriverNNN_CurrentCarrier" default=""/>
+      <entity name="DriverNNN_LiabilityLimit" default=""/>
+      <entity name="DriverNNN_CurrentAutoXDate" default=""/>
+      <entity name="DriverNNN_MedicalPayment" default=""/>
+      <entity name="DriverNNN_TicketsAccidentsClaims" default=""/>
+      <entity name="DriverNNN_IncidentType" default=""/>
+      <entity name="DriverNNN_IncidentDescription" default=""/>
+      <entity name="DriverNNN_IncidentDate" default=""/>
+      <entity name="DriverNNN_ClaimPaidAmount" default=""/>
+    </entityRepeater>
+    <entityRepeater name="Vehicle" iterations="3" marker="NNN" startFrom="1" endAt="3">
+      <entity name="VehicleNNN_Year" default="" />
+      <entity name="VehicleNNN_Make" default="" />
+      <entity name="VehicleNNN_Model" default="" />
+      <entity name="VehicleNNN_Submodel" default="" />
+      <entity name="VehicleNNN_AnnualMileage" default="" />
+      <entity name="VehicleNNN_WeeklyCommuteDays" default="" />
+      <entity name="VehicleNNN_PrimaryUse" default="" />
+      <entity name="VehicleNNN_ComprehensiveDeductable" default="" />
+      <entity name="VehicleNNN_CollisionDeductable" default="" />
+      <entity name="VehicleNNN_SecuritySystem" default="" />
+      <entity name="VehicleNNN_WhereParked" default="" />
+    </entityRepeater>
+    <entityRepeater name="Home" iterations="3" marker="NNN" startFrom="1" endAt="3">
+      <entity name="HomeNNN_CurrentCarrier" default="" />
+      <entity name="HomeNNN_CurrentXdateLeadInfo" default="" />
+      <entity name="HomeNNN_YearBuilt" default="" />
+      <entity name="HomeNNN_DwellingType" default="" />
+      <entity name="HomeNNN_DesignType" default="" />
+      <entity name="HomeNNN_RoofAge" default="" />
+      <entity name="HomeNNN_RoofType" default="" />
+      <entity name="HomeNNN_FoundationType" default="" />
+      <entity name="HomeNNN_HeatingType" default="" />
+      <entity name="HomeNNN_ExteriorWallType" default="" />
+      <entity name="HomeNNN_NumberOfClaims" default="" />
+      <entity name="HomeNNN_NumberOfBedrooms" default="" />
+      <entity name="HomeNNN_SqFootage" default="" />
+      <entity name="HomeNNN_ReqCoverage" default="" />
+      <entity name="HomeNNN_NumberOfBathrooms" default="" />
+    </entityRepeater>
+  </format>
+</formats>

@@ -1,0 +1,33 @@
+D:\Condado Group 1\New TFS code\GAL_Engine\GALEngine Library\bin\Debug\GALEngine Library.dll.config
+D:\Condado Group 1\New TFS code\GAL_Engine\GALEngine Library\bin\Debug\GALEngine Library.dll
+D:\Condado Group 1\New TFS code\GAL_Engine\GALEngine Library\bin\Debug\GALEngine Library.pdb
+D:\Condado Group 1\New TFS code\GAL_Engine\GALEngine Library\bin\Debug\EntityFramework.dll
+D:\Condado Group 1\New TFS code\GAL_Engine\GALEngine Library\bin\Debug\EntityFramework.xml
+D:\Condado Group 1\New TFS code\GAL_Engine\GALEngine Library\obj\Debug\GALEngine Library.dll
+D:\Condado Group 1\New TFS code\GAL_Engine\GALEngine Library\obj\Debug\GALEngine Library.pdb
+F:\Yasir Ali\Projects\LiveTFSNew\SelectCARE - WinSvc\Plugins\GALEngine Library\obj\Debug\GALEngine Library.csprojResolveAssemblyReference.cache
+F:\Yasir Ali\Projects\LiveTFSNew\SelectCARE - WinSvc\Plugins\GALEngine Library\bin\Debug\plugins.xml
+F:\Yasir Ali\Projects\LiveTFSNew\SelectCARE - WinSvc\Plugins\GALEngine Library\bin\Debug\GALEngine Library.dll.config
+F:\Yasir Ali\Projects\LiveTFSNew\SelectCARE - WinSvc\Plugins\GALEngine Library\bin\Debug\GALEngine Library.dll
+F:\Yasir Ali\Projects\LiveTFSNew\SelectCARE - WinSvc\Plugins\GALEngine Library\bin\Debug\GALEngine Library.pdb
+F:\Yasir Ali\Projects\LiveTFSNew\SelectCARE - WinSvc\Plugins\GALEngine Library\bin\Debug\EntityFramework.dll
+F:\Yasir Ali\Projects\LiveTFSNew\SelectCARE - WinSvc\Plugins\GALEngine Library\bin\Debug\SalesTool.Service.exe
+F:\Yasir Ali\Projects\LiveTFSNew\SelectCARE - WinSvc\Plugins\GALEngine Library\bin\Debug\Service.Interfaces.dll
+F:\Yasir Ali\Projects\LiveTFSNew\SelectCARE - WinSvc\Plugins\GALEngine Library\bin\Debug\SalesTool.DataAccess.dll
+F:\Yasir Ali\Projects\LiveTFSNew\SelectCARE - WinSvc\Plugins\GALEngine Library\bin\Debug\Service.Interfaces.pdb
+F:\Yasir Ali\Projects\LiveTFSNew\SelectCARE - WinSvc\Plugins\GALEngine Library\bin\Debug\SalesTool.Service.pdb
+F:\Yasir Ali\Projects\LiveTFSNew\SelectCARE - WinSvc\Plugins\GALEngine Library\obj\Debug\GALEngine Library.dll
+F:\Yasir Ali\Projects\LiveTFSNew\SelectCARE - WinSvc\Plugins\GALEngine Library\obj\Debug\GALEngine Library.pdb
+D:\Condado Group 1\WIN SERVICE OFFLINE\SelectCARE - WinSvc Offline\SelectCARE - WinSvc\Plugins\GALEngine Library\bin\Debug\plugins.xml
+D:\Condado Group 1\WIN SERVICE OFFLINE\SelectCARE - WinSvc Offline\SelectCARE - WinSvc\Plugins\GALEngine Library\bin\Debug\GALEngine Library.dll.config
+D:\Condado Group 1\WIN SERVICE OFFLINE\SelectCARE - WinSvc Offline\SelectCARE - WinSvc\Plugins\GALEngine Library\bin\Debug\GALEngine Library.dll
+D:\Condado Group 1\WIN SERVICE OFFLINE\SelectCARE - WinSvc Offline\SelectCARE - WinSvc\Plugins\GALEngine Library\bin\Debug\GALEngine Library.pdb
+D:\Condado Group 1\WIN SERVICE OFFLINE\SelectCARE - WinSvc Offline\SelectCARE - WinSvc\Plugins\GALEngine Library\bin\Debug\EntityFramework.dll
+D:\Condado Group 1\WIN SERVICE OFFLINE\SelectCARE - WinSvc Offline\SelectCARE - WinSvc\Plugins\GALEngine Library\bin\Debug\SalesTool.Service.exe
+D:\Condado Group 1\WIN SERVICE OFFLINE\SelectCARE - WinSvc Offline\SelectCARE - WinSvc\Plugins\GALEngine Library\bin\Debug\Service.Interfaces.dll
+D:\Condado Group 1\WIN SERVICE OFFLINE\SelectCARE - WinSvc Offline\SelectCARE - WinSvc\Plugins\GALEngine Library\bin\Debug\SalesTool.DataAccess.dll
+D:\Condado Group 1\WIN SERVICE OFFLINE\SelectCARE - WinSvc Offline\SelectCARE - WinSvc\Plugins\GALEngine Library\bin\Debug\Service.Interfaces.pdb
+D:\Condado Group 1\WIN SERVICE OFFLINE\SelectCARE - WinSvc Offline\SelectCARE - WinSvc\Plugins\GALEngine Library\bin\Debug\SalesTool.Service.pdb
+D:\Condado Group 1\WIN SERVICE OFFLINE\SelectCARE - WinSvc Offline\SelectCARE - WinSvc\Plugins\GALEngine Library\obj\Debug\GALEngine Library.csprojResolveAssemblyReference.cache
+D:\Condado Group 1\WIN SERVICE OFFLINE\SelectCARE - WinSvc Offline\SelectCARE - WinSvc\Plugins\GALEngine Library\obj\Debug\GALEngine Library.dll
+D:\Condado Group 1\WIN SERVICE OFFLINE\SelectCARE - WinSvc Offline\SelectCARE - WinSvc\Plugins\GALEngine Library\obj\Debug\GALEngine Library.pdb

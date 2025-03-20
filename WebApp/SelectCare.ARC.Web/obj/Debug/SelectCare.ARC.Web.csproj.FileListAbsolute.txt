@@ -1,0 +1,14 @@
+D:\Suheyl\Projects\Condado\WebApp\SelectCare.ARC.Web\bin\SelectCare.ARC.Web.dll.config
+D:\Suheyl\Projects\Condado\WebApp\SelectCare.ARC.Web\bin\SelectCare.ARC.Web.dll
+D:\Suheyl\Projects\Condado\WebApp\SelectCare.ARC.Web\bin\SelectCare.ARC.Web.pdb
+D:\Suheyl\Projects\Condado\WebApp\SelectCare.ARC.Web\bin\NLog.dll
+D:\Suheyl\Projects\Condado\WebApp\SelectCare.ARC.Web\bin\SalesTool.DataAccess.dll
+D:\Suheyl\Projects\Condado\WebApp\SelectCare.ARC.Web\bin\SalesTool.Direct.dll
+D:\Suheyl\Projects\Condado\WebApp\SelectCare.ARC.Web\bin\EntityFramework.dll
+D:\Suheyl\Projects\Condado\WebApp\SelectCare.ARC.Web\bin\SalesTool.Direct.pdb
+D:\Suheyl\Projects\Condado\WebApp\SelectCare.ARC.Web\bin\SalesTool.DataAccess.pdb
+D:\Suheyl\Projects\Condado\WebApp\SelectCare.ARC.Web\bin\NLog.xml
+D:\Suheyl\Projects\Condado\WebApp\SelectCare.ARC.Web\bin\EntityFramework.xml
+D:\Suheyl\Projects\Condado\WebApp\SelectCare.ARC.Web\obj\Debug\SelectCare.ARC.Web.csprojResolveAssemblyReference.cache
+D:\Suheyl\Projects\Condado\WebApp\SelectCare.ARC.Web\obj\Debug\SelectCare.ARC.Web.dll
+D:\Suheyl\Projects\Condado\WebApp\SelectCare.ARC.Web\obj\Debug\SelectCare.ARC.Web.pdb

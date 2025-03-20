@@ -1,0 +1,6 @@
+D:\Suheyl\Projects\Condado\SelectCare.WebService.DataFormats\bin\Debug\SelectCare.WebService.DataFormats.dll
+D:\Suheyl\Projects\Condado\SelectCare.WebService.DataFormats\bin\Debug\SelectCare.WebService.DataFormats.pdb
+D:\Suheyl\Projects\Condado\SelectCare.WebService.DataFormats\obj\Debug\SelectCare.WebService.DataFormats.dll
+D:\Suheyl\Projects\Condado\SelectCare.WebService.DataFormats\obj\Debug\SelectCare.WebService.DataFormats.pdb
+D:\Suheyl\Projects\WebApp\SQSalesToolCRM\Bin\SelectCare.WebService.DataFormats.dll
+D:\Suheyl\Projects\WebApp\SQSalesToolCRM\Bin\SelectCare.WebService.DataFormats.pdb

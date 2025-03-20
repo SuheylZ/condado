@@ -1,0 +1,354 @@
+﻿body   
+{
+    background: #b6b7bc;
+    font-size: .80em;
+    font-family: "Helvetica Neue", "Lucida Grande", "Segoe UI", Arial, Helvetica, Verdana, sans-serif;
+    margin: 0px;
+    padding: 0px;
+    color: #696969;
+}
+
+#scWrapper
+{
+    width: 1560px;
+    height: auto;
+    min-height: 1000px;
+    background-color: #fff;
+    margin: 0px auto 0px auto;
+    border: 1px solid #496077;
+}
+
+#scMetricsWrapper {
+    width: 1500px;
+    background-color: #fff;
+    padding-bottom:25px;
+    margin: 0px auto 0px auto;
+    border: 1px solid #496077;
+    /* IE10 Consumer Preview */ 
+    background-image: -ms-linear-gradient(top, #4B6C9E 0%, #465C71 100%);
+
+    /* Mozilla Firefox */ 
+    background-image: -moz-linear-gradient(top, #4B6C9E 0%, #465C71 100%);
+
+    /* Opera */ 
+    background-image: -o-linear-gradient(top, #4B6C9E 0%, #465C71 100%);
+
+    /* Webkit (Safari/Chrome 10) */ 
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #4B6C9E), color-stop(1, #465C71));
+
+    /* Webkit (Chrome 11+) */ 
+    background-image: -webkit-linear-gradient(top, #4B6C9E 0%, #465C71 100%);
+
+    /* W3C Markup, IE10 Release Preview */ 
+    background-image: linear-gradient(to bottom, #4B6C9E 0%, #465C71 100%);
+    /*Round Corners*/
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+}
+
+#totalSalesHeader {
+    vertical-align:text-top;
+    color:#ffffff;
+    text-align:center;
+    font-size:24px;
+    font-weight:bold;
+  height:30px;
+  padding:5px;
+  box-shadow:0 12px 20px rgba(0,0,0,.9);
+  background: -webkit-radial-gradient(center bottom, rgba(160, 201, 215, 0.8) 0%, rgba(160, 201, 215, 0) 70%), -webkit-linear-gradient(top, black 0%,#282F44 6%,#2C3551 52%,#354262 91%,#050C54 100%);
+  /*Round Corners*/
+  border-top-left-radius:15px;
+border-top-right-radius:15px;
+}
+
+#scSalesMetricArea {
+    width:710px;
+    height:350px;
+    color:#ffffff;
+    font-size:20px;
+    text-align:center;
+    border:4px solid #465C71;
+    margin:10px;
+    padding:5px;
+    float:left;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+
+}
+
+#scLeadMetricArea {
+    width:710px;
+    height:350px;
+    color:#ffffff;
+    font-size:20px;
+    text-align:center;
+    margin:10px;
+    padding:5px;
+    float:right;
+    border:4px solid #465C71;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+
+}
+
+.scSalesDashBoxesLeft {
+    float:left;
+    width:220px;
+    height:75px;
+    color:#ffffff;
+    margin:2px;
+    margin-right:14px;
+    text-align:center;
+    border:2px solid #53708A;
+    border-radius: 20px;
+    box-shadow:0 6px 10px rgba(0,0,0,.9);
+    /* IE10 Consumer Preview */ 
+    background-image: -ms-linear-gradient(top, #354D70 0%, #273440 100%);
+
+    /* Mozilla Firefox */ 
+    background-image: -moz-linear-gradient(top, #354D70 0%, #273440 100%);
+
+    /* Opera */ 
+    background-image: -o-linear-gradient(top, #354D70 0%, #273440 100%);
+
+    /* Webkit (Safari/Chrome 10) */ 
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #354D70), color-stop(1, #273440));
+
+    /* Webkit (Chrome 11+) */ 
+    background-image: -webkit-linear-gradient(top, #354D70 0%, #273440 100%);
+
+    /* W3C Markup, IE10 Release Preview */ 
+    background-image: linear-gradient(to bottom, #354D70 0%, #273440 100%);
+}
+
+.scSalesDashBoxesRight {
+    float:right;
+    width:220px;
+    height:75px;
+    color:#ffffff;
+    margin:2px;
+    text-align:center;
+    border:2px solid #53708A;
+    border-radius: 20px;
+    box-shadow:0 6px 10px rgba(0,0,0,.9);
+    /* IE10 Consumer Preview */ 
+    background-image: -ms-linear-gradient(top, #354D70 0%, #273440 100%);
+
+    /* Mozilla Firefox */ 
+    background-image: -moz-linear-gradient(top, #354D70 0%, #273440 100%);
+
+    /* Opera */ 
+    background-image: -o-linear-gradient(top, #354D70 0%, #273440 100%);
+
+    /* Webkit (Safari/Chrome 10) */ 
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #354D70), color-stop(1, #273440));
+
+    /* Webkit (Chrome 11+) */ 
+    background-image: -webkit-linear-gradient(top, #354D70 0%, #273440 100%);
+
+    /* W3C Markup, IE10 Release Preview */ 
+    background-image: linear-gradient(to bottom, #354D70 0%, #273440 100%);
+}
+
+.scTextTiles {
+display: block;
+font-size: 1.17em;
+font-weight: bold; 
+}
+
+.odometer {
+    font-size: 24px;
+}
+
+.scSelect {
+    padding:2px;
+    margin: 0;
+    width:125px;
+    font-size:14px;
+    border-radius:4px;
+    -webkit-box-shadow: 
+        0 0px 0 #ccc,
+        0 0px #fff inset;
+    background: url('http://i45.tinypic.com/309nb74.png') no-repeat right, -moz-linear-gradient(top, #354D70 0%, #273440 100%);
+    background: url('http://i45.tinypic.com/309nb74.png') no-repeat right, -webkit-gradient(linear, left top, left bottom, color-stop(0%,#FBFBFB), color-stop(100%,#E9E9E9));
+    color:black;
+    border:none;
+    outline:none;
+    display: inline-block;
+    -webkit-appearance:none; 
+    cursor:pointer;
+    border: 1px solid #ccc;
+}
+
+.scParametersMetrics {
+    padding-bottom:5px;
+}
+
+#scReportWrapper {
+    width: 1500px;
+    height: 400px;
+    background-color: #fff;
+    margin: 0px auto 0px auto;
+    border: 1px solid #496077;
+    /* IE10 Consumer Preview */ 
+    background-image: -ms-linear-gradient(top, #4B6C9E 0%, #465C71 100%);
+
+    /* Mozilla Firefox */ 
+    background-image: -moz-linear-gradient(top, #4B6C9E 0%, #465C71 100%);
+
+    /* Opera */ 
+    background-image: -o-linear-gradient(top, #4B6C9E 0%, #465C71 100%);
+
+    /* Webkit (Safari/Chrome 10) */ 
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #4B6C9E), color-stop(1, #465C71));
+
+    /* Webkit (Chrome 11+) */ 
+    background-image: -webkit-linear-gradient(top, #4B6C9E 0%, #465C71 100%);
+
+    /* W3C Markup, IE10 Release Preview */ 
+    background-image: linear-gradient(to bottom, #4B6C9E 0%, #465C71 100%);
+    
+}
+
+
+.scParametersReports {
+    text-align:right;
+    color:#ffffff;
+    padding:5px;
+    float:right; 
+    width:900px;
+    font-weight:bold;
+}
+
+.scParmSelect {
+    padding:2px;
+    margin: 0;
+    width:200px;
+    font-size:14px;
+    border-radius:4px;
+    -webkit-box-shadow: 
+        0 0px 0 #ccc,
+        0 0px #fff inset;
+    background: url('http://i45.tinypic.com/309nb74.png') no-repeat right, -moz-linear-gradient(top, #354D70 0%, #273440 100%);
+    background: url('http://i45.tinypic.com/309nb74.png') no-repeat right, -webkit-gradient(linear, left top, left bottom, color-stop(0%,#FBFBFB), color-stop(100%,#E9E9E9));
+    color:black;
+    border:none;
+    outline:none;
+    display: inline-block;
+    -webkit-appearance:none; 
+    cursor:pointer;
+    border: 1px solid #ccc;
+}
+
+.scParmTextbox {
+    padding:2px;
+    margin: 0;
+    width:100px;
+    font-size:14px;
+    border-radius:4px;
+    -webkit-box-shadow: 
+        0 0px 0 #ccc,
+        0 0px #fff inset;
+    background: -moz-linear-gradient(top, #354D70 0%, #273440 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#FBFBFB), color-stop(100%,#E9E9E9));
+    color:black;
+    border:none;
+    outline:none;
+    display: inline-block;
+    -webkit-appearance:none; 
+    cursor:pointer;
+    border: 1px solid #ccc;
+}
+
+table.dashboardReportingTables {
+    margin-left: auto ;
+    margin-right: auto ;
+    width: 100%;
+    clear: both;
+    font-family:Arial, Helvetica, Verdana, sans-serif;
+}
+ 
+table.dashboardReportingTables td,
+table.dashboardReportingTables th {
+    padding: 2px;
+    border: 1px solid #696969;
+}
+
+/* Header cells */
+    table.dashboardReportingTables thead tr {
+        width:100%;
+    }
+
+table.dashboardReportingTables thead th {
+    text-align: center;
+    background: #66a9bd;
+    color:#ffffff;
+    font-weight:bold;
+    font-size:14px;
+    background-image: -webkit-linear-gradient(top, #4B6C9E 0%, #465C71 100%);
+}
+
+
+/* Body cells */
+table.dashboardReportingTables tbody th {
+    text-align: left;
+    background: #91c5d4;
+}
+     
+table.dashboardReportingTables tbody td {
+    font-size:12px;
+    text-align: center;
+    background: #fff;
+    color:#000000;
+}
+
+    table.dashboardReportingTables tbody tr.totalCount.odd td {
+        background-color: #a7d509;
+    }
+
+
+ /*       
+table.dashboardReportingTables tbody tr.odd td {
+    background: #bcd9e1;
+}
+*/
+/* Footer cells */ 
+table.dashboardReportingTables tfoot td {
+    font-size:10px;
+    background: #66a9bd;
+    text-align: center;
+}
+     
+table.dashboardReportingTables tfoot tr {
+    background: #66a9bd;
+    text-align: center;
+    font-weight: bold;
+}
+
+.reportingHeader {
+    cursor: pointer;
+    font-size:20px;
+    color:#ffffff;
+     border: 1px solid #496077;
+    /* IE10 Consumer Preview */ 
+    background-image: -ms-linear-gradient(top, #4B6C9E 0%, #465C71 100%);
+
+    /* Mozilla Firefox */ 
+    background-image: -moz-linear-gradient(top, #4B6C9E 0%, #465C71 100%);
+
+    /* Opera */ 
+    background-image: -o-linear-gradient(top, #4B6C9E 0%, #465C71 100%);
+
+    /* Webkit (Safari/Chrome 10) */ 
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #4B6C9E), color-stop(1, #465C71));
+
+    /* Webkit (Chrome 11+) */ 
+    background-image: -webkit-linear-gradient(top, #4B6C9E 0%, #465C71 100%);
+
+    /* W3C Markup, IE10 Release Preview */ 
+    background-image: linear-gradient(to bottom, #4B6C9E 0%, #465C71 100%);
+}
+
+.scoreCardTotal {
+    background-color: #a7d509;
+}

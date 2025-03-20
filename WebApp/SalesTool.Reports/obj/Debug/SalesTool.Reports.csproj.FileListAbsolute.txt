@@ -1,0 +1,51 @@
+F:\Yasir Ali\Projects\LiveTFSNew\SelectCARE - WebApp\SalesTool.Reports\bin\Debug\SalesTool.Reports.dll.config
+F:\Yasir Ali\Projects\LiveTFSNew\SelectCARE - WebApp\SalesTool.Reports\bin\Debug\SalesTool.Reports.dll
+F:\Yasir Ali\Projects\LiveTFSNew\SelectCARE - WebApp\SalesTool.Reports\bin\Debug\SalesTool.Reports.pdb
+F:\Yasir Ali\Projects\LiveTFSNew\SelectCARE - WebApp\SalesTool.Reports\obj\Debug\SalesTool.Reports.csprojResolveAssemblyReference.cache
+F:\Yasir Ali\Projects\LiveTFSNew\SelectCARE - WebApp\SalesTool.Reports\obj\Debug\SalesTool.Reports.CarrierMix.resources
+F:\Yasir Ali\Projects\LiveTFSNew\SelectCARE - WebApp\SalesTool.Reports\obj\Debug\SalesTool.Reports.Commision.resources
+F:\Yasir Ali\Projects\LiveTFSNew\SelectCARE - WebApp\SalesTool.Reports\obj\Debug\SalesTool.Reports.FillFormSpeed.resources
+F:\Yasir Ali\Projects\LiveTFSNew\SelectCARE - WebApp\SalesTool.Reports\obj\Debug\SalesTool.Reports.StackRankings.resources
+F:\Yasir Ali\Projects\LiveTFSNew\SelectCARE - WebApp\SalesTool.Reports\obj\Debug\SalesTool.Reports.Scorecard.resources
+F:\Yasir Ali\Projects\LiveTFSNew\SelectCARE - WebApp\SalesTool.Reports\obj\Debug\SalesTool.Reports.CaseSpecialist.resources
+F:\Yasir Ali\Projects\LiveTFSNew\SelectCARE - WebApp\SalesTool.Reports\obj\Debug\SalesTool.Reports.Falloff.resources
+F:\Yasir Ali\Projects\LiveTFSNew\SelectCARE - WebApp\SalesTool.Reports\obj\Debug\SalesTool.Reports.Goal.resources
+F:\Yasir Ali\Projects\LiveTFSNew\SelectCARE - WebApp\SalesTool.Reports\obj\Debug\SalesTool.Reports.Premium.resources
+F:\Yasir Ali\Projects\LiveTFSNew\SelectCARE - WebApp\SalesTool.Reports\obj\Debug\SalesTool.Reports.SubmitEnrollment.resources
+F:\Yasir Ali\Projects\LiveTFSNew\SelectCARE - WebApp\SalesTool.Reports\obj\Debug\SalesTool.Reports.PrioritizedListReport.resources
+F:\Yasir Ali\Projects\LiveTFSNew\SelectCARE - WebApp\SalesTool.Reports\obj\Debug\SalesTool.Reports.LeadVolume.resources
+F:\Yasir Ali\Projects\LiveTFSNew\SelectCARE - WebApp\SalesTool.Reports\obj\Debug\SalesTool.Reports.IncentiveTracking.resources
+F:\Yasir Ali\Projects\LiveTFSNew\SelectCARE - WebApp\SalesTool.Reports\obj\Debug\SalesTool.Reports.QuotaTracking.resources
+F:\Yasir Ali\Projects\LiveTFSNew\SelectCARE - WebApp\SalesTool.Reports\obj\Debug\SalesTool.Reports.Pipeline.resources
+F:\Yasir Ali\Projects\LiveTFSNew\SelectCARE - WebApp\SalesTool.Reports\obj\Debug\SalesTool.Reports.Properties.Resources.resources
+F:\Yasir Ali\Projects\LiveTFSNew\SelectCARE - WebApp\SalesTool.Reports\obj\Debug\SalesTool.Reports.CPAByAgent.resources
+F:\Yasir Ali\Projects\LiveTFSNew\SelectCARE - WebApp\SalesTool.Reports\obj\Debug\SalesTool.Reports.Sample.resources
+F:\Yasir Ali\Projects\LiveTFSNew\SelectCARE - WebApp\SalesTool.Reports\obj\Debug\SalesTool.Reports.csproj.GenerateResource.Cache
+F:\Yasir Ali\Projects\LiveTFSNew\SelectCARE - WebApp\SalesTool.Reports\obj\Debug\SalesTool.Reports.dll
+F:\Yasir Ali\Projects\LiveTFSNew\SelectCARE - WebApp\SalesTool.Reports\obj\Debug\SalesTool.Reports.pdb
+D:\Suheyl\Projects\Condado\WebApp\SalesTool.Reports\bin\Debug\SalesTool.Reports.dll.config
+D:\Suheyl\Projects\Condado\WebApp\SalesTool.Reports\bin\Debug\SalesTool.Reports.dll
+D:\Suheyl\Projects\Condado\WebApp\SalesTool.Reports\bin\Debug\SalesTool.Reports.pdb
+D:\Suheyl\Projects\Condado\WebApp\SalesTool.Reports\bin\Debug\Telerik.Reporting.dll
+D:\Suheyl\Projects\Condado\WebApp\SalesTool.Reports\obj\Debug\SalesTool.Reports.csprojResolveAssemblyReference.cache
+D:\Suheyl\Projects\Condado\WebApp\SalesTool.Reports\obj\Debug\SalesTool.Reports.CarrierMix.resources
+D:\Suheyl\Projects\Condado\WebApp\SalesTool.Reports\obj\Debug\SalesTool.Reports.Commision.resources
+D:\Suheyl\Projects\Condado\WebApp\SalesTool.Reports\obj\Debug\SalesTool.Reports.FillFormSpeed.resources
+D:\Suheyl\Projects\Condado\WebApp\SalesTool.Reports\obj\Debug\SalesTool.Reports.StackRankings.resources
+D:\Suheyl\Projects\Condado\WebApp\SalesTool.Reports\obj\Debug\SalesTool.Reports.Scorecard.resources
+D:\Suheyl\Projects\Condado\WebApp\SalesTool.Reports\obj\Debug\SalesTool.Reports.CaseSpecialist.resources
+D:\Suheyl\Projects\Condado\WebApp\SalesTool.Reports\obj\Debug\SalesTool.Reports.Falloff.resources
+D:\Suheyl\Projects\Condado\WebApp\SalesTool.Reports\obj\Debug\SalesTool.Reports.Goal.resources
+D:\Suheyl\Projects\Condado\WebApp\SalesTool.Reports\obj\Debug\SalesTool.Reports.Premium.resources
+D:\Suheyl\Projects\Condado\WebApp\SalesTool.Reports\obj\Debug\SalesTool.Reports.SubmitEnrollment.resources
+D:\Suheyl\Projects\Condado\WebApp\SalesTool.Reports\obj\Debug\SalesTool.Reports.PrioritizedListReport.resources
+D:\Suheyl\Projects\Condado\WebApp\SalesTool.Reports\obj\Debug\SalesTool.Reports.LeadVolume.resources
+D:\Suheyl\Projects\Condado\WebApp\SalesTool.Reports\obj\Debug\SalesTool.Reports.IncentiveTracking.resources
+D:\Suheyl\Projects\Condado\WebApp\SalesTool.Reports\obj\Debug\SalesTool.Reports.QuotaTracking.resources
+D:\Suheyl\Projects\Condado\WebApp\SalesTool.Reports\obj\Debug\SalesTool.Reports.Pipeline.resources
+D:\Suheyl\Projects\Condado\WebApp\SalesTool.Reports\obj\Debug\SalesTool.Reports.Properties.Resources.resources
+D:\Suheyl\Projects\Condado\WebApp\SalesTool.Reports\obj\Debug\SalesTool.Reports.CPAByAgent.resources
+D:\Suheyl\Projects\Condado\WebApp\SalesTool.Reports\obj\Debug\SalesTool.Reports.Sample.resources
+D:\Suheyl\Projects\Condado\WebApp\SalesTool.Reports\obj\Debug\SalesTool.Reports.csproj.GenerateResource.Cache
+D:\Suheyl\Projects\Condado\WebApp\SalesTool.Reports\obj\Debug\SalesTool.Reports.dll
+D:\Suheyl\Projects\Condado\WebApp\SalesTool.Reports\obj\Debug\SalesTool.Reports.pdb

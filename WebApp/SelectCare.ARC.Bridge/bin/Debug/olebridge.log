@@ -1,0 +1,12 @@
+2014-10-03 22:44:21.8898 INFO user [d00836c2-03a1-4c4e-aace-0745f7ba6ef5] has logged in successfully.
+2014-10-03 22:44:22.4419 TRACE connecting to the SignalR at http://localhost:17356 with hub arcHub
+2014-10-03 22:44:22.5039 TRACE Connected to the hub, configuring command listener
+2014-10-03 22:44:24.9270 ERROR Could not contact message hub: One or more errors occurred.
+2014-10-03 22:44:36.8947 INFO User has chosen to exit the application
+2014-10-03 22:44:38.5518 TRACE Program has finished its execution gracefully
+2014-10-03 22:54:45.1313 INFO user [6d690286-a449-4c09-a694-1940df3b249f] has logged in successfully.
+2014-10-03 22:54:45.2293 TRACE connecting to the SignalR at http://localhost:17356 with hub arcHub
+2014-10-03 22:54:45.2803 TRACE Connected to the hub, configuring command listener
+2014-10-03 22:54:47.6594 ERROR Could not contact message hub: One or more errors occurred.
+2014-10-03 22:56:20.7397 INFO User has chosen to exit the application
+2014-10-03 22:56:20.7477 TRACE Program has finished its execution gracefully

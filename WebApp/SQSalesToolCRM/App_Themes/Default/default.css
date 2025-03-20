@@ -1,0 +1,738 @@
+﻿/* DEFAULTS
+----------------------------------------------------------*/
+
+body {
+    background: #b6b7bc;
+    font-size: 12px;
+    font-family: "Helvetica Neue", "Lucida Grande", "Segoe UI", Arial, Helvetica, Verdana, sans-serif;
+    margin: 0px;
+    padding: 0px;
+    color: #696969;
+    height: 100%;
+    margin-bottom: 23px; /*form footer*/
+}
+
+.button {
+    padding: 1px 4px 1px 4px;
+    font-size: 0.9em;
+    border: 1px solid #5D7B9D;
+    color: #FFFFFF;
+    background: #5D7B9D;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+a:link, a:visited {
+    cursor: pointer;
+    color: #1d60ff;
+    text-decoration: underline;
+}
+
+a:hover {
+    cursor: pointer;
+    color: #1d60ff;
+    text-decoration: underline;
+}
+
+a:active {
+    cursor: pointer;
+    color: #1d60ff;
+    text-decoration: underline;
+}
+
+p {
+    margin-bottom: 10px;
+    line-height: 1.6em;
+}
+
+
+/* HEADINGS   
+----------------------------------------------------------*/
+
+h1, h2, h3, h4, h5, h6 {
+    font-size: 1.5em;
+    color: #666666;
+    font-variant: small-caps;
+    text-transform: none;
+    font-weight: 200;
+    margin-bottom: 0px;
+}
+
+h1 {
+    font-size: 1.6em;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+}
+
+h2 {
+    font-size: 1.5em;
+    font-weight: 600;
+}
+
+h3 {
+    font-size: 1.2em;
+}
+
+h4 {
+    font-size: 13px;
+}
+
+h5, h6 {
+    font-size: 12px;
+}
+
+/* this rule styles <h1> and <h2> tags that are the 
+first child of the left and right table columns */
+.rightColumn > h1, .rightColumn > h2, .leftColumn > h1, .leftColumn > h2 {
+    margin-top: 0px;
+}
+
+
+/* PRIMARY LAYOUT ELEMENTS   
+----------------------------------------------------------*/
+
+.page {
+    /*width: 1560px;*/
+    /*height: auto;*/
+    /*min-height: 1000px;*/
+    height: 100%;
+    background-color: #fff;
+    margin: 0 auto;
+    border: 1px solid #496077;
+    -moz-min-width: 1900px;
+    -ms-min-width: 1900px;
+    -o-min-width: 1900px;
+    -webkit-min-width: 1900px;
+    min-width: 1900px;
+}
+
+.header {
+    /*position: relative;*/
+    margin: 0px;
+    padding: 0px;
+    background: #4b6c9e;
+    width: 100%;
+}
+
+    .header h1 {
+        font-weight: 700;
+        margin: 0px;
+        padding: 0px 0px 0px 20px;
+        color: #f9f9f9;
+        border: none;
+        line-height: 2em;
+        font-size: 2em;
+    }
+
+.main {
+    padding: 0px 12px;
+    margin: 3px 0px 8px 0px;
+    min-height: 100%; /*background: #f9f9f9;*/
+    background: white;
+}
+
+.leftCol {
+    padding: 6px 0px;
+    margin: 12px 8px 8px 8px;
+    width: 200px;
+    min-height: 200px;
+}
+
+.footer {
+    color: #4e5766;
+    padding: 8px 0px 0px 0px;
+    margin: 0px auto;
+    text-align: center;
+    line-height: normal;
+    background: rgb(222, 227, 234);
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+
+/* TAB MENU   
+----------------------------------------------------------*/
+
+div.hideSkiplink {
+    background-color: #FFFFFF;
+    width: 100%;
+    color: #3a4f63;
+}
+
+/* FORM ELEMENTS   
+----------------------------------------------------------*/
+
+fieldset {
+    margin: 1em 0px;
+    padding: 1em;
+    border: 1px solid #ccc;
+}
+
+    fieldset p {
+        margin: 2px 12px 10px 10px;
+    }
+
+    fieldset.login label, fieldset.register label, fieldset.changePassword label {
+        display: block;
+    }
+
+    fieldset label.inline {
+        display: inline;
+    }
+
+legend {
+    font-size: 1.1em;
+    font-weight: 600;
+    padding: 2px 4px 8px 4px;
+}
+
+input .textEntry .passwordEntry {
+    padding: 4px;
+    font-size: 1.0em;
+    border: 1px solid #5D7B9D;
+    color: #1E1903;
+    background: #EAEAEA;
+    width: 250px;
+    z-index: 1;
+}
+
+input[type=submit] {
+    padding: 1px 4px 1px 4px;
+    font-size: 12px;
+    border: 1px solid #5D7B9D;
+    color: #FFFFFF;
+    background: #5D7B9D;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+    input[type=submit]:hover {
+        border: 1px solid #5D7B9D;
+        background: #8CA3BB;
+        text-decoration: none;
+    }
+
+    input[type=submit]:active {
+        border-style: solid;
+        border-width: 1px;
+        border-color: #303030 #C0C0C0 #C0C0C0 #303030;
+        background: #8CA3BB;
+        text-decoration: none;
+    }
+
+button {
+    /*width: auto;
+  overflow: visible;*/
+    padding: 1px 4px 1px 4px;
+    font-size: 12px;
+    border: 1px solid #5D7B9D;
+    color: #FFFFFF;
+    background: #5D7B9D;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+input[type="button"]:disabled {
+    background: rgb(150, 158, 167);
+}
+
+div.accountInfo {
+    width: 42%;
+}
+
+/* MISC  
+----------------------------------------------------------*/
+
+.clear {
+    clear: both;
+}
+
+.title {
+    display: block;
+    float: left;
+    text-align: left;
+    width: auto;
+}
+
+.loginDisplay {
+    font-size: .9em;
+    display: block;
+    text-align: right;
+    padding: 0px;
+    padding-right: 7px;
+    color: White;
+}
+
+    .loginDisplay a:link {
+        color: white;
+    }
+
+    .loginDisplay a:visited {
+        color: white;
+    }
+
+    .loginDisplay a:hover {
+        color: white;
+    }
+
+.failureNotification {
+    font-size: 1.2em;
+    color: Red;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.submitButton {
+    text-align: right;
+    padding-right: 10px;
+}
+
+.mainFormDiv {
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+}
+
+/* Site Table CSS Classes */
+
+/*table
+{
+    border-collapse: collapse;
+    border-spacing: 0;
+    border:0;
+    width:100%;
+   
+}*/
+
+
+.tdSpacerH24 {
+    height: 24px;
+}
+
+.HeadingText {
+    font-size: large;
+    font-weight: bold;
+}
+
+.tdSpacerW20 {
+    width: 20px;
+}
+
+/* General Classes  */
+.ajax__validatorcallout_popup_table {
+    width: 300px;
+}
+
+.LabelMessage {
+    color: #009933;
+}
+
+/* Model PoupUp */
+.modalBackground {
+    background-color: Gray;
+    filter: alpha(opacity=30);
+    opacity: 0.30;
+}
+
+.popup {
+    border: solid 1px #111;
+    background-color: #fff;
+    padding: 5px 5px;
+}
+
+.LinkButton {
+    color: #FFFFFF;
+}
+
+div.Toolbar {
+    margin: 4px 0px 0px 0px;
+    padding-top: 4px;
+}
+
+    div.Toolbar input[type=submit] {
+        padding: 2px;
+        border: 1px solid #000000;
+        background-color: #5D7B9D;
+        color: #FFFFFF;
+        cursor: hand;
+    }
+
+        div.Toolbar input[type=submit]:active {
+            border: 1px solid #5D7B9D;
+            background-color: #CCCCCC;
+            color: #FFFFFF;
+        }
+
+    div.Toolbar input[type=text] {
+        border: 1px solid #5D7B9D;
+    }
+
+
+
+.tableHeaderStyle {
+    padding: 3px;
+    margin: 0px;
+    border: 2px solid #E0E6ED;
+}
+
+.AjaxPopUpLoader {
+    padding: 5px;
+    text-align: center;
+    vertical-align: middle;
+    background-color: White;
+}
+
+.ErrorLabel {
+    color: #CC0000;
+}
+/* Ajax Tab Container */ /*
+.ajax__tab_darkblue-theme .ajax__tab_header 
+{
+    font-family:arial,helvetica,clean,sans-serif;
+    font-size:small;
+    border-bottom:solid 5px #5D7B9D;
+}
+.ajax__tab_darkblue-theme .ajax__tab_header .ajax__tab_outer 
+{
+    background:#d8d8d8;
+    margin:0px 0.16em 0px 0px;
+    padding:1px 0px 1px 0px;
+    vertical-align:bottom;
+    border:solid 1px #a3a3a3;
+    border-bottom-width:0px;
+}
+.ajax__tab_darkblue-theme .ajax__tab_header .ajax__tab_tab
+{    
+    color:#000;
+    padding:0.35em 0.75em;    
+    margin-right:0.01em;
+    
+}
+.ajax__tab_darkblue-theme .ajax__tab_hover .ajax__tab_outer 
+{
+    background: #bfdaff ;
+}
+
+.ajax__tab_darkblue-theme .ajax__tab_hover .ajax__tab_tab
+{
+     
+}
+.ajax__tab_darkblue-theme .ajax__tab_active .ajax__tab_tab 
+{
+    color:#fff;
+}
+.ajax__tab_darkblue-theme .ajax__tab_active .ajax__tab_outer
+{
+    background: #5D7B9D ;
+}
+.ajax__tab_darkblue-theme .ajax__tab_body 
+{
+    font-family:verdana,tahoma,helvetica;
+    font-size:10pt;
+    padding:0.25em 0.5em;     
+    border:solid 1px #808080;
+    border-top-width:0px;
+}
+*/
+/*================================
+
+Grid Dropdown menu link
+it displays the link with a down arrow
+
+SZ [Nov 29, 2012]
+===================================*/
+
+a.dropdown, a.dropdown:hover, a.dropdown:active, a.dropdown:visited {
+    cursor: pointer;
+    color: #5D7B9D;
+    text-decoration: none;
+    padding-right: 10px;
+    background: transparent url('images/down.png') no-repeat right;
+    padding-bottom: 5px;
+    font-family: 'Segoe UI';
+    font-size: 12px;
+}
+
+.report select {
+    width: 200px;
+}
+
+.topmost {
+    z-index: 9999;
+}
+
+.RadWindow .rwCloseButton {
+    background-image: url("Images/close.png") !important;
+    background-position: 4px 0px !important;
+}
+
+.RadWindow {
+    border-width: 0px !important;
+    border-style: none !important;
+    padding: 0 0px 0px !important;
+}
+
+.WindowRestore {
+    position: fixed !important;
+    top: 2% !important;
+}
+
+.FloatLeft {
+    float: left;
+}
+
+.FloatRight {
+    float: right;
+}
+
+.align-right {
+    text-align: right;
+}
+
+/*
+YA[Aug 17, 2013] Report Viewer Design CSS
+ */
+/*.InputButtonClass
+{
+    width: 10%;
+}
+.ReportToolbarGroup
+{
+    width: 25%;
+}
+.ImageButtonCell 
+{
+ 
+}
+.sheet 
+{
+    overflow:auto;
+}*/
+
+.panel {
+    float: left;
+    display: block;
+    width: 300px;
+    padding: 1px;
+    -webkit-box-shadow: inset 0 0 5px 5px #222;
+    -ms-box-shadow: inset 0 0 5px 5px #222;
+    box-shadow: inset 0 0 5px 5px #222;
+}
+
+.main-menu {
+    -moz-min-width: 450px;
+    -ms-min-width: 450px;
+    -o-min-width: 450px;
+    -webkit-min-width: 450px;
+    min-width: 450px;
+}
+
+
+
+
+#EventCalendarList2_pnlCalendar {
+    min-height: 100vh !important;
+    background: rgb(222, 227, 234);
+}
+
+#appoitments-bar-slider {
+    margin: 0;
+    float: right;
+    top: 50px;
+    width: 20px;
+    /*height: 100vh;*/
+    min-height: 80px;
+    margin-top: 120px;
+    /*background: transparent;*/
+}
+
+#appoitments-bar-master-wrapper {
+    width: 357px;
+    float: right;
+    margin-top: 10px;
+    min-height: 100vh;
+    /*background: rgb(222, 227, 234);*/
+    overflow: hidden;
+}
+
+#appoitments-bar-master {
+    width: 334px;
+    float: right;
+    overflow: hidden;
+}
+
+.appoitments-bar-wrapper {
+    width: 334px;
+    float: right;
+}
+
+.appoitments-bar-slider-left {
+    background-image: url('../../images/slideBar-left.png');
+    background-repeat: no-repeat;
+    -moz-background-position-y: 15%;
+    -o-background-position-y: 15%;
+    background-position-y: 15%;
+}
+
+.appoitments-bar-slider-right {
+    background-image: url('../../images/slideBar-right.png');
+    background-repeat: no-repeat;
+    -moz-background-position-y: 15%;
+    -o-background-position-y: 15%;
+    background-position-y: 15%;
+}
+
+#leadheader {
+    display: block;
+    overflow: hidden;
+    height: 23px;
+}
+
+    #leadheader tr:first-child {
+        height: 23px;
+    }
+
+#leadheader-slider {
+    position: relative;
+    left: 50%;
+    width: 50px;
+    list-style: none;
+    color: blue;
+    font-weight: bold;
+}
+
+.leads-fieldset {
+    height: 415px !important;
+}
+
+    .leads-fieldset ul {
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+
+.event-tab-wrapper {
+    float: right;
+    width: 33px;
+}
+
+/* before ie rotate issue
+    .event-tab {
+    height: 30px;
+    font-size: 16px;
+    width: 90px;
+    margin: 32px auto;
+    margin-left: -28px;
+}
+    .box_rotate {
+   -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=0.083);
+    transform: rotate(-90deg);
+}
+
+    */
+
+.event-tab {
+    height: 90px;
+    font-size: 16px;
+    width: 30px;
+    /*margin: 32px auto;
+    margin-left: -28px;*/
+    margin-bottom: 1px;
+}
+
+.status_pending {
+    background-image: url("/Images/status_pending.gif");
+    background-repeat: no-repeat;
+}
+
+.status_all {
+    background-image: url("/Images/status_all.gif");
+    background-repeat: no-repeat;
+}
+
+.status_completed {
+    background-image: url("/Images/status_complete.gif");
+    background-repeat: no-repeat;
+}
+
+.status_dismissed {
+    background-image: url("/Images/status_dismissted.gif");
+    background-repeat: no-repeat;
+}
+
+.status_past_due {
+    background-image: url("/Images/status_past_due.gif");
+    background-repeat: no-repeat;
+}
+
+/*appointment issue in leads page*/
+table#ctl00_MainContent_grdAccountHistory_ctl00 {
+    width: auto !important;
+}
+
+div#ctl00_MainContent_grdAccountHistory_GridData {
+    width: auto !important;
+}
+
+table#ctl00_MainContent_grdAccountHistory_ctl00_Header {
+    table-layout: auto !important;
+}
+
+.notification-header {
+    overflow: auto;
+    height: 32px;
+    max-width: 660px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    overflow-wrap: break-word;
+}
+fieldset .onboard {
+    height: 50px;
+    margin: 0px 0px !important;
+    padding: 0px !important;
+}
+.onboard-field {
+    float: left;
+    min-width: 25%
+    
+}
+.onboard-field input[type=checkbox] {
+    vertical-align: middle !important;
+    margin-left: 10px;
+}
+
+.onboard-field span:first-child {
+    margin-left: 52px!important;
+}
+.mGrid {
+    /*fix for firefox in GAL layout*/
+    float: left; 
+}
+.ACDDropdown {
+height: 28px;
+margin-top: 4px;
+}
+
+table#ctl00_MainContent_PolicyInfo1_dlgMedicalSupplement_C_tblControls td {
+    width: 185px !important;
+}
+table#ctl00_MainContent_PolicyInfo1_dlgMedicalSupplement_C_tblControls select {
+    width: 204px!important;
+}
+fieldset#ctl00_MainContent_PolicyInfo1_dlgMedicalSupplement_C_divFormFS {
+  margin: 0 10px !important;
+}
+.default_group {
+    color: #465c71;
+    font-weight: bold;
+}
+.RadWindowTop {
+    top: 20px !important;
+}

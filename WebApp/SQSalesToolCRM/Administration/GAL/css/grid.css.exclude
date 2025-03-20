@@ -1,0 +1,41 @@
+﻿
+.gridHeader
+{
+    background-color: #5D7B9D;
+    color: #FFFFFF;
+    font-family: 'Segoe UI Light';
+    font-size: 12px;
+    height: 25px;
+}
+tr.gridHeader a, tr.gridHeader a:active, tr.gridHeader a:visited
+{
+    color: #FFFFFF;
+    text-decoration: none;
+}
+tr.gridHeader a:visited
+{
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+tr.gridHeader a:hover
+{
+    text-decoration: underline;
+}
+.mGrid
+{
+    width: 100%;
+    background-color: #fff;
+    margin: 5px 0 10px 0;
+    border: solid 0px #525252;
+    border-collapse: collapse;
+    font-family: 'Segoe UI';
+    font-size: 12px;
+}
+.mGrid .alt
+{
+    background-color: #E0E6ED;
+}
+
+
+.gridColumn { margin-right: 15px; margin-left: 15px; }

@@ -1,0 +1,30 @@
+F:\Yasir Ali\Projects\LiveTFSNew\SelectCARE - WebApp\SalesTool.DataAccess.Tests\bin\Debug\SalesTool.DataAccess.Tests.dll.config
+F:\Yasir Ali\Projects\LiveTFSNew\SelectCARE - WebApp\SalesTool.DataAccess.Tests\bin\Debug\SalesTool.DataAccess.Tests.dll
+F:\Yasir Ali\Projects\LiveTFSNew\SelectCARE - WebApp\SalesTool.DataAccess.Tests\bin\Debug\SalesTool.DataAccess.Tests.pdb
+F:\Yasir Ali\Projects\LiveTFSNew\SelectCARE - WebApp\SalesTool.DataAccess.Tests\bin\Debug\SalesTool.DataAccess.dll
+F:\Yasir Ali\Projects\LiveTFSNew\SelectCARE - WebApp\SalesTool.DataAccess.Tests\bin\Debug\SalesTool.DataAccess.pdb
+F:\Yasir Ali\Projects\LiveTFSNew\SelectCARE - WebApp\SalesTool.DataAccess.Tests\obj\Debug\SalesTool.DataAccess.Tests.csprojResolveAssemblyReference.cache
+F:\Yasir Ali\Projects\LiveTFSNew\SelectCARE - WebApp\SalesTool.DataAccess.Tests\obj\Debug\SalesTool.DataAccess.Tests.dll
+F:\Yasir Ali\Projects\LiveTFSNew\SelectCARE - WebApp\SalesTool.DataAccess.Tests\obj\Debug\SalesTool.DataAccess.Tests.pdb
+F:\Yasir Ali\Projects\LiveTFSNew\SelectCARE - WebApp\SalesTool.DataAccess.Tests\bin\Debug\LoadTest1.loadtest
+F:\Yasir Ali\Projects\LiveTFSNew\SelectCARE - WebApp\SalesTool.DataAccess.Tests\bin\Debug\WebTest1.webtest
+F:\Yasir Ali\Projects\LiveTFSNew\SelectCARE - WebApp\SalesTool.DataAccess.Tests\bin\Debug\LoadTestSQS.loadtest
+F:\Yasir Ali\Projects\LiveTFSNew\SelectCARE - WebApp\SalesTool.DataAccess.Tests\bin\Debug\WebTest2.webtest
+F:\Yasir Ali\Projects\LiveTFSNew\SelectCARE - WebApp\SalesTool.DataAccess.Tests\bin\Debug\LoadTest2.loadtest
+D:\Suheyl\Projects\Condado\WebApp\SalesTool.DataAccess.Tests\bin\Debug\WebTest1.webtest
+D:\Suheyl\Projects\Condado\WebApp\SalesTool.DataAccess.Tests\bin\Debug\WebTest2.webtest
+D:\Suheyl\Projects\Condado\WebApp\SalesTool.DataAccess.Tests\bin\Debug\LoadTest1.loadtest
+D:\Suheyl\Projects\Condado\WebApp\SalesTool.DataAccess.Tests\bin\Debug\LoadTest2.loadtest
+D:\Suheyl\Projects\Condado\WebApp\SalesTool.DataAccess.Tests\bin\Debug\LoadTestSQS.loadtest
+D:\Suheyl\Projects\Condado\WebApp\SalesTool.DataAccess.Tests\bin\Debug\SalesTool.DataAccess.Tests.dll.config
+D:\Suheyl\Projects\Condado\WebApp\SalesTool.DataAccess.Tests\bin\Debug\SalesTool.DataAccess.Tests.dll
+D:\Suheyl\Projects\Condado\WebApp\SalesTool.DataAccess.Tests\bin\Debug\SalesTool.DataAccess.Tests.pdb
+D:\Suheyl\Projects\Condado\WebApp\SalesTool.DataAccess.Tests\bin\Debug\SalesTool.DataAccess.dll
+D:\Suheyl\Projects\Condado\WebApp\SalesTool.DataAccess.Tests\bin\Debug\SalesTool.Direct.dll
+D:\Suheyl\Projects\Condado\WebApp\SalesTool.DataAccess.Tests\bin\Debug\EntityFramework.dll
+D:\Suheyl\Projects\Condado\WebApp\SalesTool.DataAccess.Tests\bin\Debug\SalesTool.Direct.pdb
+D:\Suheyl\Projects\Condado\WebApp\SalesTool.DataAccess.Tests\bin\Debug\SalesTool.DataAccess.pdb
+D:\Suheyl\Projects\Condado\WebApp\SalesTool.DataAccess.Tests\bin\Debug\EntityFramework.xml
+D:\Suheyl\Projects\Condado\WebApp\SalesTool.DataAccess.Tests\obj\Debug\SalesTool.DataAccess.Tests.csprojResolveAssemblyReference.cache
+D:\Suheyl\Projects\Condado\WebApp\SalesTool.DataAccess.Tests\obj\Debug\SalesTool.DataAccess.Tests.dll
+D:\Suheyl\Projects\Condado\WebApp\SalesTool.DataAccess.Tests\obj\Debug\SalesTool.DataAccess.Tests.pdb

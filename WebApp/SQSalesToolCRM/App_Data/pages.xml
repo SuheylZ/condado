@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<NetQuoteData Version="1.0">
+  <QuoteRequest DateTime="2014-02-21T13:24:00" VisitorSessionID="229a4996a318ddf1836c8a7d" AppID="328631286">
+    <ApplicationContact ReceiveNewsletter="No">
+      <FirstName>Colleen</FirstName>
+      <LastName>Keranen</LastName>
+      <Address1>5101 164TH AVE SE</Address1>
+      <City>BELLEVUE</City>
+      <County>King</County>
+      <State>WA</State>
+      <ZIPCode>98006</ZIPCode>
+      <EmailAddress>colleenck@gmail.com</EmailAddress>
+      <PhoneNumbers>
+        <PhoneNumber PhoneNumberType="Home">
+          <PhoneNumberValue>4256447842</PhoneNumberValue>
+        </PhoneNumber>
+        <PhoneNumber PhoneNumberType="Work">
+          <PhoneNumberValue>4256447842</PhoneNumberValue>
+        </PhoneNumber>
+      </PhoneNumbers>
+      <ContactPreferenceProfile PreferredResponseDeadline="24" PreferredContactTime="Anytime"></ContactPreferenceProfile>
+      <ResidencyProfile>
+        <CurrentResidence ResidenceStatus="Own">
+          <OccupancyDate>2013-02-01</OccupancyDate>
+        </CurrentResidence>
+      </ResidencyProfile>
+    </ApplicationContact>
+    <Persons>
+      <Person Gender="Female" MilitaryExperience="NoMilitaryExperience" USResident12Months="Yes" MaritalStatus="Single" RelationshipToApplicant="Self" PersonID="1">
+        <FirstName>Colleen</FirstName>
+        <LastName>Keranen</LastName>
+        <BirthDate>1949-12-28</BirthDate>
+        <Occupation OccupationName="AdministrativeClerical">
+          <YearsInField>1</YearsInField>
+        </Occupation>
+        <EducationProfile>
+          <Education HighestDegree="SomeCollege" GoodStudentDiscount="No"></Education>
+        </EducationProfile>
+        <CreditHistory Bankruptcy="No" Repossessions="No" CreditSelfRating="Good"></CreditHistory>
+      </Person>
+    </Persons>
+    <HealthInsuranceQuoteRequest RiskType="Medicare">
+      <SubsidyEligible>No</SubsidyEligible>
+      <HealthPolicyMembers>
+        <HealthPolicyMember PersonID="1">
+          <MedicalProfile TobaccoUse12Months="No" ExpectantMotherOrFather="No">
+            <HeightFeet>5</HeightFeet>
+            <HeightInches>3</HeightInches>
+            <WeightPounds>140</WeightPounds>
+            <Disorders Medication="No" HighBloodPressure="Yes" AlcoholDrugAddiction="Yes" Alzheimers="Yes" Asthma="Yes" Cancer="No" HighCholesterol="Yes" Depression="Yes" Diabetes="Yes" HeartDisease="Yes" KidneyDisease="Yes" LiverDisease="Yes" MentalIllness="Yes" PulmonaryDisease="Yes" Stroke="Yes" Ulcers="Yes" VascularDisease="Yes" OtherDisorder="No" FamilyHistoryHeartDisease="No" FamilyHistoryCancer="No" AIDSHIV="Yes"></Disorders>
+          </MedicalProfile>
+        </HealthPolicyMember>
+      </HealthPolicyMembers>
+      <InsuranceProfile>
+        <RequestedPolicy>
+          <StartDate>2014-02-21</StartDate>
+          <RequestedCoverages>
+            <RequestedCoverage CoverageType="MajorMedical"></RequestedCoverage>
+          </RequestedCoverages>
+        </RequestedPolicy>
+        <PriorPolicies>
+          <PriorPolicy Current="Yes">
+            <InsuranceCompany NetQuoteCode="NQCI0001">
+              <CompanyName>Company Not Listed</CompanyName>
+            </InsuranceCompany>
+            <StartDate>2012-02-21</StartDate>
+            <ExpirationDate>2015-02-21</ExpirationDate>
+          </PriorPolicy>
+        </PriorPolicies>
+        <ContinuouslyInsuredSinceDate>2012-02-01</ContinuouslyInsuredSinceDate>
+      </InsuranceProfile>
+    </HealthInsuranceQuoteRequest>
+  </QuoteRequest>
+</NetQuoteData>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

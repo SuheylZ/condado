@@ -1,0 +1,20 @@
+﻿<root>
+  <login>
+    <userid>USERID</userid>
+    <password>PASSWORD</password>
+    <sid>xtech:verify:phone:1</sid>
+    <realtime>1</realtime>
+    <protocol>PROTOCOL</protocol>
+    <timeout>TIMEOUT</timeout>
+  </login>
+  <transaction>
+    <input>
+      <account>
+        <subuserid>TYPE</subuserid>
+      </account>
+      <data>
+        <phone>PHONE</phone>
+      </data>
+    </input>
+  </transaction>
+</root>

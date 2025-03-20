@@ -1,0 +1,165 @@
+2014-10-02 21:03:23.1822 INFO user [d00836c2-03a1-4c4e-aace-0745f7ba6ef5] has logged in successfully.
+2014-10-02 21:03:23.4112 TRACE connecting to the SignalR at http://localhost:60776/ with hub arcHub
+2014-10-02 21:03:23.5452 TRACE Connected to the hub, configuring command listener
+2014-10-02 21:03:26.9184 ERROR Could not contact message hub: One or more errors occurred.
+2014-10-02 21:03:48.1926 INFO User has chosen to exit the application
+2014-10-02 21:03:48.1926 TRACE Program has finished its execution gracefully
+2014-10-03 22:58:21.0805 INFO user [6d690286-a449-4c09-a694-1940df3b249f] has logged in successfully.
+2014-10-03 22:58:21.1645 TRACE connecting to the SignalR at http://localhost:17356 with hub arcHub
+2014-10-03 22:58:21.2215 TRACE Connected to the hub, configuring command listener
+2014-10-03 22:58:23.4837 ERROR Could not contact message hub: One or more errors occurred.
+2014-10-03 22:58:37.3285 INFO User has chosen to exit the application
+2014-10-03 22:58:37.3465 TRACE Program has finished its execution gracefully
+2014-10-03 23:01:31.8314 INFO user [6d690286-a449-4c09-a694-1940df3b249f] has logged in successfully.
+2014-10-03 23:01:31.8654 TRACE connecting to the SignalR at http://localhost:17356 with hub arcHub
+2014-10-03 23:01:31.8874 TRACE Connected to the hub, configuring command listener
+2014-10-03 23:34:37.1111 INFO User has chosen to exit the application
+2014-10-03 23:34:37.1111 TRACE Closing the signalr connection ...
+2014-10-03 23:34:37.2891 TRACE Program has finished its execution gracefully
+2014-10-04 00:17:34.6105 ERROR Issue while verifying the credentials at http://sql-scqa.condadogroup.com/Services/SelectCare.asmx. 
+Details: Credentials are not valid, try again 
+2014-10-04 00:42:21.2579 INFO user [d00836c2-03a1-4c4e-aace-0745f7ba6ef5] has logged in successfully.
+2014-10-04 00:42:21.3189 TRACE connecting to the SignalR at http://localhost:17356 with hub arcHub
+2014-10-04 00:42:21.3519 TRACE Connected to the hub, configuring command listener
+2014-10-04 00:42:21.6859 ERROR Could not contact message hub: One or more errors occurred.
+2014-10-04 01:36:16.9477 INFO User has chosen to exit the application
+2014-10-04 01:36:16.9557 TRACE Program has finished its execution gracefully
+2014-10-04 06:06:29.8493 INFO user [6d690286-a449-4c09-a694-1940df3b249f] has logged in successfully.
+2014-10-04 06:07:25.4305 TRACE connecting to the SignalR at http://sql-scqa.condadogroup.com/signal/signalr with hub selectCareHub
+2014-10-04 06:07:38.9622 TRACE connecting to the SignalR at http://sql-scqa.condadogroup.com/signal/signalr with hub selectCareHub
+2014-10-04 06:07:40.1983 TRACE Connected to the hub, configuring command listener
+2014-10-04 06:07:41.3054 TRACE Connected to the hub, configuring command listener
+2014-10-04 06:08:00.3465 INFO User has chosen to exit the application
+2014-10-04 06:08:00.3465 TRACE Closing the signalr connection ...
+2014-10-04 06:08:02.9506 TRACE Program has finished its execution gracefully
+2014-10-04 06:08:30.6522 INFO user [6d690286-a449-4c09-a694-1940df3b249f] has logged in successfully.
+2014-10-04 06:08:56.0246 TRACE connecting to the SignalR at http://sql-scqa.condadogroup.com/signal/signalr with hub selectCareHub
+2014-10-04 06:08:56.0886 TRACE Connected to the hub, configuring command listener
+2014-10-04 06:08:56.0966 TRACE Connected to the hub, configuring command listener
+2014-10-04 06:09:00.5919 INFO User has chosen to exit the application
+2014-10-04 06:09:00.5919 TRACE Closing the signalr connection ...
+2014-10-04 06:09:01.2959 TRACE Program has finished its execution gracefully
+2014-10-10 20:33:01.5568 ERROR Issue while verifying the credentials at http://sql-scqa.condadogroup.com/Services/SelectCare.asmx. 
+Details: Credentials are not valid, try again 
+2014-10-10 20:33:24.9522 INFO user [ccb82f9e-68a6-40d8-9804-c96a72902105] has logged in successfully.
+2014-10-10 20:33:25.2622 TRACE connecting to the SignalR at https://sql-scdev.condadogroup.com/signalr with hub selectCareHub
+2014-10-10 20:33:25.3221 TRACE Connected to the hub, configuring command listener
+2014-10-10 20:33:25.3261 TRACE Connected to the hub, configuring command listener
+2014-10-10 20:33:29.1964 TRACE command: notify arguments: you are now connected.
+2014-10-10 20:33:29.1964 INFO Command Received: notify(you are now connected.)
+2014-10-10 20:33:39.2829 INFO User has chosen to exit the application
+2014-10-10 20:33:39.2829 TRACE Closing the signalr connection ...
+2014-10-10 20:33:39.5700 TRACE Program has finished its execution gracefully
+2014-10-10 20:36:17.8720 INFO user [6d690286-a449-4c09-a694-1940df3b249f] has logged in successfully.
+2014-10-10 20:36:18.2060 TRACE connecting to the SignalR at https://sql-scdev.condadogroup.com/signalr with hub selectCareHub
+2014-10-10 20:36:18.2460 TRACE Connected to the hub, configuring command listener
+2014-10-10 20:36:18.2500 TRACE Connected to the hub, configuring command listener
+2014-10-10 20:36:21.8512 TRACE command: notify arguments: you are now connected.
+2014-10-10 20:36:21.8512 INFO Command Received: notify(you are now connected.)
+2014-10-10 20:36:26.2994 INFO User has chosen to exit the application
+2014-10-10 20:36:26.2994 TRACE Closing the signalr connection ...
+2014-10-10 20:36:26.5855 TRACE Program has finished its execution gracefully
+2014-10-10 20:38:46.5674 INFO user [6d690286-a449-4c09-a694-1940df3b249f] has logged in successfully.
+2014-10-10 20:38:46.8894 TRACE connecting to the SignalR at https://sql-scdev.condadogroup.com/signalr with hub selectCareHub
+2014-10-10 20:38:46.9174 TRACE Connected to the hub, configuring command listener
+2014-10-10 20:38:46.9205 TRACE Connected to the hub, configuring command listener
+2014-10-10 20:38:50.4316 TRACE command: notify arguments: you are now connected.
+2014-10-10 20:38:50.4316 INFO Command Received: notify(you are now connected.)
+2014-10-10 20:38:54.9369 INFO User has chosen to exit the application
+2014-10-10 20:38:54.9369 TRACE Closing the signalr connection ...
+2014-10-10 20:38:55.4119 TRACE Program has finished its execution gracefully
+2014-10-10 20:43:20.0930 INFO user [6d690286-a449-4c09-a694-1940df3b249f] has logged in successfully.
+2014-10-10 20:43:20.3990 TRACE connecting to the SignalR at https://sql-scdev.condadogroup.com/signalr with hub selectCareHub
+2014-10-10 20:43:20.4260 TRACE Connected to the hub, configuring command listener
+2014-10-10 20:43:20.4260 TRACE Connected to the hub, configuring command listener
+2014-10-10 20:43:24.0012 TRACE command: notify arguments: you are now connected.
+2014-10-10 20:43:24.0012 INFO Command Received: notify(you are now connected.)
+2014-10-10 20:43:26.0943 INFO User has chosen to exit the application
+2014-10-10 20:43:26.0943 TRACE Closing the signalr connection ...
+2014-10-10 20:43:26.3763 TRACE Program has finished its execution gracefully
+2014-10-10 21:50:40.4714 INFO user [ccb82f9e-68a6-40d8-9804-c96a72902105] has logged in successfully.
+2014-10-10 21:50:40.7935 TRACE connecting to the SignalR at https://sql-scdev.condadogroup.com/signalr with hub selectCareHub
+2014-10-10 21:50:40.8195 TRACE Connected to the hub, configuring command listener
+2014-10-10 21:50:40.8195 TRACE Connected to the hub, configuring command listener
+2014-10-10 21:50:45.7687 TRACE command: notify arguments: you are now connected.
+2014-10-10 21:50:45.7687 INFO Command Received: notify(you are now connected.)
+2014-10-10 21:54:25.4022 INFO User has chosen to exit the application
+2014-10-10 21:54:25.4062 TRACE Closing the signalr connection ...
+2014-10-10 21:54:31.0055 TRACE Program has finished its execution gracefully
+2014-10-10 22:12:53.5822 INFO user [ccb82f9e-68a6-40d8-9804-c96a72902105] has logged in successfully.
+2014-10-10 22:12:53.9222 TRACE connecting to the SignalR at https://sql-scdev.condadogroup.com/signalr with hub selectCareHub
+2014-10-10 22:12:53.9682 TRACE Connected to the hub, configuring command listener
+2014-10-10 22:12:53.9682 TRACE Connected to the hub, configuring command listener
+2014-10-10 22:12:57.4994 TRACE command: notify arguments: you are now connected.
+2014-10-10 22:12:57.4994 INFO Command Received: notify(you are now connected.)
+2014-10-10 22:13:38.4297 INFO User has chosen to exit the application
+2014-10-10 22:13:38.4297 TRACE Closing the signalr connection ...
+2014-10-10 22:13:38.7217 TRACE Program has finished its execution gracefully
+2014-10-10 22:16:03.8190 INFO user [6d690286-a449-4c09-a694-1940df3b249f] has logged in successfully.
+2014-10-10 22:16:04.1200 TRACE connecting to the SignalR at https://sql-scdev.condadogroup.com/signalr with hub selectCareHub
+2014-10-10 22:16:04.1400 TRACE Connected to the hub, configuring command listener
+2014-10-10 22:16:04.1400 TRACE Connected to the hub, configuring command listener
+2014-10-10 22:16:07.6042 TRACE command: notify arguments: you are now connected.
+2014-10-10 22:16:07.6072 INFO Command Received: notify(you are now connected.)
+2014-10-10 22:17:15.0410 INFO User has chosen to exit the application
+2014-10-10 22:17:15.0610 TRACE Closing the signalr connection ...
+2014-10-10 22:17:15.3410 TRACE Program has finished its execution gracefully
+2014-10-10 22:24:43.0914 ERROR Issue while verifying the credentials at http://sql-scqa.condadogroup.com/Services/SelectCare.asmx. 
+Details: Credentials are not valid, try again 
+2014-10-10 22:25:32.9443 ERROR Issue while verifying the credentials at http://sql-scqa.condadogroup.com/Services/SelectCare.asmx. 
+Details: Credentials are not valid, try again 
+2014-10-10 22:30:46.6621 ERROR Issue while verifying the credentials at http://sql-scqa.condadogroup.com/Services/SelectCare.asmx. 
+Details: Credentials are not valid, try again 
+2014-10-10 22:31:11.9545 INFO user [ccb82f9e-68a6-40d8-9804-c96a72902105] has logged in successfully.
+2014-10-10 22:31:12.2636 TRACE connecting to the SignalR at https://sql-scdev.condadogroup.com/signalr with hub selectCareHub
+2014-10-10 22:31:12.2906 TRACE Connected to the hub, configuring command listener
+2014-10-10 22:31:12.2946 TRACE Connected to the hub, configuring command listener
+2014-10-10 22:31:15.7657 TRACE command: notify arguments: you are now connected.
+2014-10-10 22:31:15.7657 INFO Command Received: notify(you are now connected.)
+2014-10-10 22:31:26.9434 INFO User has chosen to exit the application
+2014-10-10 22:31:26.9434 TRACE Closing the signalr connection ...
+2014-10-10 22:31:27.2304 TRACE Program has finished its execution gracefully
+2014-10-10 22:31:36.3379 ERROR Issue while verifying the credentials at http://sql-scqa.condadogroup.com/Services/SelectCare.asmx. 
+Details: Credentials are not valid, try again 
+2014-10-10 22:33:48.3954 ERROR Issue while verifying the credentials at http://sql-scqa.condadogroup.com/Services/SelectCare.asmx. 
+Details: Credentials are not valid, try again 
+2014-10-10 22:34:17.6131 INFO user [6d690286-a449-4c09-a694-1940df3b249f] has logged in successfully.
+2014-10-10 22:34:17.9171 TRACE connecting to the SignalR at https://sql-scdev.condadogroup.com/signalr with hub selectCareHub
+2014-10-10 22:34:17.9361 TRACE Connected to the hub, configuring command listener
+2014-10-10 22:34:17.9361 TRACE Connected to the hub, configuring command listener
+2014-10-10 22:34:21.4243 TRACE command: notify arguments: you are now connected.
+2014-10-10 22:34:21.4243 INFO Command Received: notify(you are now connected.)
+2014-10-10 22:34:37.8332 INFO User has chosen to exit the application
+2014-10-10 22:34:37.8332 TRACE Closing the signalr connection ...
+2014-10-10 22:34:38.1352 TRACE Program has finished its execution gracefully
+2014-10-10 22:34:48.1498 INFO user [6d690286-a449-4c09-a694-1940df3b249f] has logged in successfully.
+2014-10-10 22:34:48.4448 TRACE connecting to the SignalR at https://sql-scdev.condadogroup.com/signalr with hub selectCareHub
+2014-10-10 22:34:48.4648 TRACE Connected to the hub, configuring command listener
+2014-10-10 22:34:48.4688 TRACE Connected to the hub, configuring command listener
+2014-10-10 22:34:51.9680 TRACE command: notify arguments: you are now connected.
+2014-10-10 22:34:51.9680 INFO Command Received: notify(you are now connected.)
+2014-10-11 00:29:07.2304 INFO User has chosen to exit the application
+2014-10-11 00:29:07.2344 TRACE Closing the signalr connection ...
+2014-10-11 00:29:08.2304 TRACE Program has finished its execution gracefully
+2014-10-11 00:29:42.8904 INFO user [ccb82f9e-68a6-40d8-9804-c96a72902105] has logged in successfully.
+2014-10-11 00:30:25.2748 TRACE connecting to the SignalR at https://sql-scdev.condadogroup.com/signalr with hub selectCareHub
+2014-10-11 00:30:25.3038 TRACE Connected to the hub, configuring command listener
+2014-10-11 00:30:25.3038 TRACE Connected to the hub, configuring command listener
+2014-10-11 00:38:44.4502 INFO user [ccb82f9e-68a6-40d8-9804-c96a72902105] has logged in successfully.
+2014-10-11 00:38:44.7732 TRACE connecting to the SignalR at https://sql-scdev.condadogroup.com/signalr with hub selectCareHub
+2014-10-11 00:38:44.8022 TRACE Connected to the hub, configuring command listener
+2014-10-11 00:38:44.8022 TRACE Connected to the hub, configuring command listener
+2014-10-11 00:38:49.0264 TRACE command: notify arguments: you are now connected.
+2014-10-11 00:38:49.0404 INFO Command Received: notify(you are now connected.)
+2014-10-11 00:39:01.1761 INFO User has chosen to exit the application
+2014-10-11 00:39:01.1861 TRACE Closing the signalr connection ...
+2014-10-11 00:39:01.4881 TRACE Program has finished its execution gracefully
+2014-10-11 00:40:56.3046 INFO user [ccb82f9e-68a6-40d8-9804-c96a72902105] has logged in successfully.
+2014-10-11 00:40:56.6196 TRACE connecting to the SignalR at https://sql-scdev.condadogroup.com/signalr with hub selectCareHub
+2014-10-11 00:40:56.6467 TRACE Connected to the hub, configuring command listener
+2014-10-11 00:40:56.6467 TRACE Connected to the hub, configuring command listener
+2014-10-11 00:41:00.1328 TRACE command: notify arguments: you are now connected.
+2014-10-11 00:41:00.1328 INFO Command Received: notify(you are now connected.)
+2014-10-11 00:41:10.0504 INFO User has chosen to exit the application
+2014-10-11 00:41:10.0504 TRACE Closing the signalr connection ...
+2014-10-11 00:41:10.3405 TRACE Program has finished its execution gracefully

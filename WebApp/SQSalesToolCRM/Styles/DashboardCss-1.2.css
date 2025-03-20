@@ -1,0 +1,355 @@
+﻿.metricsWrapper {
+    background-color: #5D7B9D;
+    width: 1500px;
+    height: 300px;
+    margin: 0px auto 0px auto;
+    padding: 5px;
+    border-radius: 4px;
+}
+
+.metricsDashboardHeader {
+    background-color: #8CA3BB;
+    border-radius: 4px;
+    text-align: center;
+    color: #fff;
+    font-size: 18px;
+    margin-bottom: 5px;
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzhjYTNiYiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjUwJSIgc3RvcC1jb2xvcj0iIzVkN2I5ZCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiM4Y2EzYmIiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+    background: -moz-linear-gradient(top, rgba(140,163,187,1) 0%, rgba(93,123,157,1) 50%, rgba(140,163,187,1) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(140,163,187,1)), color-stop(50%,rgba(93,123,157,1)), color-stop(100%,rgba(140,163,187,1))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, rgba(140,163,187,1) 0%,rgba(93,123,157,1) 50%,rgba(140,163,187,1) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, rgba(140,163,187,1) 0%,rgba(93,123,157,1) 50%,rgba(140,163,187,1) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, rgba(140,163,187,1) 0%,rgba(93,123,157,1) 50%,rgba(140,163,187,1) 100%); /* IE10+ */
+    background: linear-gradient(to bottom, rgba(140,163,187,1) 0%,rgba(93,123,157,1) 50%,rgba(140,163,187,1) 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8ca3bb', endColorstr='#5D7B9D',GradientType=0 ); /* IE6-8 */
+}
+
+.metricsSalesBox {
+    width: 730px;
+    margin-left: 5px;
+    height: 260px;
+    float: left;
+    border-radius: 4px;
+    border: 1px solid #465C71;
+}
+
+.metricsLeadsBox {
+    width: 730px;
+    height: 260px;
+    float: right;
+    border-radius: 4px;
+    border: 1px solid #465C71;
+    margin-right: 5px;
+}
+
+.divClear {
+    clear: both;
+}
+
+.metricsTable {
+    display: table;
+    width: 100%;
+    border-spacing: 10px;
+}
+
+.metricsRow {
+    display: table-row;
+    margin: 0px auto 0px auto;
+}
+
+.metricsCell {
+    display: table-cell;
+    width: 250px;
+    text-align: center;
+    color: #fff;
+    height: 70px;
+}
+
+.metricsCellInnerText {
+    text-align: center;
+    padding-bottom: 5px;
+}
+
+.reportHeaderBar {
+    width: 1500px;
+    margin: 0px auto 0px auto;
+    padding: 5px;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 6px;
+    -moz-border-radius: 6px;
+    border: 1px solid #465C71;
+    background: rgb(140,163,187); /* Old browsers */
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzhjYTNiYiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjUwJSIgc3RvcC1jb2xvcj0iIzVkN2I5ZCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiM4Y2EzYmIiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+    background: -moz-linear-gradient(top, rgba(140,163,187,1) 0%, rgba(93,123,157,1) 50%, rgba(140,163,187,1) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(140,163,187,1)), color-stop(50%,rgba(93,123,157,1)), color-stop(100%,rgba(140,163,187,1))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, rgba(140,163,187,1) 0%,rgba(93,123,157,1) 50%,rgba(140,163,187,1) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, rgba(140,163,187,1) 0%,rgba(93,123,157,1) 50%,rgba(140,163,187,1) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, rgba(140,163,187,1) 0%,rgba(93,123,157,1) 50%,rgba(140,163,187,1) 100%); /* IE10+ */
+    background: linear-gradient(to bottom, rgba(140,163,187,1) 0%,rgba(93,123,157,1) 50%,rgba(140,163,187,1) 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8ca3bb', endColorstr='#5D7B9D',GradientType=0 ); /* IE6-8 */
+}
+
+.reportHeaderBarActive {
+    width: 1500px;
+    margin: 0px auto 0px auto;
+    padding: 5px;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 6px;
+    -moz-border-radius: 6px;
+    border: 1px solid #465C71;
+    background: rgb(237,192,120); /* Old browsers */
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIxJSIgc3RvcC1jb2xvcj0iI2VkYzA3OCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjUwJSIgc3RvcC1jb2xvcj0iI2U4OTE0NSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNlZGMwNzgiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+    background: -moz-linear-gradient(top,  rgba(237,192,120,1) 1%, rgba(232,145,69,1) 50%, rgba(237,192,120,1) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(1%,rgba(237,192,120,1)), color-stop(50%,rgba(232,145,69,1)), color-stop(100%,rgba(237,192,120,1))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  rgba(237,192,120,1) 1%,rgba(232,145,69,1) 50%,rgba(237,192,120,1) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  rgba(237,192,120,1) 1%,rgba(232,145,69,1) 50%,rgba(237,192,120,1) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  rgba(237,192,120,1) 1%,rgba(232,145,69,1) 50%,rgba(237,192,120,1) 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  rgba(237,192,120,1) 1%,rgba(232,145,69,1) 50%,rgba(237,192,120,1) 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#EDC078', endColorstr='#E89145',GradientType=0 ); /* IE6-8 */
+
+
+
+}
+
+.reportBodyBar {
+    width: 1480px;
+    margin: 0px auto 0px auto;
+    padding: 5px;
+    background-color: #5D7B9D;
+    border: 1px solid #465C71;
+    border-bottom-right-radius: 6px;
+    border-bottom-left-radius: 6px;
+}
+
+.filterDivBox {
+    background-color: #8CA3BB;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 0px auto 0px auto;
+    width: 200px;
+    margin-top: 10px;
+    border: 1px solid #465C71;
+    display: none;
+}
+
+.reportHeadingLable {
+    float:left;
+    width:400px;
+}
+
+.scParametersReports {
+    float:right;
+    width:1000px;
+    text-align:right;
+}
+
+/* ------------------------------------------------------------------------------------------------------------- */
+/* DATA TABLE FOR REPORTS*/
+table.dashboardReportingTables {
+    margin-left: auto ;
+    margin-right: auto ;
+    width: 100%;
+    clear: both;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+ 
+table.dashboardReportingTables td,
+table.dashboardReportingTables th {
+    padding: 2px;
+    /*border: 1px solid #dde4ec;*/
+}
+
+/* Header cells */
+    table.dashboardReportingTables thead tr {
+        width:100%;
+    }
+
+table.dashboardReportingTables thead th {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    background: #5D7B9D;
+    color:#fff;
+    font-size:12px;
+
+}
+
+
+/* Body cells */
+table.dashboardReportingTables tbody th {
+    text-align: left;
+    background: #465c71;
+}
+     
+table.dashboardReportingTables tbody td {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size:12px;
+    text-align: center;
+    background: #fff;
+}
+
+table.dashboardReportingTables tbody tr.odd td {
+    background: #E0E6ED;
+}
+
+table.dashboardReportingTables tbody tr.totalCount.odd td {
+    background-color: #E0E6ED;
+}
+
+ 
+table.dashboardReportingTables tfoot td {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size:10px;
+    background: #5D7B9D;
+    text-align: center;
+}
+     
+table.dashboardReportingTables tfoot tr {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background: #5D7B9D;
+    text-align: center;
+    font-weight: bold;
+    color:#fff;
+}
+
+
+/* ------------------------------------------------------------------------------------------------------------------------ */
+/* ODOMETER EFFECTS */
+
+.odometer.odometer-auto-theme, .odometer.odometer-theme-plaza {
+    display: -moz-inline-box;
+    -moz-box-orient: vertical;
+    display: inline-block;
+    vertical-align: middle;
+    *vertical-align: auto;
+    position: relative;
+}
+
+.odometer.odometer-auto-theme, .odometer.odometer-theme-plaza {
+    *display: inline;
+}
+
+.odometer.odometer-auto-theme .odometer-digit, .odometer.odometer-theme-plaza .odometer-digit {
+    display: -moz-inline-box;
+    -moz-box-orient: vertical;
+    display: inline-block;
+    vertical-align: middle;
+    *vertical-align: auto;
+    position: relative;
+}
+
+.odometer.odometer-auto-theme .odometer-digit, .odometer.odometer-theme-plaza .odometer-digit {
+    *display: inline;
+}
+
+.odometer.odometer-auto-theme .odometer-digit .odometer-digit-spacer, .odometer.odometer-theme-plaza .odometer-digit .odometer-digit-spacer {
+    display: -moz-inline-box;
+    -moz-box-orient: vertical;
+    display: inline-block;
+    vertical-align: middle;
+    *vertical-align: auto;
+    visibility: hidden;
+}
+
+.odometer.odometer-auto-theme .odometer-digit .odometer-digit-spacer, .odometer.odometer-theme-plaza .odometer-digit .odometer-digit-spacer {
+    *display: inline;
+}
+
+.odometer.odometer-auto-theme .odometer-digit .odometer-digit-inner, .odometer.odometer-theme-plaza .odometer-digit .odometer-digit-inner {
+    text-align: left;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+}
+
+.odometer.odometer-auto-theme .odometer-digit .odometer-ribbon, .odometer.odometer-theme-plaza .odometer-digit .odometer-ribbon {
+    display: block;
+}
+
+.odometer.odometer-auto-theme .odometer-digit .odometer-ribbon-inner, .odometer.odometer-theme-plaza .odometer-digit .odometer-ribbon-inner {
+    display: block;
+    -webkit-backface-visibility: hidden;
+}
+
+.odometer.odometer-auto-theme .odometer-digit .odometer-value, .odometer.odometer-theme-plaza .odometer-digit .odometer-value {
+    display: block;
+    -webkit-transform: translateZ(0);
+}
+
+.odometer.odometer-auto-theme .odometer-digit .odometer-value.odometer-last-value, .odometer.odometer-theme-plaza .odometer-digit .odometer-value.odometer-last-value {
+    position: absolute;
+}
+
+.odometer.odometer-auto-theme.odometer-animating-up .odometer-ribbon-inner, .odometer.odometer-theme-plaza.odometer-animating-up .odometer-ribbon-inner {
+    -webkit-transition: -webkit-transform 2s;
+    -moz-transition: -moz-transform 2s;
+    -ms-transition: -ms-transform 2s;
+    -o-transition: -o-transform 2s;
+    transition: transform 2s;
+}
+
+.odometer.odometer-auto-theme.odometer-animating-up.odometer-animating .odometer-ribbon-inner, .odometer.odometer-theme-plaza.odometer-animating-up.odometer-animating .odometer-ribbon-inner {
+    -webkit-transform: translateY(-100%);
+    -moz-transform: translateY(-100%);
+    -ms-transform: translateY(-100%);
+    -o-transform: translateY(-100%);
+    transform: translateY(-100%);
+}
+
+.odometer.odometer-auto-theme.odometer-animating-down .odometer-ribbon-inner, .odometer.odometer-theme-plaza.odometer-animating-down .odometer-ribbon-inner {
+    -webkit-transform: translateY(-100%);
+    -moz-transform: translateY(-100%);
+    -ms-transform: translateY(-100%);
+    -o-transform: translateY(-100%);
+    transform: translateY(-100%);
+}
+
+.odometer.odometer-auto-theme.odometer-animating-down.odometer-animating .odometer-ribbon-inner, .odometer.odometer-theme-plaza.odometer-animating-down.odometer-animating .odometer-ribbon-inner {
+    -webkit-transition: -webkit-transform 2s;
+    -moz-transition: -moz-transform 2s;
+    -ms-transition: -ms-transform 2s;
+    -o-transition: -o-transform 2s;
+    transition: transform 2s;
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+    transform: translateY(0);
+}
+
+.odometer.odometer-auto-theme, .odometer.odometer-theme-plaza {
+    -moz-border-radius: 0.15em;
+    -webkit-border-radius: 0.15em;
+    -o-border-radius: 0.15em;
+    -ms-border-radius: 0.15em;
+    -khtml-border-radius: 0.15em;
+    border-radius: 0.15em;
+    background-color: #465C71;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 100;
+    padding: 0 0.12em;
+    line-height: 1.2em;
+    font-size: 2.8em;
+    background-size: 16px 16px;
+    border: 3px solid #8CA3BB;
+}
+
+.odometer.odometer-auto-theme .odometer-digit, .odometer.odometer-theme-plaza .odometer-digit {
+    -moz-border-radius: 0.1em;
+    -webkit-border-radius: 0.1em;
+    -o-border-radius: 0.1em;
+    -ms-border-radius: 0.1em;
+    -khtml-border-radius: 0.1em;
+    border-radius: 0.1em;
+    padding: 0 0.03em;
+    color: #ffffff;
+}
+
+.odometer.odometer-auto-theme .odometer-digit .odometer-digit-inner, .odometer.odometer-theme-plaza .odometer-digit .odometer-digit-inner {
+    left: 0.03em;
+}

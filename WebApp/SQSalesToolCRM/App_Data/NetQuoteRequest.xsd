@@ -1,0 +1,1594 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" elementFormDefault="qualified" attributeFormDefault="qualified" id="NetQuoteApplicationData">
+	<xs:element name="NetQuoteData">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="QuoteRequest">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="DistributionDirectives" minOccurs="0">
+								<xs:complexType>
+									<xs:all>
+										<xs:element name="DistributionDirective">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="EntityID" minOccurs="0" maxOccurs="unbounded">
+														<xs:complexType>
+															<xs:simpleContent>
+																<xs:extension base="SpecifiedStringType">
+																	<xs:attribute name="Type" type="DistributionDirectiveEntityType"/>
+																	<xs:attribute name="Name" type="xs:string"/>
+																	<xs:attribute name="Encrypted" type="YesNo"/>
+																	<xs:attribute name="Key" type="xs:string"/>
+																	<xs:attribute name="Mode" type="AgentModeType"/>
+																</xs:extension>
+															</xs:simpleContent>
+														</xs:complexType>
+													</xs:element>
+												</xs:sequence>
+												<xs:attribute name="Action" type="DistributionDirectiveAction" use="required"/>
+												<xs:attribute name="LeadDistributionCap" use="optional">
+													<xs:simpleType>
+														<xs:restriction base="xs:integer">
+															<xs:minInclusive value="1"/>
+														</xs:restriction>
+													</xs:simpleType>
+												</xs:attribute>
+											</xs:complexType>
+										</xs:element>
+									</xs:all>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="SourceOfRequest" minOccurs="0">
+								<xs:complexType>
+									<xs:all minOccurs="0">
+										<xs:element name="NetQuotePartnerCode" type="xs:string" minOccurs="0"/>
+										<xs:element name="NetQuotePartnerID" type="xs:int" minOccurs="0"/>
+										<xs:element name="NetQuoteAccountID" type="xs:int" minOccurs="0"/>
+										<xs:element name="NetQuoteBrand" type="xs:string" minOccurs="0"/>
+									</xs:all>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="ApplicationContact">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="FirstName" type="xs:string"/>
+										<xs:element name="LastName" type="xs:string"/>
+										<xs:element name="Address1" type="xs:string"/>
+										<xs:element name="Address2" type="xs:string" minOccurs="0"/>
+										<xs:element name="City" type="xs:string"/>
+										<xs:element name="County" type="xs:string" minOccurs="0"/>
+										<xs:element name="State" type="State"/>
+										<xs:element name="ZIPCode">
+											<xs:simpleType>
+												<xs:restriction base="ZIPCodeType"/>
+											</xs:simpleType>
+										</xs:element>
+										<xs:element name="EmailAddress" type="EmailType"/>
+										<xs:element name="PhoneNumbers">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="PhoneNumber" type="PhoneNumber" maxOccurs="3"/>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="ContactPreferenceProfile">
+											<xs:complexType>
+												<xs:attribute name="PreferredResponseDeadline" type="xs:int" use="required"/>
+												<xs:attribute name="PreferredContactPlace" use="optional">
+													<xs:simpleType>
+														<xs:restriction base="xs:string">
+															<xs:enumeration value="Home"/>
+															<xs:enumeration value="Work"/>
+														</xs:restriction>
+													</xs:simpleType>
+												</xs:attribute>
+												<xs:attribute name="PreferredContactMethod" use="optional">
+													<xs:simpleType>
+														<xs:restriction base="xs:string">
+															<xs:enumeration value="Any"/>
+															<xs:enumeration value="Email"/>
+															<xs:enumeration value="Fax"/>
+															<xs:enumeration value="Phone"/>
+														</xs:restriction>
+													</xs:simpleType>
+												</xs:attribute>
+												<xs:attribute name="PreferredContactTime" use="required">
+													<xs:simpleType>
+														<xs:restriction base="xs:string">
+															<xs:enumeration value="Anytime"/>
+															<xs:enumeration value="Morning"/>
+															<xs:enumeration value="Afternoon"/>
+															<xs:enumeration value="Evening"/>
+														</xs:restriction>
+													</xs:simpleType>
+												</xs:attribute>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="ResidencyProfile">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="CurrentResidence" type="ResidenceDwellingType"/>
+													<xs:element name="PreviousResidence" type="ResidenceDwellingType" minOccurs="0"/>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+									<xs:attribute name="ReceiveNewsletter" type="YesNo" use="required"/>
+									<xs:attribute name="AddressValidationResponse" type="AddressValidationResponse" use="optional"/>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="Persons" minOccurs="0">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="Person" type="Person" maxOccurs="unbounded"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:choice id="InsuranceQuoteRequest">
+								<xs:element name="AutoInsuranceQuoteRequest">
+									<xs:complexType mixed="false">
+										<xs:complexContent mixed="false">
+											<xs:extension base="AutoInsuranceQuoteRequest">
+												<xs:attribute name="RiskType"/>
+											</xs:extension>
+										</xs:complexContent>
+									</xs:complexType>
+								</xs:element>
+								<xs:element name="PropertyAndCasualtyInsuranceQuoteRequest">
+									<xs:complexType mixed="false">
+										<xs:complexContent mixed="false">
+											<xs:extension base="PropertyAndCasualtyInsuranceQuoteRequest">
+												<xs:attribute name="RiskType"/>
+											</xs:extension>
+										</xs:complexContent>
+									</xs:complexType>
+								</xs:element>
+								<xs:element name="WorkersCompensationInsuranceQuoteRequest">
+									<xs:complexType mixed="false">
+										<xs:complexContent mixed="false">
+											<xs:extension base="WorkersCompensationInsuranceQuoteRequest">
+												<xs:attribute name="RiskType"/>
+											</xs:extension>
+										</xs:complexContent>
+									</xs:complexType>
+								</xs:element>
+								<xs:element name="GroupHealthInsuranceQuoteRequest">
+									<xs:complexType mixed="false">
+										<xs:complexContent mixed="false">
+											<xs:extension base="GroupHealthInsuranceQuoteRequest">
+												<xs:attribute name="RiskType"/>
+											</xs:extension>
+										</xs:complexContent>
+									</xs:complexType>
+								</xs:element>
+								<xs:element name="HealthInsuranceQuoteRequest">
+									<xs:complexType mixed="false">
+										<xs:complexContent mixed="false">
+											<xs:extension base="HealthInsuranceQuoteRequest">
+												<xs:attribute name="RiskType"/>
+											</xs:extension>
+										</xs:complexContent>
+									</xs:complexType>
+								</xs:element>
+								<xs:element name="HomeInsuranceQuoteRequest">
+									<xs:complexType mixed="false">
+										<xs:complexContent mixed="false">
+											<xs:extension base="HomeInsuranceQuoteRequest">
+												<xs:attribute name="RiskType"/>
+											</xs:extension>
+										</xs:complexContent>
+									</xs:complexType>
+								</xs:element>
+								<xs:element name="LifeInsuranceQuoteRequest">
+									<xs:complexType mixed="false">
+										<xs:complexContent mixed="false">
+											<xs:extension base="LifeInsuranceQuoteRequest">
+												<xs:attribute name="RiskType"/>
+											</xs:extension>
+										</xs:complexContent>
+									</xs:complexType>
+								</xs:element>
+								<xs:element name="MortgageInsuranceQuoteRequest">
+									<xs:complexType mixed="false">
+										<xs:complexContent mixed="false">
+											<xs:extension base="MortgageInsuranceQuoteRequest">
+												<xs:attribute name="RiskType"/>
+											</xs:extension>
+										</xs:complexContent>
+									</xs:complexType>
+								</xs:element>
+							</xs:choice>
+						</xs:sequence>
+						<xs:attribute name="DateTime" type="xs:dateTime" use="required"/>
+						<xs:attribute name="VisitorSessionID" type="xs:string" use="optional"/>
+						<xs:attribute name="AppID" type="xs:int" use="optional"/>
+						<xs:attribute name="EarlyDecision" type="YesNo"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+			<xs:attribute name="Version" type="xs:string" default="1.0"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:simpleType name="AddressValidationResponse">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="AddressDeliverable"/>
+			<xs:enumeration value="AddressOutOfRange"/>
+			<xs:enumeration value="AddressNumberInvalid"/>
+			<xs:enumeration value="ComponentMismatch"/>
+			<xs:enumeration value="MultipleMatches"/>
+			<xs:enumeration value="NewAddress"/>
+			<xs:enumeration value="NonDeliverableAddress"/>
+			<xs:enumeration value="NoStreetDataForZipCode"/>
+			<xs:enumeration value="SystemUnavailable"/>
+			<xs:enumeration value="Unknown"/>
+			<xs:enumeration value="UnknownStreet"/>
+			<xs:enumeration value="ZipCodeError"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="AnnualPayroll">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="under50000"/>
+			<xs:enumeration value="from50001To100000"/>
+			<xs:enumeration value="from100001To200000"/>
+			<xs:enumeration value="from200001To500000"/>
+			<xs:enumeration value="over500001"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="AnnualRevenue">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="under100000"/>
+			<xs:enumeration value="from100000To500000"/>
+			<xs:enumeration value="from500000To1000000"/>
+			<xs:enumeration value="from1000000To10000000"/>
+			<xs:enumeration value="over10000000"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="BusinessOperatingStatus">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Corporation"/>
+			<xs:enumeration value="LimitedLiabilityCorporation"/>
+			<xs:enumeration value="Partnership"/>
+			<xs:enumeration value="SoleProprietership"/>
+			<xs:enumeration value="JointVenture"/>
+			<xs:enumeration value="Trust"/>
+			<xs:enumeration value="Municipality"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="Comment">
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="1024"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="CoverageAmountQualifier">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="PerPerson"/>
+			<xs:enumeration value="PerIncident"/>
+			<xs:enumeration value="PerDay"/>
+			<xs:enumeration value="Maximum"/>
+			<xs:enumeration value="Deductible"/>
+			<xs:enumeration value="PerPolicy"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="CoverageType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="BodilyInjury"/>
+			<xs:enumeration value="PropertyDamage"/>
+			<xs:enumeration value="UninsuredMotorist"/>
+			<xs:enumeration value="UnderinsuredMotorist"/>
+			<xs:enumeration value="Towing"/>
+			<xs:enumeration value="Glass"/>
+			<xs:enumeration value="RentalCar"/>
+			<xs:enumeration value="Comprehensive"/>
+			<xs:enumeration value="Collision"/>
+			<xs:enumeration value="Bonds"/>
+			<xs:enumeration value="BusinessInterruption"/>
+			<xs:enumeration value="BusinessOwnersPolicy"/>
+			<xs:enumeration value="CommercialAuto"/>
+			<xs:enumeration value="CommercialCrime"/>
+			<xs:enumeration value="CommercialGeneralLiability"/>
+			<xs:enumeration value="CommercialPackagePolicy"/>
+			<xs:enumeration value="DirectorsOfficers"/>
+			<xs:enumeration value="EmploymentPractices"/>
+			<xs:enumeration value="ErrorsAndOmissions"/>
+			<xs:enumeration value="TechnologyBusinessPackage"/>
+			<xs:enumeration value="WorkersComp"/>
+			<xs:enumeration value="MajorMedical"/>
+			<xs:enumeration value="Medical"/>
+			<xs:enumeration value="NonOwnedAuto"/>
+			<xs:enumeration value="PointOfServiceMedical"/>
+			<xs:enumeration value="PreferredProviderOrganizationMedical"/>
+			<xs:enumeration value="Maternity"/>
+			<xs:enumeration value="VisionCare"/>
+			<xs:enumeration value="Dental"/>
+			<xs:enumeration value="Prescription"/>
+			<xs:enumeration value="Mortgage"/>
+			<xs:enumeration value="PersonalProperty"/>
+			<xs:enumeration value="Residence"/>
+			<xs:enumeration value="PersonalLiability"/>
+			<xs:enumeration value="PhysicalBuilding"/>
+			<xs:enumeration value="UmbrellaPolicy"/>
+			<xs:enumeration value="Term1YearAnnuallyRenewable"/>
+			<xs:enumeration value="Term5YearGuaranteedLevelPremium"/>
+			<xs:enumeration value="Term10YearGuaranteedLevelPremium"/>
+			<xs:enumeration value="Term15YearGuaranteedLevelPremium"/>
+			<xs:enumeration value="Term20YearGuaranteedLevelPremium"/>
+			<xs:enumeration value="Term25YearGuaranteedLevelPremium"/>
+			<xs:enumeration value="Term30YearGuaranteedLevelPremium"/>
+			<xs:enumeration value="PermanentWhole"/>
+			<xs:enumeration value="PermanentUniversal"/>
+			<xs:enumeration value="PermanentVariable"/>
+			<xs:enumeration value="Other"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="DistributionDirectiveAction">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Include"/>
+			<xs:enumeration value="Exclude"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="DistributionDirectiveEntityType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Account"/>
+			<xs:enumeration value="Company"/>
+			<xs:enumeration value="Partner"/>
+			<xs:enumeration value="NetQuoteCode"/>
+			<xs:enumeration value="Agent"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="IncidentAutoAccident">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="VehicleHitVehicle"/>
+			<xs:enumeration value="VehicleHitPedestrian"/>
+			<xs:enumeration value="VehicleHitProperty"/>
+			<xs:enumeration value="VehicleDamagedAvoidingAccident"/>
+			<xs:enumeration value="OtherVehicleHitYours"/>
+			<xs:enumeration value="AtFaultAccidentNotListed"/>
+			<xs:enumeration value="NotAtFaultAccidentNotListed"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="IncidentAutoClaim">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="FireHailWaterDamage"/>
+			<xs:enumeration value="VandalismDamage"/>
+			<xs:enumeration value="VehicleHitAnimal"/>
+			<xs:enumeration value="VehicleStolen"/>
+			<xs:enumeration value="WindshieldDamage"/>
+			<xs:enumeration value="LossClaimNotListed"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="IncidentAutoDUI">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="DrivingUnderInfluenceOfAlcolholOrWhileIntoxicated"/>
+			<xs:enumeration value="DrivingWhileUnderTheInfluenceOfDrugs"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="IncidentAutoTicket">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="CarelessDriving"/>
+			<xs:enumeration value="DefectiveEquipment"/>
+			<xs:enumeration value="FailureToObeySignal"/>
+			<xs:enumeration value="SpeedingViolation"/>
+			<xs:enumeration value="TicketViolationNotListed"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="IncidentHomeClaim">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="FireOrLightningDamage"/>
+			<xs:enumeration value="WindstormOrHailDamage"/>
+			<xs:enumeration value="IceSnowSleetDamage"/>
+			<xs:enumeration value="SmokeDamage"/>
+			<xs:enumeration value="WaterDamage"/>
+			<xs:enumeration value="Vandalism"/>
+			<xs:enumeration value="Theft"/>
+			<xs:enumeration value="LossClaimNotListed"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="LicenseStatus">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="ValidLicense"/>
+			<xs:enumeration value="NotLicensed"/>
+			<xs:enumeration value="SuspendedLicence"/>
+			<xs:enumeration value="TemporaryLicence"/>
+			<xs:enumeration value="TemporaryLicense"/>
+			<xs:enumeration value="SuspendedLicense"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="MemberType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Adult"/>
+			<xs:enumeration value="Child"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="NumberEmployeesType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="0"/>
+			<xs:enumeration value="1"/>
+			<xs:enumeration value="2-3"/>
+			<xs:enumeration value="4-5"/>
+			<xs:enumeration value="6-10"/>
+			<xs:enumeration value="11-20"/>
+			<xs:enumeration value="Over 20"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="PhoneNumberValue">
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="14"/>
+			<xs:pattern value="\d{10,14}"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="EmailType">
+		<xs:restriction base="xs:string"/>
+	</xs:simpleType>
+	<xs:simpleType name="PhoneValidationResponse">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="AreaCodePrefixMatch"/>
+			<xs:enumeration value="InvalidPrefix"/>
+			<xs:enumeration value="InvalidAreaCode"/>
+			<xs:enumeration value="NewAreaCode"/>
+			<xs:enumeration value="SystemUnavailable"/>
+			<xs:enumeration value="Unknown"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="State">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="AK"/>
+			<xs:enumeration value="AL"/>
+			<xs:enumeration value="AR"/>
+			<xs:enumeration value="AZ"/>
+			<xs:enumeration value="CA"/>
+			<xs:enumeration value="CO"/>
+			<xs:enumeration value="CT"/>
+			<xs:enumeration value="DE"/>
+			<xs:enumeration value="DC"/>
+			<xs:enumeration value="FL"/>
+			<xs:enumeration value="GA"/>
+			<xs:enumeration value="HI"/>
+			<xs:enumeration value="ID"/>
+			<xs:enumeration value="IL"/>
+			<xs:enumeration value="IN"/>
+			<xs:enumeration value="IA"/>
+			<xs:enumeration value="KS"/>
+			<xs:enumeration value="KY"/>
+			<xs:enumeration value="LA"/>
+			<xs:enumeration value="ME"/>
+			<xs:enumeration value="MD"/>
+			<xs:enumeration value="MA"/>
+			<xs:enumeration value="MI"/>
+			<xs:enumeration value="MN"/>
+			<xs:enumeration value="MS"/>
+			<xs:enumeration value="MO"/>
+			<xs:enumeration value="MT"/>
+			<xs:enumeration value="NE"/>
+			<xs:enumeration value="NV"/>
+			<xs:enumeration value="NH"/>
+			<xs:enumeration value="NJ"/>
+			<xs:enumeration value="NM"/>
+			<xs:enumeration value="NY"/>
+			<xs:enumeration value="NC"/>
+			<xs:enumeration value="ND"/>
+			<xs:enumeration value="OH"/>
+			<xs:enumeration value="OK"/>
+			<xs:enumeration value="OR"/>
+			<xs:enumeration value="PA"/>
+			<xs:enumeration value="RI"/>
+			<xs:enumeration value="SC"/>
+			<xs:enumeration value="SD"/>
+			<xs:enumeration value="TN"/>
+			<xs:enumeration value="TX"/>
+			<xs:enumeration value="UT"/>
+			<xs:enumeration value="VT"/>
+			<xs:enumeration value="VA"/>
+			<xs:enumeration value="WA"/>
+			<xs:enumeration value="WV"/>
+			<xs:enumeration value="WI"/>
+			<xs:enumeration value="WY"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="ZIPCodeType">
+		<xs:restriction base="xs:string">
+			<xs:length value="5"/>
+			<xs:pattern value="\d{5}"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="YearType">
+		<xs:restriction base="xs:string">
+			<xs:length value="4"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SpecifiedStringType">
+		<xs:restriction base="xs:string">
+			<xs:minLength value="1"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="WhatDamaged">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="People"/>
+			<xs:enumeration value="Property"/>
+			<xs:enumeration value="Both"/>
+			<xs:enumeration value="NotApplicable"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="YesNo">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Yes"/>
+			<xs:enumeration value="No"/>
+			<xs:enumeration value="Unknown"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="AgentModeType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Full"/>
+			<xs:enumeration value="Numeric"/>
+			<xs:enumeration value="Contact"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<!-- Global COMPLEX Types -->
+	<xs:complexType name="PhoneNumber">
+		<xs:sequence>
+			<xs:element name="PhoneNumberValue" type="PhoneNumberValue"/>
+			<xs:element name="PhoneExtensionValue" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="8"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute name="PhoneNumberType" use="required">
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="Home"/>
+					<xs:enumeration value="Work"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="PhoneValidationResponse" type="PhoneValidationResponse" use="optional"/>
+	</xs:complexType>
+	<xs:complexType name="Coverage">
+		<xs:sequence>
+			<xs:element name="CoverageAmount" minOccurs="0" maxOccurs="unbounded">
+				<xs:complexType>
+					<xs:simpleContent>
+						<xs:extension base="xs:int">
+							<xs:attribute name="Qualifier" type="CoverageAmountQualifier" use="required"/>
+						</xs:extension>
+					</xs:simpleContent>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute name="CoverageType" type="CoverageType" use="required"/>
+	</xs:complexType>
+	<xs:complexType name="ResidenceDwellingType">
+		<xs:sequence>
+			<xs:element name="OccupancyDate" type="xs:date"/>
+		</xs:sequence>
+		<xs:attribute name="ResidenceStatus" use="required">
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="Own"/>
+					<xs:enumeration value="Rent"/>
+					<xs:enumeration value="LiveWithParents"/>
+					<xs:enumeration value="Dormitory"/>
+					<xs:enumeration value="ChoiceNotListed"/>
+					<xs:enumeration value="Unknown"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:complexType name="Person" mixed="true">
+		<xs:sequence>
+			<xs:element name="FirstName" type="xs:string"/>
+			<xs:element name="LastName" type="xs:string"/>
+			<xs:element name="BirthDate" type="xs:date"/>
+			<xs:element name="SocialSecurityNumber" type="xs:string" minOccurs="0"/>
+			<xs:element name="Occupation">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="YearsInField" type="xs:int"/>
+					</xs:sequence>
+					<xs:attribute name="OccupationName">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:enumeration value="AdministrativeClerical"/>
+								<xs:enumeration value="Architect"/>
+								<xs:enumeration value="BusinessOwner"/>
+								<xs:enumeration value="CertifiedPublicAccountant"/>
+								<xs:enumeration value="Clergy"/>
+								<xs:enumeration value="ConstructionTrades"/>
+								<xs:enumeration value="Dentist"/>
+								<xs:enumeration value="Disabled"/>
+								<xs:enumeration value="Engineer"/>
+								<xs:enumeration value="Homemaker"/>
+								<xs:enumeration value="Lawyer"/>
+								<xs:enumeration value="ManagerSupervisor"/>
+								<xs:enumeration value="MilitaryOfficer"/>
+								<xs:enumeration value="MilitaryEnlisted"/>
+								<xs:enumeration value="MinorNotApplicable"/>
+								<xs:enumeration value="OtherNonTechnical"/>
+								<xs:enumeration value="OtherTechnical"/>
+								<xs:enumeration value="Physician"/>
+								<xs:enumeration value="ProfessionalSalaried"/>
+								<xs:enumeration value="Professor"/>
+								<xs:enumeration value="Retail"/>
+								<xs:enumeration value="Retired"/>
+								<xs:enumeration value="SalesInside"/>
+								<xs:enumeration value="SalesOutside"/>
+								<xs:enumeration value="SchoolTeacher"/>
+								<xs:enumeration value="Scientist"/>
+								<xs:enumeration value="SelfEmployed"/>
+								<xs:enumeration value="SkilledSemiSkilled"/>
+								<xs:enumeration value="Student"/>
+								<xs:enumeration value="Unemployed"/>
+								<xs:enumeration value="Unknown"/>
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:attribute>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="EducationProfile" minOccurs="0">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Education" minOccurs="0" maxOccurs="4">
+							<xs:complexType mixed="false">
+								<xs:complexContent mixed="false">
+									<xs:extension base="Education">
+										<xs:attribute name="GoodStudentDiscount" type="YesNo" use="optional"/>
+									</xs:extension>
+								</xs:complexContent>
+							</xs:complexType>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="CreditHistory" minOccurs="0">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="CreditScore" type="xs:string" minOccurs="0"/>
+					</xs:sequence>
+					<xs:attribute name="Bankruptcy" type="YesNo" use="required"/>
+					<xs:attribute name="Repossessions" type="YesNo" use="required"/>
+					<xs:attribute name="CreditSelfRating" use="required">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:enumeration value="Poor"/>
+								<xs:enumeration value="Good"/>
+								<xs:enumeration value="Excellent"/>
+								<xs:enumeration value="Unsure"/>
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:attribute>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute name="Gender" use="required">
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="Male"/>
+					<xs:enumeration value="Female"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="MilitaryExperience" use="required">
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="NoMilitaryExperience"/>
+					<xs:enumeration value="ActiveCommissioned"/>
+					<xs:enumeration value="ActiveEnlisted"/>
+					<xs:enumeration value="DischargedCommissioned"/>
+					<xs:enumeration value="DischargedEnlisted"/>
+					<xs:enumeration value="ReserveCommissioned"/>
+					<xs:enumeration value="ReserveEnlisted"/>
+					<xs:enumeration value="Retired"/>
+					<xs:enumeration value="Other"/>
+					<xs:enumeration value="Unknown"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="USResident12Months" type="YesNo" use="required"/>
+		<xs:attribute name="MaritalStatus" use="required">
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="Single"/>
+					<xs:enumeration value="Married"/>
+					<xs:enumeration value="Divorced"/>
+					<xs:enumeration value="Separated"/>
+					<xs:enumeration value="Widowed"/>
+					<xs:enumeration value="Unknown"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="RelationshipToApplicant" use="required">
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="Self"/>
+					<xs:enumeration value="Spouse"/>
+					<xs:enumeration value="Parent"/>
+					<xs:enumeration value="Sibling"/>
+					<xs:enumeration value="Child"/>
+					<xs:enumeration value="Grandparent"/>
+					<xs:enumeration value="Grandchild"/>
+					<xs:enumeration value="Other"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="PersonID" type="xs:int" use="required"/>
+	</xs:complexType>
+	<xs:complexType name="InsuranceProfile">
+		<xs:all>
+			<xs:element name="RequestedPolicy">
+				<xs:complexType>
+					<xs:all>
+						<xs:element name="StartDate" type="xs:date"/>
+						<xs:element name="RequestedCoverages">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="RequestedCoverage" type="Coverage" maxOccurs="unbounded"/>
+									<xs:element name="CoverageComment" type="xs:string" minOccurs="0"/>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+					</xs:all>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="PriorPolicies" minOccurs="0">
+				<xs:complexType>
+					<xs:sequence minOccurs="0">
+						<xs:element name="PriorPolicy" minOccurs="0" maxOccurs="4">
+							<xs:complexType>
+								<xs:all>
+									<xs:element name="InsuranceCompany" msdata:Ordinal="0">
+										<xs:complexType>
+											<xs:sequence>
+												<xs:element name="CompanyName" type="xs:string"/>
+											</xs:sequence>
+											<xs:attribute name="NetQuoteCode" type="xs:string" use="required"/>
+										</xs:complexType>
+									</xs:element>
+									<xs:element name="StartDate" type="xs:date"/>
+									<xs:element name="ExpirationDate" type="xs:date"/>
+									<xs:element name="AnnualPremium" minOccurs="0">
+										<xs:simpleType>
+											<xs:restriction base="xs:string">
+												<xs:enumeration value="Less Than 1000"/>
+												<xs:enumeration value="1000-5000"/>
+												<xs:enumeration value="5000-10000"/>
+												<xs:enumeration value="Greater Than 10000"/>
+											</xs:restriction>
+										</xs:simpleType>
+									</xs:element>
+									<xs:element name="NumberClaimsPast3Years" type="xs:int" minOccurs="0"/>
+								</xs:all>
+								<xs:attribute name="Current" type="YesNo" use="required"/>
+							</xs:complexType>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="ContinuouslyInsuredSinceDate" type="xs:date" minOccurs="0"/>
+		</xs:all>
+		<xs:attribute name="MultiplePolicyDiscount" type="YesNo" use="optional"/>
+	</xs:complexType>
+	<xs:complexType name="VehicleDriverInfo">
+		<xs:sequence>
+			<xs:element name="UseOfVehiclePercentage" minOccurs="0"/>
+		</xs:sequence>
+		<xs:attribute name="DriverID" type="xs:int" use="required"/>
+	</xs:complexType>
+	<xs:complexType name="MedicalProfile">
+		<xs:sequence>
+			<xs:element name="HeightFeet" type="xs:int"/>
+			<xs:element name="HeightInches" type="xs:int"/>
+			<xs:element name="WeightPounds">
+				<xs:simpleType>
+					<xs:restriction base="xs:int">
+						<xs:maxInclusive value="500"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="Disorders" minOccurs="0">
+				<xs:complexType>
+					<xs:all>
+						<xs:element name="MedicationDescription" type="xs:string" minOccurs="0"/>
+						<xs:element name="OtherDisordersDescription" type="xs:string" minOccurs="0"/>
+					</xs:all>
+					<xs:attribute name="Medication" type="YesNo" use="required"/>
+					<xs:attribute name="HighBloodPressure" type="YesNo" use="required"/>
+					<xs:attribute name="AlcoholDrugAddiction" type="YesNo" use="required"/>
+					<xs:attribute name="Alzheimers" type="YesNo" use="required"/>
+					<xs:attribute name="Asthma" type="YesNo" use="required"/>
+					<xs:attribute name="Cancer" type="YesNo" use="required"/>
+					<xs:attribute name="HighCholesterol" type="YesNo" use="required"/>
+					<xs:attribute name="Depression" type="YesNo" use="required"/>
+					<xs:attribute name="Diabetes" type="YesNo" use="required"/>
+					<xs:attribute name="HeartDisease" type="YesNo" use="required"/>
+					<xs:attribute name="KidneyDisease" type="YesNo" use="required"/>
+					<xs:attribute name="LiverDisease" type="YesNo" use="required"/>
+					<xs:attribute name="MentalIllness" type="YesNo" use="required"/>
+					<xs:attribute name="PulmonaryDisease" type="YesNo" use="required"/>
+					<xs:attribute name="Stroke" type="YesNo" use="required"/>
+					<xs:attribute name="Ulcers" type="YesNo" use="required"/>
+					<xs:attribute name="VascularDisease" type="YesNo" use="required"/>
+					<xs:attribute name="OtherDisorder" type="YesNo" use="required"/>
+					<xs:attribute name="FamilyHistoryHeartDisease" type="YesNo" use="required"/>
+					<xs:attribute name="FamilyHistoryCancer" type="YesNo" use="required"/>
+					<xs:attribute name="AIDSHIV" type="YesNo" use="required"/>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute name="TobaccoUse12Months" type="YesNo" use="required"/>
+		<xs:attribute name="ExpectantMotherOrFather" type="YesNo" use="required"/>
+	</xs:complexType>
+	<xs:complexType name="GroupHealthPolicyMemberCensusData">
+		<xs:all>
+			<xs:element name="FirstName" type="SpecifiedStringType"/>
+			<xs:element name="LastName" type="SpecifiedStringType" minOccurs="0"/>
+			<xs:element name="BirthDate" type="xs:date"/>
+			<xs:element name="ZIPCode" type="ZIPCodeType"/>
+		</xs:all>
+		<xs:attribute name="Gender" type="xs:string" use="required"/>
+		<xs:attribute name="Spouse" type="YesNo" use="required"/>
+		<xs:attribute name="Children" type="YesNo" use="required"/>
+	</xs:complexType>
+	<xs:complexType name="Education">
+		<xs:sequence>
+			<xs:element name="GraduationYear" type="xs:string" minOccurs="0" msdata:Ordinal="1"/>
+			<xs:element name="SchoolName" type="xs:string" minOccurs="0"/>
+			<xs:element name="GPA" type="xs:decimal" minOccurs="0"/>
+		</xs:sequence>
+		<xs:attribute name="HighestDegree" use="required">
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="SomeOrNoHighSchool"/>
+					<xs:enumeration value="HighSchoolDiploma"/>
+					<xs:enumeration value="GED"/>
+					<xs:enumeration value="AssociateDegree"/>
+					<xs:enumeration value="BachelorsDegree"/>
+					<xs:enumeration value="MastersDegree"/>
+					<xs:enumeration value="DoctorateDegree"/>
+					<xs:enumeration value="OtherProfessionalDegree"/>
+					<xs:enumeration value="OtherNonProfessionalDegree"/>
+					<xs:enumeration value="SomeCollege"/>
+					<xs:enumeration value="TradeVocationalSchool"/>
+					<xs:enumeration value="Unknown"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:complexType name="TimeOfDay">
+		<xs:sequence>
+			<xs:element name="Hour" type="xs:int"/>
+			<xs:element name="Minute">
+				<xs:simpleType>
+					<xs:restriction base="xs:int">
+						<xs:enumeration value="00"/>
+						<xs:enumeration value="30"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="AMPM">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="AM"/>
+						<xs:enumeration value="PM"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="Address">
+		<xs:sequence>
+			<xs:element name="Address1" type="xs:string"/>
+			<xs:element name="Address2" type="xs:string" minOccurs="0"/>
+			<xs:element name="City" type="xs:string"/>
+			<xs:element name="County" type="xs:string"/>
+			<xs:element name="State" type="xs:string"/>
+			<xs:element name="ZIPCode" type="ZIPCodeType"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- AUTO Insurance Quote Request Application -->
+	<xs:complexType name="AutoInsuranceQuoteRequest">
+		<xs:sequence>
+			<xs:element name="Drivers">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Driver" maxOccurs="4">
+							<xs:complexType>
+								<xs:all>
+									<xs:element name="DriversLicense">
+										<xs:complexType>
+											<xs:all minOccurs="0">
+												<xs:element name="State" type="xs:string" minOccurs="0"/>
+												<xs:element name="Number" type="xs:string" minOccurs="0"/>
+												<xs:element name="LicensedDate" type="xs:date" minOccurs="0"/>
+											</xs:all>
+											<xs:attribute name="LicenseStatus" type="LicenseStatus" use="required"/>
+											<xs:attribute name="LicenseEverSuspendedRevoked" type="YesNo" use="required"/>
+										</xs:complexType>
+									</xs:element>
+									<xs:element name="DrivingRecord">
+										<xs:complexType>
+											<xs:all minOccurs="0">
+												<xs:element name="DUIs" minOccurs="0">
+													<xs:complexType>
+														<xs:sequence>
+															<xs:element name="DUI" minOccurs="0" maxOccurs="4">
+																<xs:complexType>
+																	<xs:sequence>
+																		<xs:element name="Date" type="xs:date"/>
+																		<xs:element name="State" type="State" minOccurs="0"/>
+																	</xs:sequence>
+																	<xs:attribute name="IncidentType" type="IncidentAutoDUI" use="required"/>
+																</xs:complexType>
+															</xs:element>
+														</xs:sequence>
+													</xs:complexType>
+												</xs:element>
+												<xs:element name="Accidents" minOccurs="0">
+													<xs:complexType>
+														<xs:sequence>
+															<xs:element name="Accident" minOccurs="0" maxOccurs="4">
+																<xs:complexType>
+																	<xs:sequence>
+																		<xs:element name="Date" type="xs:date"/>
+																		<xs:element name="InsurancePaidAmount" type="xs:int" minOccurs="0"/>
+																	</xs:sequence>
+																	<xs:attribute name="AtFault" type="YesNo" use="required"/>
+																	<xs:attribute name="WhatDamaged" type="WhatDamaged" use="required"/>
+																	<xs:attribute name="IncidentType" type="IncidentAutoAccident" use="required"/>
+																</xs:complexType>
+															</xs:element>
+														</xs:sequence>
+													</xs:complexType>
+												</xs:element>
+												<xs:element name="Tickets" minOccurs="0">
+													<xs:complexType>
+														<xs:sequence>
+															<xs:element name="Ticket" minOccurs="0" maxOccurs="4">
+																<xs:complexType>
+																	<xs:sequence>
+																		<xs:element name="Date" type="xs:date"/>
+																	</xs:sequence>
+																	<xs:attribute name="IncidentType" type="IncidentAutoTicket" use="required"/>
+																</xs:complexType>
+															</xs:element>
+														</xs:sequence>
+													</xs:complexType>
+												</xs:element>
+												<xs:element name="Claims" minOccurs="0">
+													<xs:complexType>
+														<xs:sequence>
+															<xs:element name="Claim" minOccurs="0" maxOccurs="4">
+																<xs:complexType>
+																	<xs:sequence>
+																		<xs:element name="Date" type="xs:date"/>
+																		<xs:element name="InsurancePaidAmount" type="xs:int" minOccurs="0"/>
+																	</xs:sequence>
+																	<xs:attribute name="WhatDamaged" type="WhatDamaged" use="required"/>
+																	<xs:attribute name="IncidentType" type="IncidentAutoClaim" use="required"/>
+																</xs:complexType>
+															</xs:element>
+														</xs:sequence>
+													</xs:complexType>
+												</xs:element>
+											</xs:all>
+											<xs:attribute name="SR22Required" type="YesNo" use="required"/>
+											<xs:attribute name="DriverTraining" type="YesNo" use="required"/>
+										</xs:complexType>
+									</xs:element>
+								</xs:all>
+								<xs:attribute name="DriverID" type="xs:int" use="required"/>
+								<xs:attribute name="PersonID" type="xs:int" use="required"/>
+							</xs:complexType>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="Vehicles">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Vehicle" maxOccurs="4">
+							<xs:complexType>
+								<xs:all>
+									<xs:element name="Year" type="YearType"/>
+									<xs:element name="Make" type="SpecifiedStringType"/>
+									<xs:element name="Model" type="SpecifiedStringType"/>
+									<xs:element name="Submodel" type="xs:string" minOccurs="0"/>
+									<xs:element name="VIN" type="SpecifiedStringType"/>
+									<xs:element name="GaragedZIPCode" type="ZIPCodeType"/>
+									<xs:element name="VehicleDrivers">
+										<xs:complexType>
+											<xs:sequence>
+												<xs:element name="PrimaryVehicleDriver" type="VehicleDriverInfo"/>
+												<xs:element name="SecondaryVehicleDrivers" minOccurs="0">
+													<xs:complexType>
+														<xs:sequence>
+															<xs:element name="SecondaryVehicleDriver" type="VehicleDriverInfo" minOccurs="0" maxOccurs="3"/>
+														</xs:sequence>
+													</xs:complexType>
+												</xs:element>
+											</xs:sequence>
+										</xs:complexType>
+									</xs:element>
+									<xs:element name="VehicleUse">
+										<xs:complexType>
+											<xs:all>
+												<xs:element name="AnnualMiles" type="xs:int"/>
+												<xs:element name="WeeklyCommuteDays" type="xs:int" minOccurs="0"/>
+												<xs:element name="DailyCommuteMiles" type="xs:int" minOccurs="0"/>
+											</xs:all>
+											<xs:attribute name="VehicleUseDescription" use="required">
+												<xs:simpleType>
+													<xs:restriction base="xs:string">
+														<xs:enumeration value="CommuteWork"/>
+														<xs:enumeration value="CommuteSchool"/>
+														<xs:enumeration value="CommuteVaries"/>
+														<xs:enumeration value="Pleasure"/>
+														<xs:enumeration value="Business"/>
+													</xs:restriction>
+												</xs:simpleType>
+											</xs:attribute>
+										</xs:complexType>
+									</xs:element>
+									<xs:element name="VehicleCoverages" minOccurs="0">
+										<xs:complexType>
+											<xs:sequence minOccurs="0">
+												<xs:element name="VehicleCoverage" type="Coverage" minOccurs="0" maxOccurs="4"/>
+											</xs:sequence>
+										</xs:complexType>
+									</xs:element>
+								</xs:all>
+								<xs:attribute name="VehicleID" type="xs:int" use="required" form="unqualified" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="1" msdata:AutoIncrementStep="1"/>
+								<xs:attribute name="Leased" type="YesNo" use="required"/>
+							</xs:complexType>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="InsuranceProfile">
+				<xs:complexType mixed="false">
+					<xs:complexContent mixed="false">
+						<xs:extension base="InsuranceProfile"/>
+					</xs:complexContent>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="Comment" type="Comment" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="BusinessProfile">
+		<xs:sequence>
+			<xs:element name="BusinessName" type="xs:string"/>
+			<xs:element name="BusinessDescription" type="xs:string"/>
+			<xs:element name="NumberOfFullTimeEmployees" type="NumberEmployeesType"/>
+			<xs:element name="NumberOfPartTimeEmployees" type="NumberEmployeesType"/>
+			<xs:element name="ContactFirstName" type="xs:string"/>
+			<xs:element name="ContactLastName" type="xs:string"/>
+			<xs:element name="BusinessOperatingSinceDate" type="xs:date"/>
+			<xs:element name="BusinessLocation" type="Address"/>
+			<xs:element name="SICCode">
+				<xs:complexType>
+					<xs:simpleContent>
+						<xs:extension base="xs:string">
+							<xs:attribute name="Industry" type="xs:string" use="optional"/>
+						</xs:extension>
+					</xs:simpleContent>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="OwnerIndustryManagementExperience" type="xs:string"/>
+		</xs:sequence>
+		<xs:attribute name="BusinessOperatingStatus" type="BusinessOperatingStatus" use="required"/>
+		<xs:attribute name="AnnualPayroll" type="AnnualPayroll" use="required"/>
+		<xs:attribute name="AnnualRevenue" type="AnnualRevenue" use="required"/>
+	</xs:complexType>
+	<xs:complexType name="PropertyAndCasualtyInsuranceQuoteRequest">
+		<xs:sequence>
+			<xs:element name="BusinessProfile" type="BusinessProfile"/>
+			<xs:element name="BusinessHours" minOccurs="0">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="BusinessOpenTime" type="TimeOfDay"/>
+						<xs:element name="BusinessCloseTime" type="TimeOfDay"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="BusinessLocation" minOccurs="0">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="BusinessAddress" type="Address"/>
+						<xs:element name="YearBuiltOrUpdateCompleted">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:maxLength value="4"/>
+									<xs:minLength value="4"/>
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:element>
+						<xs:element name="ConstructionType">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:enumeration value="Frame"/>
+									<xs:enumeration value="Joisted Masonry"/>
+									<xs:enumeration value="Masonry Non-combustible"/>
+									<xs:enumeration value="Modified Resistive"/>
+									<xs:enumeration value="Fire Resistive/Superior"/>
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:element>
+						<xs:element name="NumberStories">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:enumeration value="1-2"/>
+									<xs:enumeration value="3-5"/>
+									<xs:enumeration value="6-10"/>
+									<xs:enumeration value="Over 10"/>
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:element>
+						<xs:element name="SquareFootageOfBuilding" type="xs:int"/>
+						<xs:element name="SquareFootageOccupiedByBusiness" type="xs:int"/>
+						<xs:element name="BurglarAlarmType">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:enumeration value="None"/>
+									<xs:enumeration value="Central/Monitored"/>
+									<xs:enumeration value="Local/Audible"/>
+									<xs:enumeration value="Other"/>
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:element>
+						<xs:element name="FireAlarmType">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:enumeration value="None"/>
+									<xs:enumeration value="Central/Monitored"/>
+									<xs:enumeration value="Local/Audible"/>
+									<xs:enumeration value="Other"/>
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="NumberAdditionalProperties" type="xs:int" minOccurs="0"/>
+			<xs:element name="CommercialAuto" minOccurs="0">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="GaragingAddress" type="Address"/>
+						<xs:element name="NumberVehicles">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:enumeration value="0-2"/>
+									<xs:enumeration value="3-10"/>
+									<xs:enumeration value="MoreThan10"/>
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:element>
+						<xs:element name="NumberDrivers">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:enumeration value="1-4"/>
+									<xs:enumeration value="5-10"/>
+									<xs:enumeration value="MoreThan10"/>
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:element>
+						<xs:element name="MaximumDistanceTraveled">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:enumeration value="0-50"/>
+									<xs:enumeration value="51-200"/>
+									<xs:enumeration value="201-300"/>
+									<xs:enumeration value="301-400"/>
+									<xs:enumeration value="401-500"/>
+									<xs:enumeration value="over 500"/>
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="InsuranceProfile" type="InsuranceProfile"/>
+			<xs:element name="Comment" type="Comment" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="WorkersCompensationInsuranceQuoteRequest">
+		<xs:sequence>
+			<xs:element name="BusinessProfile" type="BusinessProfile"/>
+			<xs:element name="AverageHourlyWage" type="xs:decimal"/>
+			<xs:element name="BusinessOpenTime" type="TimeOfDay"/>
+			<xs:element name="ExcludeCompanyOfficers" type="xs:boolean"/>
+			<xs:element name="SafetyProgram" type="xs:boolean"/>
+			<xs:element name="InsuranceProfile" type="InsuranceProfile"/>
+			<xs:element name="Comment" type="Comment" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- GROUP Insurance Quote Request Application -->
+	<xs:complexType name="GroupHealthInsuranceQuoteRequest">
+		<xs:sequence>
+			<xs:element name="CompanyProfile">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="CompanyName" type="xs:string"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="GroupHealthPolicyMembers">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="GroupHealthPolicyMember" minOccurs="3" maxOccurs="50">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="CensusData" type="GroupHealthPolicyMemberCensusData"/>
+								</xs:sequence>
+								<xs:attribute name="MemberID" type="xs:int" use="required"/>
+							</xs:complexType>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="InsuranceProfile" type="InsuranceProfile"/>
+			<xs:element name="Comment" type="Comment" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- HEALTH Insurance Quote Request Application -->
+	<xs:complexType name="HealthInsuranceQuoteRequest">
+		<xs:sequence>
+			<xs:element name="HealthPolicyMembers">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="HealthPolicyMember" maxOccurs="10">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="MedicalProfile" type="MedicalProfile"/>
+								</xs:sequence>
+								<xs:attribute name="PersonID" type="xs:int" use="required"/>
+							</xs:complexType>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="InsuranceProfile" type="InsuranceProfile"/>
+			<xs:element name="Comment" type="Comment" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- HOME Insurance Quote Request Application -->
+	<xs:complexType name="HomeInsuranceQuoteRequest">
+		<xs:sequence>
+			<xs:element name="ResidenceProfile">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="ResidenceLocation">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="ResidenceAddress1" type="xs:string"/>
+									<xs:element name="ResidenceAddress2" type="xs:string" minOccurs="0"/>
+									<xs:element name="ResidenceCity" type="xs:string"/>
+									<xs:element name="ResidenceCounty" type="xs:string" minOccurs="0"/>
+									<xs:element name="ResidenceState" type="xs:string"/>
+									<xs:element name="ResidenceZIPCode" type="ZIPCodeType"/>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="ConstructionProfile">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="YearBuilt">
+										<xs:simpleType>
+											<xs:restriction base="xs:string">
+												<xs:maxLength value="4"/>
+												<xs:minLength value="4"/>
+											</xs:restriction>
+										</xs:simpleType>
+									</xs:element>
+									<xs:element name="TotalRooms" type="xs:string" minOccurs="0"/>
+									<xs:element name="ResidenceSquareFootage" type="xs:int" minOccurs="0"/>
+									<xs:element name="NumberBedrooms" type="xs:string" minOccurs="0"/>
+									<xs:element name="NumberBathrooms" type="xs:string" minOccurs="0"/>
+									<xs:element name="NumberFireplacesOrWoodstoves" type="xs:string" minOccurs="0"/>
+									<xs:element name="NumberUnits" type="xs:string" minOccurs="0"/>
+									<xs:element name="ConstructionDescription" type="xs:string" minOccurs="0"/>
+								</xs:sequence>
+								<xs:attribute name="DesignType" use="optional">
+									<xs:simpleType>
+										<xs:restriction base="xs:string">
+											<xs:enumeration value="OneStory"/>
+											<xs:enumeration value="BiLevel"/>
+											<xs:enumeration value="TwoStory"/>
+											<xs:enumeration value="TriLevel"/>
+											<xs:enumeration value="Other"/>
+										</xs:restriction>
+									</xs:simpleType>
+								</xs:attribute>
+								<xs:attribute name="ExteriorWallType" use="optional">
+									<xs:simpleType>
+										<xs:restriction base="xs:string">
+											<xs:enumeration value="MostlyBrick"/>
+											<xs:enumeration value="MostlyWoodFrame"/>
+											<xs:enumeration value="MostlyStone"/>
+											<xs:enumeration value="AluminumOrVinylSiding"/>
+											<xs:enumeration value="Veneer"/>
+											<xs:enumeration value="CinderBlock"/>
+											<xs:enumeration value="Stucco"/>
+											<xs:enumeration value="Log"/>
+											<xs:enumeration value="Other"/>
+										</xs:restriction>
+									</xs:simpleType>
+								</xs:attribute>
+								<xs:attribute name="FireHydrantProximity" use="optional">
+									<xs:simpleType>
+										<xs:restriction base="xs:string">
+											<xs:enumeration value="Within1000Feet"/>
+											<xs:enumeration value="Over1000Feet"/>
+										</xs:restriction>
+									</xs:simpleType>
+								</xs:attribute>
+								<xs:attribute name="FireStationProximity" use="optional">
+									<xs:simpleType>
+										<xs:restriction base="xs:string">
+											<xs:enumeration value="Within5Miles"/>
+											<xs:enumeration value="Within10Miles"/>
+											<xs:enumeration value="Over10Miles"/>
+										</xs:restriction>
+									</xs:simpleType>
+								</xs:attribute>
+								<xs:attribute name="FoundationType" use="optional">
+									<xs:simpleType>
+										<xs:restriction base="xs:string">
+											<xs:enumeration value="BasementFullyFinished"/>
+											<xs:enumeration value="BasementThreeQuartersFinished"/>
+											<xs:enumeration value="BasementOneHalfFinished"/>
+											<xs:enumeration value="BasementOneQuarterFinished"/>
+											<xs:enumeration value="BasementUnfinished"/>
+											<xs:enumeration value="CrawlSpace"/>
+											<xs:enumeration value="PiersPilingsStilts"/>
+											<xs:enumeration value="Slab"/>
+											<xs:enumeration value="Other"/>
+										</xs:restriction>
+									</xs:simpleType>
+								</xs:attribute>
+								<xs:attribute name="GarageType" use="optional">
+									<xs:simpleType>
+										<xs:restriction base="xs:string">
+											<xs:enumeration value="NoGarage"/>
+											<xs:enumeration value="CarportAttached"/>
+											<xs:enumeration value="CarportDetached"/>
+											<xs:enumeration value="OneCarAttached"/>
+											<xs:enumeration value="TwoCarAttached"/>
+											<xs:enumeration value="ThreeCarAttached"/>
+											<xs:enumeration value="OneCarDetached"/>
+											<xs:enumeration value="TwoCarDetached"/>
+											<xs:enumeration value="ThreeCarDetached"/>
+											<xs:enumeration value="Other"/>
+										</xs:restriction>
+									</xs:simpleType>
+								</xs:attribute>
+								<xs:attribute name="HeatingType" use="optional">
+									<xs:simpleType>
+										<xs:restriction base="xs:string">
+											<xs:enumeration value="GasForcedAir"/>
+											<xs:enumeration value="Boiler"/>
+											<xs:enumeration value="OilCoalKerosene"/>
+											<xs:enumeration value="Propane"/>
+											<xs:enumeration value="Electric"/>
+											<xs:enumeration value="Stove"/>
+											<xs:enumeration value="Other"/>
+											<xs:enumeration value="Unknown"/>
+										</xs:restriction>
+									</xs:simpleType>
+								</xs:attribute>
+								<xs:attribute name="MunicipalBoundaryProximity" use="optional">
+									<xs:simpleType>
+										<xs:restriction base="xs:string">
+											<xs:enumeration value="InsideCityLimits"/>
+											<xs:enumeration value="OutsideCityLimits"/>
+										</xs:restriction>
+									</xs:simpleType>
+								</xs:attribute>
+								<xs:attribute name="ProximityToWater" use="optional">
+									<xs:simpleType>
+										<xs:restriction base="xs:string">
+											<xs:enumeration value="NotApplicable"/>
+											<xs:enumeration value="LocatedInDesignatedFloodPlain"/>
+											<xs:enumeration value="ProneToFlooding"/>
+										</xs:restriction>
+									</xs:simpleType>
+								</xs:attribute>
+								<xs:attribute name="RoofAge" use="optional">
+									<xs:simpleType>
+										<xs:restriction base="xs:string">
+											<xs:enumeration value="OneTo5Years"/>
+											<xs:enumeration value="SixTo10Years"/>
+											<xs:enumeration value="ElevenOrMoreYears"/>
+										</xs:restriction>
+									</xs:simpleType>
+								</xs:attribute>
+								<xs:attribute name="RoofType" use="optional">
+									<xs:simpleType>
+										<xs:restriction base="xs:string">
+											<xs:enumeration value="CompositionShingle"/>
+											<xs:enumeration value="WoodShingle"/>
+											<xs:enumeration value="Tile"/>
+											<xs:enumeration value="Concrete"/>
+											<xs:enumeration value="Other"/>
+										</xs:restriction>
+									</xs:simpleType>
+								</xs:attribute>
+								<xs:attribute name="ServicePanelType" use="optional">
+									<xs:simpleType>
+										<xs:restriction base="xs:string">
+											<xs:enumeration value="CircuitBreaker"/>
+											<xs:enumeration value="FuseBox"/>
+											<xs:enumeration value="Other"/>
+											<xs:enumeration value="Unknown"/>
+										</xs:restriction>
+									</xs:simpleType>
+								</xs:attribute>
+								<xs:attribute name="WiringType" use="optional">
+									<xs:simpleType>
+										<xs:restriction base="xs:string">
+											<xs:enumeration value="Copper"/>
+											<xs:enumeration value="Aluminum"/>
+											<xs:enumeration value="KnobAndTube"/>
+											<xs:enumeration value="Unknown"/>
+										</xs:restriction>
+									</xs:simpleType>
+								</xs:attribute>
+								<xs:attribute name="PropertyQuality" use="optional">
+									<xs:simpleType>
+										<xs:restriction base="xs:string">
+											<xs:enumeration value="Economy"/>
+											<xs:enumeration value="Standard"/>
+											<xs:enumeration value="Luxury"/>
+										</xs:restriction>
+									</xs:simpleType>
+								</xs:attribute>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="ResidenceAccessories">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="OtherResidenceAccessoriesDescription" type="xs:string" minOccurs="0"/>
+								</xs:sequence>
+								<xs:attribute name="CentralAirConditioning" type="YesNo" use="required"/>
+								<xs:attribute name="CentralBurglarAlarm" type="xs:string" use="required"/>
+								<xs:attribute name="CentralFireAlarm" type="xs:string" use="required"/>
+								<xs:attribute name="CoveredPatioDeck" type="YesNo" use="required"/>
+								<xs:attribute name="DeadBolt" type="YesNo" use="required"/>
+								<xs:attribute name="FireExtinguisher" type="YesNo" use="required"/>
+								<xs:attribute name="SmokeDetector" type="YesNo" use="required"/>
+								<xs:attribute name="SwimmingPool" type="YesNo" use="required"/>
+								<xs:attribute name="TennisCourt" type="YesNo" use="required"/>
+								<xs:attribute name="Trampoline" type="YesNo" use="required"/>
+								<xs:attribute name="UncoveredPatioDeck" type="YesNo" use="required"/>
+								<xs:attribute name="IndoorFireSprinkler" type="YesNo" use="required"/>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="ClosingDate" type="xs:date" minOccurs="0"/>
+					</xs:sequence>
+					<xs:attribute name="DwellingType" use="required">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:enumeration value="SingleFamilyHome"/>
+								<xs:enumeration value="MultiFamilyHome"/>
+								<xs:enumeration value="Apartment"/>
+								<xs:enumeration value="Duplex"/>
+								<xs:enumeration value="Condominium"/>
+								<xs:enumeration value="Townhome"/>
+								<xs:enumeration value="MobileHome"/>
+								<xs:enumeration value="Other"/>
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:attribute>
+					<xs:attribute name="OwnershipStatus" use="required">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:enumeration value="Own"/>
+								<xs:enumeration value="Rent"/>
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:attribute>
+					<xs:attribute name="OccupiedByApplicant" type="YesNo" use="required"/>
+					<xs:attribute name="UsedForBusinessOrFarming" type="YesNo" use="required"/>
+					<xs:attribute name="AttackDog" type="YesNo" use="required"/>
+					<xs:attribute name="ResidenceType" use="required">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:enumeration value="Primary"/>
+								<xs:enumeration value="Secondary"/>
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:attribute>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="InsuranceProfile" type="InsuranceProfile"/>
+			<xs:element name="Claims" minOccurs="0">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Claim" maxOccurs="4">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="Date" type="xs:date"/>
+									<xs:element name="InsurancePaidAmount" type="xs:int" minOccurs="0"/>
+								</xs:sequence>
+								<xs:attribute name="IncidentType" type="IncidentHomeClaim" use="required"/>
+							</xs:complexType>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="Comment" type="Comment" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!--LIFE Insurance Quote Request Application -->
+	<xs:complexType name="LifeInsuranceQuoteRequest">
+		<xs:sequence>
+			<xs:element name="LifePolicyMembers">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="LifePolicyMember">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="MedicalProfile" type="MedicalProfile"/>
+									<xs:element name="LifeStyleProfile">
+										<xs:complexType>
+											<xs:sequence>
+												<xs:element name="LifeStyleDescription" type="xs:string" minOccurs="0"/>
+											</xs:sequence>
+											<xs:attribute name="PrivatePilot" type="YesNo" use="required"/>
+											<xs:attribute name="HazardousActivies" type="YesNo" use="required"/>
+											<xs:attribute name="DUIConviction" type="YesNo" use="required"/>
+											<xs:attribute name="DriversLicenseSuspendedOrRevoked" type="YesNo" use="required"/>
+											<xs:attribute name="ConvictedOfMovingViolations" type="YesNo" use="required"/>
+											<xs:attribute name="ConvictedOfFelony" type="YesNo" use="required"/>
+										</xs:complexType>
+									</xs:element>
+								</xs:sequence>
+								<xs:attribute name="PersonID" type="xs:int" use="required"/>
+							</xs:complexType>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="InsuranceProfile" type="InsuranceProfile"/>
+			<xs:element name="Comment" type="Comment" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="MortgageInsuranceQuoteRequest">
+		<xs:sequence>
+			<xs:element name="MortgagePolicyMembers">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="MortgagePolicyMember" maxOccurs="unbounded">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="MedicalProfile">
+										<xs:complexType>
+											<xs:sequence>
+												<xs:element name="HeightFeet" type="xs:int"/>
+												<xs:element name="HeightInches" type="xs:int"/>
+												<xs:element name="WeightPounds" type="xs:int"/>
+												<xs:element name="AttendedByPhysicianDescription" type="xs:string" minOccurs="0"/>
+											</xs:sequence>
+											<xs:attribute name="TobaccoUse12Months" type="YesNo" use="required"/>
+											<xs:attribute name="AttendedByPhysician12Months" type="YesNo" use="required"/>
+										</xs:complexType>
+									</xs:element>
+								</xs:sequence>
+								<xs:attribute name="PersonID" type="xs:int" use="required"/>
+							</xs:complexType>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="MortgageProfile">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="NumberOfYearsRemaining" type="xs:int"/>
+						<xs:element name="ApproxDollarAmountRemaining" type="xs:int"/>
+						<xs:element name="LoanOriginationDate" type="xs:string"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

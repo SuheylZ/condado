@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SelectCARE_SQL_DEVModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="SelectCARE_SQL_DEVModelStoreContainer">
+    <EntitySet Name="SignalR_Central_Bindings" EntityType="SelectCARE_SQL_DEVModel.Store.SignalR_Central_Bindings" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="users" EntityType="SelectCARE_SQL_DEVModel.Store.users" store:Type="Tables" Schema="dbo" />
+  </EntityContainer>
+  <EntityType Name="SignalR_Central_Bindings">
+    <Key>
+      <PropertyRef Name="Token" />
+    </Key>
+    <Property Name="Token" Type="varchar" Nullable="false" MaxLength="40" />
+    <Property Name="UserKey" Type="varchar" Nullable="false" MaxLength="40" />
+    <Property Name="ConnectionID" Type="varchar" Nullable="false" MaxLength="40" />
+    <Property Name="ConnectedTime" Type="datetime" />
+    <Property Name="DisconnectedTime" Type="datetime" />
+  </EntityType>
+  <EntityType Name="users">
+    <Key>
+      <PropertyRef Name="usr_key" />
+    </Key>
+    <Property Name="usr_key" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="usr_first_name" Type="nvarchar" Nullable="false" MaxLength="200" />
+    <Property Name="usr_last_name" Type="nvarchar" Nullable="false" MaxLength="200" />
+    <Property Name="usr_email" Type="nvarchar" Nullable="false" MaxLength="200" />
+    <Property Name="usr_work_phone" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="usr_work_phone_ext" Type="nvarchar" MaxLength="25" />
+    <Property Name="usr_mobile_phone" Type="nvarchar" MaxLength="50" />
+    <Property Name="usr_fax" Type="nvarchar" MaxLength="50" />
+    <Property Name="usr_other_phone" Type="nvarchar" MaxLength="50" />
+    <Property Name="usr_other_phone_ext" Type="nvarchar" MaxLength="25" />
+    <Property Name="usr_position" Type="nvarchar" MaxLength="75" />
+    <Property Name="usr_note" Type="nvarchar" MaxLength="200" />
+    <Property Name="usr_softphone_sq_personal" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="usr_softphone_sq_general" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="usr_softphone_cm_personal" Type="nvarchar" MaxLength="100" />
+    <Property Name="usr_softphone_cm_general" Type="nvarchar" MaxLength="100" />
+    <Property Name="usr_custom1" Type="nvarchar" MaxLength="200" />
+    <Property Name="usr_custom2" Type="nvarchar" MaxLength="200" />
+    <Property Name="usr_custom3" Type="nvarchar" MaxLength="200" />
+    <Property Name="usr_custom4" Type="nvarchar" MaxLength="200" />
+    <Property Name="usr_default_cal_view" Type="bit" Nullable="false" />
+    <Property Name="usr_cal_background_highlights" Type="bit" />
+    <Property Name="usr_new_lead_bold" Type="bit" />
+    <Property Name="usr_new_lead_hl" Type="bit" />
+    <Property Name="usr_new_lead_hl_incl_newly_assigned" Type="bit" />
+    <Property Name="usr_flagged_lead_highlight" Type="bit" />
+    <Property Name="usr_auto_refresh" Type="int" />
+    <Property Name="usr_save_filter_criteria" Type="bit" />
+    <Property Name="usr_login_landing_page" Type="smallint" Nullable="false" />
+    <Property Name="usr_cal_start_hour" Type="tinyint" />
+    <Property Name="usr_cal_start_am" Type="bit" />
+    <Property Name="usr_cal_end_hour" Type="tinyint" />
+    <Property Name="usr_cal_end_am" Type="bit" />
+    <Property Name="usr_mobile_email" Type="nvarchar" MaxLength="200" />
+    <Property Name="usr_tz" Type="tinyint" />
+    <Property Name="usr_retention_flag" Type="bit" />
+    <Property Name="usr_csr_flag" Type="bit" />
+    <Property Name="usr_transfer_flag" Type="bit" />
+    <Property Name="usr_alternate_product_flag" Type="bit" />
+    <Property Name="usr_onboard_flag" Type="bit" />
+    <Property Name="usr_net_login" Type="nvarchar" MaxLength="100" />
+    <Property Name="usr_pwd" Type="nvarchar" MaxLength="256" />
+    <Property Name="usr_reassignment_flag" Type="bit" />
+    <Property Name="usr_arc_id" Type="nvarchar" MaxLength="25" />
+    <Property Name="usr_acdcap" Type="int" />
+    <Property Name="usr_api_flag" Type="bit" />
+    <Property Name="usr_acd_flag" Type="bit" />
+    <Property Name="usr_acd_status_flag" Type="bit" />
+    <Property Name="usr_acd_cap_flag" Type="bit" />
+    <Property Name="usr_phone_system_username" Type="nvarchar" MaxLength="200" />
+    <Property Name="usr_phone_system_password" Type="nvarchar" MaxLength="200" />
+    <Property Name="usr_phone_system_id" Type="nvarchar" MaxLength="200" />
+    <Property Name="usr_phone_system_stationid" Type="nvarchar" MaxLength="50" />
+    <Property Name="usr_phone_system_station_type" Type="nvarchar" MaxLength="50" />
+    <Property Name="usr_phone_system_inbound_skill" Type="nvarchar" MaxLength="200" />
+    <Property Name="usr_active_flag" Type="bit" />
+    <Property Name="usr_delete_flag" Type="bit" />
+    <Property Name="usr_add_usr" Type="nvarchar" MaxLength="50" />
+    <Property Name="usr_add_date" Type="smalldatetime" />
+    <Property Name="usr_change_user" Type="nvarchar" MaxLength="50" />
+    <Property Name="usr_change_date" Type="smalldatetime" />
+    <Property Name="usr_phone_system_inbound_skillId" Type="varchar" MaxLength="10" />
+    <Property Name="usr_phone_system" Type="varchar" MaxLength="50" />
+    <Property Name="usr_cisco_domain_address" Type="varchar" MaxLength="50" />
+    <Property Name="usr_cisco_first_name" Type="varchar" MaxLength="50" />
+    <Property Name="usr_cisco_last_name" Type="varchar" MaxLength="50" />
+    <Property Name="usr_cisco_agent_id" Type="varchar" MaxLength="50" />
+    <Property Name="usr_cisco_agent_password" Type="varchar" MaxLength="50" />
+    <Property Name="usr_cisco_agent_extension1" Type="varchar" MaxLength="50" />
+    <Property Name="usr_cisco_agent_extension2" Type="varchar" MaxLength="50" />
+  </EntityType>
+</Schema>

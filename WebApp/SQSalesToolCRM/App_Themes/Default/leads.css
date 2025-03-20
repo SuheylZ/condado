@@ -1,0 +1,304 @@
+﻿/*
+========================================================
+File Name: Fieldset.css
+Date:      Friday, November 9, 2012
+
+Purpose:   This file describes all the styles used by fieldset on all the forms of this web applictaion
+            any change in the design of form required must be placed here. 
+
+Caution:   DO NOT put any other styling elements here other than the fieldset. For other styles either use default.css or create a new css file.   
+========================================================
+*/
+fieldset.leads {
+    border: 1px solid #999999;
+    margin: 2px 0 0 0;
+    padding: 0px 6px 10px;
+    /*width:0; YA[April 4, 2013] Removed beacause of having UI issue on the Leads page and added specific width for it i.e 510px */
+    /*width:512px;*/
+    height: inherit;
+}
+
+    fieldset.leads legend {
+        margin-left: 16px;
+        font-size: 15px;
+        font-family: 'Segoe UI';
+    }
+
+textarea {
+    resize: none;
+}
+
+fieldset.leads ul {
+    padding: 0px 2px 2px 2px;
+    list-style: none;
+    margin: 0px;
+}
+
+fieldset.leads li {
+    border-width: 0px;
+    border-color: #E0E6ED;
+    /*position: relative;*/
+    padding: 3px;
+    vertical-align: middle;
+    border-bottom-style: solid;
+}
+
+    fieldset.leads li.none {
+        border-width: 0px;
+        border-color: #E0E6ED;
+        /*position: relative;*/
+        padding-bottom: 4px;
+        vertical-align: middle;
+        border-bottom-style: solid;
+    }
+
+    fieldset.leads li.buttons {
+        border-width: 1px;
+        border-color: #C0C0C0;
+        text-align: center;
+        line-height: 1.0px;
+        padding-top: 9px;
+        border-top-style: solid;
+    }
+
+    fieldset.leads li.header {
+        border-width: 1px;
+        border-color: #C0C0C0;
+        line-height: 1.0px;
+        padding-top: 9px;
+        border-top-style: solid;
+        background-color: #EAEAEA;
+        height: 20px;
+    }
+
+fieldset.leads label {
+    /*position: relative;*/
+    clear: left;
+    float: left;
+    width: 13%;
+    margin-right: 5px;
+    text-align: right;
+    line-height: 24px;
+}
+
+fieldset.leads input[type=text], input[type=password], select, textarea {
+    padding: 1px;
+    font-size: 12px;
+    border: 1px solid #5D7B9D;
+    color: #1E1903;
+    background: #EAEAEA;
+    /*width: 500px;*/
+    z-index: 1;
+}
+
+
+/*
+SZ [Jan 10, 2013] Added for telerik box on Manage Campaign 
+*/
+fieldset.leads span#input {
+    padding: 1px;
+    /*text-align:right;*/
+    height: 180px;
+    z-index: 1;
+    display: inline-table;
+}
+
+fieldset.leads input[type=checkbox] {
+    color: #1E1903;
+    z-index: 1;
+    vertical-align: bottom;
+}
+
+fieldset.leads input[type=submit] {
+    padding: 1px 4px 1px 4px;
+    font-size: 12px;
+    border: 1px solid #5D7B9D;
+    color: #FFFFFF;
+    background: #5D7B9D;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+    fieldset.leads input[type=submit]:hover {
+        border: 1px solid #5D7B9D;
+        background: #8CA3BB;
+        text-decoration: none;
+    }
+
+    fieldset.leads input[type=submit]:active {
+        border-style: solid;
+        border-width: 1px;
+        border-color: #303030 #C0C0C0 #C0C0C0 #303030;
+        background: #8CA3BB;
+        text-decoration: none;
+    }
+
+div.buttons {
+    padding: 10px;
+    text-align: center;
+}
+
+    div.buttons input[type=submit] {
+        padding: 1px 4px 1px 4px;
+        font-size: 12px;
+        border: 1px solid #5D7B9D;
+        color: #FFFFFF;
+        background: #5D7B9D;
+        cursor: pointer;
+    }
+
+        div.buttons input[type=submit]:hover {
+            border: 1px solid #5D7B9D;
+            background: #8CA3BB;
+        }
+
+        div.buttons input[type=submit]:active {
+            border-style: solid;
+            border-width: 1px;
+            border-color: #303030 #C0C0C0 #C0C0C0 #303030;
+            background: #8CA3BB;
+        }
+
+span.information {
+    color: #0066FF;
+    font-family: 'Segoe UI';
+    font-size: 12px;
+}
+
+span.exception {
+    color: #FF0000;
+    font-family: 'Segoe UI';
+    font-size: 12px;
+}
+
+
+RadButton RadButton_ rbSkinnedButton {
+    text-decoration: none !important;
+}
+
+input.riTextBox {
+    padding: 1px !important;
+    font-size: 12px;
+    border: 1px solid #5D7B9D !important;
+    color: #1E1903 !important;
+    background: #EAEAEA !important;
+    width: 250px;
+    z-index: 1;
+}
+
+.buttonstyle {
+    padding: 1px 4px 1px 4px;
+    font-size: 12px;
+    border: 1px solid #5D7B9D;
+    color: #FFFFFF;
+    background: #5D7B9D;
+    cursor: pointer;
+}
+
+.buttonstyleACDOFF {
+    padding: 1px 4px 1px 4px;
+    font-size: 12px;
+    border: 1px solid #5D7B9D;
+    color: #FFFFFF;
+    background: #FF0000 !important;
+    cursor: pointer;
+}
+
+.buttonstyleACDPurple {
+    padding: 1px 4px 1px 4px;
+    font-size: 12px;
+    border: 1px solid #5D7B9D;
+    color: #FFFFFF;
+    background: #6600CC !important;
+    cursor: pointer;
+}
+
+.Error {
+    font-weight: normal;
+    color: #CC0000;
+    font-size: 9pt;
+    margin-bottom: 0px;
+}
+
+.PopUpFormTable {
+    width: 610px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 11pt;
+    font-weight: bold;
+    color: #929497;
+    border-collapse: collapse;
+    border-spacing: 0px;
+    empty-cells: hide;
+    height: 11px;
+}
+
+.buttonTable {
+    border-collapse: collapse;
+    border-spacing: 0px;
+}
+
+    .buttonTable td {
+        padding: 0px 20px 0px 0px;
+        margin: 0px;
+    }
+
+input[type="submit"]:disabled, input[type="button"]:disabled {
+    background: rgb(150, 158, 167)!important;
+}
+
+.lead_headerSLable {
+    width: 30px;
+    display: inline-block;
+    text-align: center;
+}
+.lead_headerXLable {
+    width: 62px;
+    display: inline-block;
+    text-align: left;
+    margin-left: 5px
+}
+.lead_headerXValue {
+    width: 115px;
+    display: inline-block;
+}
+
+#leadheader td {
+    padding: 0px
+}
+
+#MainContent_pnlPrimary input[type='text'] {
+    /*width: 130px!important;*/
+    padding: 0px!important;
+}
+
+#MainContent_pnlPrimary li {
+    padding-left:0px!important;
+    padding-right:0px!important;
+}
+#MainContent_pnlSpouce input[type='text'] {
+      /*width: 130px!important;*/
+    padding: 0px!important;
+
+}
+#MainContent_pnlSpouce li {
+      padding-left:0px!important;
+    padding-right:0px!important;
+}
+.grdEventCalendar {
+    /*display: inline-block;*/
+    /*width: 280px;*/
+}
+
+.eventcalandar_title {
+    /*width: 86px;
+    -ms-word-wrap: break-word;
+    word-wrap: break-word;*/
+    
+    /*width: 36%;*/
+    display: inline-block;
+}
+
+.eventcalandar_date {
+width: 90px;
+display: inline-block;    
+}

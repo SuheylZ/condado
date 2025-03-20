@@ -1,0 +1,271 @@
+﻿/*
+========================================================
+File Name: Fieldset.css
+Date:      Friday, November 9, 2012
+
+Purpose:   This file describes all the styles used by fieldset on all the forms of this web applictaion
+            any change in the design of form required must be placed here. 
+
+Caution:   DO NOT put any other styling elements here other than the fieldset. For other styles either use default.css or create a new css file.   
+========================================================
+*/
+
+
+fieldset.condado {
+    border: 1px solid #999999;
+    margin: 2px 0 0 0;
+    padding: 0px 10px 10px;
+    z-index:100;
+}
+
+    fieldset.condado legend {
+        margin-left: 16px;
+        font-size: 15px;
+        font-family: 'Segoe UI';
+    }
+
+    fieldset.condado table {
+        border-collapse: collapse;
+        border-spacing: 0;
+        border: 0;
+        width: 100%;
+    }
+
+    fieldset.condado ul {
+        padding: 0px 2px 2px 2px;
+        list-style: none;
+        margin: 0px;
+        z-index:1;
+    }
+
+    fieldset.condado li {
+        border-width: 0px;
+        border-color: #E0E6ED;
+        /*position: relative;*/
+        padding: 3px;
+        vertical-align: middle;
+        border-bottom-style: solid;
+        z-index:1;
+    }
+
+        fieldset.condado li.none {
+            border-width: 0px;
+            border-color: #E0E6ED;
+            /*position: relative;*/
+            padding-bottom: 4px;
+            vertical-align: middle;
+            border-bottom-style: solid;
+        }
+
+        fieldset.condado li.buttons {
+            border-width: 1px;
+            border-color: #C0C0C0;
+            text-align: center;
+            line-height: 1.0px;
+            padding-top: 9px;
+            border-top-style: solid;
+        }
+
+        fieldset.condado li.header {
+            border-width: 1px;
+            border-color: #C0C0C0;
+            line-height: 1.0px;
+            padding-top: 9px;
+            border-top-style: solid;
+            background-color: #EAEAEA;
+        }
+        /*YA[Nov 05, 2013] */
+        fieldset.condado li.Whiteheader {            
+            
+            border-color: #C0C0C0;            
+            padding-top: 9px;
+            border-top-style: solid;
+            background-color: #FFFFFF;
+        }
+
+    fieldset.condado label {
+        /*position: relative;*/
+        clear: left;
+        float: left;
+        width: 34%;
+        margin-right: 5px;
+        margin-left: 5px;
+        text-align: right;
+        line-height: 22px;
+    }
+
+    fieldset.condado label2 {
+        /*position: relative;*/
+        clear: left;
+        float: left;
+        width: 34%;
+        margin-right: 5px;
+        text-align: left;
+        line-height: 22px;
+    }
+
+    .uclabel {
+        /*position: relative;*/
+        clear: left;
+        float: none;
+        width: 32%;
+        margin-right: 5px;
+        margin-left: 0px !important;
+        line-height: 22px;
+        text-align: left !important;
+    }
+
+    .leftlabel {
+        /*position: relative;*/
+        clear: left;
+        float: none;
+        width: 15% !important;
+        margin-right: 5px;
+        margin-left: 0px !important;
+        line-height: 22px;
+        text-align: left !important;
+    }
+
+    fieldset.condado .rcbInputCell input[type=text] {
+        border: 0px;
+        background: none repeat scroll 0 0;
+    }
+
+
+    fieldset.condado input[type=text], input[type=password], select, textarea {
+        padding: 1px;
+        font-size: 14px;
+        border: 1px solid #5D7B9D;
+        color: #1E1903;
+        background: #EAEAEA;
+        width: 200px;
+        z-index: 1;
+    }
+
+
+    /*
+SZ [Jan 10, 2013] Added for telerik box on Manage Campaign 
+*/
+    fieldset.condado span#input {
+        padding: 1px;
+        /*text-align:right;*/
+        height: 180px;
+        z-index: 1;
+        display: inline-table;
+    }
+
+    fieldset.condado span#input2 {
+        padding: 1px;
+        z-index: 1;
+        display: inline-table;
+    }
+
+    fieldset.condado input[type=checkbox] {
+        color: #1E1903;
+        z-index: 1;
+        vertical-align: bottom;
+    }
+
+    fieldset.condado button {
+        padding: 1px 4px 1px 4px;
+        font-size: 12px;
+        border: 1px solid #5D7B9D;
+        color: #FFFFFF;
+        background: #5D7B9D;
+        cursor: pointer;
+        text-decoration: none;
+    }
+
+        fieldset.condado button:hover {
+            border: 1px solid #5D7B9D;
+            background: #8CA3BB;
+            text-decoration: none;
+        }
+
+
+    fieldset.condado input[type=submit] {
+        padding: 1px 4px 1px 4px;
+        font-size: 12px;
+        border: 1px solid #5D7B9D;
+        color: #FFFFFF;
+        background: #5D7B9D;
+        cursor: pointer;
+        text-decoration: none;
+    }
+
+        fieldset.condado input[type=submit]:hover {
+            border: 1px solid #5D7B9D;
+            background: #8CA3BB;
+            text-decoration: none;
+        }
+
+        fieldset.condado input[type=submit]:active {
+            border-style: solid;
+            border-width: 1px;
+            border-color: #303030 #C0C0C0 #C0C0C0 #303030;
+            background: #8CA3BB;
+            text-decoration: none;
+        }
+
+div.buttons {
+    padding: 10px;
+    text-align: center;
+}
+
+    div.buttons input[type=submit] {
+        padding: 1px 4px 1px 4px;
+        font-size: 12px;
+        border: 1px solid #5D7B9D;
+        color: #FFFFFF;
+        background: #5D7B9D;
+        cursor: pointer;
+    }
+
+    div.buttons input[type=text], input[type=password], select, textarea {
+        padding: 1px;
+        font-size: 14px;
+        border: 1px solid #5D7B9D;
+        color: #1E1903;
+        background: #EAEAEA;
+        width: 200px;
+        z-index: 1;
+    }
+
+    div.buttons input[type=submit]:hover {
+        border: 1px solid #5D7B9D;
+        background: #8CA3BB;
+    }
+
+    div.buttons input[type=submit]:active {
+        border-style: solid;
+        border-width: 1px;
+        border-color: #303030 #C0C0C0 #C0C0C0 #303030;
+        background: #8CA3BB;
+    }
+
+span.information {
+    color: #0066FF;
+    font-family: 'Segoe UI';
+    font-size: 12px;
+}
+
+span.exception {
+    color: #FF0000;
+    font-family: 'Segoe UI';
+    font-size: 12px;
+}
+
+
+RadButton RadButton_ rbSkinnedButton {
+    text-decoration: none !important;
+}
+
+input.riTextBox {
+    padding: 1px !important;
+    font-size: 14px;
+    border: 1px solid #5D7B9D !important;
+    color: #1E1903 !important;
+    background: #EAEAEA !important;
+    width: 250px;
+    z-index: 1;
+}

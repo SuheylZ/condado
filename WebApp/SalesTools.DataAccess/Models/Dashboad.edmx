@@ -1,0 +1,262 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="Dashboard.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="DashboardStoreContainer">
+          <EntitySet Name="dashboard_announcements" EntityType="Dashboard.Store.dashboard_announcements" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="dashboard_report_types" EntityType="Dashboard.Store.dashboard_report_types" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="dashboard_section" EntityType="Dashboard.Store.dashboard_section" store:Type="Tables" Schema="dbo" />
+          <AssociationSet Name="FK__dashboard__ann_s__113584D1" Association="Dashboard.Store.FK__dashboard__ann_s__113584D1">
+            <End Role="dashboard_section" EntitySet="dashboard_section" />
+            <End Role="dashboard_announcements" EntitySet="dashboard_announcements" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="dashboard_announcements">
+          <Key>
+            <PropertyRef Name="ann_Id" />
+          </Key>
+          <Property Name="ann_Id" Type="int" Nullable="false" />
+          <Property Name="ann_sec_id" Type="int" />
+          <Property Name="ann_order" Type="int" Nullable="false" />
+          <Property Name="ann_title" Type="nvarchar" Nullable="false" MaxLength="100" />
+          <Property Name="ann_body" Type="ntext" />
+          <Property Name="ann_date_added" Type="datetime" />
+          <Property Name="ann_active_flag" Type="bit" />
+        </EntityType>
+        <EntityType Name="dashboard_report_types">
+          <Key>
+            <PropertyRef Name="rpt_id" />
+          </Key>
+          <Property Name="rpt_id" Type="int" Nullable="false" />
+          <Property Name="rpt_title" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="rpt_default_flag" Type="bit" Nullable="false" />
+          <Property Name="rpt_order" Type="smallint" Nullable="false" />
+          <Property Name="rpt_issenior" Type="bit" />
+        </EntityType>
+        <EntityType Name="dashboard_section">
+          <Key>
+            <PropertyRef Name="dse_Id" />
+          </Key>
+          <Property Name="dse_Id" Type="int" Nullable="false" />
+          <Property Name="dse_Title" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="dse_active_flag" Type="bit" />
+        </EntityType>
+        <Association Name="FK__dashboard__ann_s__113584D1">
+          <End Role="dashboard_section" Type="Dashboard.Store.dashboard_section" Multiplicity="0..1" />
+          <End Role="dashboard_announcements" Type="Dashboard.Store.dashboard_announcements" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="dashboard_section">
+              <PropertyRef Name="dse_Id" />
+            </Principal>
+            <Dependent Role="dashboard_announcements">
+              <PropertyRef Name="ann_sec_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Function Name="dashboard_AddAnnouncementBySection" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="sectionId" Type="int" Mode="In" />
+          <Parameter Name="title" Type="nvarchar" Mode="In" />
+          <Parameter Name="order" Type="int" Mode="In" />
+          <Parameter Name="body" Type="ntext" Mode="In" />
+        </Function>
+        <Function Name="dashboard_DeleteAnnouncement" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="dashboard_GetAnnouncementBySection" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="sectionId" Type="int" Mode="In" />
+        </Function>
+        <Function Name="dashboard_GetReports" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="dashboard_UpdateAnnouncement" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="id" Type="int" Mode="In" />
+          <Parameter Name="sectionId" Type="int" Mode="In" />
+          <Parameter Name="active" Type="bit" Mode="In" />
+          <Parameter Name="title" Type="nvarchar" Mode="In" />
+          <Parameter Name="order" Type="int" Mode="In" />
+          <Parameter Name="body" Type="ntext" Mode="In" />
+        </Function>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="Dashboard" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="DashboardEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Announcements" EntityType="Dashboard.Announcement" />
+          <EntitySet Name="ReportTypes" EntityType="Dashboard.ReportType" />
+          <EntitySet Name="Sections" EntityType="Dashboard.Section" />
+          <AssociationSet Name="FK__dashboard__ann_s__4F5E6B2A" Association="Dashboard.FK__dashboard__ann_s__4F5E6B2A">
+            <End Role="dashboard_section" EntitySet="Sections" />
+            <End Role="dashboard_announcements" EntitySet="Announcements" />
+          </AssociationSet>
+          <FunctionImport Name="AddAnnouncementBySection">
+            <Parameter Name="sectionId" Mode="In" Type="Int32" />
+            <Parameter Name="title" Mode="In" Type="String" />
+            <Parameter Name="order" Mode="In" Type="Int32" />
+            <Parameter Name="body" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="DeleteAnnouncement">
+          <Parameter Name="id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="GetAnnouncementBySection" ReturnType="Collection(Dashboard.GetAnnouncementBySectionRS)">
+          <Parameter Name="sectionId" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="GetReports" ReturnType="Collection(Dashboard.GetReportsRS)" />
+          <FunctionImport Name="UpdateAnnouncement">
+            <Parameter Name="id" Mode="In" Type="Int32" />
+            <Parameter Name="sectionId" Mode="In" Type="Int32" />
+            <Parameter Name="active" Mode="In" Type="Boolean" />
+            <Parameter Name="title" Mode="In" Type="String" />
+            <Parameter Name="order" Mode="In" Type="Int32" />
+            <Parameter Name="body" Mode="In" Type="String" />
+          </FunctionImport>
+        </EntityContainer>
+        <EntityType Name="Announcement">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="SectionId" Type="Int32" />
+          <Property Name="Order" Type="Int32" Nullable="false" />
+          <Property Name="Title" Type="String" Nullable="false" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="Body" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="DateAdded" Type="DateTime" Precision="3" />
+          <Property Name="IsActive" Type="Boolean" />
+          <NavigationProperty Name="Sections" Relationship="Dashboard.FK__dashboard__ann_s__4F5E6B2A" FromRole="dashboard_announcements" ToRole="dashboard_section" />
+        </EntityType>
+        <EntityType Name="ReportType">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="Title" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="IsDefault" Type="Boolean" Nullable="false" />
+          <Property Name="Order" Type="Int16" Nullable="false" />
+          <Property Type="Boolean" Name="IsSenior" />
+        </EntityType>
+        <EntityType Name="Section">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="Title" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="IsActive" Type="Boolean" />
+          <NavigationProperty Name="Announcements" Relationship="Dashboard.FK__dashboard__ann_s__4F5E6B2A" FromRole="dashboard_section" ToRole="dashboard_announcements" />
+        </EntityType>
+        <Association Name="FK__dashboard__ann_s__4F5E6B2A">
+          <End Role="dashboard_section" Type="Dashboard.Section" Multiplicity="0..1" />
+          <End Role="dashboard_announcements" Type="Dashboard.Announcement" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="dashboard_section">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="dashboard_announcements">
+              <PropertyRef Name="SectionId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <ComplexType Name="GetAnnouncementBySectionRS">
+          <Property Type="Int32" Name="ID" Nullable="false" />
+          <Property Type="String" Name="Title" Nullable="false" MaxLength="100" />
+          <Property Type="String" Name="Body" Nullable="true" MaxLength="Max" />
+          <Property Type="DateTime" Name="DateAdded" Nullable="true" Precision="23" />
+        </ComplexType>
+        <ComplexType Name="GetReportsRS">
+          <Property Type="Int32" Name="ID" Nullable="false" />
+          <Property Type="String" Name="Title" Nullable="false" MaxLength="50" />
+          <Property Type="Boolean" Name="IsActive" Nullable="false" />
+        </ComplexType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="DashboardStoreContainer" CdmEntityContainer="DashboardEntities">
+          <EntitySetMapping Name="Announcements">
+            <EntityTypeMapping TypeName="Dashboard.Announcement">
+              <MappingFragment StoreEntitySet="dashboard_announcements">
+                <ScalarProperty Name="Id" ColumnName="ann_Id" />
+                <ScalarProperty Name="SectionId" ColumnName="ann_sec_id" />
+                <ScalarProperty Name="Order" ColumnName="ann_order" />
+                <ScalarProperty Name="Title" ColumnName="ann_title" />
+                <ScalarProperty Name="Body" ColumnName="ann_body" />
+                <ScalarProperty Name="DateAdded" ColumnName="ann_date_added" />
+                <ScalarProperty Name="IsActive" ColumnName="ann_active_flag" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ReportTypes">
+            <EntityTypeMapping TypeName="Dashboard.ReportType">
+              <MappingFragment StoreEntitySet="dashboard_report_types">
+                <ScalarProperty Name="IsSenior" ColumnName="rpt_issenior" />
+                <ScalarProperty Name="Id" ColumnName="rpt_id" />
+                <ScalarProperty Name="Title" ColumnName="rpt_title" />
+                <ScalarProperty Name="IsDefault" ColumnName="rpt_default_flag" />
+                <ScalarProperty Name="Order" ColumnName="rpt_order" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Sections">
+            <EntityTypeMapping TypeName="Dashboard.Section">
+              <MappingFragment StoreEntitySet="dashboard_section">
+                <ScalarProperty Name="Id" ColumnName="dse_Id" />
+                <ScalarProperty Name="Title" ColumnName="dse_Title" />
+                <ScalarProperty Name="IsActive" ColumnName="dse_active_flag" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="AddAnnouncementBySection" FunctionName="Dashboard.Store.dashboard_AddAnnouncementBySection" />
+          <FunctionImportMapping FunctionImportName="DeleteAnnouncement" FunctionName="Dashboard.Store.dashboard_DeleteAnnouncement" />
+          <FunctionImportMapping FunctionImportName="GetAnnouncementBySection" FunctionName="Dashboard.Store.dashboard_GetAnnouncementBySection">
+          <ResultMapping>
+              <ComplexTypeMapping TypeName="Dashboard.GetAnnouncementBySectionRS">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="Body" ColumnName="Body" />
+                <ScalarProperty Name="DateAdded" ColumnName="DateAdded" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="GetReports" FunctionName="Dashboard.Store.dashboard_GetReports">
+          <ResultMapping>
+              <ComplexTypeMapping TypeName="Dashboard.GetReportsRS">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="UpdateAnnouncement" FunctionName="Dashboard.Store.dashboard_UpdateAnnouncement" />
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Default" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="Dashboad">
+        <EntityTypeShape EntityType="Dashboard.Announcement" Width="1.5" PointX="3" PointY="1" Height="2.5571907552083335" IsExpanded="true" />
+        <EntityTypeShape EntityType="Dashboard.ReportType" Width="1.5" PointX="0.75" PointY="4.75" Height="1.7879850260416674" IsExpanded="true" />
+        <EntityTypeShape EntityType="Dashboard.Section" Width="1.5" PointX="0.75" PointY="1.375" Height="1.7879850260416665" IsExpanded="true" />
+        <AssociationConnector Association="Dashboard.FK__dashboard__ann_s__4F5E6B2A" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="2.2689925130208333" />
+          <ConnectorPoint PointX="3" PointY="2.2689925130208333" />
+        </AssociationConnector>
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

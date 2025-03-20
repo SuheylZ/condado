@@ -1,0 +1,43 @@
+﻿div#sldOuter{width:100%;}
+
+
+div#sldOuter select
+{
+    padding: 4px; font-size: 1.0em; border: 1px solid #5D7B9D; color: #1E1903; background: #EAEAEA; width: 250px; 
+}
+div#sldOuter h2
+{
+    font-family: 'Segoe UI';
+    font-size: 14px;
+    line-height: 1.4em;
+    text-align: center;
+}
+
+div#sldOuter div#sldLeft{float:left;width:40%;}
+
+div#sldOuter div#sldCenter
+{
+    float: left;
+    width: 20%;
+    text-align: center;
+    vertical-align: middle;
+    height: 100%;
+}
+div#sldOuter div#sldCenter ul
+{
+    width: 100%;
+    list-style-type: none;
+}
+div#sldOuter div#sldCenter ul li
+{
+    border-style: none;
+    line-height: 40px;
+    text-align: center;
+    vertical-align: middle;
+}
+div#sldOuter div#sldCenter ul li input[type=submit]{ width:40px;}
+
+
+div#sldOuter div#sldRight{float:left;width:40%;}
+
+div#sldOuter div#sldBottom{text-align:center;}

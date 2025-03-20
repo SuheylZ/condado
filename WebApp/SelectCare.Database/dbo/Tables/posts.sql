@@ -1,0 +1,27 @@
+﻿CREATE TABLE [dbo].[posts] (
+    [pst_key]                     INT            IDENTITY (1, 1) NOT FOR REPLICATION NOT NULL,
+    [pst_title]                   NVARCHAR (100) NOT NULL,
+    [pst_url]                     NVARCHAR (MAX) NOT NULL,
+    [pst_type]                    INT            NOT NULL,
+    [pst_header]                  NVARCHAR (100) NULL,
+    [pst_regex_response]          NVARCHAR (100) NULL,
+    [pst_body]                    NTEXT          NOT NULL,
+    [pst_active_flag]             BIT            CONSTRAINT [DF_posts_pst_active_flag] DEFAULT ((1)) NULL,
+    [pst_delete_flag]             BIT            CONSTRAINT [DF_posts_pst_delete_flag] DEFAULT ((0)) NULL,
+    [pst_add_user]                NVARCHAR (50)  NULL,
+    [pst_add_date]                SMALLDATETIME  NULL,
+    [pst_change_user]             NVARCHAR (50)  NULL,
+    [pst_change_date]             SMALLDATETIME  NULL,
+    [pst_trigger_increment]       SMALLINT       NULL,
+    [pst_trigger_increment_type]  SMALLINT       NULL,
+    [pst_specdate_increment]      SMALLINT       NULL,
+    [pst_specdate_increment_type] SMALLINT       NULL,
+    [pst_specdate_before_after]   BIT            NULL,
+    [pst_specdate_datefield]      SMALLINT       NULL,
+    [pst_cancel_upon_status]      BIT            NULL,
+    [pst_email_send]              SMALLINT       NULL,
+    [pst_filter_selection]        SMALLINT       NULL,
+    [pst_filter_customValue]      NVARCHAR (200) NULL,
+    CONSTRAINT [PK_posts] PRIMARY KEY CLUSTERED ([pst_key] ASC)
+);
+

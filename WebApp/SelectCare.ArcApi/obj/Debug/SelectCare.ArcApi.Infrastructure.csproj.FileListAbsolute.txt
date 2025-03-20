@@ -1,0 +1,38 @@
+F:\Yasir Ali\Projects\LiveTFSNew\SelectCARE - WebApp\SelectCare.ArcApi\bin\Debug\SelectCare.ArcApi.Infrastructure.dll
+F:\Yasir Ali\Projects\LiveTFSNew\SelectCARE - WebApp\SelectCare.ArcApi\bin\Debug\SelectCare.ArcApi.Infrastructure.pdb
+F:\Yasir Ali\Projects\LiveTFSNew\SelectCARE - WebApp\SelectCare.ArcApi\bin\Debug\Newtonsoft.Json.dll
+F:\Yasir Ali\Projects\LiveTFSNew\SelectCARE - WebApp\SelectCare.ArcApi\bin\Debug\SalesTool.DataAccess.dll
+F:\Yasir Ali\Projects\LiveTFSNew\SelectCARE - WebApp\SelectCare.ArcApi\bin\Debug\SalesTool.Direct.dll
+F:\Yasir Ali\Projects\LiveTFSNew\SelectCARE - WebApp\SelectCare.ArcApi\bin\Debug\System.Net.Http.dll
+F:\Yasir Ali\Projects\LiveTFSNew\SelectCARE - WebApp\SelectCare.ArcApi\bin\Debug\System.Net.Http.Formatting.dll
+F:\Yasir Ali\Projects\LiveTFSNew\SelectCARE - WebApp\SelectCare.ArcApi\bin\Debug\System.Net.Http.WebRequest.dll
+F:\Yasir Ali\Projects\LiveTFSNew\SelectCARE - WebApp\SelectCare.ArcApi\bin\Debug\EntityFramework.dll
+F:\Yasir Ali\Projects\LiveTFSNew\SelectCARE - WebApp\SelectCare.ArcApi\bin\Debug\SalesTool.Direct.pdb
+F:\Yasir Ali\Projects\LiveTFSNew\SelectCARE - WebApp\SelectCare.ArcApi\bin\Debug\SalesTool.DataAccess.pdb
+F:\Yasir Ali\Projects\LiveTFSNew\SelectCARE - WebApp\SelectCare.ArcApi\bin\Debug\Newtonsoft.Json.xml
+F:\Yasir Ali\Projects\LiveTFSNew\SelectCARE - WebApp\SelectCare.ArcApi\bin\Debug\System.Net.Http.xml
+F:\Yasir Ali\Projects\LiveTFSNew\SelectCARE - WebApp\SelectCare.ArcApi\bin\Debug\System.Net.Http.Formatting.xml
+F:\Yasir Ali\Projects\LiveTFSNew\SelectCARE - WebApp\SelectCare.ArcApi\bin\Debug\System.Net.Http.WebRequest.xml
+F:\Yasir Ali\Projects\LiveTFSNew\SelectCARE - WebApp\SelectCare.ArcApi\bin\Debug\EntityFramework.xml
+F:\Yasir Ali\Projects\LiveTFSNew\SelectCARE - WebApp\SelectCare.ArcApi\obj\Debug\SelectCare.ArcApi.Infrastructure.csprojResolveAssemblyReference.cache
+F:\Yasir Ali\Projects\LiveTFSNew\SelectCARE - WebApp\SelectCare.ArcApi\obj\Debug\SelectCare.ArcApi.Infrastructure.dll
+F:\Yasir Ali\Projects\LiveTFSNew\SelectCARE - WebApp\SelectCare.ArcApi\obj\Debug\SelectCare.ArcApi.Infrastructure.pdb
+D:\Suheyl\Projects\Condado\WebApp\SelectCare.ArcApi\bin\Debug\SelectCare.ArcApi.Infrastructure.dll
+D:\Suheyl\Projects\Condado\WebApp\SelectCare.ArcApi\bin\Debug\SelectCare.ArcApi.Infrastructure.pdb
+D:\Suheyl\Projects\Condado\WebApp\SelectCare.ArcApi\bin\Debug\Newtonsoft.Json.dll
+D:\Suheyl\Projects\Condado\WebApp\SelectCare.ArcApi\bin\Debug\SalesTool.DataAccess.dll
+D:\Suheyl\Projects\Condado\WebApp\SelectCare.ArcApi\bin\Debug\SalesTool.Direct.dll
+D:\Suheyl\Projects\Condado\WebApp\SelectCare.ArcApi\bin\Debug\System.Net.Http.dll
+D:\Suheyl\Projects\Condado\WebApp\SelectCare.ArcApi\bin\Debug\System.Net.Http.Formatting.dll
+D:\Suheyl\Projects\Condado\WebApp\SelectCare.ArcApi\bin\Debug\System.Net.Http.WebRequest.dll
+D:\Suheyl\Projects\Condado\WebApp\SelectCare.ArcApi\bin\Debug\EntityFramework.dll
+D:\Suheyl\Projects\Condado\WebApp\SelectCare.ArcApi\bin\Debug\SalesTool.Direct.pdb
+D:\Suheyl\Projects\Condado\WebApp\SelectCare.ArcApi\bin\Debug\SalesTool.DataAccess.pdb
+D:\Suheyl\Projects\Condado\WebApp\SelectCare.ArcApi\bin\Debug\Newtonsoft.Json.xml
+D:\Suheyl\Projects\Condado\WebApp\SelectCare.ArcApi\bin\Debug\System.Net.Http.xml
+D:\Suheyl\Projects\Condado\WebApp\SelectCare.ArcApi\bin\Debug\System.Net.Http.Formatting.xml
+D:\Suheyl\Projects\Condado\WebApp\SelectCare.ArcApi\bin\Debug\System.Net.Http.WebRequest.xml
+D:\Suheyl\Projects\Condado\WebApp\SelectCare.ArcApi\bin\Debug\EntityFramework.xml
+D:\Suheyl\Projects\Condado\WebApp\SelectCare.ArcApi\obj\Debug\SelectCare.ArcApi.Infrastructure.csprojResolveAssemblyReference.cache
+D:\Suheyl\Projects\Condado\WebApp\SelectCare.ArcApi\obj\Debug\SelectCare.ArcApi.Infrastructure.dll
+D:\Suheyl\Projects\Condado\WebApp\SelectCare.ArcApi\obj\Debug\SelectCare.ArcApi.Infrastructure.pdb

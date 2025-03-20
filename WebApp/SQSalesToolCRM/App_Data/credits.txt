@@ -1,0 +1,43 @@
+﻿
+Created By: Suheyl Zafar
+Created On: Saturday May 25, 2013, at 1:00 AM
+
+===========================================
+Subject: Credits, Courtesy and Thanks!
+===========================================
+
+
+This project Sales Tool has was started by a team of 2 which was later expanded to 4 developers. Though most of the project has been designed and 
+implemented by the team under the direction and supervision of the client, some portions of it use some open source stuff, 
+mentioning the names of which is the intent of creating this file.
+
+1. Josh Bush (digitalbush.com) for the masked input box javascript code. althougth not currently used, all maked edit validation were initially performed by the jquery.maskedinput script
+
+2. Justin Mead (MeadMiracle/www.meadmiracle.com) for the dual listbox selection. This script is used on the email editor user name selection. 
+
+3. Cory S.N. LaViska (A Beautiful Site/ http://abeautifulsite.net/) for the jquery alert boxes. Not currently used but initial fancy boxes were implemented by using this script.
+
+4. CustomFilter parser currently used in parsing all expressions is based on the design by "TheEvilPenguin" from StackOverflow.com. http://stackoverflow.com/questions/2853907/how-to-parse-math-expressions-in-c
+
+5. Dynamic.cs which is used heavily everywhere and implements order by skip and take functionality in grids is an open source project (Open Source Helpers) by a microsoft employee. 
+ The project can be found on CodePlex.com
+
+6. SqlHelper.cs which is used in SalesTool.Direct is from the Data Access Application Block from Microsoft Enterprise Library. It is a utility/helper library by Microsoft.
+
+7. some of the icons and images are retreived from internet from various websites and were not created by the team here.
+
+8. The css filedset style "condado" in fieldset.css is based on the work by NICK RIGBY (http://alistapart.com/article/prettyaccessibleforms). Modifications were
+made to the form as according to the specifications by the client.
+
+9. Thanks to various writers of www.codeproject.com and www.stackoverflow.com. 
+
+
+Thanks to the various writers and other people whose work/ideas have been used in this project. There names might have been forgotten by us 
+but their work has helped the team in many ways. We do not claim their work and the credit is given to them.
+
+
+ 
+
+ ---------------------End of file--------------------
+ 
+  

@@ -1,0 +1,173 @@
+﻿
+.scMonthlyContest h2, .scDailyContest h2, .scMainAnnouncement h2, .scLeadAnnouncement h2
+{
+    color: #496077;
+}
+
+.scAnnouncement
+{
+    margin: 20px 4px 10px 0px;
+    padding: 2px;
+    width: 100%;
+    height: auto;
+    border: 1px solid #496077;
+    max-height: 600px;
+    display: block;
+}
+
+.scContests
+{
+    display: table-cell;
+    width: 300px;
+    padding: 2px;
+    vertical-align: top;
+}
+
+.scMonthlyContest
+{
+    padding: 4px;
+    display: block;
+    max-height: 200px;
+    overflow-y:auto;
+}
+
+.scDailyContest
+{
+    padding: 4px;
+    display: block;
+    height: 200px;
+}
+
+.scMainAnnouncement
+{
+    border-width: 1px;
+    border-color: #496077;
+    border-right-style: dotted;
+    border-left-style: dotted;
+    margin: 0px;
+    display: table-cell;
+    width: 65%;
+    padding: 0px 8px 0px 8px;
+    vertical-align: top;
+}
+
+.scLeadAnnouncement
+{
+    display: table-cell;
+    width: 300px;
+    padding: 0px 8px 0px 8px;
+    vertical-align: top;
+}
+
+.scFilter
+{
+    display: block;
+    text-align: right;
+    padding: 10px 0px 10px 0px;
+    /*margin-bottom : -40px;*/
+}
+
+.scFilter select
+{
+    width: 175px;
+    font-family: Verdana;
+    font-size: 10px;
+}
+
+.scTabs
+{
+    display: block;
+    padding-bottom: 20px;
+}
+
+.scIndicators fieldset
+{
+    padding: 0px;
+    margin: 0px;
+    border-style: none;
+    font-style: italic;
+    display: inline;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.scIndicators fieldset label
+{
+    font-style: normal;
+    display: block;
+    font-size: 15px;
+    font-weight: normal;
+}
+
+
+.scIndicators ul
+{
+    list-style-type: none;
+}
+
+.scIndicators ul li
+{
+    list-style-type: none;
+    float: left;
+    dislay: inline-block;
+    padding-left: 0px;
+    padding-right: 30px;
+    margin-right: 10px;
+    text-align: center;
+}
+
+.scReports
+{
+    border-width: 1px;
+    border-color: #496077;
+    padding: 4px;
+    height: 600px;
+    border-top-style: solid;
+    border-bottom-style: solid;
+}
+
+.scFooter
+{
+    padding: 4px;
+    height: 100px;
+    width: 100%;
+}
+
+.scAnnouncementControl
+{
+    width: 100%;
+}
+
+.scAnnouncementControl span.heading
+{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    color: #496077;
+    overflow-y:scroll;
+}
+
+.scAnnouncementControl ul
+{
+    padding: 0px;
+    margin: 0px;
+    list-style-type: none;
+}
+.scAnnouncementControl ul li
+{
+    border-width: 1px;
+    border-color: #999999;
+    margin: 0px;
+    padding: 2px 0px 2px 0px;
+    display: block;
+    list-style-position: inside;
+    border-bottom-style: dotted;
+}
+table
+{
+    border-collapse: collapse;
+    border-spacing: 0;
+    border:0;
+    /*width: auto !important;*/
+   
+}

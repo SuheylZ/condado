@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Test Page for OLE Bridge App (OBA)</title>
+
+    <script src="Scripts/jquery-1.11.0.js"></script>
+    <script src="Scripts/jquery.signalR-2.0.0.min.js"></script>
+    <script src="signalr/hubs"></script>
+</head>
+
+<body>
+    
+
+    <input type="text" id="txtMessage"/>
+    <input type="text" id="txtArguments"/>
+     
+    <button id="btnSend" value="">Send</button>
+
+
+
+    <hr/>
+    <textarea id="logger"></textarea>
+
+    <script type="text/javascript">
+        $(function () {
+            debugger;
+            var hub = $.connection.arcHub;
+            var hubx = $.connection.selectCareHub;
+            hub.qs = { 'version': '1.0', 'userid': '12b3c3b5-cf71-4e9f-b0d9-87208d64e12' };
+            hub.registerCRM('12b3c3b5-cf71-4e9f-b0d9-87208d64e12');
+            
+            hub.client.messageReceived = function (msg, args) {
+                var text = 'Message: ' + msg + '/r/n' + 'Arguments: ' + args;
+                $('textarea#logger').val($('textarea#logger').val() + '/r/n' + text);
+                alert(args);
+            };
+
+            $("button#btnSend").click(function (e) {
+                e.preventDefault();
+                var cmd = $('input#txtMessage').val();
+                var arg = $('input#txtArguments').val();
+                hub.sendMessage(cmd, args);
+            });
+        });
+            </script>
+ </body>
+</html>
