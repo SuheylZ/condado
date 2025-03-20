@@ -1,9 +1,0 @@
-D:\Suheyl\Projects\Condado\WebApp\SelectCare.Database\bin\Debug\SelectCare.Database.SQS.dacpac
-D:\Suheyl\Projects\Condado\WebApp\SelectCare.Database\bin\Debug\SelectCare.Database.dll
-D:\Suheyl\Projects\Condado\WebApp\SelectCare.Database\bin\Debug\SelectCare.Database.pdb
-D:\Suheyl\Projects\Condado\WebApp\SelectCare.Database\obj\Debug\Model.xml
-D:\Suheyl\Projects\Condado\WebApp\SelectCare.Database\obj\Debug\refactor.xml
-D:\Suheyl\Projects\Condado\WebApp\SelectCare.Database\obj\Debug\postdeploy.sql
-D:\Suheyl\Projects\Condado\WebApp\SelectCare.Database\obj\Debug\predeploy.sql
-D:\Suheyl\Projects\Condado\WebApp\SelectCare.Database\obj\Debug\SelectCare.Database.dll
-D:\Suheyl\Projects\Condado\WebApp\SelectCare.Database\obj\Debug\SelectCare.Database.pdb

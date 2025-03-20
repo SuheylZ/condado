@@ -1,6 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
-<plugins>
-  <plugin name="email"  enabled="true" path="SalesTool.Service.Plugin.Email.dll"/>
-  <plugin name="post"  enabled="true" path="SalesTool.Service.Plugin.Postbot.dll"/>
-  <plugin name="emailqueue"  enabled="true" path="SalesTool.Service.Plugin.Emailbot.dll"/>
-</plugins>

@@ -1,5 +1,0 @@
-D:\Suheyl\Projects\Condado\WebApp\UserControlLibrary\bin\UserControlLibrary.dll
-D:\Suheyl\Projects\Condado\WebApp\UserControlLibrary\bin\UserControlLibrary.pdb
-D:\Suheyl\Projects\Condado\WebApp\UserControlLibrary\obj\Debug\UserControlLibrary.csprojResolveAssemblyReference.cache
-D:\Suheyl\Projects\Condado\WebApp\UserControlLibrary\obj\Debug\UserControlLibrary.dll
-D:\Suheyl\Projects\Condado\WebApp\UserControlLibrary\obj\Debug\UserControlLibrary.pdb
